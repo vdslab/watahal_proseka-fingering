@@ -49,23 +49,23 @@ function Sort() {
 function MusicTable() {
   return (
     <div>
-      <table>
+      <table className="table-auto">
         <thead>
-          <th>名前</th>
-          <th>難易度</th>
-          <th>再生時間</th>
-          <th>BPM</th>
+          <th className="px-4 py-2">名前</th>
+          <th className="px-4 py-2">難易度</th>
+          <th className="px-4 py-2">再生時間</th>
+          <th className="px-4 py-2">BPM</th>
         </thead>
         <tbody>
           {musics.map(({ name, difficult, time_sec, bpm }) => {
             return (
               <tr key={name}>
-                <td>
+                <td className="border px-4 py-2">
                   <Link href={`/music/${name}`}>to music {`${name}`}</Link>
                 </td>
-                <td>{`${difficult}`}</td>
-                <td>{`${time_sec}`}</td>
-                <td>{`${bpm}`}</td>
+                <td className="border px-4 py-2">{`${difficult}`}</td>
+                <td className="border px-4 py-2">{`${time_sec}`}</td>
+                <td className="border px-4 py-2">{`${bpm}`}</td>
               </tr>
             );
           })}
