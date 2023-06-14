@@ -51,15 +51,17 @@ function MusicTable() {
     <div>
       <table className="table-auto">
         <thead>
-          <th className="px-4 py-2">名前</th>
-          <th className="px-4 py-2">難易度</th>
-          <th className="px-4 py-2">再生時間</th>
-          <th className="px-4 py-2">BPM</th>
+          <tr className="">
+            <th className="px-4 py-2">名前</th>
+            <th className="px-4 py-2">難易度</th>
+            <th className="px-4 py-2">再生時間</th>
+            <th className="px-4 py-2">BPM</th>
+          </tr>
         </thead>
         <tbody>
           {musics.map(({ name, difficult, time_sec, bpm }) => {
             return (
-              <tr key={name}>
+              <tr key={name} className="odd:bg-gray-200 even:bg-gray-400">
                 <td className="border px-4 py-2">
                   <Link href={`/music/${name}`}>to music {`${name}`}</Link>
                 </td>
