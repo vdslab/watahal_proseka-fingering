@@ -47,27 +47,31 @@ function Sort() {
 }
 
 function MusicTable() {
+  const cell = "px-4 py-2";
+  const smallCell = `${cell} w-1/12`;
+  const dataCell = `border ${cell}`;
+  const smallDataCell = `border ${smallCell} text-center`;
   return (
     <div>
-      <table className="table-auto">
+      <table className="table-auto w-full">
         <thead>
-          <tr className="">
-            <th className="px-4 py-2">名前</th>
-            <th className="px-4 py-2">難易度</th>
-            <th className="px-4 py-2">再生時間</th>
-            <th className="px-4 py-2">BPM</th>
+          <tr>
+            <th className={`${cell}`}>名前</th>
+            <th className={`${smallCell}`}>難易度</th>
+            <th className={`${smallCell}`}>再生時間</th>
+            <th className={`${smallCell}`}>BPM</th>
           </tr>
         </thead>
         <tbody>
           {musics.map(({ name, difficult, time_sec, bpm }) => {
             return (
               <tr key={name} className="odd:bg-gray-200 even:bg-gray-400">
-                <td className="border px-4 py-2">
+                <td className={`${dataCell}`}>
                   <Link href={`/music/${name}`}>to music {`${name}`}</Link>
                 </td>
-                <td className="border px-4 py-2">{`${difficult}`}</td>
-                <td className="border px-4 py-2">{`${time_sec}`}</td>
-                <td className="border px-4 py-2">{`${bpm}`}</td>
+                <td className={`${smallDataCell}`}>{`${difficult}`}</td>
+                <td className={`${smallDataCell}`}>{`${time_sec}`}</td>
+                <td className={`${smallDataCell}`}>{`${bpm}`}</td>
               </tr>
             );
           })}
