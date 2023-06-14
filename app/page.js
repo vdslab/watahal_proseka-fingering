@@ -1,3 +1,4 @@
+import "./tailwind.css";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -75,7 +76,7 @@ function MusicTable() {
 }
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="min-h-screen flex-col items-center justify-between p-24">
       <p>this is Home</p>
       <div>
         <div>
@@ -83,18 +84,18 @@ export default function Home() {
         </div>
 
         <nav>
-          <ul>
+          <ul className="flex">
             <li>アイコンの場所</li>
-            <li>
+            <li className="mr-6">
               <Search />
             </li>
-            <li>
+            <li className="mr-6">
               <Filter />
             </li>
-            <li>
+            <li className="mr-6">
               <Sort />
             </li>
-            <li>メニューの場所</li>
+            <li className="mr-6">メニューの場所</li>
           </ul>
         </nav>
 
