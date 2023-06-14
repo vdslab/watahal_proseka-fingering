@@ -1,10 +1,107 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const music_names = ["one", "two", "three", "four", "five"];
+const musics = [
+  { name: "one", difficult: 1, time_sec: 300, bpm: 200 },
+  { name: "two", difficult: 2, time_sec: 290, bpm: 210 },
+  { name: "three", difficult: 3, time_sec: 280, bpm: 220 },
+  { name: "four", difficult: 4, time_sec: 270, bpm: 230 },
+  { name: "five", difficult: 5, time_sec: 260, bpm: 240 },
+];
+
+function Search() {
+  return (
+    <div>
+      <form>
+        <label>曲検索</label>
+        <input type="text"></input>
+      </form>
+    </div>
+  );
+}
+
+function Filter() {
+  return (
+    <div>
+      <form>
+        <label>絞り込み</label>
+        <input type="text" placeholder="曲名"></input>
+      </form>
+    </div>
+  );
+}
+
+function Sort() {
+  return (
+    <div>
+      <form>
+        <select>
+          <option>表示順の変更（現在何もできない）</option>
+          <option>難易度順</option>
+        </select>
+      </form>
+    </div>
+  );
+}
+
+function MusicTable() {
+  return (
+    <div>
+      <table>
+        <thead>
+          <th>名前</th>
+          <th>難易度</th>
+          <th>再生時間</th>
+          <th>BPM</th>
+        </thead>
+        <tbody>
+          {musics.map(({ name, difficult, time_sec, bpm }) => {
+            return (
+              <tr key={name}>
+                <td>
+                  <Link href={`/music/${name}`}>to music {`${name}`}</Link>
+                </td>
+                <td>{`${difficult}`}</td>
+                <td>{`${time_sec}`}</td>
+                <td>{`${bpm}`}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Link href={"/music"}>music link</Link>
+      <p>this is Home</p>
+      <div>
+        <div>
+          <Link href={"/"}>music link</Link>
+        </div>
+
+        <nav>
+          <ul>
+            <li>アイコンの場所</li>
+            <li>
+              <Search />
+            </li>
+            <li>
+              <Filter />
+            </li>
+            <li>
+              <Sort />
+            </li>
+            <li>メニューの場所</li>
+          </ul>
+        </nav>
+
+        <div>
+          <MusicTable />
+        </div>
+      </div>
       {/* <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
