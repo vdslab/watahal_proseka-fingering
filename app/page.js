@@ -13,23 +13,24 @@ const musics = [
 
 function Search() {
   return (
-    <form className="relative">
-      <div className="absolute inset-y-0 left-0 flex items-center pl-1 pr-1 pointer-events-none">
+    <div className="relative items-center">
+      <div className="absolute inset-0 p-1 pointer-events-none">
         <Image
           src="/search.svg"
-          className="w-4 text-gray-300"
+          className="w-1/12 h-1/12 text-gray-300"
           width={120}
           height={120}
           priority
         />
       </div>
-
-      <input
-        className="w-full pl-6  border border-gray-300 rounded-lg"
-        type="text"
-        placeholder="曲名"
-      ></input>
-    </form>
+      <form className="">
+        <input
+          className="w-full pl-6 border border-gray-300 rounded-lg"
+          type="text"
+          placeholder="曲名"
+        ></input>
+      </form>
+    </div>
   );
 }
 
@@ -90,10 +91,10 @@ export default function Home() {
           <ul className="flex">
             <li className="w-1/12 mr-3">アイコンの場所</li>
 
-            <li className="w-1/6 mr-3">
+            <li className="w-1/12 mr-3">
               <Sort />
             </li>
-            <li className="w-1/2 mr-3">
+            <li className="w-3/4 mr-3">
               <Search />
             </li>
             <li className="w-1/12 mr-3">
