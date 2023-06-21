@@ -13,36 +13,34 @@ const musics = [
 
 function Search() {
   return (
-    <div>
-      <form>
-        <label>曲検索</label>
-        <input type="text"></input>
-      </form>
-    </div>
-  );
-}
+    <form className="relative">
+      <div className="absolute inset-y-0 left-0 flex items-center pl-1 pr-1 pointer-events-none">
+        <Image
+          src="/search.svg"
+          className="w-4 text-gray-300"
+          width={120}
+          height={120}
+          priority
+        />
+      </div>
 
-function Filter() {
-  return (
-    <div>
-      <form>
-        <label>絞り込み</label>
-        <input type="text" placeholder="曲名"></input>
-      </form>
-    </div>
+      <input
+        className="w-full pl-6  border border-gray-300 rounded-lg"
+        type="text"
+        placeholder="曲名"
+      ></input>
+    </form>
   );
 }
 
 function Sort() {
   return (
-    <div>
-      <form>
-        <select>
-          <option>表示順の変更（現在何もできない）</option>
-          <option>難易度順</option>
-        </select>
-      </form>
-    </div>
+    <form>
+      <select className="w-full">
+        <option>表示順の変更（現在何もできない）</option>
+        <option>難易度順</option>
+      </select>
+    </form>
   );
 }
 
@@ -52,37 +50,36 @@ function MusicTable() {
   const dataCell = `border ${cell}`;
   const smallDataCell = `border ${smallCell} text-center`;
   return (
-    <div>
-      <table className="table-auto w-full">
-        <thead>
-          <tr>
-            <th className={`${cell}`}>名前</th>
-            <th className={`${smallCell}`}>難易度</th>
-            <th className={`${smallCell}`}>再生時間</th>
-            <th className={`${smallCell}`}>BPM</th>
-          </tr>
-        </thead>
-        <tbody>
-          {musics.map(({ name, difficult, time_sec, bpm }) => {
-            return (
-              <tr key={name} className="odd:bg-gray-200 even:bg-gray-400">
-                <td className={`${dataCell}`}>
-                  <Link href={`/music/${name}`}>to music {`${name}`}</Link>
-                </td>
-                <td className={`${smallDataCell}`}>{`${difficult}`}</td>
-                <td className={`${smallDataCell}`}>{`${time_sec}`}</td>
-                <td className={`${smallDataCell}`}>{`${bpm}`}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
+    <table className="table-auto w-full">
+      <thead>
+        <tr>
+          <th className={`${cell}`}>名前</th>
+          <th className={`${smallCell}`}>難易度</th>
+          <th className={`${smallCell}`}>再生時間</th>
+          <th className={`${smallCell}`}>BPM</th>
+        </tr>
+      </thead>
+      <tbody>
+        {musics.map(({ name, difficult, time_sec, bpm }) => {
+          return (
+            <tr key={name} className="odd:bg-gray-200 even:bg-gray-400">
+              <td className={`${dataCell}`}>
+                <Link href={`/music/${name}`}>to music {`${name}`}</Link>
+              </td>
+              <td className={`${smallDataCell}`}>{`${difficult}`}</td>
+              <td className={`${smallDataCell}`}>{`${time_sec}`}</td>
+              <td className={`${smallDataCell}`}>{`${bpm}`}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
   );
 }
 export default function Home() {
+  const c = "min-h-screen flex-col items-center justify-between p-12";
   return (
-    <main className="min-h-screen flex-col items-center justify-between p-24">
+    <main className="p-12">
       <p>this is Home</p>
       <div>
         <div>
@@ -91,17 +88,23 @@ export default function Home() {
 
         <nav>
           <ul className="flex">
-            <li>アイコンの場所</li>
-            <li className="mr-6">
-              <Search />
-            </li>
-            <li className="mr-6">
-              <Filter />
-            </li>
-            <li className="mr-6">
+            <li className="w-1/12 mr-3">アイコンの場所</li>
+
+            <li className="w-1/6 mr-3">
               <Sort />
             </li>
-            <li className="mr-6">メニューの場所</li>
+            <li className="w-1/2 mr-3">
+              <Search />
+            </li>
+            <li className="w-1/12 mr-3">
+              <Image
+                src="/menu.svg"
+                className="text-black"
+                width={120}
+                height={120}
+                priority
+              />
+            </li>
           </ul>
         </nav>
 
