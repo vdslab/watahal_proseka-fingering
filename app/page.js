@@ -2,15 +2,7 @@ import "./tailwind.css";
 import Image from "next/image";
 import Link from "next/link";
 import MusicSearch from "@/components/Search";
-
-const music_names = ["one", "two", "three", "four", "five"];
-const musics = [
-  { name: "one", difficult: 1, time_sec: 300, bpm: 200 },
-  { name: "two", difficult: 2, time_sec: 290, bpm: 210 },
-  { name: "three", difficult: 3, time_sec: 280, bpm: 220 },
-  { name: "four", difficult: 4, time_sec: 270, bpm: 230 },
-  { name: "five", difficult: 5, time_sec: 260, bpm: 240 },
-];
+import MusicTable from "@/components/MusicTable";
 
 function Sort() {
   return (
@@ -23,38 +15,6 @@ function Sort() {
   );
 }
 
-function MusicTable() {
-  const cell = "px-4 py-2";
-  const smallCell = `${cell} w-1/12`;
-  const dataCell = `border ${cell}`;
-  const smallDataCell = `border ${smallCell} text-center`;
-  return (
-    <table className="table-auto w-full">
-      <thead>
-        <tr>
-          <th className={`${cell}`}>名前</th>
-          <th className={`${smallCell}`}>難易度</th>
-          <th className={`${smallCell}`}>再生時間</th>
-          <th className={`${smallCell}`}>BPM</th>
-        </tr>
-      </thead>
-      <tbody>
-        {musics.map(({ name, difficult, time_sec, bpm }) => {
-          return (
-            <tr key={name} className="odd:bg-gray-200 even:bg-gray-400">
-              <td className={`${dataCell}`}>
-                <Link href={`/music/${name}`}>to music {`${name}`}</Link>
-              </td>
-              <td className={`${smallDataCell}`}>{`${difficult}`}</td>
-              <td className={`${smallDataCell}`}>{`${time_sec}`}</td>
-              <td className={`${smallDataCell}`}>{`${bpm}`}</td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
-  );
-}
 export default function Home() {
   const c = "min-h-screen flex-col items-center justify-between p-12";
   return (
