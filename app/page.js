@@ -1,6 +1,7 @@
 import "./tailwind.css";
 import Image from "next/image";
 import Link from "next/link";
+import MusicSearch from "@/components/Search";
 
 const music_names = ["one", "two", "three", "four", "five"];
 const musics = [
@@ -10,29 +11,6 @@ const musics = [
   { name: "four", difficult: 4, time_sec: 270, bpm: 230 },
   { name: "five", difficult: 5, time_sec: 260, bpm: 240 },
 ];
-
-function Search() {
-  return (
-    <div className="relative items-center">
-      <div className="absolute inset-0 p-1 pointer-events-none">
-        <Image
-          src="/search.svg"
-          className="w-1/12 h-1/12 text-gray-300"
-          width={120}
-          height={120}
-          priority
-        />
-      </div>
-      <form className="">
-        <input
-          className="w-full pl-6 border border-gray-300 rounded-lg"
-          type="text"
-          placeholder="曲名"
-        ></input>
-      </form>
-    </div>
-  );
-}
 
 function Sort() {
   return (
@@ -95,7 +73,7 @@ export default function Home() {
               <Sort />
             </li>
             <li className="w-3/4 mr-3">
-              <Search />
+              <MusicSearch />
             </li>
             <li className="w-1/12 mr-3">
               <Image
