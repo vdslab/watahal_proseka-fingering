@@ -10,6 +10,8 @@ import {
   TableHead,
 } from "@mui/material";
 
+import { styled } from "@mui/material/styles";
+
 const musics = [
   { name: "one", difficult: 1, time_sec: 300, bpm: 200 },
   { name: "two", difficult: 2, time_sec: 290, bpm: 210 },
@@ -17,6 +19,17 @@ const musics = [
   { name: "four", difficult: 4, time_sec: 270, bpm: 230 },
   { name: "five", difficult: 5, time_sec: 260, bpm: 240 },
 ];
+
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  "&:nth-of-type(odd)": {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  "&:last-child td, &:last-child th": {
+    border: 0,
+  },
+}));
+
 export default function MusicTable() {
   const cell = "px-4 py-2";
   const smallCell = `${cell} w-1/12`;
@@ -35,7 +48,7 @@ export default function MusicTable() {
         <TableBody>
           {musics.map((music) => {
             return (
-              <TableRow key={music.name}>
+              <StyledTableRow key={music.name}>
                 {/* {Object.values(music).map((value) => (
                     <TableCell>{value}</TableCell>
                   ))} */}
@@ -45,7 +58,7 @@ export default function MusicTable() {
                 <TableCell>{music.difficult}</TableCell>
                 <TableCell>{music.time_sec}</TableCell>
                 <TableCell>{music.bpm}</TableCell>
-              </TableRow>
+              </StyledTableRow>
             );
           })}
         </TableBody>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MusicSearch from "@/components/Search";
 import MusicTable from "@/components/MusicTable";
+import SideMenu from "@/components/SideMenu";
 
 function Sort() {
   return (
@@ -36,13 +37,7 @@ export default function Home() {
               <MusicSearch />
             </li>
             <li className="w-1/12 mr-3">
-              <Image
-                src="/menu.svg"
-                className="text-black"
-                width={120}
-                height={120}
-                priority
-              />
+              <SideMenu />
             </li>
           </ul>
         </nav>
