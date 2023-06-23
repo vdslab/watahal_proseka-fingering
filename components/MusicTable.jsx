@@ -13,11 +13,16 @@ import {
 import { styled } from "@mui/material/styles";
 
 const musics = [
-  { name: "one", difficult: 1, time_sec: 300, bpm: 200 },
-  { name: "two", difficult: 2, time_sec: 290, bpm: 210 },
-  { name: "three", difficult: 3, time_sec: 280, bpm: 220 },
-  { name: "four", difficult: 4, time_sec: 270, bpm: 230 },
-  { name: "five", difficult: 5, time_sec: 260, bpm: 240 },
+  { name: "砂の惑星", difficult: 27, time_sec: "2:11", bpm: 95 },
+  { name: "雨のペトラ", difficult: 29, time_sec: "2:01", bpm: 195 },
+  { name: "いーあるふぁんくらぶ", difficult: 28, time_sec: "2:01", bpm: 145 },
+  { name: "心予報", difficult: 28, time_sec: "2:09", bpm: 143 },
+  {
+    name: "ルカルカ★ナイトフィーバー",
+    difficult: 29,
+    time_sec: "2:12",
+    bpm: 160,
+  },
 ];
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
