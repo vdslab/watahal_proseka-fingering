@@ -20,12 +20,7 @@ export default function Home() {
   const c = "min-h-screen flex-col items-center justify-between p-12";
   return (
     <main className="p-12">
-      <p>this is Home</p>
       <div>
-        <div>
-          <Link href={"/"}>music link</Link>
-        </div>
-
         <nav>
           <ul className="flex">
             <li className="w-1/12 mr-3">アイコンの場所</li>
