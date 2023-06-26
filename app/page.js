@@ -4,6 +4,8 @@ import Link from "next/link";
 import MusicSearch from "@/components/Search";
 import MusicTable from "@/components/MusicTable";
 import SideMenu from "@/components/SideMenu";
+import Search from "./{feature}/Search";
+import ClusteringVis from "./{feature}/ClusteringVis";
 
 function Sort() {
   return (
@@ -19,7 +21,12 @@ function Sort() {
 export default function Home() {
   const c = "min-h-screen flex-col items-center justify-between p-12";
   return (
-    <main className="p-12">
+    <main className="p-12 bg-slate-200">
+      <div>
+        <ClusteringVis />
+        <Search />
+      </div>
+
       <div>
         <nav>
           <ul className="flex">
