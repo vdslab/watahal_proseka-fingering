@@ -1,3 +1,3 @@
 export default function RootLayout({ children }) {
-  return <main className="min-h-screen p-12">{children}</main>;
+  return <main className="max-h-screen max-w-screen p-3">{children}</main>;
 }
