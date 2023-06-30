@@ -12,18 +12,23 @@ import {
 
 import { styled } from "@mui/material/styles";
 
-const musics = [
-  { name: "砂の惑星", difficult: 27, time_sec: "2:11", bpm: 95 },
-  { name: "雨のペトラ", difficult: 29, time_sec: "2:01", bpm: 195 },
-  { name: "いーあるふぁんくらぶ", difficult: 28, time_sec: "2:01", bpm: 145 },
-  { name: "心予報", difficult: 28, time_sec: "2:09", bpm: 143 },
-  {
-    name: "ルカルカ★ナイトフィーバー",
-    difficult: 29,
-    time_sec: "2:12",
-    bpm: 160,
-  },
-];
+import musicdata from "../public/musicdata.json";
+
+// const musics = [
+//   { name: "砂の惑星", difficult: 27, time_sec: "2:11", bpm: 95 },
+//   { name: "雨のペトラ", difficult: 29, time_sec: "2:01", bpm: 195 },
+//   { name: "いーあるふぁんくらぶ", difficult: 28, time_sec: "2:01", bpm: 145 },
+//   { name: "心予報", difficult: 28, time_sec: "2:09", bpm: 143 },
+//   {
+//     name: "ルカルカ★ナイトフィーバー",
+//     difficult: 29,
+//     time_sec: "2:12",
+//     bpm: 160,
+//   },
+// ];
+
+const musics = musicdata.data;
+const musicheader = musicdata.header;
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   "&:nth-of-type(odd)": {
@@ -45,7 +50,7 @@ export default function MusicTable() {
       <Table>
         <TableHead>
           <TableRow>
-            {Object.keys(musics[0]).map((key) => (
+            {Object.values(musicheader).map((key) => (
               <TableCell key={key}>{key}</TableCell>
             ))}
           </TableRow>
