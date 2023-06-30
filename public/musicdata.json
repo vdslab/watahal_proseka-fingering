@@ -1,0 +1,25 @@
+{
+  "header": {
+    "name": "名前",
+    "difficult": "楽曲レベル",
+    "time_sec": "分:秒",
+    "bpm": "BPM"
+  },
+  "data": [
+    { "name": "砂の惑星", "difficult": 27, "time_sec": "2:11", "bpm": 95 },
+    { "name": "雨のペトラ", "difficult": 29, "time_sec": "2:01", "bpm": 195 },
+    {
+      "name": "いーあるふぁんくらぶ",
+      "difficult": 28,
+      "time_sec": "2:01",
+      "bpm": 145
+    },
+    { "name": "心予報", "difficult": 28, "time_sec": "2:09", "bpm": 143 },
+    {
+      "name": "ルカルカ★ナイトフィーバー",
+      "difficult": 29,
+      "time_sec": "2:12",
+      "bpm": 160
+    }
+  ]
+}
