@@ -43,9 +43,7 @@ export default function MainPage() {
               <li className="w-3/4 mr-3">
                 <MusicSearch />
               </li>
-              <li className="w-1/12 mr-3">
-                <SideMenu />
-              </li>
+              <li className="w-1/12 mr-3"></li>
             </ul>
           </nav>
 
