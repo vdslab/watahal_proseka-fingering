@@ -17,11 +17,12 @@ function Sort() {
 export default async function Home() {
   const c = "min-h-screen flex-col items-center justify-between p-12";
   const jsonFile = path.join(process.cwd(), "public", "musicdata.json");
-  const musicData = await fs.readFile(jsonFile, "utf8");
+  const musicsJsonContent = await fs.readFile(jsonFile, "utf8");
+  const musics = JSON.parse(musicsJsonContent);
 
   return (
     <main className="p-12 bg-slate-200">
-      <MainPage data={musicData} />
+      <MainPage data={musics.data} />
     </main>
   );
 }
