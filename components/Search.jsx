@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import {
   TextField,
   FormControl,
@@ -10,11 +10,21 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-export default function MusicSearch() {
+export default function MusicSearch({ handleChange }) {
+  const [inputValue, setInputValue] = useState("");
+  function handleChangeWrapper(e) {
+    if (handleChange !== undefined && handleChange !== null) {
+      handleChange(e);
+    }
+
+    setInputValue(e.target.value);
+  }
   return (
     <FormControl variant="standard">
       <InputLabel htmlFor="input-with-icon-adornment">曲名の検索</InputLabel>
       <Input
+        value={inputValue}
+        onChange={handleChangeWrapper}
         startAdornment={
           <InputAdornment position="start">
             <SearchIcon />

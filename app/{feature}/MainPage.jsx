@@ -15,7 +15,7 @@ function TabPanel({ value, index, children }) {
   );
 }
 
-export default function MainPage() {
+export default function MainPage({ data }) {
   const [currentTab, setCurrentTab] = useState(0);
   function handleTabChange(e, tabIndex) {
     // console.log(tabIndex);
@@ -32,7 +32,7 @@ export default function MainPage() {
       <TabPanel value={currentTab} index={0}>
         <div>
           <ClusteringVis />
-          <Search />
+          <Search data={data} />
         </div>
       </TabPanel>
 
@@ -41,7 +41,7 @@ export default function MainPage() {
           <nav>
             <ul className="flex">
               <li className="w-3/4 mr-3">
-                <MusicSearch />
+                <MusicSearch data={data} />
               </li>
               <li className="w-1/12 mr-3"></li>
             </ul>
