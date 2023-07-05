@@ -22,7 +22,7 @@ export default async function Home() {
 
   return (
     <main className="p-12 bg-slate-200">
-      <MainPage data={musics.data} />
+      <MainPage musics={musics} />
     </main>
   );
 }
