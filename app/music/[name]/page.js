@@ -2,6 +2,7 @@ import Link from "next/link";
 import SideMenu from "@/components/SideMenu";
 import TimeSlider from "./{feature}/TimeSlider";
 import VideoManagerButtons from "./{feature}/VideoManagerButtons";
+import FingeringVis from "./{feature}/FingeringVis";
 
 export default function Home({ params: { name } }) {
   const music_name = decodeURI(name);
@@ -22,6 +23,9 @@ export default function Home({ params: { name } }) {
       </div>
       <div>
         <VideoManagerButtons />
+      </div>
+      <div>
+        <FingeringVis />
       </div>
       <iframe
         // width="100%"
