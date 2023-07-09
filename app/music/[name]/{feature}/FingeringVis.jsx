@@ -1,6 +1,7 @@
 "use client";
 import Drawer from "@mui/material/Drawer";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function FingeringVis() {
   const [open, setOpen] = useState(false);
@@ -9,20 +10,25 @@ export default function FingeringVis() {
   }
   return (
     <>
-      <p>fingering vis</p>
       <button
-        onClick={() => {
-          setOpen(true);
+        onClick={(e) => {
+          setOpen(!open);
         }}
       >
         Drawer
       </button>
-      <Drawer anchor="right" open={open} onClose={handleToggle}>
-        <ul>
-          <li>test</li>
-          <li>test2</li>
-          <li>test4</li>
-        </ul>
+      <Drawer
+        PaperProps={{
+          sx: {
+            width: "40%",
+          },
+        }}
+        anchor="right"
+        variant="persistent"
+        open={open}
+        onClose={handleToggle}
+      >
+        <Image src={"/fingering.png"} alt="仮の運指表示" fill={true} />
       </Drawer>
     </>
   );
