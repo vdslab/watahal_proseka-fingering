@@ -1,8 +1,5 @@
-import Link from "next/link";
 import SideMenu from "@/components/SideMenu";
-import TimeSlider from "./{feature}/TimeSlider";
-import VideoManagerButtons from "./{feature}/VideoManagerButtons";
-import FingeringVis from "./{feature}/FingeringVis";
+import Content from "./{feature}/Content";
 
 export default function Home({ params: { name } }) {
   const music_name = decodeURI(name);
@@ -18,23 +15,7 @@ export default function Home({ params: { name } }) {
           <SideMenu />
         </div>
       </div>
-      <div className="m-1 px-3">
-        <TimeSlider max={300} />
-      </div>
-      <div>
-        <VideoManagerButtons />
-      </div>
-      <div>
-        <FingeringVis />
-      </div>
-      <iframe
-        // width="100%"
-        height="100%"
-        src="https://www.youtube.com/embed/lIfHd0bEDNQ"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
+      <Content />
     </>
   );
 }
