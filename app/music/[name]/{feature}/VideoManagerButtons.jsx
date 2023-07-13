@@ -6,13 +6,20 @@ import SwapHorizRoundedIcon from "@mui/icons-material/SwapHorizRounded";
 import PlayCircleFilledWhiteRoundedIcon from "@mui/icons-material/PlayCircleFilledWhiteRounded";
 import YouTube, { YouTubePlayer } from "react-youtube";
 
-export default function VideoManagerButtons({ YTPlayer }) {
+export default function VideoManagerButtons({ YTPlayer, setPlaybackRate }) {
   function videoPlayer(e) {
     const state = YTPlayer.getPlayerState();
     if (state == YouTube.PlayerState.PAUSED) {
       YTPlayer.playVideo();
     } else if (state == YouTube.PlayerState.PLAYING) {
       YTPlayer.pauseVideo();
+    }
+  }
+
+  function handlePlaybackRate(e) {
+    const speed = parseFloat(e.target.value);
+    if (speed != NaN) {
+      setPlaybackRate(speed);
     }
   }
 
@@ -28,9 +35,15 @@ export default function VideoManagerButtons({ YTPlayer }) {
       </IconButton>
       {/*  */}
       <span>
-        <Button variant="outlined">0.5</Button>
-        <Button variant="outlined">0.75</Button>
-        <Button variant="outlined">1</Button>
+        <Button variant="outlined" value={0.5} onClick={handlePlaybackRate}>
+          0.5
+        </Button>
+        <Button variant="outlined" value={0.75} onClick={handlePlaybackRate}>
+          0.75
+        </Button>
+        <Button variant="outlined" value={1} onClick={handlePlaybackRate}>
+          1
+        </Button>
       </span>
     </div>
   );

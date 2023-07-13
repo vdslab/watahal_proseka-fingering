@@ -1,25 +1,36 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TimeSlider from "./TimeSlider";
 import VideoManagerButtons from "./VideoManagerButtons";
 import YouTube, { YouTubePlayer } from "react-youtube";
 
 export default function VideoPlayer() {
   const [YTPlayer, setYTPlayer] = useState(null);
+
   function handleReady(e) {
     setYTPlayer(e.target);
-    console.log(e.target);
   }
+
+  function setPlaybackRate(value) {
+    YTPlayer.setPlaybackRate(value);
+  }
+
   return (
     <>
       <div>
         <TimeSlider max={300} />
       </div>
       <div>
-        <VideoManagerButtons YTPlayer={YTPlayer} />
+        <VideoManagerButtons {...{ YTPlayer, setPlaybackRate }} />
       </div>
       {/* url: https://www.youtube.com/embed/lIfHd0bEDNQ */}
-      <YouTube videoId="lIfHd0bEDNQ" onReady={handleReady} />
+      <YouTube
+        videoId="lIfHd0bEDNQ"
+        onReady={handleReady}
+        onPlaybackRateChange={() => {
+          console.log("change rate");
+        }}
+      />
       {/* <iframe
         // width="100%"
         height="100%"
