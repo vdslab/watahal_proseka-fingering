@@ -6,20 +6,40 @@
     "bpm": "BPM"
   },
   "data": [
-    { "name": "砂の惑星", "difficult": 27, "time_sec": "2:11", "bpm": 95 },
-    { "name": "雨のペトラ", "difficult": 29, "time_sec": "2:01", "bpm": 195 },
+    {
+      "name": "砂の惑星",
+      "difficult": 27,
+      "time_sec": "2:11",
+      "bpm": 95,
+      "ruby": "すなのわくせい"
+    },
+    {
+      "name": "雨とペトラ",
+      "difficult": 29,
+      "time_sec": "2:01",
+      "bpm": 195,
+      "ruby": "あめとぺとら"
+    },
     {
       "name": "いーあるふぁんくらぶ",
       "difficult": 28,
       "time_sec": "2:01",
-      "bpm": 145
+      "bpm": 145,
+      "ruby": "いーあるふぁんくらぶ"
     },
-    { "name": "心予報", "difficult": 28, "time_sec": "2:09", "bpm": 143 },
+    {
+      "name": "心予報",
+      "difficult": 28,
+      "time_sec": "2:09",
+      "bpm": 143,
+      "ruby": "こころよほう"
+    },
     {
       "name": "ルカルカ★ナイトフィーバー",
       "difficult": 29,
       "time_sec": "2:12",
-      "bpm": 160
+      "bpm": 160,
+      "ruby": "るかるかないとふぃーばー"
     }
   ]
 }
