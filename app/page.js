@@ -27,7 +27,8 @@ async function readJSON(filePath, rootDir = null) {
 
 async function readCSV(filePath, rootDir = null, parseFunc) {
   const content = await readFileContent(filePath, rootDir);
-  return content.split("\r\n").map((value) => parseFunc(value));
+  const rows = content.split("\r\n");
+  return rows.map((row) => row.split(",").map((value) => parseFunc(value)));
 }
 
 export default async function Home() {
@@ -37,17 +38,24 @@ export default async function Home() {
   const musics = await readJSON("musicdata.json", publicDir);
 
   const csvDir = path.join(publicDir, "csv");
-  const clusteringLabels = await readCSV(
+  const clusteringLabelsNoFlat = await readCSV(
     "clustering_label_data.csv",
     csvDir,
     parseInt
   );
+  const clusteringLabels = clusteringLabelsNoFlat.flat();
 
-  const clusteringPoints = await readCSV(
+  const clusteringPositions = await readCSV(
     "clustering_point_data.csv",
     csvDir,
     parseFloat
   );
+  const clusteringPoints = clusteringPositions.map((value) => ({
+    x: value[0],
+    y: value[1],
+  }));
+  // console.log(clusteringLabels);
+  // console.log(clusteringPoints);
 
   return (
     <main className="p-12 bg-slate-200">
