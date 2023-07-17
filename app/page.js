@@ -16,7 +16,13 @@ function Sort() {
 
 export default async function Home() {
   const c = "min-h-screen flex-col items-center justify-between p-12";
-  const jsonFile = path.join(process.cwd(), "public", "musicdata.json");
+  const jsonFile = path.join(
+    process.cwd(),
+    "public",
+    "json",
+    "detail",
+    "data.json"
+  );
   const musicsJsonContent = await fs.readFile(jsonFile, "utf8");
   const musics = JSON.parse(musicsJsonContent);
 
