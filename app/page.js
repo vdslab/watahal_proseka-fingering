@@ -16,13 +16,23 @@ function Sort() {
 
 export default async function Home() {
   const c = "min-h-screen flex-col items-center justify-between p-12";
-  const jsonFile = path.join(process.cwd(), "public", "musicdata.json");
-  const musicsJsonContent = await fs.readFile(jsonFile, "utf8");
+  const publicDir = path.join(process.cwd(), "public");
+
+  const musicJsonFile = path.join(publicDir, "musicdata.json");
+  const musicsJsonContent = await fs.readFile(musicJsonFile, "utf8");
   const musics = JSON.parse(musicsJsonContent);
+
+  const clusteringLabelJson = path.join(publicDir, "clustering_label_data.csv");
+  const clusteringLabelContent = await fs.readFile(clusteringLabelJson, "utf8");
+  const clusteringLabels = JSON.parse(clusteringLabelContent);
+
+  const clusteringPointJson = path.join(publicDir, "clustering_point_data.csv");
+  const clusteringPointContent = await fs.readFile(clusteringPointJson, "utf8");
+  const clusteringPoints = JSON.parse(clusteringPointContent);
 
   return (
     <main className="p-12 bg-slate-200">
-      <MainPage musics={musics} />
+      <MainPage {...{ musics, clusteringLabels, clusteringPoints }} />
     </main>
   );
 }

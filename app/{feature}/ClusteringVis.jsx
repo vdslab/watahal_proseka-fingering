@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function ClusteringVis() {
+export default function ClusteringVis({ clusteringLabels, clusteringPoints }) {
   return (
     <div className="p-3">
       <Image
