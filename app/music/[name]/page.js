@@ -1,4 +1,3 @@
-import SideMenu from "@/components/SideMenu";
 import Content from "./{feature}/Content";
 
 export default function Home({ params: { name } }) {
@@ -11,9 +10,7 @@ export default function Home({ params: { name } }) {
             <p>{music_name}</p>
           </div>
         </div>
-        <div className="w-1/12">
-          <SideMenu />
-        </div>
+        <div className="w-1/12"></div>
       </div>
       <Content />
     </>

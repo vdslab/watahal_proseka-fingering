@@ -4,11 +4,14 @@ import Link from "next/link";
 import {
   TableContainer,
   Table,
-  TableCell,
   TableBody,
   TableRow,
   TableHead,
+  Button,
 } from "@mui/material";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import TableCell, { tableCellClasses } from "@mui/material/TableCell";
+import IconButton from "@mui/material/IconButton";
 
 import { styled } from "@mui/material/styles";
 
@@ -22,6 +25,20 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+  },
+}));
+
+function onclick(event) {
+  console.log(event.currentTarget.value);
+}
+
 export default function MusicTable({ data, header }) {
   const cell = "px-4 py-2";
   const smallCell = `${cell} w-1/12`;
@@ -30,13 +47,34 @@ export default function MusicTable({ data, header }) {
   return (
     <TableContainer>
       <Table>
-        {/* <TableHead>
+        <TableHead>
           <TableRow>
-            {Object.values(header).map((key) => (
-              <TableCell key={key}>{key}</TableCell>
-            ))}
+            <StyledTableCell>
+              曲名
+              <IconButton onClick={onclick} value="name">
+                <ArrowDropDownIcon color="primary" fontSize="large" />
+              </IconButton>
+            </StyledTableCell>
+            <StyledTableCell>
+              難易度
+              <IconButton onClick={onclick} value="level">
+                <ArrowDropDownIcon color="primary" fontSize="large" />
+              </IconButton>
+            </StyledTableCell>
+            <StyledTableCell>
+              曲の長さ
+              <IconButton onClick={onclick} value="sec">
+                <ArrowDropDownIcon color="primary" fontSize="large" />
+              </IconButton>
+            </StyledTableCell>
+            <StyledTableCell>
+              BPM
+              <IconButton onClick={onclick} value="bpm">
+                <ArrowDropDownIcon color="primary" fontSize="large" />
+              </IconButton>
+            </StyledTableCell>
           </TableRow>
-        </TableHead> */}
+        </TableHead>
         <TableBody>
           {data.map(({ name, level, sec, bpm }) => {
             return (

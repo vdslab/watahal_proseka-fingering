@@ -3,6 +3,8 @@ import Drawer from "@mui/material/Drawer";
 import React, { useState } from "react";
 import VideoPlayer from "./VideoPlayer";
 import FingeringVis from "./FingeringVis";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 import { styled, useTheme } from "@mui/material/styles";
 const drawerWidth = 240;
 
@@ -34,13 +36,16 @@ export default function Content() {
   return (
     <div className="flex">
       <Main open={open}>
-        <button
-          onClick={(e) => {
-            setOpen(!open);
-          }}
-        >
-          Drawer
-        </button>
+        <Stack spacing={2} direction="row">
+          <Button
+            variant="contained"
+            onClick={(e) => {
+              setOpen(!open);
+            }}
+          >
+            どろわー
+          </Button>
+        </Stack>
         <div>
           <VideoPlayer />
         </div>
