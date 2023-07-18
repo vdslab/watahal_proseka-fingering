@@ -37,7 +37,7 @@ export default function MainPage({
       <TabPanel value={currentTab} index={0}>
         <div>
           <ClusteringVis {...{ clusteringLabels, clusteringPoints }} />
-          <Search data={musics.data} />
+          <Search data={musics} />
         </div>
       </TabPanel>
 
