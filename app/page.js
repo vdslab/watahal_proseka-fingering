@@ -35,7 +35,9 @@ export default async function Home() {
   const c = "min-h-screen flex-col items-center justify-between p-12";
   const publicDir = path.join(process.cwd(), "public");
 
-  const musics = await readJSON("musicdata.json", publicDir);
+  const jsonDir = path.join(publicDir, "json");
+  const musicDetailPath = path.join(jsonDir, "detail");
+  const musics = await readJSON("data.json", musicDetailPath);
 
   const csvDir = path.join(publicDir, "csv");
   const clusteringLabelsNoFlat = await readCSV(

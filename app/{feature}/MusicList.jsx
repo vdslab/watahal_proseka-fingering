@@ -5,18 +5,18 @@ import MusicTable from "@/components/MusicTable";
 import searchFilter from "./searchFilter";
 
 export default function MusicList({ musics }) {
-  const [showedData, setShowedData] = useState(musics.data);
+  const [showedData, setShowedData] = useState(musics);
   function handleChange(e) {
-    const filtered = searchFilter(musics.data, e.target.value);
+    const filtered = searchFilter(musics, e.target.value);
     const isEmpty = JSON.stringify(filtered) == JSON.stringify([]);
-    setShowedData(isEmpty ? musics.data : filtered);
+    setShowedData(isEmpty ? musics : filtered);
   }
   return (
     <>
       <nav>
         <ul className="flex">
           <li className="w-3/4 mr-3">
-            <MusicSearch data={musics.data} handleChange={handleChange} />
+            <MusicSearch data={musics} handleChange={handleChange} />
           </li>
           <li className="w-1/12 mr-3"></li>
         </ul>

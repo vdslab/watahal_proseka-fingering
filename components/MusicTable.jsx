@@ -30,15 +30,15 @@ export default function MusicTable({ data, header }) {
   return (
     <TableContainer>
       <Table>
-        <TableHead>
+        {/* <TableHead>
           <TableRow>
             {Object.values(header).map((key) => (
               <TableCell key={key}>{key}</TableCell>
             ))}
           </TableRow>
-        </TableHead>
+        </TableHead> */}
         <TableBody>
-          {data.map(({ name, difficult, time_sec, bpm }) => {
+          {data.map(({ name, level, sec, bpm }) => {
             return (
               <TableRow key={name} hover>
                 {/* {Object.values(music).map((value) => (
@@ -47,8 +47,8 @@ export default function MusicTable({ data, header }) {
                 <TableCell>
                   <Link href={`/music/${name}`}>{name}</Link>
                 </TableCell>
-                <TableCell>{difficult}</TableCell>
-                <TableCell>{time_sec}</TableCell>
+                <TableCell>{level}</TableCell>
+                <TableCell>{sec}</TableCell>
                 <TableCell>{bpm}</TableCell>
               </TableRow>
             );

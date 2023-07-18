@@ -27,8 +27,8 @@ export default function Imformation() {
 
   return (
     <div>
-      <IconButton onClick={handleOpen}>
-        <InfoOutlinedIcon color="primary" fontSize="large" />
+      <IconButton onClick={handleOpen} size="large">
+        <InfoOutlinedIcon color="inherit" fontSize="large" />
       </IconButton>
 
       <Modal
