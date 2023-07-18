@@ -1,9 +1,10 @@
 "use client";
 import Drawer from "@mui/material/Drawer";
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import VideoPlayer from "./VideoPlayer";
 import FingeringVis from "./FingeringVis";
 import { styled, useTheme } from "@mui/material/styles";
+import Loading from "../loading";
 const drawerWidth = 240;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -41,9 +42,9 @@ export default function Content() {
         >
           Drawer
         </button>
-        <div>
+        <Suspense fallback={Loading}>
           <VideoPlayer />
-        </div>
+        </Suspense>
         <Drawer
           sx={{
             width: drawerWidth,
