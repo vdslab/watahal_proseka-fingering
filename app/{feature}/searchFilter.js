@@ -11,6 +11,6 @@ export default function searchFilter(data, searchStr) {
     : data.filter(
         ({ name, ruby }) =>
           name.indexOf(searchStr) !== -1 ||
-          hiraToKana(ruby).indexOf(hiraToKana(searchStr)) !== -1
+          (ruby && hiraToKana(ruby).indexOf(hiraToKana(searchStr)) !== -1)
       );
 }
