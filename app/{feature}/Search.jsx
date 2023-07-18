@@ -2,29 +2,12 @@
 import MusicSearch from "@/components/Search";
 import { Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
-
-function hiraToKana(str) {
-  return str?.replace(/[\u3041-\u3096]/g, function (match) {
-    var chr = match.charCodeAt(0) + 0x60;
-    return String.fromCharCode(chr);
-  });
-}
+import searchFilter from "./searchFilter";
 
 export default function Search({ data }) {
   const [musics, setMusics] = useState([]);
   function handleChange(e) {
-    const searchStr = e.target.value;
-    if (searchStr == "") {
-      setMusics([]);
-      return;
-    }
-
-    const filtered = data.filter(({ name, ruby }) => {
-      const isInclude =
-        name.indexOf(searchStr) !== -1 ||
-        (ruby && hiraToKana(ruby).indexOf(hiraToKana(searchStr)));
-      return isInclude;
-    });
+    const filtered = searchFilter(data, e.target.value);
     setMusics(filtered);
   }
   return (
