@@ -5,6 +5,7 @@ import VideoPlayer from "./VideoPlayer";
 import FingeringVis from "./FingeringVis";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import PanToolAltIcon from "@mui/icons-material/PanToolAlt";
 import { styled, useTheme } from "@mui/material/styles";
 const drawerWidth = 240;
 
@@ -38,12 +39,13 @@ export default function Content() {
       <Main open={open}>
         <Stack spacing={2} direction="row">
           <Button
-            variant="contained"
+            variant="outlined"
             onClick={(e) => {
               setOpen(!open);
             }}
+            startIcon={<PanToolAltIcon />}
           >
-            どろわー
+            運指表示
           </Button>
         </Stack>
         <div>

@@ -1,6 +1,5 @@
 "use client";
 import * as React from "react";
-import Link from "next/link";
 import {
   TableContainer,
   Table,
@@ -8,10 +7,12 @@ import {
   TableRow,
   TableHead,
   Button,
+  IconButton,
 } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
-import IconButton from "@mui/material/IconButton";
+
+import { useRouter } from "next/navigation";
 
 import { styled } from "@mui/material/styles";
 
@@ -35,15 +36,13 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   },
 }));
 
-function onclick(event) {
-  console.log(event.currentTarget.value);
-}
-
 export default function MusicTable({ data, header }) {
   const cell = "px-4 py-2";
   const smallCell = `${cell} w-1/12`;
   const dataCell = `border ${cell}`;
   const smallDataCell = `border ${smallCell} text-center`;
+
+  const router = useRouter();
   return (
     <TableContainer>
       <Table>
@@ -78,13 +77,15 @@ export default function MusicTable({ data, header }) {
         <TableBody>
           {data.map(({ name, level, sec, bpm }) => {
             return (
-              <TableRow key={name} hover>
+              <TableRow
+                key={name}
+                hover
+                onClick={() => router.push(`/music/${name}`)}
+              >
                 {/* {Object.values(music).map((value) => (
                     <TableCell>{value}</TableCell>
                   ))} */}
-                <TableCell>
-                  <Link href={`/music/${name}`}>{name}</Link>
-                </TableCell>
+                <TableCell>{name}</TableCell>
                 <TableCell>{level}</TableCell>
                 <TableCell>{sec}</TableCell>
                 <TableCell>{bpm}</TableCell>
