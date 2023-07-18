@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import { useState } from "react";
 import {
   TableContainer,
   Table,
@@ -42,6 +43,24 @@ export default function MusicTable({ data, header }) {
   const dataCell = `border ${cell}`;
   const smallDataCell = `border ${smallCell} text-center`;
 
+  const [showdata, setShowdata] = useState(data);
+
+  function onclick(event) {
+    console.log(event.currentTarget.value);
+    const value = event.currentTarget.value;
+    setShowdata([
+      ...showdata.sort((a, b) => {
+        if (a[`${value}`] < b[`${value}`]) {
+          return -1;
+        } else if (a[`${value}`] > b[`${value}`]) {
+          return 1;
+        } else {
+          return 0;
+        }
+      }),
+    ]);
+  }
+
   const router = useRouter();
   return (
     <TableContainer>
@@ -75,7 +94,7 @@ export default function MusicTable({ data, header }) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map(({ name, level, sec, bpm }) => {
+          {showdata.map(({ name, level, sec, bpm }) => {
             return (
               <TableRow
                 key={name}
