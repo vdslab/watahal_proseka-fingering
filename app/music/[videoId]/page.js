@@ -1,8 +1,8 @@
 import Content from "./{feature}/Content";
 
-export default function Home({ params: { name } }) {
-  const videoid = decodeURI(name);
-  console.log(typeof music_name);
+export default function Home({ params: { videoId } }) {
+  const id = decodeURI(videoId);
+  console.log(typeof videoId);
   return (
     <>
       {/* <div className="flex flex-row items-center">
@@ -13,7 +13,7 @@ export default function Home({ params: { name } }) {
         </div>
         <div className="w-1/12"></div>
       </div> */}
-      <Content {...{ videoid }} />
+      <Content {...{ videoId: id }} />
     </>
   );
 }

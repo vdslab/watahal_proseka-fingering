@@ -29,7 +29,7 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
   })
 );
 
-export default function Content({ videoid }) {
+export default function Content({ videoId }) {
   const [open, setOpen] = useState(false);
   function handleToggle(e) {
     setOpen(false);
@@ -50,7 +50,7 @@ export default function Content({ videoid }) {
           </Button>
         </Stack>
         <Suspense>
-          <VideoPlayer {...{ videoid }} />
+          <VideoPlayer {...{ videoId }} />
         </Suspense>
         <Drawer
           sx={{
