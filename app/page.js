@@ -52,10 +52,12 @@ export default async function Home() {
     csvDir,
     parseFloat
   );
-  const clusteringPoints = clusteringPositions.map((value) => ({
-    x: value[0],
-    y: value[1],
-  }));
+  const clusteringPoints = clusteringPositions
+    .map((value) => ({
+      x: value[0],
+      y: value[1],
+    }))
+    .filter(({ x, y }) => (x ?? false) && (y ?? false));
   // console.log(clusteringLabels);
   // console.log(clusteringPoints);
 
