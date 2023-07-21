@@ -1,20 +1,9 @@
 "use client";
 import * as d3 from "d3";
-import Image from "next/image";
 
-export default function ClusteringVis({
-  clusteringData,
-}) {
+export default function ClusteringVis({ clusteringData }) {
   const width = 400;
   const height = 400;
-  var n = 500; //データ数
-  var values = new Array(n);
-  for (var i = 0; i < n; ++i) {
-    values[i] = {
-      x: d3.randomNormal(width / 2, width / 7)(),
-      y: d3.randomNormal(height / 2, height / 7)(),
-    };
-  }
 
   const xScale = d3
     .scaleLinear()

@@ -34,10 +34,7 @@ async function readCSV(filePath, rootDir = null, parseFunc, header = false) {
   }
   const head = csvData[0];
   const data = csvData.slice(1);
-  // console.log(head);
-  // console.log(data[0]);
 
-  // console.log(csvData);
   return data.map((row) =>
     row.reduce((obj, value, i) => ({ ...obj, [head[i]]: parseFunc(value) }), {})
   );
