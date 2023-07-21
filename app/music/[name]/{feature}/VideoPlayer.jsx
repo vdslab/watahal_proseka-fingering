@@ -4,7 +4,7 @@ import TimeSlider from "./TimeSlider";
 import VideoManagerButtons from "./VideoManagerButtons";
 import YouTube, { YouTubePlayer } from "react-youtube";
 
-export default function VideoPlayer() {
+export default function VideoPlayer({ videoid }) {
   const [YTPlayer, setYTPlayer] = useState(null);
   const [playBtn, setPlayBtn] = useState(YouTube.PlayerState.UNSTARTED);
 
@@ -26,7 +26,7 @@ export default function VideoPlayer() {
       </div>
       {/* url: https://www.youtube.com/embed/lIfHd0bEDNQ */}
       <YouTube
-        videoId="lIfHd0bEDNQ"
+        videoId={videoid}
         onReady={handleReady}
         onPlaybackRateChange={() => {
           console.log("change rate");

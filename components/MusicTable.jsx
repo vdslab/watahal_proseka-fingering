@@ -94,12 +94,12 @@ export default function MusicTable({ data, header }) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {showdata.map(({ name, level, sec, bpm }) => {
+          {showdata.map(({ name, level, sec, bpm, videoid }) => {
             return (
               <TableRow
                 key={name}
                 hover
-                onClick={() => router.push(`/music/${name}`)}
+                onClick={() => router.push(`/music/${videoid}`)}
               >
                 {/* {Object.values(music).map((value) => (
                     <TableCell>{value}</TableCell>
