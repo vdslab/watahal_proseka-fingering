@@ -6,6 +6,7 @@ import YouTube, { YouTubePlayer } from "react-youtube";
 
 export default function VideoPlayer() {
   const [YTPlayer, setYTPlayer] = useState(null);
+  const [playBtn, setPlayBtn] = useState(YouTube.PlayerState.UNSTARTED);
 
   function handleReady(e) {
     setYTPlayer(e.target);
@@ -21,7 +22,7 @@ export default function VideoPlayer() {
         <TimeSlider max={300} />
       </div>
       <div>
-        <VideoManagerButtons {...{ YTPlayer, setPlaybackRate }} />
+        <VideoManagerButtons {...{ YTPlayer, setPlaybackRate, playBtn }} />
       </div>
       {/* url: https://www.youtube.com/embed/lIfHd0bEDNQ */}
       <YouTube
@@ -29,6 +30,9 @@ export default function VideoPlayer() {
         onReady={handleReady}
         onPlaybackRateChange={() => {
           console.log("change rate");
+        }}
+        onStateChange={() => {
+          setPlayBtn(YTPlayer.getPlayerState());
         }}
       />
       {/* <iframe
