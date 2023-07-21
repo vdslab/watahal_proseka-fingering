@@ -1,12 +1,13 @@
 "use client";
 import Drawer from "@mui/material/Drawer";
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import VideoPlayer from "./VideoPlayer";
 import FingeringVis from "./FingeringVis";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import PanToolAltIcon from "@mui/icons-material/PanToolAlt";
 import { styled, useTheme } from "@mui/material/styles";
+import Loading from "../loading";
 const drawerWidth = 240;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -48,9 +49,9 @@ export default function Content() {
             運指表示
           </Button>
         </Stack>
-        <div>
+        <Suspense>
           <VideoPlayer />
-        </div>
+        </Suspense>
         <Drawer
           sx={{
             width: drawerWidth,
