@@ -25,10 +25,19 @@ async function readJSON(filePath, rootDir = null) {
   return JSON.parse(content);
 }
 
-async function readCSV(filePath, rootDir = null, parseFunc) {
+async function readCSV(filePath, rootDir = null, parseFunc, header = false) {
   const content = await readFileContent(filePath, rootDir);
   const rows = content.split("\r\n");
-  return rows.map((row) => row.split(",").map((value) => parseFunc(value)));
+  const csvData = rows.map((row) => row.split(","));
+  if (!header) {
+    return csvData.map((row) => row.map((value) => parseFunc(value)));
+  }
+  const head = csvData[0];
+  const data = csvData.slice(1);
+
+  return data.map((row) =>
+    row.reduce((obj, value, i) => ({ ...obj, [head[i]]: parseFunc(value) }), {})
+  );
 }
 
 export default async function Home() {
@@ -40,28 +49,16 @@ export default async function Home() {
   const musics = await readJSON("data.json", musicDetailPath);
 
   const csvDir = path.join(publicDir, "csv");
-  const clusteringLabelsNoFlat = await readCSV(
-    "clustering_label_data.csv",
+  const clusteringData = await readCSV(
+    "clustering_data.csv",
     csvDir,
-    parseInt
+    parseFloat,
+    true
   );
-  const clusteringLabels = clusteringLabelsNoFlat.flat();
-
-  const clusteringPositions = await readCSV(
-    "clustering_point_data.csv",
-    csvDir,
-    parseFloat
-  );
-  const clusteringPoints = clusteringPositions.map((value) => ({
-    x: value[0],
-    y: value[1],
-  }));
-  // console.log(clusteringLabels);
-  // console.log(clusteringPoints);
 
   return (
     <main className="p-12 bg-slate-200">
-      <MainPage {...{ musics, clusteringLabels, clusteringPoints }} />
+      <MainPage {...{ musics, clusteringData }} />
     </main>
   );
 }
