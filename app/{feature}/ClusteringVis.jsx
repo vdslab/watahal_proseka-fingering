@@ -22,23 +22,13 @@ export default function ClusteringVis({ clusteringLabels, clusteringPoints }) {
 
   return (
     <div className="p-3">
-      <Image
-        src={"/cluster.png"}
-        alt="仮のクラスタリング結果"
-        className="w-full"
-        width={width}
-        height={height}
-      />
       <svg width={400} height={400}>
         <g>
           {clusteringPoints.map(({ x, y }, i) => {
             return (
               <circle
                 key={i}
-                transform={`translate(
-                                      ${xScale(x)},
-                                      ${yScale(y)}
-                                      )`}
+                transform={`translate(${xScale(x)},${yScale(y)})`}
                 fill={colorScale(clusteringLabels[i])}
                 r={3}
               />
