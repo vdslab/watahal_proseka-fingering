@@ -3,17 +3,18 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 
 import { useRouter } from "next/navigation";
 
 export default function Search({ data }) {
-  const names = data.map(({ id, name }) => {
-    return { key: id, label: name };
+  const names = data.map(({ id, name, videoid }) => {
+    return { key: id, label: name, ID: videoid };
   });
 
   const router = useRouter();
-  const [selectname, setSelectname] = useState(null);
+  const [selectID, setSelectID] = useState(null);
 
   return (
     <div className="flex">
@@ -33,7 +34,7 @@ export default function Search({ data }) {
           return <TextField {...params} label="曲" />;
         }}
         onChange={(event, value) => {
-          setSelectname(value.label);
+          setSelectID(value.ID);
         }}
       />
 
@@ -41,8 +42,8 @@ export default function Search({ data }) {
         variant="outlined"
         startIcon={<MusicNoteIcon />}
         onClick={() => {
-          if (selectname != null) {
-            router.push(`/music/${selectname}`);
+          if (selectID != null) {
+            router.push(`/music/${selectID}`);
           }
         }}
       >
