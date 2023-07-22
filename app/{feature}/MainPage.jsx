@@ -20,7 +20,7 @@ export default function MainPage({ musics, clusteringData }) {
   }
 
   return (
-    <div>
+    <>
       <Tabs value={currentTab} onChange={handleTabChange} variant="fullWidth">
         <Tab label="曲検索" />
         <Tab label="曲一覧" />
@@ -36,6 +36,6 @@ export default function MainPage({ musics, clusteringData }) {
       <TabPanel value={currentTab} index={1}>
         <MusicList musics={musics} />
       </TabPanel>
-    </div>
+    </>
   );
 }

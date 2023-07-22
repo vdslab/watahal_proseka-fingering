@@ -57,7 +57,7 @@ export default async function Home() {
   );
 
   return (
-    <main className="p-12 bg-slate-200">
+    <main className="p-12 bg-slate-200 max-h-screen">
       <MainPage {...{ musics, clusteringData }} />
     </main>
   );
