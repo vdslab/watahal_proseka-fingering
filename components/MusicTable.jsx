@@ -41,16 +41,9 @@ export default function MusicTable({ data }) {
   const dataCell = `border ${cell}`;
   const smallDataCell = `border ${smallCell} text-center`;
 
-  const [showdata, setShowdata] = useState(data);
-
-  useEffect(() => {
-    setShowdata(data);
-  }, [data]);
-
-  function onclick(event) {
-    const value = event.currentTarget.value;
-    setShowdata([
-      ...showdata.sort((a, b) => {
+  function sorttable(data, value) {
+    return [
+      ...data.sort((a, b) => {
         if (a[`${value}`] < b[`${value}`]) {
           return -1;
         } else if (a[`${value}`] > b[`${value}`]) {
@@ -59,7 +52,17 @@ export default function MusicTable({ data }) {
           return 0;
         }
       }),
-    ]);
+    ];
+  }
+  const [showdata, setShowdata] = useState(sorttable(data, "id"));
+
+  useEffect(() => {
+    setShowdata(data);
+  }, [data]);
+
+  function onclick(event) {
+    const value = event.currentTarget.value;
+    setShowdata(sorttable(showdata, value));
   }
 
   const router = useRouter();
