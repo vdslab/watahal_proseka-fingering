@@ -6,7 +6,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Imformation from "./Imformation";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
-import { cyan } from "@mui/material/colors";
 
 const theme = createTheme({
   palette: {
