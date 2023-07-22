@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MusicSearch from "@/components/Search";
 import MusicTable from "@/components/MusicTable";
 import searchFilter from "./searchFilter";
@@ -22,7 +22,7 @@ export default function MusicList({ musics }) {
         </ul>
       </nav>
 
-      <MusicTable data={showedData} header={musics.header} />
+      <MusicTable data={showedData} />
     </>
   );
 }

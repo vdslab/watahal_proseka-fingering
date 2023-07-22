@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import { Tabs, Tab } from "@mui/material";
 import Search from "./Search";
 import ClusteringVis from "./ClusteringVis";
-import MusicSearch from "@/components/Search";
-import MusicTable from "@/components/MusicTable";
-import SideMenu from "@/components/SideMenu";
 import MusicList from "./MusicList";
 
 function TabPanel({ value, index, children }) {
@@ -19,7 +16,6 @@ function TabPanel({ value, index, children }) {
 export default function MainPage({ musics, clusteringData }) {
   const [currentTab, setCurrentTab] = useState(0);
   function handleTabChange(e, tabIndex) {
-    // console.log(tabIndex);
     setCurrentTab(tabIndex);
   }
 

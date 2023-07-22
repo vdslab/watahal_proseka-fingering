@@ -6,7 +6,6 @@ import {
   TableBody,
   TableRow,
   TableHead,
-  Button,
   IconButton,
 } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -36,7 +35,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   },
 }));
 
-export default function MusicTable({ data, header }) {
+export default function MusicTable({ data }) {
   const cell = "px-4 py-2";
   const smallCell = `${cell} w-1/12`;
   const dataCell = `border ${cell}`;
@@ -49,7 +48,6 @@ export default function MusicTable({ data, header }) {
   }, [data]);
 
   function onclick(event) {
-    console.log(event.currentTarget.value);
     const value = event.currentTarget.value;
     setShowdata([
       ...showdata.sort((a, b) => {
@@ -104,9 +102,6 @@ export default function MusicTable({ data, header }) {
                 hover
                 onClick={() => router.push(`/music/${videoid}`)}
               >
-                {/* {Object.values(music).map((value) => (
-                    <TableCell>{value}</TableCell>
-                  ))} */}
                 <TableCell>{name}</TableCell>
                 <TableCell>{level}</TableCell>
                 <TableCell>{sec}</TableCell>
