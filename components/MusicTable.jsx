@@ -67,33 +67,51 @@ export default function MusicTable({ data }) {
 
   const router = useRouter();
   return (
-    <TableContainer>
-      <Table>
+    <TableContainer className="max-h-screen text-center">
+      <Table stickyHeader>
         <TableHead>
           <TableRow>
             <StyledTableCell>
-              曲名
-              <IconButton onClick={onclick} value="name">
-                <ArrowDropDownIcon color="primary" fontSize="large" />
-              </IconButton>
+              <div className="flex items-center justify-items-center">
+                <p>曲名</p>
+                <IconButton onClick={onclick} value="name">
+                  <ArrowDropDownIcon color="primary" fontSize="large" />
+                </IconButton>
+              </div>
             </StyledTableCell>
             <StyledTableCell>
-              難易度
-              <IconButton onClick={onclick} value="level">
-                <ArrowDropDownIcon color="primary" fontSize="large" />
-              </IconButton>
+              <div className="flex flex-row items-center justify-items-center">
+                <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
+                  難易度
+                </p>
+                <IconButton
+                  onClick={onclick}
+                  value="level"
+                  className="basis-1/4"
+                >
+                  <ArrowDropDownIcon color="primary" fontSize="large" />
+                </IconButton>
+              </div>
             </StyledTableCell>
             <StyledTableCell>
-              曲の長さ
-              <IconButton onClick={onclick} value="sec">
-                <ArrowDropDownIcon color="primary" fontSize="large" />
-              </IconButton>
+              <div className="flex flex-row items-center justify-items-center">
+                <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
+                  曲の長さ
+                </p>
+                <IconButton onClick={onclick} value="sec">
+                  <ArrowDropDownIcon color="primary" fontSize="large" />
+                </IconButton>
+              </div>
             </StyledTableCell>
             <StyledTableCell>
-              BPM
-              <IconButton onClick={onclick} value="bpm">
-                <ArrowDropDownIcon color="primary" fontSize="large" />
-              </IconButton>
+              <div className="flex flex-row items-center justify-items-center">
+                <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
+                  BPM
+                </p>
+                <IconButton onClick={onclick} value="bpm">
+                  <ArrowDropDownIcon color="primary" fontSize="large" />
+                </IconButton>
+              </div>
             </StyledTableCell>
           </TableRow>
         </TableHead>
@@ -106,9 +124,9 @@ export default function MusicTable({ data }) {
                 onClick={() => router.push(`/music/${videoid}`)}
               >
                 <TableCell>{name}</TableCell>
-                <TableCell>{level}</TableCell>
-                <TableCell>{sec}</TableCell>
-                <TableCell>{bpm}</TableCell>
+                <TableCell className="text-center">{level}</TableCell>
+                <TableCell className="text-center">{sec}</TableCell>
+                <TableCell className="text-center">{bpm}</TableCell>
               </TableRow>
             );
           })}
