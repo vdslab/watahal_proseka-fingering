@@ -71,6 +71,14 @@ export default function MusicTable({ data }) {
       <Table stickyHeader>
         <TableHead>
           <TableRow>
+            <StyledTableCell align="center">
+              <div>
+                難易度
+                <IconButton onClick={onclick} value="level">
+                  <ArrowDropDownIcon color="primary" fontSize="large" />
+                </IconButton>
+              </div>
+            </StyledTableCell>
             <StyledTableCell>
               <div className="flex items-center justify-items-center">
                 <p>曲名</p>
@@ -123,6 +131,7 @@ export default function MusicTable({ data }) {
                 hover
                 onClick={() => router.push(`/music/${videoid}`)}
               >
+                <TableCell align="center">{level}</TableCell>
                 <TableCell>{name}</TableCell>
                 <TableCell className="text-center">{level}</TableCell>
                 <TableCell className="text-center">{sec}</TableCell>
