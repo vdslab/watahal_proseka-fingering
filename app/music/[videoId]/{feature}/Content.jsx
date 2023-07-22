@@ -1,9 +1,13 @@
 "use client";
 import Drawer from "@mui/material/Drawer";
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import VideoPlayer from "./VideoPlayer";
 import FingeringVis from "./FingeringVis";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+import PanToolAltIcon from "@mui/icons-material/PanToolAlt";
 import { styled, useTheme } from "@mui/material/styles";
+import Loading from "../loading";
 const drawerWidth = 240;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -25,7 +29,7 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
   })
 );
 
-export default function Content() {
+export default function Content({ videoId }) {
   const [open, setOpen] = useState(false);
   function handleToggle(e) {
     setOpen(false);
@@ -34,16 +38,20 @@ export default function Content() {
   return (
     <div className="flex">
       <Main open={open}>
-        <button
-          onClick={(e) => {
-            setOpen(!open);
-          }}
-        >
-          Drawer
-        </button>
-        <div>
-          <VideoPlayer />
-        </div>
+        <Stack spacing={2} direction="row">
+          <Button
+            variant="outlined"
+            onClick={(e) => {
+              setOpen(!open);
+            }}
+            startIcon={<PanToolAltIcon />}
+          >
+            運指表示
+          </Button>
+        </Stack>
+        <Suspense>
+          <VideoPlayer {...{ videoId }} />
+        </Suspense>
         <Drawer
           sx={{
             width: drawerWidth,

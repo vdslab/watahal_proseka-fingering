@@ -4,8 +4,9 @@ import TimeSlider from "./TimeSlider";
 import VideoManagerButtons from "./VideoManagerButtons";
 import YouTube, { YouTubePlayer } from "react-youtube";
 
-export default function VideoPlayer() {
+export default function VideoPlayer({ videoId }) {
   const [YTPlayer, setYTPlayer] = useState(null);
+  const [playBtn, setPlayBtn] = useState(YouTube.PlayerState.UNSTARTED);
 
   function handleReady(e) {
     setYTPlayer(e.target);
@@ -21,24 +22,18 @@ export default function VideoPlayer() {
         <TimeSlider max={300} />
       </div>
       <div>
-        <VideoManagerButtons {...{ YTPlayer, setPlaybackRate }} />
+        <VideoManagerButtons {...{ YTPlayer, setPlaybackRate, playBtn }} />
       </div>
-      {/* url: https://www.youtube.com/embed/lIfHd0bEDNQ */}
       <YouTube
-        videoId="lIfHd0bEDNQ"
+        videoId={videoId}
         onReady={handleReady}
         onPlaybackRateChange={() => {
           console.log("change rate");
         }}
+        onStateChange={() => {
+          setPlayBtn(YTPlayer.getPlayerState());
+        }}
       />
-      {/* <iframe
-        // width="100%"
-        height="100%"
-        src="https://www.youtube.com/embed/lIfHd0bEDNQ"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe> */}
     </>
   );
 }

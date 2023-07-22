@@ -5,12 +5,18 @@ function hiraToKana(str) {
   });
 }
 
-export default function searchFilter(data, searchStr) {
+export default function searchFilter(data, str) {
+  const searchStr = str.trim().toLowerCase().replace(/\s+/g, "");
   return searchStr == ""
     ? []
-    : data.filter(
-        ({ name, ruby }) =>
-          name.indexOf(searchStr) !== -1 ||
-          hiraToKana(ruby).indexOf(hiraToKana(searchStr)) !== -1
-      );
+    : data.filter(({ name, ruby }) => {
+        const searchName = name.trim().toLowerCase().replace(/\s+/g, "");
+        const searchRuby = ruby?.trim().toLowerCase().replace(/\s+/g, "");
+        const matchName = searchName.indexOf(searchStr) !== -1;
+        const matchRuby =
+          searchRuby &&
+          hiraToKana(searchRuby).indexOf(hiraToKana(searchStr)) !== -1;
+
+        return matchName || matchRuby;
+      });
 }

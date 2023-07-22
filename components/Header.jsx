@@ -1,15 +1,42 @@
 "use client";
 
 import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 import Imformation from "./Imformation";
+import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import { cyan } from "@mui/material/colors";
+
+const theme = createTheme({
+  palette: {
+    primary: cyan,
+    secondary: { main: cyan["A400"] },
+  },
+});
+
+const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+  alignItems: "flex-center",
+  paddingTop: theme.spacing(1),
+  paddingBottom: theme.spacing(2),
+  // Override media queries injected by theme.mixins.toolbar
+  "@media all": {
+    minHeight: 60,
+    maxHeight: 300,
+  },
+}));
 
 export default function Header() {
   return (
-    <header className="flex">
-      <div className="w-10/12">プロセカ運指可視化</div>
-      <div className="w-2/12">
-        <Imformation />
-      </div>
-    </header>
+    <ThemeProvider theme={theme}>
+      <AppBar position="static" color="secondary" className="p-8">
+        <StyledToolbar>
+          <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
+            プロセカ運指可視化
+          </Typography>
+          <Imformation />
+        </StyledToolbar>
+      </AppBar>
+    </ThemeProvider>
   );
 }
