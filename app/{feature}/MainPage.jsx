@@ -16,10 +16,7 @@ function TabPanel({ value, index, children }) {
   );
 }
 
-export default function MainPage({
-  musics,
-  clusteringData,
-}) {
+export default function MainPage({ musics, clusteringData }) {
   const [currentTab, setCurrentTab] = useState(0);
   function handleTabChange(e, tabIndex) {
     // console.log(tabIndex);
@@ -28,16 +25,14 @@ export default function MainPage({
 
   return (
     <div>
-      <Tabs value={currentTab} onChange={handleTabChange}>
+      <Tabs value={currentTab} onChange={handleTabChange} variant="fullWidth">
         <Tab label="曲検索" />
         <Tab label="曲一覧" />
       </Tabs>
 
       <TabPanel value={currentTab} index={0}>
         <div>
-          <ClusteringVis
-            {...{  clusteringData }}
-          />
+          <ClusteringVis {...{ clusteringData }} />
           <Search data={musics} />
         </div>
       </TabPanel>
