@@ -28,7 +28,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 export default function Header() {
   return (
     <ThemeProvider theme={theme}>
-      <AppBar position="static" color="primary" className="p-8">
+      <AppBar position="static" color="primary" className="p-8 m-0">
         <StyledToolbar>
           <Typography
             color="secondary"
