@@ -10,8 +10,8 @@ import { cyan } from "@mui/material/colors";
 
 const theme = createTheme({
   palette: {
-    primary: cyan,
-    secondary: { main: cyan["A400"] },
+    primary: { main: "#acfef4" },
+    secondary: { main: "#464366" },
   },
 });
 
@@ -29,9 +29,14 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 export default function Header() {
   return (
     <ThemeProvider theme={theme}>
-      <AppBar position="static" color="secondary" className="p-8">
+      <AppBar position="static" color="primary" className="p-8">
         <StyledToolbar>
-          <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
+          <Typography
+            color="secondary"
+            variant="h3"
+            component="div"
+            sx={{ flexGrow: 1 }}
+          >
             プロセカ運指可視化
           </Typography>
           <Imformation />

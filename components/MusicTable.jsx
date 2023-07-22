@@ -13,7 +13,14 @@ import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 
 import { useRouter } from "next/navigation";
 
-import { styled } from "@mui/material/styles";
+import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+
+const theme = createTheme({
+  palette: {
+    primary: { main: "#acfef4" },
+    secondary: { main: "#464366" },
+  },
+});
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   "&:nth-of-type(odd)": {
@@ -27,7 +34,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: theme.palette.secondary.main,
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -69,60 +76,62 @@ export default function MusicTable({ data }) {
   return (
     <TableContainer className="max-h-screen text-center">
       <Table stickyHeader>
-        <TableHead>
-          <TableRow>
-            <StyledTableCell align="center">
-              <div>
-                難易度
-                <IconButton onClick={onclick} value="level">
-                  <ArrowDropDownIcon color="primary" fontSize="large" />
-                </IconButton>
-              </div>
-            </StyledTableCell>
-            <StyledTableCell>
-              <div className="flex items-center justify-items-center">
-                <p>曲名</p>
-                <IconButton onClick={onclick} value="name">
-                  <ArrowDropDownIcon color="primary" fontSize="large" />
-                </IconButton>
-              </div>
-            </StyledTableCell>
-            <StyledTableCell>
-              <div className="flex flex-row items-center justify-items-center">
-                <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
+        <ThemeProvider theme={theme}>
+          <TableHead color="secondary">
+            <TableRow>
+              <StyledTableCell align="center">
+                <div>
                   難易度
-                </p>
-                <IconButton
-                  onClick={onclick}
-                  value="level"
-                  className="basis-1/4"
-                >
-                  <ArrowDropDownIcon color="primary" fontSize="large" />
-                </IconButton>
-              </div>
-            </StyledTableCell>
-            <StyledTableCell>
-              <div className="flex flex-row items-center justify-items-center">
-                <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
-                  曲の長さ
-                </p>
-                <IconButton onClick={onclick} value="sec">
-                  <ArrowDropDownIcon color="primary" fontSize="large" />
-                </IconButton>
-              </div>
-            </StyledTableCell>
-            <StyledTableCell>
-              <div className="flex flex-row items-center justify-items-center">
-                <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
-                  BPM
-                </p>
-                <IconButton onClick={onclick} value="bpm">
-                  <ArrowDropDownIcon color="primary" fontSize="large" />
-                </IconButton>
-              </div>
-            </StyledTableCell>
-          </TableRow>
-        </TableHead>
+                  <IconButton onClick={onclick} value="level">
+                    <ArrowDropDownIcon color="primary" fontSize="large" />
+                  </IconButton>
+                </div>
+              </StyledTableCell>
+              <StyledTableCell>
+                <div className="flex items-center justify-items-center">
+                  <p>曲名</p>
+                  <IconButton onClick={onclick} value="name">
+                    <ArrowDropDownIcon color="primary" fontSize="large" />
+                  </IconButton>
+                </div>
+              </StyledTableCell>
+              <StyledTableCell>
+                <div className="flex flex-row items-center justify-items-center">
+                  <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
+                    難易度
+                  </p>
+                  <IconButton
+                    onClick={onclick}
+                    value="level"
+                    className="basis-1/4"
+                  >
+                    <ArrowDropDownIcon color="primary" fontSize="large" />
+                  </IconButton>
+                </div>
+              </StyledTableCell>
+              <StyledTableCell>
+                <div className="flex flex-row items-center justify-items-center">
+                  <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
+                    曲の長さ
+                  </p>
+                  <IconButton onClick={onclick} value="sec">
+                    <ArrowDropDownIcon color="primary" fontSize="large" />
+                  </IconButton>
+                </div>
+              </StyledTableCell>
+              <StyledTableCell>
+                <div className="flex flex-row items-center justify-items-center">
+                  <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
+                    BPM
+                  </p>
+                  <IconButton onClick={onclick} value="bpm">
+                    <ArrowDropDownIcon color="primary" fontSize="large" />
+                  </IconButton>
+                </div>
+              </StyledTableCell>
+            </TableRow>
+          </TableHead>
+        </ThemeProvider>
         <TableBody>
           {showdata.map(({ name, level, sec, bpm, videoid }) => {
             return (
@@ -134,7 +143,9 @@ export default function MusicTable({ data }) {
                 <TableCell align="center">{level}</TableCell>
                 <TableCell>{name}</TableCell>
                 <TableCell className="text-center">{level}</TableCell>
-                <TableCell className="text-center">{sec}</TableCell>
+                <TableCell className="text-center">
+                  {Math.floor(sec / 60)}:{("00" + (sec % 60)).slice(-2)}
+                </TableCell>
                 <TableCell className="text-center">{bpm}</TableCell>
               </TableRow>
             );
