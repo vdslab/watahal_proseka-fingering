@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MusicSearch from "@/components/Search";
 import MusicTable from "@/components/MusicTable";
 import searchFilter from "./searchFilter";
@@ -8,9 +8,9 @@ export default function MusicList({ musics }) {
   const [showedData, setShowedData] = useState(musics);
   function handleChange(e) {
     const filtered = searchFilter(musics, e.target.value);
-    const isEmpty = JSON.stringify(filtered) == JSON.stringify([]);
-    setShowedData(isEmpty ? musics : filtered);
+    setShowedData(e.target.value == "" ? musics : filtered);
   }
+
   return (
     <>
       <nav>

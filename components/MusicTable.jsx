@@ -1,6 +1,5 @@
 "use client";
-import * as React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   TableContainer,
   Table,
@@ -44,6 +43,10 @@ export default function MusicTable({ data, header }) {
   const smallDataCell = `border ${smallCell} text-center`;
 
   const [showdata, setShowdata] = useState(data);
+
+  useEffect(() => {
+    setShowdata(data);
+  }, [data]);
 
   function onclick(event) {
     console.log(event.currentTarget.value);
