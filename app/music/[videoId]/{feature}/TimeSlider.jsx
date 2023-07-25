@@ -12,7 +12,7 @@ function valueLabelFormat(value) {
 
 const minDistance = 10;
 
-export default function TimeSlider({ max }) {
+export default function TimeSlider({ max, setSeek }) {
   const [value, setValue] = useState([0, max]);
 
   function handleTimeChange(e, newValue, activeThumb) {
@@ -21,8 +21,10 @@ export default function TimeSlider({ max }) {
     }
     if (activeThumb === 0) {
       setValue([Math.min(newValue[0], value[1] - minDistance), value[1]]);
+      setSeek(value[0]);
     } else {
       setValue([value[0], Math.max(newValue[1], value[0] + minDistance)]);
+      setSeek(value[0]);
     }
   }
 

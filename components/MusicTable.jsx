@@ -74,7 +74,7 @@ export default function MusicTable({ data }) {
 
   const router = useRouter();
   return (
-    <TableContainer className="max-h-screen text-center">
+    <TableContainer className="max-h-[60vh]">
       <Table stickyHeader>
         <ThemeProvider theme={theme}>
           <TableHead color="secondary">
