@@ -48,19 +48,40 @@ export default function MusicTable({ data }) {
   const dataCell = `border ${cell}`;
   const smallDataCell = `border ${smallCell} text-center`;
 
-  function sorttable(data, value) {
-    return [
-      ...data.sort((a, b) => {
-        if (a[`${value}`] < b[`${value}`]) {
-          return -1;
-        } else if (a[`${value}`] > b[`${value}`]) {
-          return 1;
-        } else {
-          return 0;
-        }
-      }),
-    ];
+  const rotateStyle = {
+    transform: "rotate(180deg)",
+  };
+
+  const [TableStatus, setTableStatus] = useState(["", 1]);
+
+  function sorttable(data, value, Status) {
+    if (Status == 1) {
+      return [
+        ...data.sort((a, b) => {
+          if (a[`${value}`] < b[`${value}`]) {
+            return -1;
+          } else if (a[`${value}`] > b[`${value}`]) {
+            return 1;
+          } else {
+            return 0;
+          }
+        }),
+      ];
+    } else {
+      return [
+        ...data.sort((a, b) => {
+          if (a[`${value}`] > b[`${value}`]) {
+            return -1;
+          } else if (a[`${value}`] < b[`${value}`]) {
+            return 1;
+          } else {
+            return 0;
+          }
+        }),
+      ];
+    }
   }
+
   const [showdata, setShowdata] = useState(sorttable(data, "id"));
 
   useEffect(() => {
@@ -69,7 +90,9 @@ export default function MusicTable({ data }) {
 
   function onclick(event) {
     const value = event.currentTarget.value;
-    setShowdata(sorttable(showdata, value));
+
+    setShowdata(sorttable(showdata, value, TableStatus[1]));
+    setTableStatus([value, TableStatus[1] * -1]);
   }
 
   const router = useRouter();
@@ -83,7 +106,17 @@ export default function MusicTable({ data }) {
                 <div>
                   難易度
                   <IconButton onClick={onclick} value="level">
-                    <ArrowDropDownIcon color="primary" fontSize="large" />
+                    <ArrowDropDownIcon
+                      color="primary"
+                      fontSize="large"
+                      style={
+                        TableStatus[0] == "level"
+                          ? TableStatus[1] == -1
+                            ? rotateStyle
+                            : {}
+                          : {}
+                      }
+                    />
                   </IconButton>
                 </div>
               </StyledTableCell>
@@ -91,31 +124,38 @@ export default function MusicTable({ data }) {
                 <div className="flex items-center justify-items-center">
                   <p>曲名</p>
                   <IconButton onClick={onclick} value="name">
-                    <ArrowDropDownIcon color="primary" fontSize="large" />
+                    <ArrowDropDownIcon
+                      color="primary"
+                      fontSize="large"
+                      style={
+                        TableStatus[0] == "name"
+                          ? TableStatus[1] == -1
+                            ? rotateStyle
+                            : {}
+                          : {}
+                      }
+                    />
                   </IconButton>
                 </div>
               </StyledTableCell>
-              <StyledTableCell>
-                <div className="flex flex-row items-center justify-items-center">
-                  <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
-                    難易度
-                  </p>
-                  <IconButton
-                    onClick={onclick}
-                    value="level"
-                    className="basis-1/4"
-                  >
-                    <ArrowDropDownIcon color="primary" fontSize="large" />
-                  </IconButton>
-                </div>
-              </StyledTableCell>
+
               <StyledTableCell>
                 <div className="flex flex-row items-center justify-items-center">
                   <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
                     曲の長さ
                   </p>
                   <IconButton onClick={onclick} value="sec">
-                    <ArrowDropDownIcon color="primary" fontSize="large" />
+                    <ArrowDropDownIcon
+                      color="primary"
+                      fontSize="large"
+                      style={
+                        TableStatus[0] == "sec"
+                          ? TableStatus[1] == -1
+                            ? rotateStyle
+                            : {}
+                          : {}
+                      }
+                    />
                   </IconButton>
                 </div>
               </StyledTableCell>
@@ -125,7 +165,17 @@ export default function MusicTable({ data }) {
                     BPM
                   </p>
                   <IconButton onClick={onclick} value="bpm">
-                    <ArrowDropDownIcon color="primary" fontSize="large" />
+                    <ArrowDropDownIcon
+                      color="primary"
+                      fontSize="large"
+                      style={
+                        TableStatus[0] == "bpm"
+                          ? TableStatus[1] == -1
+                            ? rotateStyle
+                            : {}
+                          : {}
+                      }
+                    />
                   </IconButton>
                 </div>
               </StyledTableCell>
@@ -142,7 +192,6 @@ export default function MusicTable({ data }) {
               >
                 <TableCell align="center">{level}</TableCell>
                 <TableCell>{name}</TableCell>
-                <TableCell className="text-center">{level}</TableCell>
                 <TableCell className="text-center">
                   {Math.floor(sec / 60)}:{("00" + (sec % 60)).slice(-2)}
                 </TableCell>

@@ -30,12 +30,6 @@ export default function VideoPlayer({ videoId }) {
     YTPlayer.setPlaybackRate(value);
   }
 
-  function loop(playTime, finTime) {
-    if (playTime >= finTime) {
-      YTPlayer.seelTo(seek, true);
-    }
-  }
-
   useEffect(() => {
     if (YTPlayer != null) {
       YTPlayer.seekTo(seek, true);
@@ -62,7 +56,7 @@ export default function VideoPlayer({ videoId }) {
         }}
         onStateChange={() => {
           setPlayBtn(YTPlayer.getPlayerState());
-          console.log(YTPlayer.getCurrentTime());
+          //console.log(YTPlayer.getCurrentTime());
         }}
       />
     </>
