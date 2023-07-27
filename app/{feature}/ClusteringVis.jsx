@@ -18,16 +18,19 @@ export default function ClusteringVis({ clusteringData }) {
 
   const path = d3.geoPath();
 
+  const threds = d3.range(100);
   const contourDensity = d3
     .contourDensity()
     .x((d) => xScale(d.x))
     .y((d) => yScale(d.y))
-    .size([width, height]);
+    .size([width, height])
+    .thresholds(50);
   const contourDensityValue = contourDensity(clusteringData);
 
+  const colorValueMinMax = d3.extent(contourDensityValue, (d) => d.value);
   const colorScale = d3
     .scaleSequential(d3.interpolatePurples)
-    .domain(d3.extent(contourDensityValue, (d) => d.value));
+    .domain(colorValueMinMax);
 
   return (
     <div className="p-3">
