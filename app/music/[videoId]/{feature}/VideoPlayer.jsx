@@ -31,10 +31,14 @@ export default function VideoPlayer({ videoId }) {
   }
 
   useEffect(() => {
-    if (YTPlayer != null) {
-      YTPlayer.seekTo(seek, true);
-    }
+    YTPlayer?.seekTo(seek, true);
   }, [seek]);
+
+  const [volume, setVolume] = useState(30);
+  useEffect(() => {
+    YTPlayer?.setVolume(volume);
+    console.log(volume);
+  }, [volume]);
 
   return (
     <>
@@ -45,7 +49,9 @@ export default function VideoPlayer({ videoId }) {
         />
       </div>
       <div>
-        <VideoManagerButtons {...{ YTPlayer, setPlaybackRate, playBtn }} />
+        <VideoManagerButtons
+          {...{ YTPlayer, setPlaybackRate, playBtn, volume, setVolume }}
+        />
       </div>
       <YouTube
         videoId={videoId}
