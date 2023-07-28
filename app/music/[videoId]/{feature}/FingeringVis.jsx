@@ -1,6 +1,7 @@
 import Image from "next/image";
 import * as d3 from "d3";
 import { useMemo, useRef } from "react";
+import { ConnectedTvOutlined } from "@mui/icons-material";
 
 function HoldNote({ x, y, width, height }) {
   const holdColor = "rgb(37 255 57)";
@@ -38,23 +39,32 @@ function Note({ judge_type, type, ...res }) {
 
 export default function FingeringVis({ fingering, width, minY }) {
   const svgRef = useRef(null);
-  const left = fingering["left"]?.map(({ x, y, width, type, judge_type }) => ({
-    x,
-    y,
-    width,
-    type,
-    judge_type,
-  }));
-  // .filter(({ y }) => minY <= y && y <= minY + 4);
-  const right = fingering["right"]?.map(
-    ({ x, y, width, type, judge_type }) => ({
+  const left = fingering["left"]?.map(
+    ({ x, y, width, type, judge_type, hold_type, hole }) => ({
       x,
       y,
       width,
       type,
       judge_type,
+      hold_type,
+      hole,
     })
   );
+  // .filter(({ y }) => minY <= y && y <= minY + 4);
+  const right = fingering["right"]?.map(
+    ({ x, y, width, type, judge_type, hold_type, hole }) => ({
+      x,
+      y,
+      width,
+      type,
+      judge_type,
+      hold_type,
+      hole,
+    })
+  );
+
+  const rangeHeight = 25000;
+
   // .filter(({ y }) => minY <= y && y <= minY + 4);
   // console.log([...left, ...right]);
   const xScale = d3
@@ -65,7 +75,7 @@ export default function FingeringVis({ fingering, width, minY }) {
   const yScale = d3
     .scaleLinear()
     .domain(d3.extent([...left, ...right], ({ y }) => y))
-    .range([10000, 0])
+    .range([rangeHeight, 0])
     .nice();
   const widthScale = d3
     .scaleLinear()
@@ -86,7 +96,7 @@ export default function FingeringVis({ fingering, width, minY }) {
     <div height="200px">
       <svg
         width={width}
-        height="10000px"
+        height={rangeHeight}
         ref={svgRef} /*viewBox="0 0 100 100"*/
         style={{ overflow: "scroll" }}
       >
@@ -96,40 +106,134 @@ export default function FingeringVis({ fingering, width, minY }) {
           <g>
             <g>
               {/* {left.map(({ x, y, width, type }, i) => {return <Note {...{x, y, width,height:10 type}}>;})} */}
-              {left.map(({ judge_type, type, x, y, width }, i) => {
-                return (
-                  <Note
-                    key={i}
-                    {...{
-                      type,
-                      judge_type,
-                      height: 10,
-                      x: xScale(x),
-                      y: yScale(y),
-                      width: widthScale(width),
-                    }}
-                  />
-                );
-              })}
-              <path d={line?.(left)} fill="none" stroke="red" />
+              {left.map(
+                (
+                  { judge_type, type, x, y, width, hold_type, hole },
+                  i,
+                  leftHold
+                ) => {
+                  if (hold_type == "start") {
+                    const ScaleHoldX = [
+                      xScale(x),
+                      xScale(x) + widthScale(width),
+
+                      xScale(leftHold[i + 1].x) +
+                        widthScale(leftHold[i + 1].width),
+                      xScale(leftHold[i + 1].x),
+                    ];
+                    const ScaleHoldY = [
+                      yScale(y),
+                      yScale(y),
+                      yScale(leftHold[i + 1].y),
+                      yScale(leftHold[i + 1].y),
+                    ];
+                    return (
+                      <g key={i}>
+                        <path
+                          fillOpacity="0.4"
+                          fill="lime"
+                          d={`M ${ScaleHoldX[0]},${ScaleHoldY[0]} ${ScaleHoldX[1]},${ScaleHoldY[1]} ${ScaleHoldX[2]} ${ScaleHoldY[2]} ${ScaleHoldX[3]} ${ScaleHoldY[3]}`}
+                        />
+                        <Note
+                          {...{
+                            type,
+                            judge_type,
+                            height: 10,
+                            x: xScale(x),
+                            y: yScale(y),
+                            width: widthScale(width),
+                          }}
+                        />
+                      </g>
+                    );
+                  } else {
+                    return (
+                      <Note
+                        key={i}
+                        {...{
+                          type,
+                          judge_type,
+                          height: 10,
+                          x: xScale(x),
+                          y: yScale(y),
+                          width: widthScale(width),
+                        }}
+                      />
+                    );
+                  }
+                }
+              )}
+              <path
+                key="fingeringLineLeft"
+                d={line?.(left)}
+                fill="none"
+                stroke="red"
+              />
             </g>
             <g>
-              {right.map(({ judge_type, type, x, y, width }, i) => {
-                return (
-                  <Note
-                    key={i}
-                    {...{
-                      type,
-                      judge_type,
-                      height: 10,
-                      x: xScale(x),
-                      y: yScale(y),
-                      width: widthScale(width),
-                    }}
-                  />
-                );
-              })}
-              <path d={line?.(right)} fill="none" stroke="blue" />
+              {right.map(
+                (
+                  { judge_type, type, x, y, width, hold_type, hole },
+                  i,
+                  rightHold
+                ) => {
+                  if (hold_type == "start") {
+                    const ScaleHoldX = [
+                      xScale(x),
+                      xScale(x) + widthScale(width),
+
+                      xScale(rightHold[i + 1].x) +
+                        widthScale(rightHold[i + 1].width),
+                      xScale(rightHold[i + 1].x),
+                    ];
+                    const ScaleHoldY = [
+                      yScale(y),
+                      yScale(y),
+                      yScale(rightHold[i + 1].y),
+                      yScale(rightHold[i + 1].y),
+                    ];
+                    return (
+                      <g key={i}>
+                        <path
+                          fillOpacity="0.4"
+                          fill="lime"
+                          d={`M ${ScaleHoldX[0]},${ScaleHoldY[0]} ${ScaleHoldX[1]},${ScaleHoldY[1]} ${ScaleHoldX[2]} ${ScaleHoldY[2]} ${ScaleHoldX[3]} ${ScaleHoldY[3]}`}
+                        />
+                        <Note
+                          {...{
+                            type,
+                            judge_type,
+                            height: 10,
+                            x: xScale(x),
+                            y: yScale(y),
+                            width: widthScale(width),
+                          }}
+                        />
+                      </g>
+                    );
+                  } else {
+                    return (
+                      <Note
+                        key={i}
+                        {...{
+                          type,
+                          judge_type,
+                          height: 10,
+                          x: xScale(x),
+                          y: yScale(y),
+                          width: widthScale(width),
+                        }}
+                      />
+                    );
+                  }
+                }
+              )}
+              <path
+                key="fingeringLineRight"
+                d={line?.(right)}
+                fill="none"
+                stroke="blue"
+              />
             </g>
           </g>
         )}
