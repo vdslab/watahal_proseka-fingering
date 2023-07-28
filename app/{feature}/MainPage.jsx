@@ -31,12 +31,11 @@ export default function MainPage({ musics, clusteringData }) {
   }
 
   return (
-    <div>
-      <ThemeProvider theme={theme}>
-        <Tabs value={currentTab} onChange={handleTabChange} variant="fullWidth">
-          <Tab label="曲検索" />
-          <Tab label="曲一覧" />
-        </Tabs>
+    <ThemeProvider theme={theme}>
+      <Tabs value={currentTab} onChange={handleTabChange} variant="fullWidth">
+        <Tab label="曲検索" />
+        <Tab label="曲一覧" />
+      </Tabs>
 
       <TabPanel value={currentTab} index={0}>
         <div>
@@ -45,10 +44,9 @@ export default function MainPage({ musics, clusteringData }) {
         </div>
       </TabPanel>
 
-        <TabPanel value={currentTab} index={1}>
-          <MusicList musics={musics} />
-        </TabPanel>
-      </ThemeProvider>
-    </div>
+      <TabPanel value={currentTab} index={1}>
+        <MusicList musics={musics} />
+      </TabPanel>
+    </ThemeProvider>
   );
 }
