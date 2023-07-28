@@ -113,12 +113,12 @@ export default function MusicTable({ data }) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {showdata.map(({ name, level, sec, bpm, videoid }) => {
+          {showdata.map(({ id, name, level, sec, bpm, videoid }) => {
             return (
               <TableRow
                 key={name}
                 hover
-                onClick={() => router.push(`/music/${videoid}`)}
+                onClick={() => router.push(`/music/${videoid}?id=${id}`)}
               >
                 <TableCell>{name}</TableCell>
                 <TableCell className="text-center">{level}</TableCell>

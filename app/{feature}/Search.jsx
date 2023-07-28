@@ -34,7 +34,7 @@ export default function Search({ data }) {
           return <TextField {...params} label="曲" />;
         }}
         onChange={(event, value) => {
-          setSelectID(value.ID);
+          setSelectID({ videoId: value.ID, id: value.key });
         }}
       />
 
@@ -43,7 +43,8 @@ export default function Search({ data }) {
         startIcon={<MusicNoteIcon />}
         onClick={() => {
           if (selectID != null) {
-            router.push(`/music/${selectID}`);
+            const { videoId, id } = selectID;
+            router.push(`/music/${videoId}?id=${id}`);
           }
         }}
       >

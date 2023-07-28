@@ -1,8 +1,30 @@
 import Content from "./{feature}/Content";
+import path from "path";
+import { promises as fs } from "fs";
 
-export default function Home({ params: { videoId } }) {
-  const id = decodeURI(videoId);
-  console.log(typeof videoId);
+async function readFileContent(filePath, rootDir = null) {
+  const file = path.join(rootDir ?? "", filePath);
+  const content = await fs.readFile(file, "utf8");
+  return content;
+}
+
+async function readJSON(filePath, rootDir = null) {
+  const content = await readFileContent(filePath, rootDir);
+  return JSON.parse(content);
+}
+
+export default async function Home({
+  params: { videoId },
+  searchParams: { id },
+}) {
+  const video = decodeURI(videoId);
+  // console.log(typeof videoId);
+  // console.log(id);
+
+  const jsonDir = path.join(process.cwd(), "public", "json");
+  const musicDetailPath = path.join(jsonDir, "fingering");
+  const fingering = await readJSON(`song${id}.json`, musicDetailPath);
+  // const fingering = readJSON();
   return (
     <>
       {/* <div className="flex flex-row items-center">
@@ -13,7 +35,7 @@ export default function Home({ params: { videoId } }) {
         </div>
         <div className="w-1/12"></div>
       </div> */}
-      <Content {...{ videoId: id }} />
+      <Content {...{ videoId: video, fingering }} />
     </>
   );
 }
