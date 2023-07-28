@@ -19,7 +19,11 @@ const theme = createTheme({
   },
 });
 
-export default function VideoPlayer({ videoId }) {
+export default function VideoPlayer({
+  videoId,
+  setPlayTimeState,
+  playTimeState,
+}) {
   const [YTPlayer, setYTPlayer] = useState(null);
   const [playBtn, setPlayBtn] = useState(YouTube.PlayerState.UNSTARTED);
   const [seek, setSeek] = useState({ value: 0 });
@@ -36,6 +40,7 @@ export default function VideoPlayer({ videoId }) {
 
   function handleReady(e) {
     setYTPlayer(e.target);
+    setPlayTimeState({ ...playTimeState, max: e.target?.getDuration() ?? 0 });
   }
 
   function setPlaybackRate(value) {
@@ -44,6 +49,7 @@ export default function VideoPlayer({ videoId }) {
 
   useEffect(() => {
     YTPlayer?.seekTo(seek.value, true);
+    setPlayTimeState({ ...playTimeState, current: seek.value });
   }, [seek]);
 
   const [volume, setVolume] = useState(30);
@@ -59,6 +65,8 @@ export default function VideoPlayer({ videoId }) {
             playBtn={playBtn}
             currentTime={currentTime}
             setSeek={setSeek}
+            setPlayTimeState={setPlayTimeState}
+            playTimeState={playTimeState}
             max={YTPlayer != null ? YTPlayer.getDuration() : 300}
           />
         </div>
@@ -77,6 +85,10 @@ export default function VideoPlayer({ videoId }) {
           onStateChange={() => {
             setPlayBtn(YTPlayer.getPlayerState());
             setCrrentTime(YTPlayer.getCurrentTime());
+            setPlayTimeState({
+              ...playTimeState,
+              current: YTPlayer.getCurrentTime(),
+            });
             //console.log(YTPlayer.getCurrentTime());
           }}
         />

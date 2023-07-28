@@ -1,6 +1,6 @@
 import Image from "next/image";
 import * as d3 from "d3";
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 
 function HoldNote({ x, y, width, height }) {
   const holdColor = "rgb(37 255 57)";
@@ -36,8 +36,17 @@ function Note({ judge_type, type, ...res }) {
   }
 }
 
-export default function FingeringVis({ fingering, width, minY }) {
+export default function FingeringVis({
+  fingering,
+  width,
+  minY,
+  playTimeState,
+}) {
+  console.log(playTimeState);
   const svgRef = useRef(null);
+  useEffect(() => {
+    svgRef?.current?.scrollIntoView(false);
+  }, []);
   const left = fingering["left"]?.map(({ x, y, width, type, judge_type }) => ({
     x,
     y,
