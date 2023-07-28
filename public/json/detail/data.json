@@ -1,5 +1,13 @@
 [
   {
+    "id": 65,
+    "name": "*ハロー、プラネット。",
+    "level": 28,
+    "bpm": 150,
+    "sec": 117,
+    "videoid": "Baj3Zz34FMI"
+  },
+  {
     "id": 273,
     "name": "1925",
     "level": 28,
@@ -17,7 +25,7 @@
   },
   {
     "id": 44,
-    "name": "39みゅーじっく！",
+    "name": "39みゅーじっく!",
     "level": 28,
     "bpm": 130,
     "sec": 115,
@@ -337,7 +345,7 @@
   },
   {
     "id": 61,
-    "name": "ODDS＆ENDS",
+    "name": "ODDS&ENDS",
     "level": 29,
     "bpm": 192,
     "sec": 90,
@@ -353,7 +361,7 @@
   },
   {
     "id": 182,
-    "name": "PaⅢ.SENSATION",
+    "name": "PaIII.SENSATION",
     "level": 29,
     "bpm": 160,
     "sec": 128,
@@ -585,7 +593,7 @@
   },
   {
     "id": 92,
-    "name": "「１」",
+    "name": "「1」",
     "level": 26,
     "bpm": 146,
     "sec": 96,
@@ -673,7 +681,7 @@
   },
   {
     "id": 133,
-    "name": "しっくおぶはうす！",
+    "name": "しっくおぶはうす!",
     "level": 30,
     "bpm": 170,
     "sec": 140,
@@ -681,7 +689,7 @@
   },
   {
     "id": 110,
-    "name": "そうだった！！",
+    "name": "そうだった!!",
     "level": 31,
     "bpm": 192,
     "sec": 125,
@@ -745,7 +753,7 @@
   },
   {
     "id": 235,
-    "name": "どんな結末がお望みだい？",
+    "name": "どんな結末がお望みだい?",
     "level": 28,
     "bpm": 190,
     "sec": 92,
@@ -769,7 +777,7 @@
   },
   {
     "id": 18,
-    "name": "ぼうけんのしょがきえました！",
+    "name": "ぼうけんのしょがきえました!",
     "level": 31,
     "bpm": 176,
     "sec": 105,
@@ -1037,7 +1045,7 @@
     "level": 30,
     "bpm": 170,
     "sec": 124,
-    "videoid": "o5NAgruRHZo"
+    "videoid": "UAfpgbwK6oU"
   },
   {
     "id": 63,
@@ -1045,7 +1053,7 @@
     "level": 31,
     "bpm": 200,
     "sec": 119,
-    "videoid": "UAfpgbwK6oU"
+    "videoid": "o5NAgruRHZo"
   },
   {
     "id": 278,
@@ -1101,7 +1109,7 @@
     "level": 29,
     "bpm": 124,
     "sec": 101,
-    "videoid": "U3KakOMGWlg"
+    "videoid": "Zpd0T0zOno4"
   },
   {
     "id": 19,
@@ -1109,7 +1117,7 @@
     "level": 27,
     "bpm": 145,
     "sec": 101,
-    "videoid": "u7T2H1s3xpk"
+    "videoid": "Rc25XzI4t3k"
   },
   {
     "id": 314,
@@ -1117,7 +1125,7 @@
     "level": 30,
     "bpm": 144,
     "sec": 127,
-    "videoid": "Zpd0T0zOno4"
+    "videoid": "2qsuEHCF7xw"
   },
   {
     "id": 134,
@@ -1125,7 +1133,7 @@
     "level": 31,
     "bpm": 204,
     "sec": 106,
-    "videoid": "Rc25XzI4t3k"
+    "videoid": "s0-W6mY-_RQ"
   },
   {
     "id": 165,
@@ -1133,7 +1141,7 @@
     "level": 28,
     "bpm": 198,
     "sec": 97,
-    "videoid": "2qsuEHCF7xw"
+    "videoid": "C1-Gxsp68PM"
   },
   {
     "id": 219,
@@ -1141,7 +1149,7 @@
     "level": 30,
     "bpm": 128,
     "sec": 150,
-    "videoid": "s0-W6mY-_RQ"
+    "videoid": "uL0kYgiOA3E"
   },
   {
     "id": 48,
@@ -1149,7 +1157,7 @@
     "level": 29,
     "bpm": 204,
     "sec": 81,
-    "videoid": "C1-Gxsp68PM"
+    "videoid": "U3KakOMGWlg"
   },
   {
     "id": 40,
@@ -1157,7 +1165,7 @@
     "level": 31,
     "bpm": 145,
     "sec": 139,
-    "videoid": "uL0kYgiOA3E"
+    "videoid": "u7T2H1s3xpk"
   },
   {
     "id": 17,
@@ -1229,7 +1237,7 @@
     "level": 26,
     "bpm": 126,
     "sec": 120,
-    "videoid": "2r9guzrNcNY"
+    "videoid": "iiv9BIt4NWM"
   },
   {
     "id": 226,
@@ -1237,7 +1245,7 @@
     "level": 27,
     "bpm": 138,
     "sec": 137,
-    "videoid": "iiv9BIt4NWM"
+    "videoid": "6F1eqvwqFTA"
   },
   {
     "id": 35,
@@ -1245,7 +1253,7 @@
     "level": 29,
     "bpm": 190,
     "sec": 97,
-    "videoid": "6F1eqvwqFTA"
+    "videoid": "2r9guzrNcNY"
   },
   {
     "id": 183,
@@ -1257,7 +1265,7 @@
   },
   {
     "id": 68,
-    "name": "チュルリラ・チュルリラ・ダッダッダ！",
+    "name": "チュルリラ・チュルリラ・ダッダッダ!",
     "level": 31,
     "bpm": 220,
     "sec": 138,
@@ -1309,15 +1317,15 @@
     "level": 28,
     "bpm": 120,
     "sec": 103,
-    "videoid": "o_SN-PystHA"
+    "videoid": "Qn3hmMRunjE"
   },
   {
     "id": 291,
-    "name": "トラッシュ・アンド・トラッシュ！",
+    "name": "トラッシュ・アンド・トラッシュ!",
     "level": 31,
     "bpm": 220,
     "sec": 134,
-    "videoid": "mjklS8FFMVY"
+    "videoid": "3AfTTYA6n7E"
   },
   {
     "id": 104,
@@ -1325,7 +1333,7 @@
     "level": 28,
     "bpm": 130,
     "sec": 127,
-    "videoid": "Qn3hmMRunjE"
+    "videoid": "QUQCyrVLqn0"
   },
   {
     "id": 157,
@@ -1333,7 +1341,7 @@
     "level": 28,
     "bpm": 130,
     "sec": 122,
-    "videoid": "3AfTTYA6n7E"
+    "videoid": "-4HIBr90LXk"
   },
   {
     "id": 230,
@@ -1341,7 +1349,7 @@
     "level": 27,
     "bpm": 135,
     "sec": 116,
-    "videoid": "QUQCyrVLqn0"
+    "videoid": "NJOcWefbIwU"
   },
   {
     "id": 102,
@@ -1349,15 +1357,15 @@
     "level": 32,
     "bpm": 172,
     "sec": 120,
-    "videoid": "-4HIBr90LXk"
+    "videoid": "gD6e3HmaRk4"
   },
   {
     "id": 14,
-    "name": "ドクター＝ファンクビート",
+    "name": "ドクター=ファンクビート",
     "level": 32,
     "bpm": 150,
     "sec": 125,
-    "videoid": "NJOcWefbIwU"
+    "videoid": "o_SN-PystHA"
   },
   {
     "id": 62,
@@ -1365,7 +1373,7 @@
     "level": 28,
     "bpm": 149,
     "sec": 92,
-    "videoid": "gD6e3HmaRk4"
+    "videoid": "mjklS8FFMVY"
   },
   {
     "id": 175,
@@ -1441,7 +1449,7 @@
   },
   {
     "id": 20,
-    "name": "ハロ／ハワユ",
+    "name": "ハロ/ハワユ",
     "level": 26,
     "bpm": 95,
     "sec": 144,
@@ -1485,7 +1493,7 @@
     "level": 32,
     "bpm": 200,
     "sec": 94,
-    "videoid": "SkVuUk9uRxM"
+    "videoid": "FhZShZ3aUPc"
   },
   {
     "id": 73,
@@ -1493,7 +1501,7 @@
     "level": 28,
     "bpm": 140,
     "sec": 113,
-    "videoid": "FhZShZ3aUPc"
+    "videoid": "800Wp5gvg1M"
   },
   {
     "id": 109,
@@ -1501,7 +1509,7 @@
     "level": 31,
     "bpm": 174,
     "sec": 126,
-    "videoid": "800Wp5gvg1M"
+    "videoid": "WAUCC5iAhDk"
   },
   {
     "id": 39,
@@ -1509,7 +1517,7 @@
     "level": 28,
     "bpm": 148,
     "sec": 89,
-    "videoid": "WAUCC5iAhDk"
+    "videoid": "SkVuUk9uRxM"
   },
   {
     "id": 178,
@@ -1525,7 +1533,7 @@
     "level": 31,
     "bpm": 135,
     "sec": 117,
-    "videoid": "LQOG4tf40bY"
+    "videoid": "wySmTGmIx7s"
   },
   {
     "id": 261,
@@ -1533,7 +1541,7 @@
     "level": 30,
     "bpm": 220,
     "sec": 135,
-    "videoid": "oqS3Lm-AueU"
+    "videoid": "ziU_FBee4sE"
   },
   {
     "id": 225,
@@ -1541,7 +1549,7 @@
     "level": 29,
     "bpm": 170,
     "sec": 141,
-    "videoid": "wySmTGmIx7s"
+    "videoid": "ijweObstbWw"
   },
   {
     "id": 217,
@@ -1549,7 +1557,7 @@
     "level": 32,
     "bpm": 190,
     "sec": 152,
-    "videoid": "ziU_FBee4sE"
+    "videoid": "C5pdyUAH514"
   },
   {
     "id": 15,
@@ -1557,7 +1565,7 @@
     "level": 27,
     "bpm": 127,
     "sec": 121,
-    "videoid": "ijweObstbWw"
+    "videoid": "Nsk4hzUb_C8"
   },
   {
     "id": 245,
@@ -1565,15 +1573,15 @@
     "level": 30,
     "bpm": 168,
     "sec": 134,
-    "videoid": "C5pdyUAH514"
+    "videoid": "ui8HsivjTM8"
   },
   {
     "id": 210,
-    "name": "フロイライン＝ビブリォチカ",
+    "name": "フロイライン=ビブリォチカ",
     "level": 31,
     "bpm": 185,
     "sec": 139,
-    "videoid": "Nsk4hzUb_C8"
+    "videoid": "nI8TTEauBoY"
   },
   {
     "id": 105,
@@ -1581,7 +1589,7 @@
     "level": 28,
     "bpm": 130,
     "sec": 92,
-    "videoid": "ui8HsivjTM8"
+    "videoid": "MOyEWsf2Z2I"
   },
   {
     "id": 247,
@@ -1589,7 +1597,7 @@
     "level": 27,
     "bpm": 138,
     "sec": 101,
-    "videoid": "nI8TTEauBoY"
+    "videoid": "7GUJGp62I-0"
   },
   {
     "id": 191,
@@ -1597,7 +1605,7 @@
     "level": 27,
     "bpm": 165,
     "sec": 112,
-    "videoid": "MOyEWsf2Z2I"
+    "videoid": "qTgnVH6GSRg"
   },
   {
     "id": 16,
@@ -1605,7 +1613,7 @@
     "level": 29,
     "bpm": 172,
     "sec": 96,
-    "videoid": "7GUJGp62I-0"
+    "videoid": "LQOG4tf40bY"
   },
   {
     "id": 69,
@@ -1613,7 +1621,7 @@
     "level": 28,
     "bpm": 152,
     "sec": 92,
-    "videoid": "qTgnVH6GSRg"
+    "videoid": "oqS3Lm-AueU"
   },
   {
     "id": 123,
@@ -1721,7 +1729,7 @@
   },
   {
     "id": 53,
-    "name": "モア！ジャンプ！モア！",
+    "name": "モア!ジャンプ!モア!",
     "level": 31,
     "bpm": 202,
     "sec": 121,
@@ -1745,7 +1753,7 @@
   },
   {
     "id": 240,
-    "name": "ラブカ？",
+    "name": "ラブカ?",
     "level": 28,
     "bpm": 135,
     "sec": 101,
@@ -1761,7 +1769,7 @@
   },
   {
     "id": 260,
-    "name": "リンちゃんなう！",
+    "name": "リンちゃんなう!",
     "level": 29,
     "bpm": 200,
     "sec": 144,
@@ -2617,7 +2625,7 @@
   },
   {
     "id": 45,
-    "name": "青く駆けろ！",
+    "name": "青く駆けろ!",
     "level": 27,
     "bpm": 190,
     "sec": 112,
@@ -2633,18 +2641,10 @@
   },
   {
     "id": 299,
-    "name": "魔法みたいなミュージック！",
+    "name": "魔法みたいなミュージック!",
     "level": 30,
     "bpm": 210,
     "sec": 134,
     "videoid": "uozytECyWlc"
-  },
-  {
-    "id": 65,
-    "name": "＊ハロー、プラネット。",
-    "level": 28,
-    "bpm": 150,
-    "sec": 117,
-    "videoid": "Baj3Zz34FMI"
   }
 ]

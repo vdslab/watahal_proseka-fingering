@@ -6,12 +6,21 @@ import { IconButton, Button } from "@mui/material";
 import SwapHorizRoundedIcon from "@mui/icons-material/SwapHorizRounded";
 import PlayCircleFilledWhiteRoundedIcon from "@mui/icons-material/PlayCircleFilledWhiteRounded";
 import PauseCircleIcon from "@mui/icons-material/PauseCircle";
+
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Slider from "@mui/material/Slider";
+import VolumeDown from "@mui/icons-material/VolumeDown";
+import VolumeUp from "@mui/icons-material/VolumeUp";
+
 import YouTube, { YouTubePlayer } from "react-youtube";
 
 export default function VideoManagerButtons({
   YTPlayer,
   setPlaybackRate,
   playBtn,
+  volume,
+  setVolume,
 }) {
   function videoPlayer(e) {
     const state = YTPlayer.getPlayerState();
@@ -36,8 +45,12 @@ export default function VideoManagerButtons({
     }
   }
 
+  const handleChange = (event, newValue) => {
+    setVolume(newValue);
+  };
+
   return (
-    <div>
+    <div className="flex">
       {/* ミラー */}
       <IconButton>
         <SwapHorizRoundedIcon />
@@ -58,6 +71,19 @@ export default function VideoManagerButtons({
           1
         </Button>
       </span>
+
+      <Box sx={{ width: 200 }}>
+        <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
+          <VolumeDown />
+          <Slider
+            color="headerbg"
+            aria-label="Volume"
+            value={volume}
+            onChange={handleChange}
+          />
+          <VolumeUp />
+        </Stack>
+      </Box>
     </div>
   );
 }

@@ -1,13 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import {
-  TextField,
-  FormControl,
-  Input,
-  InputAdornment,
-  InputLabel,
-} from "@mui/material";
+import React, { useState } from "react";
+import { FormControl, Input, InputAdornment, InputLabel } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 export default function MusicSearch({ handleChange }) {

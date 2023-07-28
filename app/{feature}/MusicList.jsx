@@ -1,8 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MusicSearch from "@/components/Search";
 import MusicTable from "@/components/MusicTable";
 import searchFilter from "./searchFilter";
+import { Toolbar } from "@mui/material";
 
 export default function MusicList({ musics }) {
   const [showedData, setShowedData] = useState(musics);
@@ -13,16 +14,10 @@ export default function MusicList({ musics }) {
 
   return (
     <>
-      <nav>
-        <ul className="flex">
-          <li className="w-3/4 mr-3">
-            <MusicSearch data={musics} handleChange={handleChange} />
-          </li>
-          <li className="w-1/12 mr-3"></li>
-        </ul>
-      </nav>
-
-      <MusicTable data={showedData} header={musics.header} />
+      <Toolbar>
+        <MusicSearch data={musics} handleChange={handleChange} />
+      </Toolbar>
+      <MusicTable data={showedData} />
     </>
   );
 }

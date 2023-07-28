@@ -8,6 +8,8 @@ import Button from "@mui/material/Button";
 import PanToolAltIcon from "@mui/icons-material/PanToolAlt";
 import { styled, useTheme } from "@mui/material/styles";
 import Loading from "../loading";
+import { useSearchParams } from "next/navigation";
+
 const drawerWidth = 240;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -29,7 +31,7 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
   })
 );
 
-export default function Content({ videoId }) {
+export default function Content({ videoId, fingering }) {
   const [open, setOpen] = useState(false);
   function handleToggle(e) {
     setOpen(false);
@@ -59,13 +61,14 @@ export default function Content({ videoId }) {
             "& .MuiDrawer-paper": {
               width: drawerWidth,
             },
+            padding: "1rem",
           }}
           anchor="right"
           variant="persistent"
           open={open}
           onClose={handleToggle}
         >
-          <FingeringVis />
+          <FingeringVis {...{ fingering, width: drawerWidth, minY: 0 }} />
         </Drawer>
       </Main>
     </div>

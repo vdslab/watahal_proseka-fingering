@@ -1,5 +1,4 @@
 import { Inter } from "next/font/google";
-import Link from "next/link";
 import Header from "../components/Header";
 import "@/app/tailwind.css";
 
@@ -13,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-200`}>
+      <body className={`${inter.className} bg-slate-200 m-0`}>
         <Header />
         {children}
       </body>
