@@ -4172,33 +4172,13 @@
     },
     {
       "hold_type": "end",
-      "hole": 0,
+      "hole": 1,
       "is_yellow": false,
       "judge_type": "off",
       "type": "hold",
       "width": 2,
-      "x": 10,
-      "y": 62.875
-    },
-    {
-      "hold_type": "none",
-      "hole": 0,
-      "is_yellow": false,
-      "judge_type": "off",
-      "type": "normal",
-      "width": 2,
-      "x": 10,
-      "y": 63
-    },
-    {
-      "hold_type": "none",
-      "hole": 0,
-      "is_yellow": false,
-      "judge_type": "off",
-      "type": "normal",
-      "width": 2,
-      "x": 8,
-      "y": 63.125
+      "x": 6,
+      "y": 62.9375
     },
     {
       "hold_type": "none",
@@ -4208,7 +4188,17 @@
       "type": "normal",
       "width": 2,
       "x": 6,
-      "y": 63.25
+      "y": 63.0625
+    },
+    {
+      "hold_type": "none",
+      "hole": 0,
+      "is_yellow": false,
+      "judge_type": "off",
+      "type": "normal",
+      "width": 2,
+      "x": 4,
+      "y": 63.1875
     },
     {
       "hold_type": "none",
@@ -8424,13 +8414,33 @@
     },
     {
       "hold_type": "end",
-      "hole": 1,
+      "hole": 0,
       "is_yellow": false,
       "judge_type": "off",
       "type": "hold",
       "width": 2,
-      "x": 6,
-      "y": 62.9375
+      "x": 10,
+      "y": 62.875
+    },
+    {
+      "hold_type": "none",
+      "hole": 0,
+      "is_yellow": false,
+      "judge_type": "off",
+      "type": "normal",
+      "width": 2,
+      "x": 10,
+      "y": 63
+    },
+    {
+      "hold_type": "none",
+      "hole": 0,
+      "is_yellow": false,
+      "judge_type": "off",
+      "type": "normal",
+      "width": 2,
+      "x": 8,
+      "y": 63.125
     },
     {
       "hold_type": "none",
@@ -8440,17 +8450,7 @@
       "type": "normal",
       "width": 2,
       "x": 6,
-      "y": 63.0625
-    },
-    {
-      "hold_type": "none",
-      "hole": 0,
-      "is_yellow": false,
-      "judge_type": "off",
-      "type": "normal",
-      "width": 2,
-      "x": 4,
-      "y": 63.1875
+      "y": 63.25
     },
     {
       "hold_type": "none",

@@ -234,26 +234,6 @@
       "hold_type": "end",
       "hole": 0,
       "is_yellow": false,
-      "judge_type": "flick_left",
-      "type": "hold",
-      "width": 6,
-      "x": 0,
-      "y": 4.875
-    },
-    {
-      "hold_type": "start",
-      "hole": 0,
-      "is_yellow": false,
-      "judge_type": "off",
-      "type": "hold",
-      "width": 3,
-      "x": 0,
-      "y": 5
-    },
-    {
-      "hold_type": "end",
-      "hole": 0,
-      "is_yellow": false,
       "judge_type": "flick_right",
       "type": "hold",
       "width": 6,
@@ -1679,6 +1659,26 @@
       "width": 12,
       "x": 0,
       "y": 22.125
+    },
+    {
+      "hold_type": "end",
+      "hole": 1,
+      "is_yellow": false,
+      "judge_type": "off",
+      "type": "hold",
+      "width": 2,
+      "x": 5,
+      "y": 22.25
+    },
+    {
+      "hold_type": "none",
+      "hole": 0,
+      "is_yellow": false,
+      "judge_type": "off",
+      "type": "normal",
+      "width": 4,
+      "x": 4,
+      "y": 22.375
     },
     {
       "hold_type": "start",
@@ -4173,6 +4173,26 @@
       "y": 4.5
     },
     {
+      "hold_type": "end",
+      "hole": 0,
+      "is_yellow": false,
+      "judge_type": "flick_left",
+      "type": "hold",
+      "width": 6,
+      "x": 0,
+      "y": 4.875
+    },
+    {
+      "hold_type": "start",
+      "hole": 0,
+      "is_yellow": false,
+      "judge_type": "off",
+      "type": "hold",
+      "width": 3,
+      "x": 0,
+      "y": 5
+    },
+    {
       "hold_type": "none",
       "hole": 0,
       "is_yellow": false,
@@ -5491,26 +5511,6 @@
       "width": 6,
       "x": 6,
       "y": 22.0833
-    },
-    {
-      "hold_type": "end",
-      "hole": 1,
-      "is_yellow": false,
-      "judge_type": "off",
-      "type": "hold",
-      "width": 2,
-      "x": 5,
-      "y": 22.25
-    },
-    {
-      "hold_type": "none",
-      "hole": 0,
-      "is_yellow": false,
-      "judge_type": "off",
-      "type": "normal",
-      "width": 4,
-      "x": 4,
-      "y": 22.375
     },
     {
       "hold_type": "none",
