@@ -88,8 +88,6 @@ export default function TimeSlider({
   useEffect(() => {
     const { clientWidth, clientHeight } = elm.current;
     setSliderWidth(clientWidth);
-    console.log({ clientWidth });
-    console.log({ clientHeight });
   }, []);
 
   return (
