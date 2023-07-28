@@ -33,6 +33,7 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
 
 export default function Content({ videoId, fingering }) {
   const [open, setOpen] = useState(false);
+  const [playTimeState, setPlayTimeState] = useState({ current: 0, max: 0 });
   function handleToggle(e) {
     setOpen(false);
   }
@@ -52,7 +53,7 @@ export default function Content({ videoId, fingering }) {
           </Button>
         </Stack>
         <Suspense>
-          <VideoPlayer {...{ videoId }} />
+          <VideoPlayer {...{ videoId, setPlayTimeState, playTimeState }} />
         </Suspense>
         <Drawer
           sx={{
@@ -68,7 +69,14 @@ export default function Content({ videoId, fingering }) {
           open={open}
           onClose={handleToggle}
         >
-          <FingeringVis {...{ fingering, width: drawerWidth, minY: 0 }} />
+          <FingeringVis
+            {...{
+              fingering,
+              width: drawerWidth,
+              minY: 0,
+              playTimeState,
+            }}
+          />
         </Drawer>
       </Main>
     </div>
