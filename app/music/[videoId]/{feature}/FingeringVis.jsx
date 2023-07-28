@@ -2,21 +2,59 @@ import Image from "next/image";
 import * as d3 from "d3";
 import { useMemo, useRef } from "react";
 
+function HoldNote({ x, y, width, height }) {
+  const holdColor = "rgb(37 255 57)";
+  return <rect x={x} y={y} width={width} height={height} fill={holdColor} />;
+}
+
+function NormalNote({ x, y, width, height }) {
+  const color = "rgb(100 255 234)";
+  return <rect x={x} y={y} width={width} height={height} fill={color} />;
+}
+
+function FlickNote({ x, y, width, height, direction }) {
+  const color = "rgb(255, 119, 187)";
+  return <rect x={x} y={y} width={width} height={height} fill={color} />;
+}
+
+function Note({ judge_type, type, ...res }) {
+  // console.log(res);
+  switch (judge_type) {
+    case "flick_up":
+    case "flick_down":
+    case "flick_left":
+    case "flick_right":
+      return <FlickNote {...{ ...res }} />;
+  }
+  switch (type) {
+    case "hold":
+      return <HoldNote {...{ ...res }} />;
+    case "normal":
+      return <NormalNote {...{ ...res }} />;
+    default:
+      return <HoldNote {...{ ...res }} />;
+  }
+}
+
 export default function FingeringVis({ fingering, width, minY }) {
   const svgRef = useRef(null);
-  const left = fingering["left"]?.map(({ x, y, width, type }) => ({
+  const left = fingering["left"]?.map(({ x, y, width, type, judge_type }) => ({
     x,
     y,
     width,
     type,
+    judge_type,
   }));
   // .filter(({ y }) => minY <= y && y <= minY + 4);
-  const right = fingering["right"]?.map(({ x, y, width, type }) => ({
-    x,
-    y,
-    width,
-    type,
-  }));
+  const right = fingering["right"]?.map(
+    ({ x, y, width, type, judge_type }) => ({
+      x,
+      y,
+      width,
+      type,
+      judge_type,
+    })
+  );
   // .filter(({ y }) => minY <= y && y <= minY + 4);
   // console.log([...left, ...right]);
   const xScale = d3
@@ -57,39 +95,38 @@ export default function FingeringVis({ fingering, width, minY }) {
         ) : (
           <g>
             <g>
-              {left.map(({ x, y, width, type }, i) => {
-                const color =
-                  type == "hold" ? "rgb(37 255 57)" : "rgb(100 255 234)";
+              {/* {left.map(({ x, y, width, type }, i) => {return <Note {...{x, y, width,height:10 type}}>;})} */}
+              {left.map(({ judge_type, type, x, y, width }, i) => {
                 return (
-                  <>
-                    <rect
-                      key={i}
-                      x={xScale(x) - 5}
-                      y={yScale(y) - 5}
-                      width={widthScale(width)}
-                      height={10}
-                      fill={color}
-                    />
-                  </>
+                  <Note
+                    key={i}
+                    {...{
+                      type,
+                      judge_type,
+                      height: 10,
+                      x: xScale(x),
+                      y: yScale(y),
+                      width: widthScale(width),
+                    }}
+                  />
                 );
               })}
               <path d={line?.(left)} fill="none" stroke="red" />
             </g>
             <g>
-              {right.map(({ x, y, width, type }, i) => {
-                const color =
-                  type == "hold" ? "rgb(37 255 57)" : "rgb(100 255 234)";
+              {right.map(({ judge_type, type, x, y, width }, i) => {
                 return (
-                  <>
-                    <rect
-                      key={i}
-                      x={xScale(x) - 5}
-                      y={yScale(y) - 5}
-                      width={widthScale(width)}
-                      height={10}
-                      fill={color}
-                    />
-                  </>
+                  <Note
+                    key={i}
+                    {...{
+                      type,
+                      judge_type,
+                      height: 10,
+                      x: xScale(x),
+                      y: yScale(y),
+                      width: widthScale(width),
+                    }}
+                  />
                 );
               })}
               <path d={line?.(right)} fill="none" stroke="blue" />
