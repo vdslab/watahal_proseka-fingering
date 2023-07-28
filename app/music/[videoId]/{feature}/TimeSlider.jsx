@@ -13,7 +13,14 @@ function valueLabelFormat(value) {
 
 const minDistance = 10;
 
-export default function TimeSlider({ playBtn, currentTime, max, setSeek }) {
+export default function TimeSlider({
+  playBtn,
+  currentTime,
+  max,
+  setSeek,
+  setPlayTimeState,
+  playTimeState,
+}) {
   const [value, setValue] = useState([0, max]);
 
   //動画の長さをすぐにvalueへ
@@ -26,8 +33,10 @@ export default function TimeSlider({ playBtn, currentTime, max, setSeek }) {
       return;
     }
     if (activeThumb === 0) {
-      setValue([Math.min(newValue[0], value[1] - minDistance), value[1]]);
-      setSeek({ value: newValue[0] });
+      const leftValue = Math.min(newValue[0], value[1] - minDistance);
+      setValue([leftValue, value[1]]);
+      setSeek({ value: leftValue });
+      setPlayTimeState({ ...playTimeState, current: leftValue });
     } else {
       setValue([value[0], Math.max(newValue[1], value[0] + minDistance)]);
     }
@@ -93,7 +102,7 @@ export default function TimeSlider({ playBtn, currentTime, max, setSeek }) {
             color: "primary",
             width: "20px",
             height: "20px",
-            "border-radius": "99%",
+            borderRadius: "99%",
             top: "15%",
             transform: `translateX(${PlayMark - 10}px)`,
             transition: `transform ${PlayBack == 1 ? flowSec : "0.01s"} linear`,

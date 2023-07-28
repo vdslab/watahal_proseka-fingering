@@ -852,6 +852,16 @@
     },
     {
       "hold_type": "end",
+      "hole": 0,
+      "is_yellow": false,
+      "judge_type": "off",
+      "type": "hold",
+      "width": 3,
+      "x": 5,
+      "y": 13.875
+    },
+    {
+      "hold_type": "end",
       "hole": 1,
       "is_yellow": false,
       "judge_type": "flick_left",
@@ -5911,16 +5921,6 @@
       "width": 3,
       "x": 4,
       "y": 13.5
-    },
-    {
-      "hold_type": "end",
-      "hole": 0,
-      "is_yellow": false,
-      "judge_type": "off",
-      "type": "hold",
-      "width": 3,
-      "x": 5,
-      "y": 13.875
     },
     {
       "hold_type": "start",

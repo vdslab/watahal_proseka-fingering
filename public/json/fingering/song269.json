@@ -161,16 +161,6 @@
       "y": 3.5
     },
     {
-      "hold_type": "end",
-      "hole": 0,
-      "is_yellow": false,
-      "judge_type": "flick_up",
-      "type": "hold",
-      "width": 6,
-      "x": 3,
-      "y": 3.75
-    },
-    {
       "hold_type": "none",
       "hole": 0,
       "is_yellow": false,
@@ -961,14 +951,34 @@
       "y": 16.25
     },
     {
-      "hold_type": "none",
+      "hold_type": "end",
       "hole": 0,
       "is_yellow": false,
       "judge_type": "off",
-      "type": "normal",
-      "width": 5,
-      "x": 7,
-      "y": 16.5
+      "type": "hold",
+      "width": 3,
+      "x": 4,
+      "y": 16.375
+    },
+    {
+      "hold_type": "start",
+      "hole": 0,
+      "is_yellow": false,
+      "judge_type": "push",
+      "type": "hold",
+      "width": 3,
+      "x": 4,
+      "y": 16.4375
+    },
+    {
+      "hold_type": "end",
+      "hole": 0,
+      "is_yellow": false,
+      "judge_type": "off",
+      "type": "hold",
+      "width": 3,
+      "x": 4,
+      "y": 16.6875
     },
     {
       "hold_type": "none",
@@ -5563,6 +5573,16 @@
       "y": 3
     },
     {
+      "hold_type": "end",
+      "hole": 0,
+      "is_yellow": false,
+      "judge_type": "flick_up",
+      "type": "hold",
+      "width": 6,
+      "x": 3,
+      "y": 3.75
+    },
+    {
       "hold_type": "none",
       "hole": 0,
       "is_yellow": false,
@@ -6103,34 +6123,14 @@
       "y": 16.25
     },
     {
-      "hold_type": "end",
+      "hold_type": "none",
       "hole": 0,
       "is_yellow": false,
       "judge_type": "off",
-      "type": "hold",
-      "width": 3,
-      "x": 4,
-      "y": 16.375
-    },
-    {
-      "hold_type": "start",
-      "hole": 0,
-      "is_yellow": false,
-      "judge_type": "push",
-      "type": "hold",
-      "width": 3,
-      "x": 4,
-      "y": 16.4375
-    },
-    {
-      "hold_type": "end",
-      "hole": 0,
-      "is_yellow": false,
-      "judge_type": "off",
-      "type": "hold",
-      "width": 3,
-      "x": 4,
-      "y": 16.6875
+      "type": "normal",
+      "width": 5,
+      "x": 7,
+      "y": 16.5
     },
     {
       "hold_type": "none",

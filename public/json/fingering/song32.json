@@ -1441,6 +1441,16 @@
       "y": 23.625
     },
     {
+      "hold_type": "end",
+      "hole": 1,
+      "is_yellow": false,
+      "judge_type": "off",
+      "type": "hold",
+      "width": 2,
+      "x": 5,
+      "y": 23.875
+    },
+    {
       "hold_type": "start",
       "hole": 1,
       "is_yellow": false,
@@ -4172,26 +4182,6 @@
     },
     {
       "hold_type": "end",
-      "hole": 2,
-      "is_yellow": false,
-      "judge_type": "flick_right",
-      "type": "hold",
-      "width": 3,
-      "x": 4,
-      "y": 68.75
-    },
-    {
-      "hold_type": "start",
-      "hole": 2,
-      "is_yellow": false,
-      "judge_type": "hold",
-      "type": "hold",
-      "width": 3,
-      "x": 9,
-      "y": 68.875
-    },
-    {
-      "hold_type": "end",
       "hole": 1,
       "is_yellow": false,
       "judge_type": "flick_left",
@@ -4419,6 +4409,26 @@
       "width": 3,
       "x": 0,
       "y": 72.625
+    },
+    {
+      "hold_type": "end",
+      "hole": 1,
+      "is_yellow": false,
+      "judge_type": "flick_left",
+      "type": "hold",
+      "width": 3,
+      "x": 5,
+      "y": 72.75
+    },
+    {
+      "hold_type": "start",
+      "hole": 1,
+      "is_yellow": false,
+      "judge_type": "hold",
+      "type": "hold",
+      "width": 3,
+      "x": 0,
+      "y": 72.875
     },
     {
       "hold_type": "end",
@@ -5991,16 +6001,6 @@
       "width": 3,
       "x": 6,
       "y": 23.375
-    },
-    {
-      "hold_type": "end",
-      "hole": 1,
-      "is_yellow": false,
-      "judge_type": "off",
-      "type": "hold",
-      "width": 2,
-      "x": 5,
-      "y": 23.875
     },
     {
       "hold_type": "start",
@@ -8450,6 +8450,26 @@
       "type": "hold",
       "width": 3,
       "x": 4,
+      "y": 68.75
+    },
+    {
+      "hold_type": "start",
+      "hole": 2,
+      "is_yellow": false,
+      "judge_type": "hold",
+      "type": "hold",
+      "width": 3,
+      "x": 9,
+      "y": 68.875
+    },
+    {
+      "hold_type": "end",
+      "hole": 2,
+      "is_yellow": false,
+      "judge_type": "flick_right",
+      "type": "hold",
+      "width": 3,
+      "x": 4,
       "y": 69
     },
     {
@@ -8691,26 +8711,6 @@
       "width": 3,
       "x": 9,
       "y": 72.5
-    },
-    {
-      "hold_type": "end",
-      "hole": 1,
-      "is_yellow": false,
-      "judge_type": "flick_left",
-      "type": "hold",
-      "width": 3,
-      "x": 5,
-      "y": 72.75
-    },
-    {
-      "hold_type": "start",
-      "hole": 1,
-      "is_yellow": false,
-      "judge_type": "hold",
-      "type": "hold",
-      "width": 3,
-      "x": 0,
-      "y": 72.875
     },
     {
       "hold_type": "end",
