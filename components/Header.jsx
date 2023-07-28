@@ -36,7 +36,7 @@ export default function Header() {
             component="div"
             sx={{ flexGrow: 1 }}
           >
-            プロセカ運指可視化
+            プロセカ運指&曲特徴可視化
           </Typography>
           <Imformation />
         </StyledToolbar>
