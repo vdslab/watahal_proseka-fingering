@@ -8,10 +8,22 @@ import {
   LocalConvenienceStoreOutlined,
 } from "@mui/icons-material";
 
+import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+
+const theme = createTheme({
+  palette: {
+    primary: { main: "#ff55aa" },
+    secondary: { main: "#464366" },
+    headerbg: { main: "#acfef4" },
+    background: { default: "#fff" },
+  },
+});
+
 export default function VideoPlayer({ videoId }) {
   const [YTPlayer, setYTPlayer] = useState(null);
   const [playBtn, setPlayBtn] = useState(YouTube.PlayerState.UNSTARTED);
-  const [seek, setSeek] = useState(0);
+  const [seek, setSeek] = useState({ value: 0 });
+  const [currentTime, setCrrentTime] = useState(0);
 
   const opts = {
     height: "390",
@@ -31,40 +43,44 @@ export default function VideoPlayer({ videoId }) {
   }
 
   useEffect(() => {
-    YTPlayer?.seekTo(seek, true);
+    YTPlayer?.seekTo(seek.value, true);
   }, [seek]);
 
   const [volume, setVolume] = useState(30);
   useEffect(() => {
     YTPlayer?.setVolume(volume);
-    console.log(volume);
   }, [volume]);
 
   return (
     <>
-      <div>
-        <TimeSlider
-          setSeek={setSeek}
-          max={YTPlayer != null ? YTPlayer.getDuration() : 300}
+      <ThemeProvider theme={theme}>
+        <div>
+          <TimeSlider
+            playBtn={playBtn}
+            currentTime={currentTime}
+            setSeek={setSeek}
+            max={YTPlayer != null ? YTPlayer.getDuration() : 300}
+          />
+        </div>
+        <div>
+          <VideoManagerButtons
+            {...{ YTPlayer, setPlaybackRate, playBtn, volume, setVolume }}
+          />
+        </div>
+        <YouTube
+          videoId={videoId}
+          opts={opts}
+          onReady={handleReady}
+          onPlaybackRateChange={() => {
+            console.log("change rate");
+          }}
+          onStateChange={() => {
+            setPlayBtn(YTPlayer.getPlayerState());
+            setCrrentTime(YTPlayer.getCurrentTime());
+            //console.log(YTPlayer.getCurrentTime());
+          }}
         />
-      </div>
-      <div>
-        <VideoManagerButtons
-          {...{ YTPlayer, setPlaybackRate, playBtn, volume, setVolume }}
-        />
-      </div>
-      <YouTube
-        videoId={videoId}
-        opts={opts}
-        onReady={handleReady}
-        onPlaybackRateChange={() => {
-          console.log("change rate");
-        }}
-        onStateChange={() => {
-          setPlayBtn(YTPlayer.getPlayerState());
-          //console.log(YTPlayer.getCurrentTime());
-        }}
-      />
+      </ThemeProvider>
     </>
   );
 }

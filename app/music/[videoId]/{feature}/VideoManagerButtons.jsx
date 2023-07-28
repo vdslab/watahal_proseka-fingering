@@ -47,7 +47,6 @@ export default function VideoManagerButtons({
 
   const handleChange = (event, newValue) => {
     setVolume(newValue);
-    console.log(newValue);
   };
 
   return (
@@ -76,7 +75,12 @@ export default function VideoManagerButtons({
       <Box sx={{ width: 200 }}>
         <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
           <VolumeDown />
-          <Slider aria-label="Volume" value={volume} onChange={handleChange} />
+          <Slider
+            color="headerbg"
+            aria-label="Volume"
+            value={volume}
+            onChange={handleChange}
+          />
           <VolumeUp />
         </Stack>
       </Box>
