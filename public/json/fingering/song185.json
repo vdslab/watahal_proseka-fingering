@@ -5631,16 +5631,6 @@
       "y": 115
     },
     {
-      "hold_type": "end",
-      "hole": 1,
-      "is_yellow": false,
-      "judge_type": "off",
-      "type": "hold",
-      "width": 3,
-      "x": 0,
-      "y": 115.375
-    },
-    {
       "hold_type": "none",
       "hole": 0,
       "is_yellow": false,
@@ -11101,6 +11091,16 @@
       "width": 3,
       "x": 9,
       "y": 115
+    },
+    {
+      "hold_type": "end",
+      "hole": 1,
+      "is_yellow": false,
+      "judge_type": "off",
+      "type": "hold",
+      "width": 3,
+      "x": 0,
+      "y": 115.375
     },
     {
       "hold_type": "end",
