@@ -45,7 +45,8 @@ export default function Search({ data, setId }) {
       />
 
       <Button
-        variant="outlined"
+        color="primary"
+        variant="contained"
         startIcon={<MusicNoteIcon />}
         onClick={() => {
           if (selectID != null) {
