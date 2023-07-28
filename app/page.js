@@ -50,7 +50,7 @@ export default async function Home() {
 
   const csvDir = path.join(publicDir, "csv");
   const clusteringData = await readCSV(
-    "clustering_data.csv",
+    "clustering_data_all.csv",
     csvDir,
     parseFloat,
     true

@@ -8,7 +8,7 @@ import MusicNoteIcon from "@mui/icons-material/MusicNote";
 
 import { useRouter } from "next/navigation";
 
-export default function Search({ data }) {
+export default function Search({ data, setId }) {
   const names = data.map(({ id, name, videoid }) => {
     return { key: id, label: name, ID: videoid };
   });
@@ -34,7 +34,13 @@ export default function Search({ data }) {
           return <TextField {...params} label="曲" />;
         }}
         onChange={(event, value) => {
-          setSelectID({ videoId: value.ID, id: value.key });
+          if (!value) {
+            setSelectID(null);
+            setId(null);
+          } else {
+            setSelectID({ videoId: value.ID, id: value.key });
+            setId(value.key);
+          }
         }}
       />
 
