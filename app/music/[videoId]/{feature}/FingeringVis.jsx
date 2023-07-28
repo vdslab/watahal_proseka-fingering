@@ -37,7 +37,7 @@ export default function FingeringVis({ fingering, width, minY }) {
   const showable = left && right && xScale && yScale && widthScale;
   const line = d3
     .line()
-    .x(({ x }) => xScale(x))
+    .x(({ x, width }) => xScale(x + width / 2))
     .y(({ y }) => yScale(y));
   // console.log(line);
 
