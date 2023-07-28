@@ -74,7 +74,7 @@ export default function MusicTable({ data }) {
 
   const router = useRouter();
   return (
-    <TableContainer className="max-h-screen text-center">
+    <TableContainer className="max-h-[60vh]">
       <Table stickyHeader>
         <ThemeProvider theme={theme}>
           <TableHead color="secondary">
@@ -133,12 +133,12 @@ export default function MusicTable({ data }) {
           </TableHead>
         </ThemeProvider>
         <TableBody>
-          {showdata.map(({ name, level, sec, bpm, videoid }) => {
+          {showdata.map(({ id, name, level, sec, bpm, videoid }) => {
             return (
               <TableRow
                 key={name}
                 hover
-                onClick={() => router.push(`/music/${videoid}`)}
+                onClick={() => router.push(`/music/${videoid}?id=${id}`)}
               >
                 <TableCell align="center">{level}</TableCell>
                 <TableCell>{name}</TableCell>

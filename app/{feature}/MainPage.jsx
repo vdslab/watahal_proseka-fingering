@@ -25,6 +25,7 @@ function TabPanel({ value, index, children }) {
 
 export default function MainPage({ musics, clusteringData }) {
   const [currentTab, setCurrentTab] = useState(0);
+  const [id, setId] = useState(null);
   function handleTabChange(e, tabIndex) {
     setCurrentTab(tabIndex);
   }
@@ -37,12 +38,12 @@ export default function MainPage({ musics, clusteringData }) {
           <Tab label="曲一覧" />
         </Tabs>
 
-        <TabPanel value={currentTab} index={0}>
-          <div>
-            <ClusteringVis {...{ clusteringData }} />
-            <Search data={musics} />
-          </div>
-        </TabPanel>
+      <TabPanel value={currentTab} index={0}>
+        <div>
+          <ClusteringVis {...{ clusteringData, id }} />
+          <Search data={musics} setId={setId} />
+        </div>
+      </TabPanel>
 
         <TabPanel value={currentTab} index={1}>
           <MusicList musics={musics} />
