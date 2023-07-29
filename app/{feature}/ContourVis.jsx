@@ -5,8 +5,8 @@ export default function ContourVis({ clusteringData }) {
   if (clusteringData == null) {
     return <p>loading</p>;
   }
-  const width = 600;
-  const height = 600;
+  const width = 400;
+  const height = 400;
   const xScale = d3
     .scaleLinear()
     .domain(d3.extent(clusteringData, ({ x }) => x))
