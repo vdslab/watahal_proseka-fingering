@@ -1,6 +1,6 @@
 import Image from "next/image";
 import * as d3 from "d3";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useState, useMemo, useRef } from "react";
 import { ConnectedTvOutlined } from "@mui/icons-material";
 
 function HoldNote({ x, y, width, height }) {
@@ -45,8 +45,10 @@ export default function FingeringVis({
 }) {
   console.log(playTimeState);
   const svgRef = useRef(null);
+  const [svgWidth, setsvgWidth] = useState(10);
   useEffect(() => {
     svgRef?.current?.scrollIntoView(false);
+    setsvgWidth(svgRef.current?.clientWidth ?? 10);
   }, []);
   const left = fingering["left"]?.map(
     ({ x, y, width, type, judge_type, hold_type, hole }) => ({
@@ -76,10 +78,11 @@ export default function FingeringVis({
 
   // .filter(({ y }) => minY <= y && y <= minY + 4);
   // console.log([...left, ...right]);
+  console.log(svgWidth);
   const xScale = d3
     .scaleLinear()
     .domain([0, 12])
-    .range([0, svgRef?.current?.clientWidth ?? 100])
+    .range([0, svgWidth ?? 100])
     .nice();
   const yScale = d3
     .scaleLinear()
@@ -89,7 +92,7 @@ export default function FingeringVis({
   const widthScale = d3
     .scaleLinear()
     .domain([0, 12])
-    .range([0, svgRef?.current?.clientWidth ?? 100])
+    .range([0, svgWidth ?? 100])
     .nice();
   const showable = left && right && xScale && yScale && widthScale;
   const line = d3
@@ -102,11 +105,12 @@ export default function FingeringVis({
   //   .scaleSequential(d3.interpolatePurples)
   //   .domain(d3.extent(contourDensityValue, (d) => d.value));
   return (
-    <div height="200px">
+    <div height="200px" ref={svgRef}>
       <svg
-        width={width}
+        width={svgWidth}
         height={rangeHeight}
-        ref={svgRef} /*viewBox="0 0 100 100"*/
+        // ref={svgRef}
+        // viewBox={`0 0 100 ${rangeHeight}`}
         style={{ overflow: "scroll" }}
       >
         {!showable ? (
