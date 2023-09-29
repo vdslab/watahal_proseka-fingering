@@ -33,7 +33,7 @@ export default function VideoPlayer({
     height: "390",
     width: "640",
     playerVars: {
-      controls: 0,
+      //controls: 0,
       autoplay: 1,
     },
   };
@@ -61,19 +61,20 @@ export default function VideoPlayer({
     <>
       <ThemeProvider theme={theme}>
         <div>
-          <TimeSlider
+          {/* <TimeSlider
             playBtn={playBtn}
             currentTime={currentTime}
             setSeek={setSeek}
             setPlayTimeState={setPlayTimeState}
             playTimeState={playTimeState}
             max={YTPlayer != null ? YTPlayer.getDuration() : 300}
-          />
+            YTPlayer={YTPlayer}
+          /> */}
         </div>
         <div>
-          <VideoManagerButtons
+          {/* <VideoManagerButtons
             {...{ YTPlayer, setPlaybackRate, playBtn, volume, setVolume }}
-          />
+          /> */}
         </div>
         <YouTube
           videoId={videoId}

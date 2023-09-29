@@ -161,6 +161,9 @@ export default function FingeringVis({
                   leftHold
                 ) => {
                   if (hold_type == "start") {
+                    if (i + 1 >= left.length) {
+                      return <g />;
+                    }
                     const ScaleHoldX = [
                       xScale(x),
                       xScale(x) + widthScale(width),
@@ -175,6 +178,7 @@ export default function FingeringVis({
                       yScale(leftHold[i + 1].y),
                       yScale(leftHold[i + 1].y),
                     ];
+
                     return (
                       <g key={i}>
                         <path

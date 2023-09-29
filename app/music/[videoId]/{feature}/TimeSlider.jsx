@@ -20,8 +20,13 @@ export default function TimeSlider({
   setSeek,
   setPlayTimeState,
   playTimeState,
+  YTPlayer,
 }) {
-  const [value, setValue] = useState([0, max]);
+  const [value, setValue] = useState([0, max]); //指定してる区間の秒数
+
+  useEffect(() => {
+    console.log(playBtn, flowSec);
+  });
 
   //動画の長さをすぐにvalueへ
   useEffect(() => {
@@ -72,8 +77,9 @@ export default function TimeSlider({
   useEffect(() => {
     if (playBtn == 1) {
       setPlayMark(calcPx(value[1]));
-    } else if (playBtn == 2) {
+    } else {
       setPlayMark(calcPx(currentTime));
+      setFlowSec(`0s`);
     }
   }, [playBtn]);
 
@@ -97,6 +103,10 @@ export default function TimeSlider({
         onTransitionEnd={handleTransitionEnd}
         color="secondary"
         sx={{
+          "&.MuiSlider-markActive": {
+            color: "primary",
+          },
+
           [`& .${sliderClasses.mark}`]: {
             position: "absolute",
             color: "primary",
