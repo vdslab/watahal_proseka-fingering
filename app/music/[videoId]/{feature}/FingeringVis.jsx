@@ -45,7 +45,32 @@ function Note({ judge_type, type, ...res }) {
 
 function BarLine({ y, leftX, rightX }) {
   // console.log(y);
-  return <line x1={leftX} y1={y} x2={rightX} y2={y} stroke="gray" />;
+  return (
+    <line
+      x1={leftX}
+      y1={y}
+      x2={rightX}
+      y2={y}
+      strokeWidth={2.5}
+      stroke="gray"
+      opacity={0.35}
+    />
+  );
+}
+
+function LaneLine({ x, bottomY, topY }) {
+  // console.log(x, bottomY, topY);
+  return (
+    <line
+      x1={x}
+      y1={bottomY}
+      x2={x}
+      y2={topY}
+      strokeWidth={2.5}
+      stroke="gray"
+      opacity={0.35}
+    />
+  );
 }
 
 export default function FingeringVis({
@@ -97,7 +122,7 @@ export default function FingeringVis({
 
   const rectHeight = 10;
 
-  const rangeHeight = 25000;
+  const rangeHeight = 60000;
 
   // .filter(({ y }) => minY <= y && y <= minY + 4);
   // console.log([...left, ...right]);
@@ -110,7 +135,7 @@ export default function FingeringVis({
   const yScale = d3
     .scaleLinear()
     .domain(d3.extent([...left, ...right], ({ y }) => y))
-    .range([rangeHeight, 0])
+    .range([rangeHeight - rectHeight / 2, 0])
     .nice();
   const widthScale = d3
     .scaleLinear()
@@ -120,6 +145,7 @@ export default function FingeringVis({
   const showable = left && right && xScale && yScale && widthScale;
   const line = d3
     .line()
+    .curve(d3.curveCatmullRom.alpha(0.5))
     .x(({ x, width }) => xScale(x + width / 2))
     .y(({ y }) => yScale(y));
   // console.log(line);
@@ -141,13 +167,26 @@ export default function FingeringVis({
         ) : (
           <g>
             <g>
-              {[...Array(maxY)].map((e, i) => {
+              {[...Array(maxY + 1)].map((_, i) => {
                 // console.log(i);
                 return (
                   <BarLine
+                    key={i}
                     y={yScale(i)}
                     leftX={xScale(0)}
                     rightX={xScale(12)}
+                  />
+                );
+              })}
+            </g>
+            <g>
+              {[...Array(7)].map((_, i) => {
+                return (
+                  <LaneLine
+                    key={i}
+                    x={(svgWidth / 6) * i}
+                    bottomY={yScale(0)}
+                    topY={yScale(maxY)}
                   />
                 );
               })}
@@ -218,6 +257,7 @@ export default function FingeringVis({
               <path
                 key="fingeringLineLeft"
                 d={line?.(left)}
+                strokeWidth={2.5}
                 fill="none"
                 stroke="red"
               />
@@ -284,6 +324,7 @@ export default function FingeringVis({
                 key="fingeringLineRight"
                 d={line?.(right)}
                 fill="none"
+                strokeWidth={2.5}
                 stroke="blue"
               />
             </g>

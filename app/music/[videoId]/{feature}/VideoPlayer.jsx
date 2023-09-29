@@ -30,7 +30,7 @@ export default function VideoPlayer({
   const [currentTime, setCrrentTime] = useState(0);
 
   const opts = {
-    height: "390",
+    height: "590",
     width: "640",
     playerVars: {
       //controls: 0,
