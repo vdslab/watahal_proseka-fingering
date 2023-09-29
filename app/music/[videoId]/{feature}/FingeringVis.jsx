@@ -1,7 +1,7 @@
 import Image from "next/image";
 import * as d3 from "d3";
 import { useEffect, useMemo, useRef } from "react";
-import { ConnectedTvOutlined } from "@mui/icons-material";
+import { ConnectedTvOutlined, LinkOffTwoTone } from "@mui/icons-material";
 
 function HoldNote({ x, y, width, height }) {
   const holdColor = "rgb(37 255 57)";
@@ -122,6 +122,9 @@ export default function FingeringVis({
                   leftHold
                 ) => {
                   if (hold_type == "start") {
+                    if (i + 1 >= left.length) {
+                      return <g />;
+                    }
                     const ScaleHoldX = [
                       xScale(x),
                       xScale(x) + widthScale(width),
@@ -136,6 +139,7 @@ export default function FingeringVis({
                       yScale(leftHold[i + 1].y),
                       yScale(leftHold[i + 1].y),
                     ];
+
                     return (
                       <g key={i}>
                         <path
