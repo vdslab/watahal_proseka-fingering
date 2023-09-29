@@ -52,14 +52,21 @@ export default function FingeringVis({
   fingering,
   width,
   minY,
-  playTimeState,
+  playerLength,
+  playSeconds,
+  playerState,
 }) {
   // console.log(playTimeState);
   const svgRef = useRef(null);
   const [svgWidth, setsvgWidth] = useState(10);
   useEffect(() => {
-    svgRef?.current?.scrollIntoView(false);
+    //svgRef?.current?.scrollIntoView(false);
     setsvgWidth(svgRef.current?.clientWidth ?? 10);
+    svgRef?.current?.scrollTo({
+      top: 10000,
+      left: 0,
+      behavier: 0,
+    });
   }, []);
   const left = fingering["left"]?.map(
     ({ x, y, width, type, judge_type, hold_type, hole }) => ({

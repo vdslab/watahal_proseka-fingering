@@ -21,13 +21,12 @@ const theme = createTheme({
 
 export default function VideoPlayer({
   videoId,
-  setPlayTimeState,
-  playTimeState,
+  setPlayerLength,
+  setPlaySeconds,
+  setPlayerState,
 }) {
   const [YTPlayer, setYTPlayer] = useState(null);
-  const [playBtn, setPlayBtn] = useState(YouTube.PlayerState.UNSTARTED);
-  const [seek, setSeek] = useState({ value: 0 });
-  const [currentTime, setCrrentTime] = useState(0);
+  //const [seek, setSeek] = useState({ value: 0 });
 
   const opts = {
     height: "390",
@@ -40,17 +39,17 @@ export default function VideoPlayer({
 
   function handleReady(e) {
     setYTPlayer(e.target);
-    setPlayTimeState({ ...playTimeState, max: e.target?.getDuration() ?? 0 });
+    setPlayerLength(e.target?.getDuration() ?? 0);
   }
 
   function setPlaybackRate(value) {
     YTPlayer.setPlaybackRate(value);
   }
 
-  useEffect(() => {
-    YTPlayer?.seekTo(seek.value, true);
-    setPlayTimeState({ ...playTimeState, current: seek.value });
-  }, [seek]);
+  // useEffect(() => {
+  //   YTPlayer?.seekTo(seek.value, true);
+  //   setPlayTimeState({ ...playTimeState, current: seek.value });
+  // }, [seek]);
 
   const [volume, setVolume] = useState(30);
   useEffect(() => {
@@ -84,12 +83,8 @@ export default function VideoPlayer({
             console.log("change rate");
           }}
           onStateChange={() => {
-            setPlayBtn(YTPlayer.getPlayerState());
-            setCrrentTime(YTPlayer.getCurrentTime());
-            setPlayTimeState({
-              ...playTimeState,
-              current: YTPlayer.getCurrentTime(),
-            });
+            setPlayerState(YTPlayer.getPlayerState());
+            setPlaySeconds(YTPlayer.getCurrentTime());
             //console.log(YTPlayer.getCurrentTime());
           }}
         />

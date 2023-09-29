@@ -8,14 +8,21 @@ import Loading from "../loading";
 import { Box } from "@mui/material";
 
 export default function Content({ videoId, fingering }) {
-  const [playTimeState, setPlayTimeState] = useState({ current: 0, max: 0 });
+  const [playerLength, setPlayerLength] = useState(0);
+
+  const [playSeconds, setPlaySeconds] = useState(0);
+  const [playerState, setPlayerState] = useState(-1);
+
+  console.log(playerLength, playSeconds, playerState);
 
   return (
     <div>
       <Stack spacing={2} direction="row">
         <Box>
           <Suspense fallback={<Loading />}>
-            <VideoPlayer {...{ videoId, setPlayTimeState, playTimeState }} />
+            <VideoPlayer
+              {...{ videoId, setPlayerLength, setPlaySeconds, setPlayerState }}
+            />
           </Suspense>
         </Box>
         <Box
@@ -30,7 +37,9 @@ export default function Content({ videoId, fingering }) {
             {...{
               fingering,
               minY: 0,
-              playTimeState,
+              playerLength,
+              playSeconds,
+              playerState,
             }}
           />
         </Box>
