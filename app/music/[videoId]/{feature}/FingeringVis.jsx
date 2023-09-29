@@ -4,18 +4,24 @@ import { useEffect, useState, useMemo, useRef } from "react";
 import { ConnectedTvOutlined } from "@mui/icons-material";
 
 function HoldNote({ x, y, width, height }) {
-  const holdColor = "rgb(37 255 57)";
-  return <rect x={x} y={y} width={width} height={height} fill={holdColor} />;
+  const color = "rgb(37 255 57)";
+  return (
+    <rect x={x} y={y - height / 2} width={width} height={height} fill={color} />
+  );
 }
 
 function NormalNote({ x, y, width, height }) {
   const color = "rgb(100 255 234)";
-  return <rect x={x} y={y} width={width} height={height} fill={color} />;
+  return (
+    <rect x={x} y={y - height / 2} width={width} height={height} fill={color} />
+  );
 }
 
 function FlickNote({ x, y, width, height, direction }) {
   const color = "rgb(255, 119, 187)";
-  return <rect x={x} y={y} width={width} height={height} fill={color} />;
+  return (
+    <rect x={x} y={y - height / 2} width={width} height={height} fill={color} />
+  );
 }
 
 function Note({ judge_type, type, ...res }) {
@@ -37,13 +43,18 @@ function Note({ judge_type, type, ...res }) {
   }
 }
 
+function BarLine({ y, leftX, rightX }) {
+  // console.log(y);
+  return <line x1={leftX} y1={y} x2={rightX} y2={y} stroke="gray" />;
+}
+
 export default function FingeringVis({
   fingering,
   width,
   minY,
   playTimeState,
 }) {
-  console.log(playTimeState);
+  // console.log(playTimeState);
   const svgRef = useRef(null);
   const [svgWidth, setsvgWidth] = useState(10);
   useEffect(() => {
@@ -73,12 +84,24 @@ export default function FingeringVis({
       hole,
     })
   );
+  const maxY = Math.ceil(
+    Math.max.apply(
+      right.map(function (o) {
+        return o.y;
+      }),
+      left.map(function (o) {
+        return o.y;
+      })
+    )
+  );
+
+  const rectHeight = 10;
 
   const rangeHeight = 25000;
 
   // .filter(({ y }) => minY <= y && y <= minY + 4);
   // console.log([...left, ...right]);
-  console.log(svgWidth);
+  // console.log(svgWidth);
   const xScale = d3
     .scaleLinear()
     .domain([0, 12])
@@ -118,6 +141,18 @@ export default function FingeringVis({
         ) : (
           <g>
             <g>
+              {[...Array(maxY)].map((e, i) => {
+                // console.log(i);
+                return (
+                  <BarLine
+                    y={yScale(i)}
+                    leftX={xScale(0)}
+                    rightX={xScale(12)}
+                  />
+                );
+              })}
+            </g>
+            <g>
               {/* {left.map(({ x, y, width, type }, i) => {return <Note {...{x, y, width,height:10 type}}>;})} */}
               {left.map(
                 (
@@ -151,7 +186,7 @@ export default function FingeringVis({
                           {...{
                             type,
                             judge_type,
-                            height: 10,
+                            height: rectHeight,
                             x: xScale(x),
                             y: yScale(y),
                             width: widthScale(width),
@@ -166,7 +201,7 @@ export default function FingeringVis({
                         {...{
                           type,
                           judge_type,
-                          height: 10,
+                          height: rectHeight,
                           x: xScale(x),
                           y: yScale(y),
                           width: widthScale(width),
@@ -216,7 +251,7 @@ export default function FingeringVis({
                           {...{
                             type,
                             judge_type,
-                            height: 10,
+                            height: rectHeight,
                             x: xScale(x),
                             y: yScale(y),
                             width: widthScale(width),
@@ -231,7 +266,7 @@ export default function FingeringVis({
                         {...{
                           type,
                           judge_type,
-                          height: 10,
+                          height: rectHeight,
                           x: xScale(x),
                           y: yScale(y),
                           width: widthScale(width),
