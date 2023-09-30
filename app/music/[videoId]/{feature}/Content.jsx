@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, Suspense } from "react";
+import React, { useState, Suspense, useRef } from "react";
 import VideoPlayer from "./VideoPlayer";
 import FingeringVis from "./FingeringVis";
 import Stack from "@mui/material/Stack";
@@ -9,6 +9,7 @@ import { Box } from "@mui/material";
 
 export default function Content({ videoId, fingering }) {
   const [playTimeState, setPlayTimeState] = useState({ current: 0, max: 0 });
+  const fingeringVisRef = useRef();
 
   return (
     <div>
@@ -19,18 +20,17 @@ export default function Content({ videoId, fingering }) {
           </Suspense>
         </Box>
         <Box
-          sx={{
-            maxHeight: "75vh",
-            width: "50vw",
-            overflowY: "auto",
-            backgroundColor: "white",
-          }}
+          bgcolor={"white"}
+          height={"75vh"}
+          width={"45vw"}
+          ref={fingeringVisRef}
         >
           <FingeringVis
             {...{
               fingering,
               minY: 0,
               playTimeState,
+              height: fingeringVisRef.current?.clientHeight,
             }}
           />
         </Box>
