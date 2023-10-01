@@ -9,6 +9,7 @@ import { Box } from "@mui/material";
 
 export default function Content({ videoId, fingering }) {
   const [playTimeState, setPlayTimeState] = useState({ current: 0, max: 0 });
+  const [YTPlayer, setYTPlayer] = useState();
   const fingeringVisRef = useRef();
 
   return (
@@ -29,8 +30,9 @@ export default function Content({ videoId, fingering }) {
             {...{
               fingering,
               minY: 0,
-              playTimeState,
+              YTPlayer,
               height: fingeringVisRef.current?.clientHeight,
+              width: fingeringVisRef.current?.clientWidth,
             }}
           />
         </Box>
