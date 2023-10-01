@@ -1,7 +1,13 @@
 import { useEffect, useRef } from "react";
 import { Box } from "@mui/material";
 
-export default function ScrollableBox({ children, height, top, left }) {
+export default function ScrollableBox({
+  children,
+  height,
+  top,
+  left,
+  YTPlayer,
+}) {
   const wrapperRef = useRef();
 
   useEffect(() => {
@@ -11,6 +17,16 @@ export default function ScrollableBox({ children, height, top, left }) {
       behavior: "smooth",
     });
   }, [top, left]);
+
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     console.log("timer");
+  //   }, 1000);
+
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, []);
 
   return (
     <Box

@@ -1,17 +1,9 @@
 import ScrollableBox from "./ScrollableBox";
 import ChartContent from "./ChartContent";
 
-export default function Chart({
-  width,
-  minY,
-  playTimeState,
-  height,
-  left,
-  right,
-  maxY,
-}) {
+export default function Chart({ width, YTPlayer, height, left, right, maxY }) {
   return (
-    <ScrollableBox height={height}>
+    <ScrollableBox height={height} YTPlayer={YTPlayer}>
       <ChartContent
         width={width}
         height={height}

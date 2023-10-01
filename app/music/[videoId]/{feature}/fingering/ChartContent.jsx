@@ -34,7 +34,6 @@ export default function ChartContent({ width, height, left, right, maxY }) {
     .x(({ x, width }) => xScale(x + width / 2))
     .y(({ y }) => yScale(y));
 
-  console.log(width);
   return (
     <svg width={svgWidth} height={rangeHeight} ref={svgRef}>
       {!showable ? (
