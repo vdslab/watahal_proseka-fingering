@@ -1,45 +1,6 @@
 import * as d3 from "d3";
 import { useEffect, useState, useRef } from "react";
-
-function HoldNote({ x, y, width, height }) {
-  const color = "rgb(37 255 57)";
-  return (
-    <rect x={x} y={y - height / 2} width={width} height={height} fill={color} />
-  );
-}
-
-function NormalNote({ x, y, width, height }) {
-  const color = "rgb(100 255 234)";
-  return (
-    <rect x={x} y={y - height / 2} width={width} height={height} fill={color} />
-  );
-}
-
-function FlickNote({ x, y, width, height, direction }) {
-  const color = "rgb(255, 119, 187)";
-  return (
-    <rect x={x} y={y - height / 2} width={width} height={height} fill={color} />
-  );
-}
-
-function Note({ judge_type, type, ...res }) {
-  // console.log(res);
-  switch (judge_type) {
-    case "flick_up":
-    case "flick_down":
-    case "flick_left":
-    case "flick_right":
-      return <FlickNote {...{ ...res }} />;
-  }
-  switch (type) {
-    case "hold":
-      return <HoldNote {...{ ...res }} />;
-    case "normal":
-      return <NormalNote {...{ ...res }} />;
-    default:
-      return <HoldNote {...{ ...res }} />;
-  }
-}
+import Note from "./Note";
 
 function BarLine({ y, leftX, rightX }) {
   // console.log(y);
