@@ -14,8 +14,8 @@ export default function Content({ videoId, fingering }) {
 
   return (
     <div>
-      <Stack spacing={2} direction="row" flexWrap={"wrap"} margin={2.5}>
-        <Box height={"75vh"} width={"45vw"} ref={videoPlayerRef}>
+      <Stack direction="row" flexWrap={"wrap"} margin={2.5}>
+        <Box height={"75vh"} width={"45vw"} ref={videoPlayerRef} margin={1}>
           <Suspense fallback={<Loading />}>
             <VideoPlayer
               {...{
@@ -33,6 +33,7 @@ export default function Content({ videoId, fingering }) {
           height={"75vh"}
           width={"45vw"}
           ref={fingeringVisRef}
+          margin={1}
         >
           <FingeringVis
             {...{
