@@ -10,13 +10,22 @@ import { Box } from "@mui/material";
 export default function Content({ videoId, fingering }) {
   const [playTimeState, setPlayTimeState] = useState({ current: 0, max: 0 });
   const fingeringVisRef = useRef();
+  const videoPlayerRef = useRef();
 
   return (
     <div>
-      <Stack spacing={2} direction="row">
-        <Box>
+      <Stack spacing={2} direction="row" flexWrap={"wrap"} margin={2.5}>
+        <Box height={"75vh"} width={"45vw"} ref={videoPlayerRef}>
           <Suspense fallback={<Loading />}>
-            <VideoPlayer {...{ videoId, setPlayTimeState, playTimeState }} />
+            <VideoPlayer
+              {...{
+                videoId,
+                setPlayTimeState,
+                playTimeState,
+                width: videoPlayerRef.current?.clientWidth,
+                height: videoPlayerRef.current?.clientHeight,
+              }}
+            />
           </Suspense>
         </Box>
         <Box

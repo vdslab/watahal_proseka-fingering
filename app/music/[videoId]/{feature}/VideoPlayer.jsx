@@ -23,6 +23,8 @@ export default function VideoPlayer({
   videoId,
   setPlayTimeState,
   playTimeState,
+  width,
+  height,
 }) {
   const [YTPlayer, setYTPlayer] = useState(null);
   const [playBtn, setPlayBtn] = useState(YouTube.PlayerState.UNSTARTED);
@@ -30,8 +32,8 @@ export default function VideoPlayer({
   const [currentTime, setCrrentTime] = useState(0);
 
   const opts = {
-    height: "590",
-    width: "640",
+    height: height,
+    width: width,
     playerVars: {
       //controls: 0,
       autoplay: 1,
