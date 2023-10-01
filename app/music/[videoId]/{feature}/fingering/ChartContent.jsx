@@ -11,8 +11,6 @@ export default function ChartContent({ width, height, left, right, maxY }) {
     setsvgWidth(width ?? 200 - 20);
   }, [height, width]);
 
-  const rangeHeight = 25000;
-
   const xScale = d3
     .scaleLinear()
     .domain([0, 12])
@@ -21,7 +19,7 @@ export default function ChartContent({ width, height, left, right, maxY }) {
   const yScale = d3
     .scaleLinear()
     .domain(d3.extent([...left, ...right], ({ y }) => y))
-    .range([rangeHeight, 0])
+    .range([height, 0])
     .nice();
   const widthScale = d3
     .scaleLinear()
@@ -35,7 +33,7 @@ export default function ChartContent({ width, height, left, right, maxY }) {
     .y(({ y }) => yScale(y));
 
   return (
-    <svg width={svgWidth} height={rangeHeight} ref={svgRef}>
+    <svg width={svgWidth} height={height} ref={svgRef}>
       {!showable ? (
         <></>
       ) : (

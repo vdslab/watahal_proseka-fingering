@@ -4,19 +4,11 @@ import { Box } from "@mui/material";
 export default function ScrollableBox({
   children,
   height,
-  top,
-  left,
   YTPlayer,
+  svgHeight,
 }) {
   const wrapperRef = useRef();
-
-  useEffect(() => {
-    wrapperRef.current?.scroll({
-      top,
-      left,
-      behavior: "smooth",
-    });
-  }, [top, left]);
+  // TODO: 動画時間でyScaleの作成
 
   // useEffect(() => {
   //   const timer = setInterval(() => {
