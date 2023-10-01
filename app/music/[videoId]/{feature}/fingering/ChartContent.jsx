@@ -1,6 +1,5 @@
 import * as d3 from "d3";
 import { useEffect, useState, useRef } from "react";
-import Note from "./Note";
 import BarLines from "./BarLines";
 import FingeringNotes from "./FingeringNotes";
 
@@ -12,7 +11,6 @@ export default function ChartContent({ width, height, left, right, maxY }) {
     setsvgWidth(width ?? 200 - 20);
   }, [height, width]);
 
-  const rectHeight = 10;
   const rangeHeight = 25000;
 
   const xScale = d3

@@ -1,7 +1,4 @@
-import * as d3 from "d3";
-import { useEffect, useState, useRef } from "react";
 import Note from "./Note";
-import BarLines from "./BarLines";
 
 export default function FingeringNotes({ hand, scales, line }) {
   const { xScale, yScale, widthScale } = scales;
