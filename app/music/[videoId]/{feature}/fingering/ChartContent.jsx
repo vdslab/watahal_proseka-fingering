@@ -1,11 +1,7 @@
 import * as d3 from "d3";
 import { useEffect, useState, useRef } from "react";
 import Note from "./Note";
-
-function BarLine({ y, leftX, rightX }) {
-  // console.log(y);
-  return <line x1={leftX} y1={y} x2={rightX} y2={y} stroke="gray" />;
-}
+import BarLines from "./BarLines";
 
 export default function ChartContent({ width, height, left, right, maxY }) {
   const svgRef = useRef();
@@ -46,19 +42,7 @@ export default function ChartContent({ width, height, left, right, maxY }) {
         <></>
       ) : (
         <g>
-          <g>
-            {[...Array(maxY)].map((e, i) => {
-              // console.log(i);
-              return (
-                <BarLine
-                  key={i}
-                  y={yScale(i)}
-                  leftX={xScale(0)}
-                  rightX={xScale(12)}
-                />
-              );
-            })}
-          </g>
+          <BarLines maxY={maxY} yScale={yScale} xScale={xScale} />
           <g>
             {/* {left.map(({ x, y, width, type }, i) => {return <Note {...{x, y, width,height:10 type}}>;})} */}
             {left.map(
