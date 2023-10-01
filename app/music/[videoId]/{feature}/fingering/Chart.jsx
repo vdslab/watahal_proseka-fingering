@@ -3,6 +3,7 @@ import * as d3 from "d3";
 import { useEffect, useState, useMemo, useRef } from "react";
 import { ConnectedTvOutlined } from "@mui/icons-material";
 import { Box } from "@mui/material";
+import ScrollableBox from "./ScrollableBox";
 
 function HoldNote({ x, y, width, height }) {
   const color = "rgb(37 255 57)";
@@ -58,22 +59,16 @@ export default function Chart({
   right,
   maxY,
 }) {
-  // console.log(playTimeState);
-  const wrapperRef = useRef();
   const svgRef = useRef();
   const [svgWidth, setsvgWidth] = useState(10);
   useEffect(() => {
     svgRef.current?.scrollIntoView(false);
-    setsvgWidth(wrapperRef.current?.clientWidth ?? 10);
-  }, [height]);
+    setsvgWidth(width ?? 200 - 20);
+  }, [height, width]);
 
   const rectHeight = 10;
-
   const rangeHeight = 25000;
 
-  // .filter(({ y }) => minY <= y && y <= minY + 4);
-  // console.log([...left, ...right]);
-  // console.log(svgWidth);
   const xScale = d3
     .scaleLinear()
     .domain([0, 12])
@@ -94,26 +89,10 @@ export default function Chart({
     .line()
     .x(({ x, width }) => xScale(x + width / 2))
     .y(({ y }) => yScale(y));
-  // console.log(line);
 
-  // const colorScale = d3
-  //   .scaleSequential(d3.interpolatePurples)
-  //   .domain(d3.extent(contourDensityValue, (d) => d.value));
-
+  console.log(width);
   return (
-    <Box
-      maxHeight={height}
-      overflow={"auto"}
-      ref={wrapperRef}
-      onClick={() => {
-        console.log("scroll test: move to top");
-        wrapperRef?.current?.scroll({
-          top: 0,
-          left: 0,
-          behavior: "smooth",
-        });
-      }}
-    >
+    <ScrollableBox height={height}>
       <svg width={svgWidth} height={rangeHeight} ref={svgRef}>
         {!showable ? (
           <></>
@@ -124,6 +103,7 @@ export default function Chart({
                 // console.log(i);
                 return (
                   <BarLine
+                    key={i}
                     y={yScale(i)}
                     leftX={xScale(0)}
                     rightX={xScale(12)}
@@ -269,6 +249,6 @@ export default function Chart({
           </g>
         )}
       </svg>
-    </Box>
+    </ScrollableBox>
   );
 }

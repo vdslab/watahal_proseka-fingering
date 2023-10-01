@@ -31,6 +31,7 @@ export default function Content({ videoId, fingering }) {
               minY: 0,
               playTimeState,
               height: fingeringVisRef.current?.clientHeight,
+              width: fingeringVisRef.current?.clientWidth,
             }}
           />
         </Box>
