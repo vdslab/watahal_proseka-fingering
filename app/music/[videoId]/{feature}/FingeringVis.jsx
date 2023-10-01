@@ -2,6 +2,7 @@ import Image from "next/image";
 import * as d3 from "d3";
 import { useEffect, useState, useMemo, useRef } from "react";
 import { ConnectedTvOutlined } from "@mui/icons-material";
+import { Box } from "@mui/material";
 
 function HoldNote({ x, y, width, height }) {
   const color = "rgb(37 255 57)";
@@ -78,14 +79,16 @@ export default function FingeringVis({
   width,
   minY,
   playTimeState,
+  height,
 }) {
   // console.log(playTimeState);
-  const svgRef = useRef(null);
+  const wrapperRef = useRef();
+  const svgRef = useRef();
   const [svgWidth, setsvgWidth] = useState(10);
   useEffect(() => {
-    svgRef?.current?.scrollIntoView(false);
-    setsvgWidth(svgRef.current?.clientWidth ?? 10);
-  }, []);
+    svgRef.current?.scrollIntoView(false);
+    setsvgWidth(wrapperRef.current?.clientWidth ?? 10);
+  }, [height]);
   const left = fingering["left"]?.map(
     ({ x, y, width, type, judge_type, hold_type, hole }) => ({
       x,
@@ -153,15 +156,22 @@ export default function FingeringVis({
   // const colorScale = d3
   //   .scaleSequential(d3.interpolatePurples)
   //   .domain(d3.extent(contourDensityValue, (d) => d.value));
+
   return (
-    <div height="200px" ref={svgRef}>
-      <svg
-        width={svgWidth}
-        height={rangeHeight}
-        // ref={svgRef}
-        // viewBox={`0 0 100 ${rangeHeight}`}
-        style={{ overflow: "scroll" }}
-      >
+    <Box
+      maxHeight={height}
+      overflow={"auto"}
+      ref={wrapperRef}
+      onClick={() => {
+        console.log("scroll test: move to top");
+        wrapperRef?.current?.scroll({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      }}
+    >
+      <svg width={svgWidth} height={rangeHeight} ref={svgRef}>
         {!showable ? (
           <></>
         ) : (
@@ -331,6 +341,6 @@ export default function FingeringVis({
           </g>
         )}
       </svg>
-    </div>
+    </Box>
   );
 }
