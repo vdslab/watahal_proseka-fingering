@@ -14,7 +14,7 @@ export default function Content({ videoId, fingering }) {
 
   return (
     <div>
-      <Stack spacing={2} direction="row">
+      <Stack spacing={2} direction="row" justifyContent="center" margin={2}>
         <Box>
           <Suspense fallback={<Loading />}>
             <VideoPlayer {...{ videoId, setPlayTimeState, playTimeState }} />

@@ -2,7 +2,7 @@ import ScrollableBox from "./ScrollableBox";
 import ChartContent from "./ChartContent";
 
 export default function Chart({ width, YTPlayer, height, left, right, maxY }) {
-  const svgHeight = 25000;
+  const svgHeight = 60000;
 
   return (
     <ScrollableBox height={height} YTPlayer={YTPlayer} svgHeight={svgHeight}>
