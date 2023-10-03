@@ -9,23 +9,15 @@ import { Box } from "@mui/material";
 
 export default function Content({ videoId, fingering }) {
   const [playTimeState, setPlayTimeState] = useState({ current: 0, max: 0 });
+  const [YTPlayer, setYTPlayer] = useState();
   const fingeringVisRef = useRef();
-  const videoPlayerRef = useRef();
 
   return (
     <div>
-      <Stack direction="row" flexWrap={"wrap"} margin={2.5}>
-        <Box height={"75vh"} width={"45vw"} ref={videoPlayerRef} margin={1}>
+      <Stack spacing={2} direction="row">
+        <Box>
           <Suspense fallback={<Loading />}>
-            <VideoPlayer
-              {...{
-                videoId,
-                setPlayTimeState,
-                playTimeState,
-                width: videoPlayerRef.current?.clientWidth,
-                height: videoPlayerRef.current?.clientHeight,
-              }}
-            />
+            <VideoPlayer {...{ videoId, setPlayTimeState, playTimeState }} />
           </Suspense>
         </Box>
         <Box
@@ -33,14 +25,14 @@ export default function Content({ videoId, fingering }) {
           height={"75vh"}
           width={"45vw"}
           ref={fingeringVisRef}
-          margin={1}
         >
           <FingeringVis
             {...{
               fingering,
               minY: 0,
-              playTimeState,
+              YTPlayer,
               height: fingeringVisRef.current?.clientHeight,
+              width: fingeringVisRef.current?.clientWidth,
             }}
           />
         </Box>
