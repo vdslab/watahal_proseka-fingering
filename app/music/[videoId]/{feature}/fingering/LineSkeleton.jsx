@@ -28,7 +28,7 @@ function LaneLine({ x, bottomY, topY }) {
   );
 }
 
-export default function BarLines({ maxY, yScale, xScale }) {
+export default function LineSkeleton({ maxY, yScale, xScale }) {
   // console.log(y);
   return (
     <g>

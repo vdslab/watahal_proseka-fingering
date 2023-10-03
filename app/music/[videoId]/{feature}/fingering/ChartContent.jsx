@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 import { useEffect, useState, useRef } from "react";
-import BarLines from "./BarLines";
+import LineSkeleton from "./LineSkeleton";
 import FingeringNotes from "./FingeringNotes";
 
 export default function ChartContent({ width, height, left, right, maxY }) {
@@ -39,7 +39,7 @@ export default function ChartContent({ width, height, left, right, maxY }) {
         <></>
       ) : (
         <g>
-          <BarLines maxY={maxY} yScale={yScale} xScale={xScale} />
+          <LineSkeleton maxY={maxY} yScale={yScale} xScale={xScale} />
           <FingeringNotes
             hand={left}
             scales={{ xScale, yScale, widthScale }}
