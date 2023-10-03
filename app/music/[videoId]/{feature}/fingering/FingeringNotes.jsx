@@ -1,8 +1,13 @@
 import Note from "./Note";
 
-export default function FingeringNotes({ hand, scales, line }) {
+export default function FingeringNotes({
+  hand,
+  scales,
+  line,
+  fingeringColor,
+  noteHeight,
+}) {
   const { xScale, yScale, widthScale } = scales;
-  const rectHeight = 10;
 
   return (
     <g>
@@ -37,7 +42,7 @@ export default function FingeringNotes({ hand, scales, line }) {
                   {...{
                     type,
                     judge_type,
-                    height: rectHeight,
+                    height: noteHeight,
                     x: xScale(x),
                     y: yScale(y),
                     width: widthScale(width),
@@ -52,7 +57,7 @@ export default function FingeringNotes({ hand, scales, line }) {
                 {...{
                   type,
                   judge_type,
-                  height: rectHeight,
+                  height: noteHeight,
                   x: xScale(x),
                   y: yScale(y),
                   width: widthScale(width),
@@ -63,7 +68,13 @@ export default function FingeringNotes({ hand, scales, line }) {
         }
       )}
 
-      <path key="fingeringLineLeft" d={line?.(hand)} fill="none" stroke="red" />
+      <path
+        key="fingeringLine"
+        d={line?.(hand)}
+        fill="none"
+        strokeWidth={2.5}
+        stroke={fingeringColor}
+      />
     </g>
   );
 }
