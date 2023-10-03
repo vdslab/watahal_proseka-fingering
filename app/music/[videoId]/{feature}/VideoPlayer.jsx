@@ -19,15 +19,7 @@ const theme = createTheme({
   },
 });
 
-export default function VideoPlayer({
-  videoId,
-  setPlayerLength,
-  setPlaySeconds,
-  setPlayerState,
-}) {
-  const [YTPlayer, setYTPlayer] = useState(null);
-  //const [seek, setSeek] = useState({ value: 0 });
-
+export default function VideoPlayer({ videoId, YTPlayer, setYTPlayer }) {
   const opts = {
     height: "390",
     width: "640",
@@ -39,7 +31,6 @@ export default function VideoPlayer({
 
   function handleReady(e) {
     setYTPlayer(e.target);
-    setPlayerLength(e.target?.getDuration() ?? 0);
   }
 
   function setPlaybackRate(value) {
@@ -83,8 +74,8 @@ export default function VideoPlayer({
             console.log("change rate");
           }}
           onStateChange={() => {
-            setPlayerState(YTPlayer.getPlayerState());
-            setPlaySeconds(YTPlayer.getCurrentTime());
+            //   setPlayerState(YTPlayer.getPlayerState());
+            //   setPlaySeconds(YTPlayer.getCurrentTime());
             //console.log(YTPlayer.getCurrentTime());
           }}
         />

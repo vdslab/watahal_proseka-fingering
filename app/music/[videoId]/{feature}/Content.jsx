@@ -18,7 +18,11 @@ export default function Content({ videoId, fingering }) {
         <Box>
           <Suspense fallback={<Loading />}>
             <VideoPlayer
-              {...{ videoId, setPlayerLength, setPlaySeconds, setPlayerState }}
+              {...{
+                videoId,
+                YTPlayer,
+                setYTPlayer,
+              }}
             />
           </Suspense>
         </Box>
