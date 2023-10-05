@@ -35,7 +35,7 @@ export default async function Home({ searchParams: { id } }) {
 
   return (
     <main className="p-12 bg-slate-200 max-h-screen">
-      <MainPage {...{ musics, clusteringData, similarities }} />
+      <MainPage {...{ musics, clusteringData, similarityData }} />
     </main>
   );
 }

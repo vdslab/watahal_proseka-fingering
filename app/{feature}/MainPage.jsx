@@ -24,7 +24,7 @@ function TabPanel({ value, index, children }) {
   );
 }
 
-export default function MainPage({ musics, clusteringData, similarities }) {
+export default function MainPage({ musics, clusteringData, similarityData }) {
   const [currentTab, setCurrentTab] = useState(0);
   const [id, setId] = useState(null);
   function handleTabChange(e, tabIndex) {
@@ -41,7 +41,7 @@ export default function MainPage({ musics, clusteringData, similarities }) {
       <TabPanel value={currentTab} index={0}>
         <div>
           {/* <ClusteringVis {...{ clusteringData, id }} /> */}
-          <Relationvis {...{ similarities, id }} />
+          <Relationvis similarityData={similarityData} />
           <Search data={musics} setId={setId} />
         </div>
       </TabPanel>
