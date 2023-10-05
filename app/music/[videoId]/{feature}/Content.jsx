@@ -32,10 +32,10 @@ export default function Content({ videoId, fingering }) {
         </Box>
       </Grid>
       <Grid item xs={4} container direction={"column"}>
-        <Grid item xs>
+        <Grid item xs height={"10vh"} overflow={"auto"}>
           <div>menu</div>
         </Grid>
-        <Grid item xs>
+        <Grid item xs height={"10vh"}>
           <VideoPlayer
             {...{
               videoId,
