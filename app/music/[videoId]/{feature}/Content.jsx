@@ -5,38 +5,52 @@ import FingeringVis from "./FingeringVis";
 import Stack from "@mui/material/Stack";
 import { useTheme } from "@mui/material/styles";
 import Loading from "../loading";
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
+import SimilarityList from "./SimilarityList";
 
-export default function Content({ videoId, fingering }) {
+export default function Content({
+  videoId,
+  fingering,
+  similarities,
+  musicList,
+}) {
   const [playTimeState, setPlayTimeState] = useState({ current: 0, max: 0 });
   const [YTPlayer, setYTPlayer] = useState();
-  const fingeringVisRef = useRef();
+  const mainViewRef = useRef();
 
   return (
-    <div>
-      <Stack spacing={2} direction="row" justifyContent="center" margin={2}>
-        <Box>
-          <Suspense fallback={<Loading />}>
-            <VideoPlayer {...{ videoId, setPlayTimeState, playTimeState }} />
-          </Suspense>
-        </Box>
+    <Grid container direction={"row"} alignItems="stretch" spacing={2}>
+      <Grid item xs={8} ref={mainViewRef}>
         <Box
           bgcolor={"white"}
           height={"75vh"}
-          width={"45vw"}
-          ref={fingeringVisRef}
+          // width={"45vw"}
         >
           <FingeringVis
             {...{
               fingering,
               minY: 0,
               YTPlayer,
-              height: fingeringVisRef.current?.clientHeight,
-              width: fingeringVisRef.current?.clientWidth,
+              height: mainViewRef.current?.clientHeight,
+              width: mainViewRef.current?.clientWidth,
             }}
           />
         </Box>
-      </Stack>
-    </div>
+      </Grid>
+      <Grid item xs={4} container direction={"column"}>
+        <Grid item xs height={"10vh"} overflow={"auto"}>
+          <SimilarityList similarities={similarities} musicList={musicList} />
+        </Grid>
+        <Grid item xs height={"10vh"}>
+          <VideoPlayer
+            {...{
+              videoId,
+              setPlayTimeState,
+              playTimeState,
+            }}
+          />
+        </Grid>
+      </Grid>
+    </Grid>
   );
 }
