@@ -5,6 +5,8 @@ import Search from "./Search";
 import ClusteringVis from "./ClusteringVis";
 import MusicList from "./MusicList";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 const theme = createTheme({
   palette: {
@@ -32,6 +34,26 @@ export default function MainPage({ musics, clusteringData }) {
 
   return (
     <ThemeProvider theme={theme}>
+      <Container maxWidth="sm">
+        <Box
+          display="flax"
+          justifyContent="center"
+          alignItems="center"
+          height="300"
+          //</Container>sx={{
+          //   width: 300,
+          //height: 700,
+          //   backgroundColor: "primary.dark",
+          //   "&:hover": {
+          //     backgroundColor: "primary",
+          //     opacity: [0.9, 0.8, 0.7],
+          //},
+          //}}
+        >
+          <Search data={musics} setId={setId} />
+        </Box>
+      </Container>
+
       <Tabs value={currentTab} onChange={handleTabChange} variant="fullWidth">
         <Tab label="曲検索" />
         <Tab label="曲一覧" />
@@ -40,7 +62,6 @@ export default function MainPage({ musics, clusteringData }) {
       <TabPanel value={currentTab} index={0}>
         <div>
           <ClusteringVis {...{ clusteringData, id }} />
-          <Search data={musics} setId={setId} />
         </div>
       </TabPanel>
 

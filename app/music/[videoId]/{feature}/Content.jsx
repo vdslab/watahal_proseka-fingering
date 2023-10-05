@@ -45,8 +45,8 @@ export default function Content({
           <VideoPlayer
             {...{
               videoId,
-              setPlayTimeState,
-              playTimeState,
+              YTPlayer,
+              setYTPlayer,
             }}
           />
         </Grid>
