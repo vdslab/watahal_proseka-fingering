@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import TimeSlider from "./TimeSlider";
 import VideoManagerButtons from "./VideoManagerButtons";
 import YouTube, { YouTubePlayer } from "react-youtube";
@@ -9,6 +9,7 @@ import {
 } from "@mui/icons-material";
 
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import { Box } from "@mui/material";
 
 const theme = createTheme({
   palette: {
@@ -19,10 +20,22 @@ const theme = createTheme({
   },
 });
 
-export default function VideoPlayer({ videoId, YTPlayer, setYTPlayer }) {
+export default function VideoPlayer({
+  videoId,
+  setPlayTimeState,
+  playTimeState,
+}) {
+  const [YTPlayer, setYTPlayer] = useState(null);
+  const [playBtn, setPlayBtn] = useState(YouTube.PlayerState.UNSTARTED);
+  const [seek, setSeek] = useState({ value: 0 });
+  const [currentTime, setCrrentTime] = useState(0);
+  const wrapperRef = useRef();
+  const width = wrapperRef.current?.clientWidth;
+  const height = wrapperRef.current?.clientHeight;
+
   const opts = {
-    height: "390",
-    width: "640",
+    width: width,
+    height: height,
     playerVars: {
       //controls: 0,
       autoplay: 1,
@@ -48,7 +61,7 @@ export default function VideoPlayer({ videoId, YTPlayer, setYTPlayer }) {
   }, [volume]);
 
   return (
-    <>
+    <Box ref={wrapperRef} width={"100%"} height={"100%"}>
       <ThemeProvider theme={theme}>
         <div>
           {/* <TimeSlider
@@ -80,6 +93,6 @@ export default function VideoPlayer({ videoId, YTPlayer, setYTPlayer }) {
           }}
         />
       </ThemeProvider>
-    </>
+    </Box>
   );
 }
