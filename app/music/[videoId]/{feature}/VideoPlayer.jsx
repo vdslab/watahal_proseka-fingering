@@ -9,6 +9,7 @@ import {
 } from "@mui/icons-material";
 
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import { Box } from "@mui/material";
 
 const theme = createTheme({
   palette: {
@@ -61,7 +62,7 @@ export default function VideoPlayer({
   }, [volume]);
 
   return (
-    <div ref={wrapperRef} style={{ width: "100%", height: "100%" }}>
+    <Box ref={wrapperRef} width={"100%"} height={"100%"}>
       <ThemeProvider theme={theme}>
         <div>
           {/* <TimeSlider
@@ -97,6 +98,6 @@ export default function VideoPlayer({
           }}
         />
       </ThemeProvider>
-    </div>
+    </Box>
   );
 }
