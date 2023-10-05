@@ -27,4 +27,4 @@ async function readCSV(filePath, rootDir = null, parseFunc, header = false) {
   );
 }
 
-export { readJSON, readCSV };
+export { readFileContent, readJSON, readCSV };
