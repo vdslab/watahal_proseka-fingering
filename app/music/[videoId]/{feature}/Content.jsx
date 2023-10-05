@@ -6,8 +6,14 @@ import Stack from "@mui/material/Stack";
 import { useTheme } from "@mui/material/styles";
 import Loading from "../loading";
 import { Box, Grid } from "@mui/material";
+import SimilarityList from "./SimilarityList";
 
-export default function Content({ videoId, fingering }) {
+export default function Content({
+  videoId,
+  fingering,
+  similarities,
+  musicList,
+}) {
   const [playTimeState, setPlayTimeState] = useState({ current: 0, max: 0 });
   const [YTPlayer, setYTPlayer] = useState();
   const mainViewRef = useRef();
@@ -33,7 +39,7 @@ export default function Content({ videoId, fingering }) {
       </Grid>
       <Grid item xs={4} container direction={"column"}>
         <Grid item xs height={"10vh"} overflow={"auto"}>
-          <div>menu</div>
+          <SimilarityList similarities={similarities} musicList={musicList} />
         </Grid>
         <Grid item xs height={"10vh"}>
           <VideoPlayer
