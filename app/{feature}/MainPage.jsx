@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Tabs, Tab } from "@mui/material";
 import Search from "./Search";
 import ClusteringVis from "./ClusteringVis";
+import Relationvis from "./RelationVis";
 import MusicList from "./MusicList";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 
@@ -23,7 +24,7 @@ function TabPanel({ value, index, children }) {
   );
 }
 
-export default function MainPage({ musics, clusteringData }) {
+export default function MainPage({ musics, clusteringData, similarities }) {
   const [currentTab, setCurrentTab] = useState(0);
   const [id, setId] = useState(null);
   function handleTabChange(e, tabIndex) {
@@ -39,7 +40,8 @@ export default function MainPage({ musics, clusteringData }) {
 
       <TabPanel value={currentTab} index={0}>
         <div>
-          <ClusteringVis {...{ clusteringData, id }} />
+          {/* <ClusteringVis {...{ clusteringData, id }} /> */}
+          <Relationvis {...{ similarities, id }} />
           <Search data={musics} setId={setId} />
         </div>
       </TabPanel>
