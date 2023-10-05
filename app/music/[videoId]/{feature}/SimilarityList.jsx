@@ -2,6 +2,7 @@
 
 import {
   Box,
+  Divider,
   List,
   ListItem,
   ListItemButton,
@@ -10,8 +11,10 @@ import {
   ListSubheader,
 } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
+import { useRouter } from "next/navigation";
 
 export default function SimilarityList({ similarities, musicList }) {
+  const router = useRouter();
   const header = Object.keys(similarities[0]);
   similarities.sort((a, b) => {
     return b.similarity - a.similarity;
@@ -22,8 +25,12 @@ export default function SimilarityList({ similarities, musicList }) {
   ).name;
 
   const similarMusic = orderedSimilarities.map((similarity) => {
-    const name = musicList.find((music) => music.id === similarity.target).name;
-    return { ...similarity, name };
+    const targetMusic = musicList.find(
+      (music) => music.id === similarity.target
+    );
+    const { name, videoid: videoId } = targetMusic;
+
+    return { ...similarity, name, videoId };
   });
 
   return (
@@ -31,9 +38,13 @@ export default function SimilarityList({ similarities, musicList }) {
       <List>
         <ListSubheader>現在の曲</ListSubheader>
         <ListItem>{sourceName}</ListItem>
+        <Divider />
         <ListSubheader>似ている曲</ListSubheader>
-        {similarMusic.map(({ target, name }) => (
-          <ListItemButton key={target}>
+        {similarMusic.map(({ target, name, videoId }) => (
+          <ListItemButton
+            key={target}
+            onClick={() => router.push(`/music/${videoId}?id=${target}`)}
+          >
             <ListItemIcon>
               <LaunchIcon />
             </ListItemIcon>
