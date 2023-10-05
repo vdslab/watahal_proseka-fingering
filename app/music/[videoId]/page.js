@@ -1,17 +1,7 @@
 import Content from "./{feature}/Content";
 import path from "path";
 import { promises as fs } from "fs";
-
-async function readFileContent(filePath, rootDir = null) {
-  const file = path.join(rootDir ?? "", filePath);
-  const content = await fs.readFile(file, "utf8");
-  return content;
-}
-
-async function readJSON(filePath, rootDir = null) {
-  const content = await readFileContent(filePath, rootDir);
-  return JSON.parse(content);
-}
+import { readJSON } from "@/app/readFile";
 
 export default async function Home({
   params: { videoId },
