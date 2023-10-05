@@ -2,6 +2,7 @@ import "./tailwind.css";
 import MainPage from "./{feature}/MainPage";
 import path from "path";
 import { readCSV, readJSON } from "./readFile";
+import getSimilarityData from "./{feature}/getSimilarityData";
 
 function Sort() {
   return (
@@ -29,6 +30,8 @@ export default async function Home() {
     parseFloat,
     true
   );
+
+  const similarityData = await getSimilarityData();
 
   return (
     <main className="p-12 bg-slate-200 max-h-screen">
