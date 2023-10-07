@@ -11,7 +11,6 @@ export default function Relationvis({ similarityData }) {
     value: d.value * 20,
   }));
   const nodes = similarityData.nodes.map((d) => ({ ...d }));
-
   const svgRef = useRef();
 
   const simulation = d3
@@ -20,9 +19,18 @@ export default function Relationvis({ similarityData }) {
       "link",
       d3.forceLink(links).id((d) => d.id)
     )
-    .force("charge", d3.forceManyBody())
-    .force("center", d3.forceCenter(width / 2, height / 2));
-  //   .on("tick", ticked);
+    .force(
+      "charge",
+      d3.forceManyBody().strength((d) => d.value)
+    )
+    .force("center", d3.forceCenter(width / 2, height / 2))
+    // .force("x", d3.forceX())
+    // .force("y", d3.forceY())
+    .force(
+      "collide",
+      d3.forceCollide((d) => 20)
+    );
+  // .on("tick", ticked);
 
   useEffect(() => {
     const svg = d3.select(svgRef.current);
@@ -33,7 +41,7 @@ export default function Relationvis({ similarityData }) {
       .attr("stroke-opacity", 0.6)
       .selectAll()
       .data(links)
-      .join("line")
+      .join("path")
       .attr("stroke-width", (d) => Math.sqrt(d.value));
 
     const node = svg
@@ -50,11 +58,10 @@ export default function Relationvis({ similarityData }) {
 
     // Add a drag behavior.
     node.call(
-      d3
-        .drag()
-        .on("start", dragstarted)
-        .on("drag", dragged)
-        .on("end", dragended)
+      d3.drag(simulation)
+      // .on("start", dragstarted)
+      // .on("drag", dragged)
+      // .on("end", dragended)
     );
 
     // Set the position attributes of links and nodes each time the simulation ticks.
@@ -68,26 +75,35 @@ export default function Relationvis({ similarityData }) {
       node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
     }
 
+    simulation.on("tick", () => {
+      link.attr(
+        "d",
+        (d) =>
+          `M${d.source.x},${d.source.y}A0,0 0 0,1 ${d.target.x},${d.target.y}`
+      );
+      node.attr("transform", (d) => `translate(${d.x},${d.y})`);
+    });
+
     // Reheat the simulation when drag starts, and fix the subject position.
-    function dragstarted(event) {
-      if (!event.active) simulation.alphaTarget(0.3).restart();
-      event.subject.fx = event.subject.x;
-      event.subject.fy = event.subject.y;
-    }
+    // function dragstarted(event) {
+    //   if (!event.active) simulation.alphaTarget(0.3).restart();
+    //   event.subject.fx = event.subject.x;
+    //   event.subject.fy = event.subject.y;
+    // }
 
     // Update the subject (dragged node) position during drag.
-    function dragged(event) {
-      event.subject.fx = event.x;
-      event.subject.fy = event.y;
-    }
+    // function dragged(event) {
+    //   event.subject.fx = event.x;
+    //   event.subject.fy = event.y;
+    // }
 
     // Restore the target alpha so the simulation cools after dragging ends.
     // Unfix the subject position now that it’s no longer being dragged.
-    function dragended(event) {
-      if (!event.active) simulation.alphaTarget(0);
-      event.subject.fx = null;
-      event.subject.fy = null;
-    }
+    // function dragended(event) {
+    //   if (!event.active) simulation.alphaTarget(0);
+    //   event.subject.fx = null;
+    //   event.subject.fy = null;
+    // }
 
     // When this cell is re-run, stop the previous simulation. (This doesn’t
     // really matter since the target alpha is zero and the simulation will
