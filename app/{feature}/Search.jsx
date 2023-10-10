@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Button from "@mui/material/Button";
@@ -16,6 +16,10 @@ export default function Search({ data, setId, nodeId }) {
   const router = useRouter();
   const [selectID, setSelectID] = useState(null);
 
+  useEffect(() => {
+    setSelectID(names.find((d) => d.key === nodeId));
+  }, [nodeId]);
+
   return (
     <div className="flex">
       <Autocomplete
@@ -29,6 +33,7 @@ export default function Search({ data, setId, nodeId }) {
             </Box>
           );
         }}
+        value={selectID}
         sx={{ width: 500 }}
         renderInput={(params) => {
           return <TextField {...params} label="曲" />;
