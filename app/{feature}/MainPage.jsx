@@ -35,7 +35,7 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
   return (
     <ThemeProvider theme={theme}>
       <Tabs value={currentTab} onChange={handleTabChange} variant="fullWidth">
-        <Tab label="曲検索" />
+        <Tab label="似てる曲を探す" />
         <Tab label="曲一覧" />
       </Tabs>
 
