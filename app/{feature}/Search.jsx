@@ -8,7 +8,7 @@ import MusicNoteIcon from "@mui/icons-material/MusicNote";
 
 import { useRouter } from "next/navigation";
 
-export default function Search({ data, setId }) {
+export default function Search({ data, setId, nodeId }) {
   const names = data.map(({ id, name, videoid }) => {
     return { key: id, label: name, ID: videoid };
   });

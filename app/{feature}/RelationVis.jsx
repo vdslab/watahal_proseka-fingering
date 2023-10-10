@@ -2,16 +2,16 @@
 import * as d3 from "d3";
 import { useRef, useEffect } from "react";
 
-export default function Relationvis({ similarityData }) {
+export default function Relationvis({ similarityData, setNodeId }) {
   const width = 600;
   const height = 600;
+  const svgRef = useRef();
 
   const links = similarityData.links.map((d) => ({
     ...d,
     value: d.value * 20,
   }));
   const nodes = similarityData.nodes.map((d) => ({ ...d }));
-  const svgRef = useRef();
 
   const simulation = d3
     .forceSimulation(nodes)
@@ -24,13 +24,10 @@ export default function Relationvis({ similarityData }) {
       d3.forceManyBody().strength((d) => d.value)
     )
     .force("center", d3.forceCenter(width / 2, height / 2))
-    // .force("x", d3.forceX())
-    // .force("y", d3.forceY())
     .force(
       "collide",
       d3.forceCollide((d) => 20)
     );
-  // .on("tick", ticked);
 
   useEffect(() => {
     const svg = d3.select(svgRef.current);
@@ -41,8 +38,8 @@ export default function Relationvis({ similarityData }) {
       .attr("stroke-opacity", 0.6)
       .selectAll()
       .data(links)
-      .join("path")
-      .attr("stroke-width", (d) => Math.sqrt(d.value));
+      .join("line")
+      .attr("stroke-width", 1.5);
 
     const node = svg
       .append("g")
@@ -51,21 +48,25 @@ export default function Relationvis({ similarityData }) {
       .selectAll()
       .data(nodes)
       .join("circle")
+      .on("click", function (d) {
+        console.log(d.srcElement.__data__.musicId);
+        setNodeId(d.srcElement.__data__.musicId);
+      })
       .attr("r", 5);
-    //   .attr("fill", (d) => color(d.group));
 
-    node.append("title").text((d) => d.id);
+    node.append("title").text(function (d) {
+      return d.id;
+    });
 
     // Add a drag behavior.
-    node.call(
-      d3.drag(simulation)
-      // .on("start", dragstarted)
-      // .on("drag", dragged)
-      // .on("end", dragended)
-    );
+    // node.call(
+    // .on("start", dragstarted)
+    // .on("drag", dragged)
+    // .on("end", dragended)
+    // );
 
     // Set the position attributes of links and nodes each time the simulation ticks.
-    function ticked() {
+    simulation.on("tick", () => {
       link
         .attr("x1", (d) => d.source.x)
         .attr("y1", (d) => d.source.y)
@@ -73,16 +74,16 @@ export default function Relationvis({ similarityData }) {
         .attr("y2", (d) => d.target.y);
 
       node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
-    }
-
-    simulation.on("tick", () => {
-      link.attr(
-        "d",
-        (d) =>
-          `M${d.source.x},${d.source.y}A0,0 0 0,1 ${d.target.x},${d.target.y}`
-      );
-      node.attr("transform", (d) => `translate(${d.x},${d.y})`);
     });
+
+    // simulation.on("tick", () => {
+    //   link.attr(
+    //     "d",
+    //     (d) =>
+    //       `M${d.source.x},${d.source.y}A0,0 0 0,1 ${d.target.x},${d.target.y}`
+    //   );
+    //   node.attr("transform", (d) => `translate(${d.x},${d.y})`);
+    // });
 
     // Reheat the simulation when drag starts, and fix the subject position.
     // function dragstarted(event) {
@@ -109,7 +110,18 @@ export default function Relationvis({ similarityData }) {
     // really matter since the target alpha is zero and the simulation will
     // stop naturally, but it’s a good practice.)
     //   invalidation.then(() => simulation.stop());
+    return () => {
+      d3.selectAll(".chart > g").remove();
+    };
   });
 
-  return <svg width={width} height={height} ref={svgRef}></svg>;
+  return (
+    <svg
+      width={width}
+      height={height}
+      style={{ backgroundColor: "lightgray" }}
+      ref={svgRef}
+      className="chart"
+    ></svg>
+  );
 }
