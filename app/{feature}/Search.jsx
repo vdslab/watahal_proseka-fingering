@@ -49,7 +49,7 @@ export default function Search({ data, setId, nodeId }) {
             setSelectID(names[names.length - 1]);
             setId(null);
           } else {
-            setSelectID({ videoId: value.ID, id: value.key });
+            setSelectID(value);
             setId(value.key);
           }
         }}
@@ -61,7 +61,7 @@ export default function Search({ data, setId, nodeId }) {
         startIcon={<MusicNoteIcon />}
         onClick={() => {
           if (selectID != null) {
-            const { videoId, id } = selectID;
+            const { ID: videoId, key: id } = selectID;
             router.push(`/music/${videoId}?id=${id}`);
           }
         }}
