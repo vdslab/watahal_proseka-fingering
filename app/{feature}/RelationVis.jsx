@@ -1,33 +1,37 @@
 "use client";
 import * as d3 from "d3";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useMemo } from "react";
 
 export default function Relationvis({ similarityData, setNodeId }) {
   const width = 600;
   const height = 600;
   const svgRef = useRef();
 
-  const links = similarityData.links.map((d) => ({
-    ...d,
-    value: d.value * 20,
-  }));
-  const nodes = similarityData.nodes.map((d) => ({ ...d }));
+  const { links, nodes, simulation } = useMemo(() => {
+    const links = similarityData.links.map((d) => ({
+      ...d,
+      value: d.value * 20,
+    }));
+    const nodes = similarityData.nodes.map((d) => ({ ...d }));
 
-  const simulation = d3
-    .forceSimulation(nodes)
-    .force(
-      "link",
-      d3.forceLink(links).id((d) => d.id)
-    )
-    .force(
-      "charge",
-      d3.forceManyBody().strength((d) => d.value)
-    )
-    .force("center", d3.forceCenter(width / 2, height / 2))
-    .force(
-      "collide",
-      d3.forceCollide((d) => 20)
-    );
+    const simulation = d3
+      .forceSimulation(nodes)
+      .force(
+        "link",
+        d3.forceLink(links).id((d) => d.id)
+      )
+      .force(
+        "charge",
+        d3.forceManyBody().strength((d) => d.value)
+      )
+      .force("center", d3.forceCenter(width / 2, height / 2))
+      .force(
+        "collide",
+        d3.forceCollide((d) => 20)
+      );
+
+    return { links, nodes, simulation };
+  }, [similarityData]);
 
   useEffect(() => {
     const svg = d3.select(svgRef.current);
@@ -110,9 +114,9 @@ export default function Relationvis({ similarityData, setNodeId }) {
     // really matter since the target alpha is zero and the simulation will
     // stop naturally, but it’s a good practice.)
     //   invalidation.then(() => simulation.stop());
-    return () => {
-      d3.selectAll(".chart > g").remove();
-    };
+    // return () => {
+    //   d3.selectAll(".chart > g").remove();
+    // };
   });
 
   return (
