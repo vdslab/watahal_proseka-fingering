@@ -12,9 +12,14 @@ export default function Search({ data, setId, nodeId }) {
   const names = data.map(({ id, name, videoid }) => {
     return { key: id, label: name, ID: videoid };
   });
+  names.push({
+    key: null,
+    label: "曲を選択してください",
+    ID: null,
+  });
 
   const router = useRouter();
-  const [selectID, setSelectID] = useState(null);
+  const [selectID, setSelectID] = useState(names[names.length - 1]);
 
   useEffect(() => {
     setSelectID(names.find((d) => d.key === nodeId));
@@ -38,9 +43,10 @@ export default function Search({ data, setId, nodeId }) {
         renderInput={(params) => {
           return <TextField {...params} label="曲" />;
         }}
+        isOptionEqualToValue={(option, v) => option?.key === v?.key}
         onChange={(event, value) => {
           if (!value) {
-            setSelectID(null);
+            setSelectID(names[names.length - 1]);
             setId(null);
           } else {
             setSelectID({ videoId: value.ID, id: value.key });
