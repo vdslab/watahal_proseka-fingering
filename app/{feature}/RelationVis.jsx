@@ -53,7 +53,6 @@ export default function Relationvis({ similarityData, setNodeId }) {
       .data(nodes)
       .join("circle")
       .on("click", function (d) {
-        console.log(d.srcElement.__data__.musicId);
         setNodeId(d.srcElement.__data__.musicId);
       })
       .attr("r", 5);
@@ -62,14 +61,6 @@ export default function Relationvis({ similarityData, setNodeId }) {
       return d.id;
     });
 
-    // Add a drag behavior.
-    // node.call(
-    // .on("start", dragstarted)
-    // .on("drag", dragged)
-    // .on("end", dragended)
-    // );
-
-    // Set the position attributes of links and nodes each time the simulation ticks.
     simulation.on("tick", () => {
       link
         .attr("x1", (d) => d.source.x)
@@ -80,43 +71,9 @@ export default function Relationvis({ similarityData, setNodeId }) {
       node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
     });
 
-    // simulation.on("tick", () => {
-    //   link.attr(
-    //     "d",
-    //     (d) =>
-    //       `M${d.source.x},${d.source.y}A0,0 0 0,1 ${d.target.x},${d.target.y}`
-    //   );
-    //   node.attr("transform", (d) => `translate(${d.x},${d.y})`);
-    // });
-
-    // Reheat the simulation when drag starts, and fix the subject position.
-    // function dragstarted(event) {
-    //   if (!event.active) simulation.alphaTarget(0.3).restart();
-    //   event.subject.fx = event.subject.x;
-    //   event.subject.fy = event.subject.y;
-    // }
-
-    // Update the subject (dragged node) position during drag.
-    // function dragged(event) {
-    //   event.subject.fx = event.x;
-    //   event.subject.fy = event.y;
-    // }
-
-    // Restore the target alpha so the simulation cools after dragging ends.
-    // Unfix the subject position now that it’s no longer being dragged.
-    // function dragended(event) {
-    //   if (!event.active) simulation.alphaTarget(0);
-    //   event.subject.fx = null;
-    //   event.subject.fy = null;
-    // }
-
-    // When this cell is re-run, stop the previous simulation. (This doesn’t
-    // really matter since the target alpha is zero and the simulation will
-    // stop naturally, but it’s a good practice.)
-    //   invalidation.then(() => simulation.stop());
-    // return () => {
-    //   d3.selectAll(".chart > g").remove();
-    // };
+    return () => {
+      d3.selectAll(".chart > g").remove();
+    };
   });
 
   return (
