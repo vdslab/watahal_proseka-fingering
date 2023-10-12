@@ -27,4 +27,22 @@ async function readCSV(filePath, rootDir = null, parseFunc, header = false) {
   );
 }
 
-export { readFileContent, readJSON, readCSV };
+async function readSimilarity(filePath, rootDir = null) {
+  const content = await readFileContent(filePath, rootDir);
+  const rows = content.split("\r\n");
+  const csvData = rows.map((row) => row.split(","));
+  const head = csvData[0];
+  const data = csvData.slice(1);
+
+  return data.map((row) =>
+    row.reduce((obj, value, i) => {
+      if (i === head.length - 1) {
+        return { ...obj, [head[i]]: parseFloat(value) };
+      } else {
+        return { ...obj, [head[i]]: parseInt(value) };
+      }
+    }, {})
+  );
+}
+
+export { readFileContent, readJSON, readCSV, readSimilarity };

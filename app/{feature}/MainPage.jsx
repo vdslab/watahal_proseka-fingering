@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Tabs, Tab } from "@mui/material";
 import Search from "./Search";
 import ClusteringVis from "./ClusteringVis";
+import Relationvis from "./RelationVis";
 import MusicList from "./MusicList";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -25,9 +26,10 @@ function TabPanel({ value, index, children }) {
   );
 }
 
-export default function MainPage({ musics, clusteringData }) {
+export default function MainPage({ musics, clusteringData, similarityData }) {
   const [currentTab, setCurrentTab] = useState(0);
   const [id, setId] = useState(null);
+  const [nodeId, setNodeId] = useState(null);
   function handleTabChange(e, tabIndex) {
     setCurrentTab(tabIndex);
   }
@@ -55,13 +57,15 @@ export default function MainPage({ musics, clusteringData }) {
       </Container>
 
       <Tabs value={currentTab} onChange={handleTabChange} variant="fullWidth">
-        <Tab label="曲検索" />
+        <Tab label="似てる曲を探す" />
         <Tab label="曲一覧" />
       </Tabs>
 
       <TabPanel value={currentTab} index={0}>
         <div>
-          <ClusteringVis {...{ clusteringData, id }} />
+          {/* <ClusteringVis {...{ clusteringData, id }} /> */}
+          <Relationvis similarityData={similarityData} setNodeId={setNodeId} />
+          <Search data={musics} setId={setId} nodeId={nodeId} />
         </div>
       </TabPanel>
 

@@ -2,7 +2,9 @@ import "./tailwind.css";
 import Header from "@/components/Header";
 import MainPage from "./{feature}/MainPage";
 import path from "path";
-import { readCSV, readJSON } from "./readFile";
+import { readCSV, readJSON, readSimilarity } from "./readFile";
+import getSimilarityData from "./{feature}/getSimilarityData";
+
 function Sort() {
   return (
     <form>
@@ -14,7 +16,7 @@ function Sort() {
   );
 }
 
-export default async function Home() {
+export default async function Home({ searchParams: { id } }) {
   const c = "min-h-screen flex-col items-center justify-between p-12";
   const publicDir = path.join(process.cwd(), "public");
 
@@ -30,12 +32,11 @@ export default async function Home() {
     true
   );
 
+  const similarityData = await getSimilarityData(1);
+
   return (
-    <main className="bg-slate-200 max-h-screen">
-      <Header />
-      <div className="p-12">
-        <MainPage {...{ musics, clusteringData }} />
-      </div>
+    <main className="p-12 bg-slate-200 max-h-screen">
+      <MainPage {...{ musics, clusteringData, similarityData }} />
     </main>
   );
 }

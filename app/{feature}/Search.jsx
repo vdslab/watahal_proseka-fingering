@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Button from "@mui/material/Button";
@@ -8,13 +8,22 @@ import MusicNoteIcon from "@mui/icons-material/MusicNote";
 
 import { useRouter } from "next/navigation";
 
-export default function Search({ data, setId }) {
+export default function Search({ data, setId, nodeId }) {
   const names = data.map(({ id, name, videoid }) => {
     return { key: id, label: name, ID: videoid };
   });
+  names.push({
+    key: null,
+    label: "曲を選択してください",
+    ID: null,
+  });
 
   const router = useRouter();
-  const [selectID, setSelectID] = useState(null);
+  const [selectID, setSelectID] = useState(names[names.length - 1]);
+
+  useEffect(() => {
+    setSelectID(names.find((d) => d.key === nodeId));
+  }, [nodeId]);
 
   return (
     <div className="flex">
@@ -29,16 +38,18 @@ export default function Search({ data, setId }) {
             </Box>
           );
         }}
+        value={selectID}
         sx={{ width: 500 }}
         renderInput={(params) => {
           return <TextField {...params} label="曲" />;
         }}
+        isOptionEqualToValue={(option, v) => option?.key === v?.key}
         onChange={(event, value) => {
           if (!value) {
-            setSelectID(null);
+            setSelectID(names[names.length - 1]);
             setId(null);
           } else {
-            setSelectID({ videoId: value.ID, id: value.key });
+            setSelectID(value);
             setId(value.key);
           }
         }}
@@ -50,7 +61,7 @@ export default function Search({ data, setId }) {
         startIcon={<MusicNoteIcon />}
         onClick={() => {
           if (selectID != null) {
-            const { videoId, id } = selectID;
+            const { ID: videoId, key: id } = selectID;
             router.push(`/music/${videoId}?id=${id}`);
           }
         }}
