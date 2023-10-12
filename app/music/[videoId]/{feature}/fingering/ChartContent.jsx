@@ -26,7 +26,7 @@ export default function ChartContent({
     .nice();
   const yScale = d3
     .scaleLinear()
-    .domain(d3.extent([...left, ...right], ({ y }) => y))
+    .domain(d3.extent(score, ({ y }) => y))
     .range([height - noteHeight / 2, 0])
     .nice();
   const widthScale = d3
@@ -46,14 +46,30 @@ export default function ChartContent({
         <></>
       ) : (
         <g>
-          <LineSkeleton maxY={maxY} yScale={yScale} xScale={xScale} />
+          {/* <LineSkeleton
+            maxY={Math.ceil(maxY ?? 100)}
+            yScale={yScale}
+            xScale={xScale}
+          /> */}
           <NoteScore
             score={score}
             scales={{ xScale, yScale, widthScale }}
             noteheight={noteHeight}
           />
-          <Fingering hand={left} line={line} fingeringColor={"red"} />
-          <Fingering hand={right} line={line} fingeringColor={"blue"} />
+          <Fingering
+            score={score}
+            hand={left}
+            line={line}
+            fingeringColor={"red"}
+            scales={{ xScale, yScale, widthScale }}
+          />
+          <Fingering
+            score={score}
+            hand={right}
+            line={line}
+            fingeringColor={"blue"}
+            scales={{ xScale, yScale, widthScale }}
+          />
         </g>
       )}
     </svg>

@@ -7,40 +7,8 @@ export default function FingeringVis({
   height,
   score,
 }) {
-  const left = fingering["left"]?.map(
-    ({ x, y, width, type, judge_type, hold_type, hole }) => ({
-      x,
-      y,
-      width,
-      type,
-      judge_type,
-      hold_type,
-      hole,
-    })
-  );
-  // .filter(({ y }) => minY <= y && y <= minY + 4);
-  const right = fingering["right"]?.map(
-    ({ x, y, width, type, judge_type, hold_type, hole }) => ({
-      x,
-      y,
-      width,
-      type,
-      judge_type,
-      hold_type,
-      hole,
-    })
-  );
-
-  const maxY = Math.ceil(
-    Math.max.apply(
-      right.map(function (o) {
-        return o.y;
-      }),
-      left.map(function (o) {
-        return o.y;
-      })
-    )
-  );
+  const left = fingering["left"];
+  const right = fingering["right"];
 
   return (
     <Chart
@@ -48,7 +16,7 @@ export default function FingeringVis({
       height={height}
       left={left}
       right={right}
-      maxY={maxY}
+      maxY={100}
       YTPlayer={YTPlayer}
       score={score}
     />
