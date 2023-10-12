@@ -2,12 +2,11 @@
 import React, { useState } from "react";
 import { Tabs, Tab } from "@mui/material";
 import Search from "./Search";
-import ClusteringVis from "./ClusteringVis";
+//import ClusteringVis from "./ClusteringVis";
 import Relationvis from "./RelationVis";
 import MusicList from "./MusicList";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
+import { Box, Container } from "@mui/material";
 
 const theme = createTheme({
   palette: {
@@ -36,42 +35,51 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="sm">
+      <Container maxWidth="ls">
+        <Box textAlign="center" marginTop={10}>
+          <h1>運指可視化</h1>
+        </Box>
+        <Box textAlign="center" marginTop={-2}>
+          <p color="secondary">最適化された運指を参考にしてしよう</p>
+        </Box>
+
         <Box
-          display="flax"
-          justifyContent="center"
-          alignItems="center"
-          height="300"
-          //</Container>sx={{
-          //   width: 300,
-          //height: 700,
-          //   backgroundColor: "primary.dark",
-          //   "&:hover": {
-          //     backgroundColor: "primary",
-          //     opacity: [0.9, 0.8, 0.7],
-          //},
-          //}}
+          position="sticky"
+          top={20}
+          marginTop={5}
+          sx={{ zIndex: "tooltip" }}
         >
           <Search data={musics} setId={setId} />
         </Box>
+
+        <Box marginTop={20} justifyContent="center">
+          <Tabs
+            value={currentTab}
+            onChange={handleTabChange}
+            variant="fullWidth"
+          >
+            <Tab label="似てる曲を探す" />
+            <Tab label="曲一覧" />
+          </Tabs>
+
+          <TabPanel value={currentTab} index={0}>
+            <Box padding={3}>
+              {/* <ClusteringVis {...{ clusteringData, id }} /> */}
+              <Relationvis
+                similarityData={similarityData}
+                setNodeId={setNodeId}
+              />
+              {/* <Search data={musics} setId={setId} nodeId={nodeId} /> */}
+            </Box>
+          </TabPanel>
+
+          <TabPanel value={currentTab} index={1}>
+            <Box paddingBottom={5}>
+              <MusicList musics={musics} />
+            </Box>
+          </TabPanel>
+        </Box>
       </Container>
-
-      <Tabs value={currentTab} onChange={handleTabChange} variant="fullWidth">
-        <Tab label="似てる曲を探す" />
-        <Tab label="曲一覧" />
-      </Tabs>
-
-      <TabPanel value={currentTab} index={0}>
-        <div>
-          {/* <ClusteringVis {...{ clusteringData, id }} /> */}
-          <Relationvis similarityData={similarityData} setNodeId={setNodeId} />
-          <Search data={musics} setId={setId} nodeId={nodeId} />
-        </div>
-      </TabPanel>
-
-      <TabPanel value={currentTab} index={1}>
-        <MusicList musics={musics} />
-      </TabPanel>
     </ThemeProvider>
   );
 }

@@ -6,7 +6,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Imformation from "./Imformation";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
-import { Box } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const theme = createTheme({
   palette: {
@@ -24,9 +27,12 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     minHeight: 60,
     maxHeight: 300,
   },
+  display: "flex",
+  justifyContent: "space-between",
 }));
 
 export default function Header() {
+  const router = useRouter();
   return (
     <ThemeProvider theme={theme}>
       <Box marginBottom={3}>
@@ -37,14 +43,28 @@ export default function Header() {
           sx={{ boxShadow: 1 }}
         >
           <StyledToolbar>
-            <Typography
-              color="secondary"
-              variant="h5"
-              component="div"
-              sx={{ flexGrow: 1 }}
+            <Box
+              display="flex"
+              onClick={() => router.push("/")}
+              sx={{ cursor: "pointer" }}
             >
-              プロセカ運指&曲特徴可視化
-            </Typography>
+              <Box position="relative" sx={{ width: "50px", height: "50px" }}>
+                <Image
+                  src="/miku.png"
+                  alt="mikusan"
+                  fill
+                  style={{ borderRadius: "50px" }}
+                />
+              </Box>
+              <Typography
+                color="secondary"
+                variant="h5"
+                component="div"
+                alignSelf="center"
+              >
+                プロセカ運指&曲特徴可視化
+              </Typography>
+            </Box>
             <Imformation />
           </StyledToolbar>
         </AppBar>
