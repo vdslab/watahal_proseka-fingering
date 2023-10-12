@@ -1,0 +1,9302 @@
+[
+  {
+    "x": 7,
+    "y": 0,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 0.1641,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 0.1719,
+    "width": 5,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 0.1797,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 0.1875,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 0.25,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 0.2578,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 0.2656,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 0.2734,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 0.4479,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 0.4531,
+    "width": 6,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 0.4583,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 0.6172,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 0.625,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 0.6328,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 0.6406,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 0.8854,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 0.8906,
+    "width": 5,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 0.8958,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 1.0625,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 1.0677,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 1.0729,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 1.0781,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 1.3542,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 1.3594,
+    "width": 5,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 1.3646,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 1.5104,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 1.5156,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 1.5208,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 1.526,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 1.776,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 1.7812,
+    "width": 5,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 1.7865,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 2,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 7,
+    "y": 2,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 1,
+    "y": 2.0078,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 2.0104,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 2.2135,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 1,
+    "y": 2.2188,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 2.224,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 2.2292,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 2.375,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 2,
+    "y": 2.3802,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 2.3854,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 2.3906,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 2.6354,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 1,
+    "y": 2.6406,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 2.6458,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 2.651,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 2.8177,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 2,
+    "y": 2.8229,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 2.8281,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 2.8333,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 3.0833,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 1,
+    "y": 3.0885,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 3.0938,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 3.099,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 3.2188,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 2,
+    "y": 3.224,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 3.2292,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 3.2344,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 3.5625,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 1,
+    "y": 3.5677,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 3.5729,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 3.5781,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 3.7135,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 2,
+    "y": 3.7188,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 3.724,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 3.7292,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 4,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 7,
+    "y": 4,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 4.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 4.3802,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 4.3854,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 4.3906,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 4.5365,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 4.5417,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 4.5469,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 4.8438,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 4.849,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 4.8542,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 4.8594,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 4.974,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 4.9792,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 4.9844,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 4.9896,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 5.2812,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 5.2865,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 5.2917,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 5.2969,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 5.4375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 5.4427,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 5.4479,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 5.4531,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 5.6823,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 5.6875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 5.6927,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 5.6979,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 5.8438,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 5.849,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 5.8542,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 5.8594,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 6,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 7,
+    "y": 6,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 6.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 6.1302,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 6.1354,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 6.1406,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 6.599,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 6.6042,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 6.6094,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 6.6146,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 7.0208,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 7.026,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 7.0312,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 7.0365,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 7.4479,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 7.4531,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 7.4583,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 7.4635,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 7.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 10,
+    "y": 7.5,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 7.724,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 7.7292,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 7.7344,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 7.7396,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 7.875,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 6,
+    "y": 7.875,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 8.0469,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 2,
+    "y": 8.0521,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 8.0573,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 8.0625,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 8.349,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 2,
+    "y": 8.3542,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 8.3594,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 8.3646,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 8.5104,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 8.5156,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 8.5208,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 8.526,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 8.7552,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 2,
+    "y": 8.7604,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 8.7656,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 8.7708,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 8.9167,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 8.9219,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 8.9271,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 8.9323,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 9.1615,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 9.1667,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 9.1719,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 9.3177,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 9.3229,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 9.3281,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 9.625,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 6,
+    "y": 9.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 9.6875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 9.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 9.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 9.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 10,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 10,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 10.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 10.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 10.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 10.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 10.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 10.3125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 10.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 10.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 10.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 10.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 8,
+    "y": 10.625,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 10.75,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 10,
+    "y": 10.75,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 10.875,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 10.875,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 11,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 11,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 11.125,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 11.1875,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 11.1875,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 11.375,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 10,
+    "y": 11.375,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 11.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 11.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 11.6875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 11.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 11.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 11.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 12,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 12,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 12.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 12.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 12.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 12.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 12.3125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 12.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 12.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 12.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 12.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 2,
+    "y": 12.625,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 12.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 12.75,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 10,
+    "y": 12.75,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 12.875,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 12.875,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 13,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 13,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 10,
+    "y": 13.125,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 13.1875,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 10,
+    "y": 13.1875,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 13.375,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 6,
+    "y": 13.375,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 13.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 13.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 13.6875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 13.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 13.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 13.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 14,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 14,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 14.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 14.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 14.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 14.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 14.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 14.375,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 14.4375,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 6,
+    "y": 14.5,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 8,
+    "y": 14.5625,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 14.625,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 14.625,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 14.6875,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 14.75,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 14.75,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 14.875,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 14.875,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 15,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 10,
+    "y": 15,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 15.125,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 15.1875,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 15.25,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 10,
+    "y": 15.25,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 15.375,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 15.375,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 15.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 15.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 15.6875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 15.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 15.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 15.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 16,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 16,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 16.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 16.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 16.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 16.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 16.3125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 16.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 16.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 16.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 16.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 16.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 16.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 16.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 16.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 16.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 17,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 17,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 17.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 17.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 17.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 17.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 17.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 17.3125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 17.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 17.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 17.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 17.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 17.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 6,
+    "y": 17.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 17.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 6,
+    "y": 17.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 18,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 18,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 18.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 18.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 18.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 18.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 18.3125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 18.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 18.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 18.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 18.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 18.625,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 18.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 18.75,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 10,
+    "y": 18.75,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 18.875,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 18.875,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 19,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 19,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 10,
+    "y": 19.125,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 19.1875,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 19.25,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 19.375,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 10,
+    "y": 19.375,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 19.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 19.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 19.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 19.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 3,
+    "y": 19.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 19.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 20,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 20,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 20.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 20.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 20.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 20.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 20.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 20.3125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 20.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 20.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 20.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 20.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 21,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 21,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 21.125,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 21.1875,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 21.25,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 21.375,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 10,
+    "y": 21.375,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 21.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 21.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 21.6875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 21.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 21.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 21.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 21.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 22,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 22,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 22.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 22.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 22.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 22.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 22.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 22.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 6,
+    "y": 22.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 22.4375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 8,
+    "y": 22.4375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 22.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 6,
+    "y": 22.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 1,
+    "y": 22.5625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 22.5625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 22.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 6,
+    "y": 22.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 22.6875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 8,
+    "y": 22.6875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 22.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 6,
+    "y": 22.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 1,
+    "y": 22.8125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 22.8125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 22.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 6,
+    "y": 22.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 22.9375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 8,
+    "y": 22.9375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 23,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 6,
+    "y": 23,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 23.1875,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 10,
+    "y": 23.1875,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 23.375,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 6,
+    "y": 23.375,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 23.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 23.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 23.6875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 23.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 23.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 23.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 23.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 24,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 24,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 24.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 24.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 24.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 24.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 24.3125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 24.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 24.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 24.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_right",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 24.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 24.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 24.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 24.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 24.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 24.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 25,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 25,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 25.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 25.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 25.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 25.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 25.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 25.3125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 25.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 25.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_right",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 25.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 25.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 26,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 26,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 26.0938,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 26.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 26.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 26.2812,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 26.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 26.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_right",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 26.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 26.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 26.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 1,
+    "y": 26.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 26.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 26.9375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 1,
+    "y": 27,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 27,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 27.0052,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 27.0078,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 1,
+    "y": 27.0104,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 1,
+    "y": 27.1797,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 27.1823,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 1,
+    "y": 27.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 27.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 27.1927,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 1,
+    "y": 27.1979,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 1,
+    "y": 27.3594,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 27.3646,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 27.3698,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 1,
+    "y": 27.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 27.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 27.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 27.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 27.5052,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 27.5078,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 27.5104,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 27.6797,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 27.6823,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 27.6875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 27.6875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 27.6927,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 27.6979,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 27.8594,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 27.8646,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 27.8698,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 27.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 27.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 28,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 28,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 28.0625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 28.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 28.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 28.25,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 28.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 28.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 28.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 28.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 28.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 28.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 28.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 28.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 29,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 29,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 29.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 29.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 29.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 29.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 29.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 29.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 29.6875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 29.6875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 29.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 29.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 29.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 29.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 30,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 30,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 30.0938,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 30.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 30.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_right",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 30.2812,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 30.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 30.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 30.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 30.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 30.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 30.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 30.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 31,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 31,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 31.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 31.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 31.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 31.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 31.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 31.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 31.6875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 31.6875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 31.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 31.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 32,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 32,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 32.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 32.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 32.25,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 32.2812,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 32.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 32.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 32.4688,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 32.5625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 32.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 32.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 32.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 32.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 33,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 33,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 33.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 33.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 33.25,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 33.2812,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 33.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 33.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 33.4688,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 33.5625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 33.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 33.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 33.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 33.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 33.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 33.9375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 34,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 34,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 34.0938,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 34.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 34.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 34.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 34.2812,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 34.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 34.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 34.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 34.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 34.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 34.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 34.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 34.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 34.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 34.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 35,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 35,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 35.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 2,
+    "y": 35.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 35.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 35.25,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 35.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 35.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 35.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 35.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 35.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 2,
+    "y": 35.6875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 7,
+    "y": 35.6875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 35.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 35.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 35.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 36,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 36,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 36.0625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 36.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 36.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 36.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 36.25,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 36.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 36.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 36.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 36.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 36.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 36.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 36.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 36.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 36.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 36.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 36.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 37,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 37,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 37.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 37.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 37.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 37.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 37.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 37.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 37.6875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 37.6875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 37.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 37.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 37.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 37.9375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 38,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 38,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_right",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 38.0938,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 38.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 38.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_right",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 38.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 38.2812,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 38.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 38.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 38.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_right",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 38.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 38.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 38.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 38.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 38.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 38.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 38.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 39,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 39,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 39.0938,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 39.0938,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 39.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 39.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 39.25,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 39.25,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 39.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 39.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 39.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 39.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 39.5938,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 39.5938,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 39.6875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 39.6875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 39.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 39.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 39.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 39.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 10,
+    "y": 40,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 40.0625,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 40.125,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 40.1875,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 40.25,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 40.3125,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 10,
+    "y": 40.375,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 40.4375,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 40.5,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 40.5625,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 40.625,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 40.6875,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 40.75,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 10,
+    "y": 40.75,
+    "width": 2,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 40.875,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 41,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 41,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 41.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 41.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 41.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 41.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 42,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 42,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 42.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 42.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 42.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 42.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 42.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 42.3125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 42.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 42.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 42.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 42.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 42.5625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 42.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 42.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 42.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 42.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 42.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 42.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 43,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 43,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 43.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 43.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 43.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 43.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 43.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 43.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 43.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 43.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 43.5625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 43.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 43.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 43.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 43.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 43.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 44,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 6,
+    "y": 44,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 44.0938,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 44.0938,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 44.1875,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 44.1927,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 44.2812,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 44.2812,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 44.375,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 44.3802,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 44.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 44.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 44.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 44.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 44.6875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 44.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 44.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 44.8125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 7,
+    "y": 44.8125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 44.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 44.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 44.9375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 45,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 45,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 45.0625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 45.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 45.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 45.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 45.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 45.25,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 45.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 45.3125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 45.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 45.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 45.4375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 45.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 45.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 45.5625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 45.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 45.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 45.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 45.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 45.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 45.9375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 46,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 46,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 46.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 46.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 46.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 46.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_right",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 46.3125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 46.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 46.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 46.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 46.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 46.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 46.5625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 46.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 46.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 46.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 46.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 46.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 46.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 47,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 47,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 47.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 47.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 47.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_right",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 47.3125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 47.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 47.375,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 47.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 47.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 47.5625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 47.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 47.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 47.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 47.875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 47.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 48,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 48,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 48.0625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 48.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 48.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_right",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 48.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 4,
+    "y": 48.25,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_right",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 48.25,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 48.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 48.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 48.5,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 1
+  },
+  {
+    "x": 9,
+    "y": 48.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 48.5625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 1
+  },
+  {
+    "x": 0,
+    "y": 48.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 1
+  },
+  {
+    "x": 5,
+    "y": 48.625,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 48.6875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 48.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 48.75,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 48.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 48.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 49,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 49,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 49.125,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 49.1875,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 49.1875,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 49.3125,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 49.375,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 49.375,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 49.5,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 49.5,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 49.625,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 49.625,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 49.75,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 49.75,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 49.8125,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 49.875,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 49.9375,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 50,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 50,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "flick_right",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 50.125,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 50.125,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 50.25,
+    "width": 5,
+    "type": "normal",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 50.25,
+    "width": 5,
+    "type": "normal",
+    "judge_type": "flick_right",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 50.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 50.4375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 50.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 50.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 50.5625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 50.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 50.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 50.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 50.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 50.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 51,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 51,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 51.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 51.1875,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 51.25,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 51.25,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 51.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 51.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 51.4375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 51.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 51.5625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 51.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 51.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 51.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 51.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 51.8125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 51.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 51.9375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 52,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "flick_up",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 52,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 52.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 52.25,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 52.25,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 52.375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 52.4375,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 52.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 52.5,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 52.5625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 52.625,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 52.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 52.75,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 52.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 7,
+    "y": 52.875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 53,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "hold",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 53,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 53.125,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 53.125,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 53.1875,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 53.25,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 9,
+    "y": 53.25,
+    "width": 3,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 53.375,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 53.4375,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 53.5,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "flick_left",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 53.5,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "flick_right",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 53.625,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 53.625,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 53.75,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 53.75,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  },
+  {
+    "x": 8,
+    "y": 53.8125,
+    "width": 4,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 0,
+    "y": 53.875,
+    "width": 6,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 53.9375,
+    "width": 6,
+    "type": "normal",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "none",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 54,
+    "width": 8,
+    "type": "hold",
+    "judge_type": "push",
+    "is_yellow": false,
+    "hold_type": "start",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 54.0417,
+    "width": 6,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 54.4583,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 54.4635,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 54.4688,
+    "width": 5,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 54.474,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 54.4792,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 54.625,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 54.6302,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 54.6354,
+    "width": 5,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 54.6406,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 54.9062,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 54.9115,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 54.9167,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 54.9219,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 55.0677,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 55.0729,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 55.0781,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 55.0833,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 55.3177,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 55.3229,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 55.3281,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 55.3333,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 55.4792,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 2,
+    "y": 55.4844,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 55.4896,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 55.4948,
+    "width": 4,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 55.7552,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 3,
+    "y": 55.7604,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 55.7656,
+    "width": 3,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 55.7708,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 55.9219,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 55.9271,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 55.9323,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 55.9375,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 56.2031,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 56.2083,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 56.2135,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 56.2188,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 56.3646,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 56.3698,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 56.375,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 56.3802,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 56.651,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 56.6562,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 6,
+    "y": 56.6615,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 56.6667,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 56.8333,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 4,
+    "y": 56.8385,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 56.8438,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 56.849,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "middle",
+    "hole": 0
+  },
+  {
+    "x": 5,
+    "y": 56.875,
+    "width": 2,
+    "type": "hold",
+    "judge_type": "off",
+    "is_yellow": false,
+    "hold_type": "end",
+    "hole": 0
+  }
+]
