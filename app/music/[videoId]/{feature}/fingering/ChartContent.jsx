@@ -46,7 +46,11 @@ export default function ChartContent({
         <></>
       ) : (
         <g>
-          <LineSkeleton maxY={maxY} yScale={yScale} xScale={xScale} />
+          <LineSkeleton
+            maxY={yScale.domain()[1]}
+            yScale={yScale}
+            xScale={xScale}
+          />
           <NoteScore
             score={score}
             scales={{ xScale, yScale, widthScale }}
