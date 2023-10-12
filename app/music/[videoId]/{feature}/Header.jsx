@@ -6,7 +6,9 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Imformation from "./Imformation";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
-import { Box } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { useRouter } from "next/navigation";
 
 const theme = createTheme({
   palette: {
@@ -24,9 +26,12 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     minHeight: 60,
     maxHeight: 300,
   },
+  display: "flex",
+  justifyContent: "space-between",
 }));
 
 export default function Header() {
+  const router = useRouter();
   return (
     <ThemeProvider theme={theme}>
       <Box marginBottom={3}>
@@ -36,15 +41,20 @@ export default function Header() {
           padding={3}
           sx={{ boxShadow: 1 }}
         >
+          {/* <IconButton size="large">
+            <ArrowBackIcon color="inherit" fontSize="large" />
+          </IconButton> */}
           <StyledToolbar>
             <Typography
               color="secondary"
               variant="h5"
               component="div"
-              sx={{ flexGrow: 1 }}
+              sx={{ cursor: "pointer" }}
+              onClick={() => router.push("/")}
             >
               プロセカ運指&曲特徴可視化
             </Typography>
+
             <Imformation />
           </StyledToolbar>
         </AppBar>

@@ -10,7 +10,7 @@ export default function ScrollableBox({
 }) {
   const wrapperRef = useRef();
 
-  const fast = svgHeight / (YTPlayer?.getDuration() - 7.3); //1秒における動くピクセル数
+  const fast = svgHeight / (YTPlayer?.getDuration() - 14); //1秒における動くピクセル数
   const FPS = 30;
   function calcPoint(time) {
     return fast * time;
@@ -21,7 +21,7 @@ export default function ScrollableBox({
     const timer = setInterval(() => {
       if (YTPlayer?.getPlayerState() === 1) {
         wrapperRef.current?.scroll({
-          top: svgHeight - calcPoint(YTPlayer?.getCurrentTime() - 5),
+          top: svgHeight - calcPoint(YTPlayer?.getCurrentTime() - 6),
           left: 0,
           behavior: "auto",
         });

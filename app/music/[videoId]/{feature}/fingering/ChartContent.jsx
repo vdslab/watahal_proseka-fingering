@@ -26,9 +26,9 @@ export default function ChartContent({
     .nice();
   const yScale = d3
     .scaleLinear()
-    .domain(d3.extent([...left, ...right], ({ y }) => y))
+    .domain(d3.extent(score, ({ y }) => y))
     .range([height - noteHeight / 2, 0])
-    .nice();
+    .nice(100);
   const widthScale = d3
     .scaleLinear()
     .domain([0, 12])
@@ -47,7 +47,7 @@ export default function ChartContent({
       ) : (
         <g>
           <LineSkeleton
-            maxY={yScale.domain()[1]}
+            maxY={Math.ceil(yScale.domain()[1])}
             yScale={yScale}
             xScale={xScale}
           />

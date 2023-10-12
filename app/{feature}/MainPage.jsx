@@ -6,7 +6,7 @@ import Search from "./Search";
 import Relationvis from "./RelationVis";
 import MusicList from "./MusicList";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
-import { Box, Card, Grid, Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
 const theme = createTheme({
   palette: {
@@ -40,7 +40,7 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
           <h1>運指可視化</h1>
         </Box>
         <Box textAlign="center" marginTop={-2}>
-          <p>機械学習で作った運指を参考に練習してみろ</p>
+          <p>最適化された運指を参考にしよう</p>
         </Box>
 
         <Box
