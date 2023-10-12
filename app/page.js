@@ -1,4 +1,5 @@
 import "./tailwind.css";
+import Header from "@/components/Header";
 import MainPage from "./{feature}/MainPage";
 import path from "path";
 import { readCSV, readJSON, readSimilarity } from "./readFile";

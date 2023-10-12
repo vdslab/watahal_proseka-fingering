@@ -6,6 +6,8 @@ import ClusteringVis from "./ClusteringVis";
 import Relationvis from "./RelationVis";
 import MusicList from "./MusicList";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 const theme = createTheme({
   palette: {
@@ -34,6 +36,26 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
 
   return (
     <ThemeProvider theme={theme}>
+      <Container maxWidth="sm">
+        <Box
+          display="flax"
+          justifyContent="center"
+          alignItems="center"
+          height="300"
+          //</Container>sx={{
+          //   width: 300,
+          //height: 700,
+          //   backgroundColor: "primary.dark",
+          //   "&:hover": {
+          //     backgroundColor: "primary",
+          //     opacity: [0.9, 0.8, 0.7],
+          //},
+          //}}
+        >
+          <Search data={musics} setId={setId} />
+        </Box>
+      </Container>
+
       <Tabs value={currentTab} onChange={handleTabChange} variant="fullWidth">
         <Tab label="似てる曲を探す" />
         <Tab label="曲一覧" />
