@@ -13,6 +13,7 @@ export default function Content({
   fingering,
   similarities,
   musicList,
+  score,
 }) {
   const [playTimeState, setPlayTimeState] = useState({ current: 0, max: 0 });
   const [YTPlayer, setYTPlayer] = useState();
@@ -27,13 +28,12 @@ export default function Content({
           // width={"45vw"}
         >
           <FingeringVis
-            {...{
-              fingering,
-              minY: 0,
-              YTPlayer,
-              height: mainViewRef.current?.clientHeight,
-              width: mainViewRef.current?.clientWidth,
-            }}
+            fingering={fingering}
+            minY={0}
+            YTPlayer={YTPlayer}
+            height={mainViewRef.current?.clientHeight}
+            width={mainViewRef.current?.clientWidth}
+            score={score}
           />
         </Box>
       </Grid>
