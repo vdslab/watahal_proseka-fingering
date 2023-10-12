@@ -15,6 +15,11 @@ export default async function Home({
   const musicDetailPath = path.join(jsonDir, "fingering");
   const fingering = await readJSON(`song${id}.json`, musicDetailPath);
 
+  const score = await readJSON(
+    `score-${id}.json`,
+    path.join(jsonDir, "notes_score")
+  );
+
   const musicListPath = path.join(jsonDir, "detail");
   const musicList = await readJSON("data.json", musicListPath);
 
@@ -40,6 +45,7 @@ export default async function Home({
         fingering={fingering}
         similarities={similarities}
         musicList={musicList}
+        score={score}
       />
     </>
   );
