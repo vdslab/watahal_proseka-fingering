@@ -1,7 +1,7 @@
 import * as d3 from "d3";
 import { useEffect, useState, useRef } from "react";
 import LineSkeleton from "./LineSkeleton";
-import FingeringNotes from "./FingeringNotes";
+import Fingering from "./Fingering";
 import NoteScore from "./NoteScore";
 export default function ChartContent({
   width,
@@ -52,20 +52,8 @@ export default function ChartContent({
             scales={{ xScale, yScale, widthScale }}
             noteheight={noteHeight}
           />
-          {/* <FingeringNotes
-            hand={left}
-            scales={{ xScale, yScale, widthScale }}
-            line={line}
-            fingeringColor={"red"}
-            noteHeight={noteHeight}
-          />
-          <FingeringNotes
-            hand={right}
-            scales={{ xScale, yScale, widthScale }}
-            line={line}
-            fingeringColor={"blue"}
-            noteHeight={noteHeight}
-          /> */}
+          <Fingering hand={left} line={line} fingeringColor={"red"} />
+          <Fingering hand={right} line={line} fingeringColor={"blue"} />
         </g>
       )}
     </svg>
