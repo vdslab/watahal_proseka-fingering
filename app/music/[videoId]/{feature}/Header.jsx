@@ -6,6 +6,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Imformation from "./Imformation";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import { Box } from "@mui/material";
 
 const theme = createTheme({
   palette: {
@@ -28,19 +29,26 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 export default function Header() {
   return (
     <ThemeProvider theme={theme}>
-      <AppBar position="static" color="primary" className="p-0 m-0">
-        <StyledToolbar>
-          <Typography
-            color="secondary"
-            variant="h5"
-            component="div"
-            sx={{ flexGrow: 1 }}
-          >
-            プロセカ運指&曲特徴可視化
-          </Typography>
-          <Imformation />
-        </StyledToolbar>
-      </AppBar>
+      <Box marginBottom={3}>
+        <AppBar
+          position="static"
+          color="primary"
+          padding={3}
+          sx={{ boxShadow: 1 }}
+        >
+          <StyledToolbar>
+            <Typography
+              color="secondary"
+              variant="h5"
+              component="div"
+              sx={{ flexGrow: 1 }}
+            >
+              プロセカ運指&曲特徴可視化
+            </Typography>
+            <Imformation />
+          </StyledToolbar>
+        </AppBar>
+      </Box>
     </ThemeProvider>
   );
 }
