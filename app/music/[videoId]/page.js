@@ -1,17 +1,7 @@
 import Content from "./{feature}/Content";
 import path from "path";
 import { promises as fs } from "fs";
-
-async function readFileContent(filePath, rootDir = null) {
-  const file = path.join(rootDir ?? "", filePath);
-  const content = await fs.readFile(file, "utf8");
-  return content;
-}
-
-async function readJSON(filePath, rootDir = null) {
-  const content = await readFileContent(filePath, rootDir);
-  return JSON.parse(content);
-}
+import { readJSON, readSimilarity } from "@/app/readFile";
 
 export default async function Home({
   params: { videoId },
@@ -24,6 +14,21 @@ export default async function Home({
   const jsonDir = path.join(process.cwd(), "public", "json");
   const musicDetailPath = path.join(jsonDir, "fingering");
   const fingering = await readJSON(`song${id}.json`, musicDetailPath);
+
+  const score = await readJSON(
+    `score-${id}.json`,
+    path.join(jsonDir, "notes_score")
+  );
+
+  const musicListPath = path.join(jsonDir, "detail");
+  const musicList = await readJSON("data.json", musicListPath);
+
+  const csvDir = path.join(process.cwd(), "public", "csv");
+  const musicSimilarityPath = path.join(csvDir, "sims");
+  const similarities = await readSimilarity(
+    `similarities_${id}.csv`,
+    musicSimilarityPath
+  );
   // const fingering = readJSON();
   return (
     <>
@@ -35,7 +40,13 @@ export default async function Home({
         </div>
         <div className="w-1/12"></div>
       </div> */}
-      <Content {...{ videoId: video, fingering }} />
+      <Content
+        videoId={video}
+        fingering={fingering}
+        similarities={similarities}
+        musicList={musicList}
+        score={score}
+      />
     </>
   );
 }

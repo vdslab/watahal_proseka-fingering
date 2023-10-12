@@ -1,6 +1,12 @@
 import Chart from "./fingering/Chart";
 
-export default function FingeringVis({ fingering, width, YTPlayer, height }) {
+export default function FingeringVis({
+  fingering,
+  width,
+  YTPlayer,
+  height,
+  score,
+}) {
   const left = fingering["left"]?.map(
     ({ x, y, width, type, judge_type, hold_type, hole }) => ({
       x,
@@ -44,6 +50,7 @@ export default function FingeringVis({ fingering, width, YTPlayer, height }) {
       right={right}
       maxY={maxY}
       YTPlayer={YTPlayer}
+      score={score}
     />
   );
 }
