@@ -15,7 +15,7 @@ export default function MusicList({ musics }) {
   return (
     <>
       <Toolbar>
-        <MusicSearch data={musics} handleChange={handleChange} />
+        {/* <MusicSearch data={musics} handleChange={handleChange} /> */}
       </Toolbar>
       <MusicTable data={showedData} />
     </>

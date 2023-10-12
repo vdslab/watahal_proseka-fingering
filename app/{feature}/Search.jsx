@@ -26,7 +26,7 @@ export default function Search({ data, setId, nodeId }) {
   }, [nodeId]);
 
   return (
-    <div className="flex">
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
       <Autocomplete
         disablePortal
         id="combo-box-demo"
@@ -68,6 +68,6 @@ export default function Search({ data, setId, nodeId }) {
       >
         曲の再生ページ
       </Button>
-    </div>
+    </Box>
   );
 }
