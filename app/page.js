@@ -35,8 +35,11 @@ export default async function Home({ searchParams: { id } }) {
   const similarityData = await getSimilarityData(1);
 
   return (
-    <main className="p-12 bg-slate-200 max-h-screen">
-      <MainPage {...{ musics, clusteringData, similarityData }} />
-    </main>
+    <>
+      <Header />
+      <main className="p-12 bg-slate-200 max-h-screen">
+        <MainPage {...{ musics, clusteringData, similarityData }} />
+      </main>
+    </>
   );
 }
