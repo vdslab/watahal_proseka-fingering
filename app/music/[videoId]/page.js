@@ -2,6 +2,7 @@ import Content from "./{feature}/Content";
 import path from "path";
 import { promises as fs } from "fs";
 import { readJSON, readFileContent } from "@/app/readFile";
+import Header from "./{feature}/Header";
 
 async function readSimilarity(filePath, rootDir = null) {
   const content = await readFileContent(filePath, rootDir);
@@ -53,12 +54,15 @@ export default async function Home({
         </div>
         <div className="w-1/12"></div>
       </div> */}
-      <Content
-        videoId={video}
-        fingering={fingering}
-        similarities={similarities}
-        musicList={musicList}
-      />
+      <Header />
+      <div className="p-3">
+        <Content
+          videoId={video}
+          fingering={fingering}
+          similarities={similarities}
+          musicList={musicList}
+        />
+      </div>
     </>
   );
 }

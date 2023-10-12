@@ -1,8 +1,8 @@
 import "./tailwind.css";
+import Header from "@/components/Header";
 import MainPage from "./{feature}/MainPage";
 import path from "path";
 import { readCSV, readJSON } from "./readFile";
-
 function Sort() {
   return (
     <form>
@@ -31,8 +31,11 @@ export default async function Home() {
   );
 
   return (
-    <main className="p-12 bg-slate-200 max-h-screen">
-      <MainPage {...{ musics, clusteringData }} />
+    <main className="bg-slate-200 max-h-screen">
+      <Header />
+      <div className="p-12">
+        <MainPage {...{ musics, clusteringData }} />
+      </div>
     </main>
   );
 }
