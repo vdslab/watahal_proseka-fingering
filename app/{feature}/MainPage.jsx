@@ -40,7 +40,7 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
           <h1>運指可視化</h1>
         </Box>
         <Box textAlign="center" marginTop={-2}>
-          <p>最適化された運指を参考にしよう</p>
+          <p color="secondary">最適化された運指を参考にしてしよう</p>
         </Box>
 
         <Box
@@ -63,7 +63,7 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
           </Tabs>
 
           <TabPanel value={currentTab} index={0}>
-            <Box padding={5}>
+            <Box padding={3}>
               {/* <ClusteringVis {...{ clusteringData, id }} /> */}
               <Relationvis
                 similarityData={similarityData}

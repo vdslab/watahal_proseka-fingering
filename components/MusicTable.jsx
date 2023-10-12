@@ -189,6 +189,7 @@ export default function MusicTable({ data }) {
                 key={name}
                 hover
                 onClick={() => router.push(`/music/${videoid}?id=${id}`)}
+                sx={{ cursor: "pointer" }}
               >
                 <TableCell align="center">{level}</TableCell>
                 <TableCell>{name}</TableCell>

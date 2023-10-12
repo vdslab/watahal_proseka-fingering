@@ -9,6 +9,7 @@ import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import { Box, IconButton } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const theme = createTheme({
   palette: {
@@ -41,20 +42,29 @@ export default function Header() {
           padding={3}
           sx={{ boxShadow: 1 }}
         >
-          {/* <IconButton size="large">
-            <ArrowBackIcon color="inherit" fontSize="large" />
-          </IconButton> */}
           <StyledToolbar>
-            <Typography
-              color="secondary"
-              variant="h5"
-              component="div"
-              sx={{ cursor: "pointer" }}
+            <Box
+              display="flex"
               onClick={() => router.push("/")}
+              sx={{ cursor: "pointer" }}
             >
-              プロセカ運指&曲特徴可視化
-            </Typography>
-
+              <Box position="relative" sx={{ width: "50px", height: "50px" }}>
+                <Image
+                  src="/miku.png"
+                  alt="mikusan"
+                  fill
+                  style={{ borderRadius: "50px" }}
+                />
+              </Box>
+              <Typography
+                color="secondary"
+                variant="h5"
+                component="div"
+                alignSelf="center"
+              >
+                プロセカ運指&曲特徴可視化
+              </Typography>
+            </Box>
             <Imformation />
           </StyledToolbar>
         </AppBar>
