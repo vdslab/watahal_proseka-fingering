@@ -1,22 +1,17 @@
 "use client";
 import * as d3 from "d3";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
-export default function Relationvis({ similarityData, setNodeId }) {
-  const width = 600;
-  const height = 600;
-  const svgRef = useRef();
-
-  const links = similarityData.links.map((d) => ({
-    ...d,
-    value: d.value * 20,
-  }));
-  const nodes = similarityData.nodes.map((d) => ({ ...d }));
-
+function ChartContent({
+  links,
+  nodes,
+  width,
+  height,
+  similarityData,
+  setNodeId,
+}) {
   useEffect(() => {
-    if (svgRef.current === null || svgRef.current === undefined) return;
-
-    const svg = d3.select(svgRef.current);
+    const svg = d3.select(".chartContent");
     svg.selectChildren().remove();
 
     const link = svg
@@ -67,7 +62,25 @@ export default function Relationvis({ similarityData, setNodeId }) {
 
         node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
       });
-  }, [similarityData]);
+  }, [similarityData, width, height]);
+
+  return <g></g>;
+}
+
+function ZoomableSVG({ children, width, height }) {
+  const svgRef = useRef();
+  const [k, setK] = useState(1);
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+  useEffect(() => {
+    const zoom = d3.zoom().on("zoom", (event) => {
+      const { x, y, k } = event.transform;
+      setK(k);
+      setX(x);
+      setY(y);
+    });
+    d3.select(svgRef.current).call(zoom);
+  }, [svgRef]);
 
   return (
     <svg
@@ -76,6 +89,34 @@ export default function Relationvis({ similarityData, setNodeId }) {
       style={{ backgroundColor: "lightgray" }}
       ref={svgRef}
       className="chart"
-    ></svg>
+    >
+      <g transform={`translate(${x},${y})scale(${k})`} className="chartContent">
+        {children}
+      </g>
+    </svg>
+  );
+}
+
+export default function Relationvis({ similarityData, setNodeId }) {
+  const width = 600;
+  const height = 600;
+
+  const links = similarityData.links.map((d) => ({
+    ...d,
+    value: d.value * 20,
+  }));
+  const nodes = similarityData.nodes.map((d) => ({ ...d }));
+
+  return (
+    <ZoomableSVG width={width} height={height}>
+      <ChartContent
+        links={links}
+        nodes={nodes}
+        width={width}
+        height={height}
+        similarityData={similarityData}
+        setNodeId={setNodeId}
+      ></ChartContent>
+    </ZoomableSVG>
   );
 }
