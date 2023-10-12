@@ -1,18 +1,21 @@
 "use client";
 import * as d3 from "d3";
-import { useRef, useEffect, useMemo } from "react";
+import { useRef, useEffect } from "react";
 
 export default function Relationvis({ similarityData, setNodeId }) {
   const width = 600;
   const height = 600;
   const svgRef = useRef();
+
   const links = similarityData.links.map((d) => ({
     ...d,
     value: d.value * 20,
   }));
   const nodes = similarityData.nodes.map((d) => ({ ...d }));
 
-  const { simulation } = useMemo(() => {
+  useEffect(() => {
+    if (svgRef.current === null || svgRef.current === undefined) return;
+
     const svg = d3.select(svgRef.current);
     svg.selectChildren().remove();
 
@@ -64,8 +67,6 @@ export default function Relationvis({ similarityData, setNodeId }) {
 
         node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
       });
-
-    return { simulation };
   }, [similarityData]);
 
   return (
