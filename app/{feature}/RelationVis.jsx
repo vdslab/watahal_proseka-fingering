@@ -1,6 +1,6 @@
 "use client";
 import * as d3 from "d3";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export default function Relationvis({ similarityData, setNodeId }) {
   const width = 600;
@@ -13,10 +13,23 @@ export default function Relationvis({ similarityData, setNodeId }) {
   }));
   const nodes = similarityData.nodes.map((d) => ({ ...d }));
 
+  const [k, setK] = useState(1);
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+  useEffect(() => {
+    const zoom = d3.zoom().on("zoom", (event) => {
+      const { x, y, k } = event.transform;
+      setK(k);
+      setX(x);
+      setY(y);
+    });
+    d3.select(svgRef.current).call(zoom);
+  }, []);
+
   useEffect(() => {
     if (svgRef.current === null || svgRef.current === undefined) return;
 
-    const svg = d3.select(svgRef.current);
+    const svg = d3.select(svgRef.current).select(".chartContent");
     svg.selectChildren().remove();
 
     const link = svg
@@ -76,6 +89,11 @@ export default function Relationvis({ similarityData, setNodeId }) {
       style={{ backgroundColor: "lightgray" }}
       ref={svgRef}
       className="chart"
-    ></svg>
+    >
+      <g
+        transform={`translate(${x},${y})scale(${k})`}
+        className="chartContent"
+      ></g>
+    </svg>
   );
 }
