@@ -101,11 +101,17 @@ export default function Relationvis({ similarityData, setNodeId }) {
   const width = 600;
   const height = 600;
 
-  const links = similarityData.links.map((d) => ({
-    ...d,
-    value: d.value * 20,
-  }));
   const nodes = similarityData.nodes.map((d) => ({ ...d }));
+  const links = nodes.flatMap((node) => {
+    const link = similarityData.links.filter((link) => {
+      return node.id === link.source;
+    });
+    link.sort(function (a, b) {
+      return b.value - a.value;
+    });
+    const slicedLink = link.slice(0, 5);
+    return slicedLink.map((link) => ({ ...link, value: link.value * 20 }));
+  });
 
   return (
     <ZoomableSVG width={width} height={height}>
