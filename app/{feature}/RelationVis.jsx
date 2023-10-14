@@ -1,22 +1,21 @@
 "use client";
+import { Box, Grid } from "@mui/material";
 import * as d3 from "d3";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import RelationList from "./RelationList";
 
-export default function Relationvis({ similarityData, setNodeId }) {
-  const width = 600;
-  const height = 600;
-  const svgRef = useRef();
-
-  const links = similarityData.links.map((d) => ({
-    ...d,
-    value: d.value * 20,
-  }));
-  const nodes = similarityData.nodes.map((d) => ({ ...d }));
-
+function ChartContent({
+  links,
+  nodes,
+  width,
+  height,
+  similarityData,
+  setNodeId,
+}) {
   useEffect(() => {
-    if (svgRef.current === null || svgRef.current === undefined) return;
+    if (width === undefined || height === undefined) return;
 
-    const svg = d3.select(svgRef.current);
+    const svg = d3.select(".chartContent");
     svg.selectChildren().remove();
 
     const link = svg
@@ -67,15 +66,100 @@ export default function Relationvis({ similarityData, setNodeId }) {
 
         node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
       });
-  }, [similarityData]);
+  }, [similarityData, width, height]);
+
+  return <g></g>;
+}
+
+function ZoomableSVG({ children, width, height }) {
+  const svgRef = useRef();
+  const [k, setK] = useState(1);
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+  useEffect(() => {
+    const zoom = d3.zoom().on("zoom", (event) => {
+      const { x, y, k } = event.transform;
+      setK(k);
+      setX(x);
+      setY(y);
+    });
+    d3.select(svgRef.current).call(zoom);
+
+    () => {
+      d3.select(svgRef.current).on(".zoom", null);
+    };
+  }, [svgRef.current]);
+
+  if (width === undefined || height === undefined) {
+    return <p>loading data...</p>;
+  }
 
   return (
     <svg
-      width={width}
-      height={height}
+      viewBox={`0 0 ${width} ${height}`}
       style={{ backgroundColor: "lightgray" }}
       ref={svgRef}
       className="chart"
-    ></svg>
+    >
+      <g transform={`translate(${x},${y})scale(${k})`} className="chartContent">
+        {children}
+      </g>
+    </svg>
+  );
+}
+
+export default function Relationvis({ similarityData, setNodeId, nodeId }) {
+  const wrapperRef = useRef();
+  const [size, setSize] = useState({ width: undefined, height: undefined });
+  useEffect(() => {
+    setSize({
+      ...size,
+      width: wrapperRef.current?.clientWidth,
+      height: wrapperRef.current?.clientHeight,
+    });
+  }, [wrapperRef.current]);
+
+  const nodes = similarityData.nodes.map((d) => ({ ...d }));
+  const links = nodes.flatMap((node) => {
+    const link = similarityData.links.filter((link) => {
+      return node.id === link.source;
+    });
+    link.sort(function (a, b) {
+      return b.value - a.value;
+    });
+    const slicedLink = link.slice(0, 5);
+    return slicedLink.map((link) => ({ ...link, value: link.value * 20 }));
+  });
+
+  return (
+    <Box height={"100%"} width={"100%"}>
+      <Grid
+        container
+        justifyContent={"space-between"}
+        spacing={3}
+        height={"100%"}
+        width={"100%"}
+      >
+        <Grid item xs={12} md={7}>
+          <Box height={"100%"} width={"100%"} ref={wrapperRef}>
+            <ZoomableSVG width={size.width} height={size.height}>
+              <ChartContent
+                links={links}
+                nodes={nodes}
+                width={size.width}
+                height={size.height}
+                similarityData={similarityData}
+                setNodeId={setNodeId}
+              ></ChartContent>
+            </ZoomableSVG>
+          </Box>
+        </Grid>
+        <Grid item xs md>
+          <Box height={size.height}>
+            <RelationList nodeId={nodeId} />
+          </Box>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
