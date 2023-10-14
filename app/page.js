@@ -32,7 +32,7 @@ export default async function Home({ searchParams: { id } }) {
     true
   );
 
-  const similarityData = await getSimilarityData();
+  const similarityData = await getSimilarityData(1);
 
   return (
     <>
