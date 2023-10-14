@@ -26,7 +26,7 @@ export default function RelationList({ nodeId }) {
   const [height, setHeight] = useState();
   useEffect(() => {
     setHeight(wrapperRef.current?.clientHeight);
-  }, [wrapperRef.current]);
+  }, [wrapperRef.current, nodeId]);
 
   if (nodeId === undefined || nodeId === null) return <div>select node</div>;
   if (error || error2) return <div>Failed to load</div>;
@@ -41,7 +41,7 @@ export default function RelationList({ nodeId }) {
 
   return (
     <Box bgcolor={"white"} height={"100%"} ref={wrapperRef}>
-      <List sx={{ maxHeight: height / 2, overflowY: "auto" }}>
+      <List sx={{ maxHeight: height, overflowY: "auto" }}>
         <ListSubheader>現在の曲</ListSubheader>
         <ListItem>{music?.name}</ListItem>
         <Divider />

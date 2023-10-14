@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Tabs, Tab } from "@mui/material";
 import Search from "./Search";
 //import ClusteringVis from "./ClusteringVis";
@@ -29,6 +29,17 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
   const [currentTab, setCurrentTab] = useState(0);
   const [id, setId] = useState(null);
   const [nodeId, setNodeId] = useState(null);
+  const tabHeaderRef = useRef();
+  const searchRef = useRef();
+  const [height, setHeight] = useState();
+
+  useEffect(() => {
+    const tabSearchHeight =
+      tabHeaderRef.current?.clientHeight + searchRef.current?.clientHeight;
+    setHeight(tabSearchHeight);
+    console.log(tabSearchHeight);
+  }, [tabHeaderRef.current, searchRef.current]);
+
   function handleTabChange(e, tabIndex) {
     setCurrentTab(tabIndex);
   }
@@ -48,6 +59,7 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
           top={20}
           marginTop={5}
           sx={{ zIndex: "tooltip" }}
+          ref={searchRef}
         >
           <Search data={musics} setId={setId} />
         </Box>
@@ -57,13 +69,14 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
             value={currentTab}
             onChange={handleTabChange}
             variant="fullWidth"
+            ref={tabHeaderRef}
           >
             <Tab label="似てる曲を探す" />
             <Tab label="曲一覧" />
           </Tabs>
 
           <TabPanel value={currentTab} index={0}>
-            <Box padding={3} height={600}>
+            <Box padding={3} height={`calc(100vh - ${height}px)`}>
               {/* <ClusteringVis {...{ clusteringData, id }} /> */}
               <Relationvis
                 similarityData={similarityData}

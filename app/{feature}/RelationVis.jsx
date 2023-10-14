@@ -1,7 +1,7 @@
 "use client";
 import { Box, Grid } from "@mui/material";
 import * as d3 from "d3";
-import { useRef, useEffect, useState, useLayoutEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import RelationList from "./RelationList";
 
 function ChartContent({
@@ -111,12 +111,13 @@ function ZoomableSVG({ children, width, height }) {
 export default function Relationvis({ similarityData, setNodeId, nodeId }) {
   const wrapperRef = useRef();
   const [size, setSize] = useState({ width: undefined, height: undefined });
-  useLayoutEffect(() => {
+  useEffect(() => {
     setSize({
       width: wrapperRef.current?.clientWidth,
       height: wrapperRef.current?.clientHeight,
     });
-  }, []);
+    console.log(size);
+  }, [wrapperRef.current]);
 
   const nodes = similarityData.nodes.map((d) => ({ ...d }));
   const links = nodes.flatMap((node) => {
@@ -131,8 +132,8 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
   });
 
   return (
-    <Grid container spacing={3} height={"100%"}>
-      <Grid item xs={8} ref={wrapperRef}>
+    <Grid container spacing={3} height={"100%"} ref={wrapperRef}>
+      <Grid item xs={8}>
         <ZoomableSVG width={size.width} height={size.height}>
           <ChartContent
             links={links}
