@@ -1,6 +1,8 @@
 "use client";
+import { Box, Grid } from "@mui/material";
 import * as d3 from "d3";
 import { useRef, useEffect, useState } from "react";
+import RelationList from "./RelationList";
 
 function ChartContent({
   links,
@@ -11,6 +13,8 @@ function ChartContent({
   setNodeId,
 }) {
   useEffect(() => {
+    if (width === undefined || height === undefined) return;
+
     const svg = d3.select(".chartContent");
     svg.selectChildren().remove();
 
@@ -80,12 +84,19 @@ function ZoomableSVG({ children, width, height }) {
       setY(y);
     });
     d3.select(svgRef.current).call(zoom);
-  }, [svgRef]);
+
+    () => {
+      d3.select(svgRef.current).on(".zoom", null);
+    };
+  }, [svgRef.current]);
+
+  if (width === undefined || height === undefined) {
+    return <p>loading data...</p>;
+  }
 
   return (
     <svg
-      width={width}
-      height={height}
+      viewBox={`0 0 ${width} ${height}`}
       style={{ backgroundColor: "lightgray" }}
       ref={svgRef}
       className="chart"
@@ -97,9 +108,16 @@ function ZoomableSVG({ children, width, height }) {
   );
 }
 
-export default function Relationvis({ similarityData, setNodeId }) {
-  const width = 600;
-  const height = 600;
+export default function Relationvis({ similarityData, setNodeId, nodeId }) {
+  const wrapperRef = useRef();
+  const [size, setSize] = useState({ width: undefined, height: undefined });
+  useEffect(() => {
+    setSize({
+      ...size,
+      width: wrapperRef.current?.clientWidth,
+      height: wrapperRef.current?.clientHeight,
+    });
+  }, [wrapperRef.current]);
 
   const nodes = similarityData.nodes.map((d) => ({ ...d }));
   const links = nodes.flatMap((node) => {
@@ -114,15 +132,34 @@ export default function Relationvis({ similarityData, setNodeId }) {
   });
 
   return (
-    <ZoomableSVG width={width} height={height}>
-      <ChartContent
-        links={links}
-        nodes={nodes}
-        width={width}
-        height={height}
-        similarityData={similarityData}
-        setNodeId={setNodeId}
-      ></ChartContent>
-    </ZoomableSVG>
+    <Box height={"100%"} width={"100%"}>
+      <Grid
+        container
+        justifyContent={"space-between"}
+        spacing={3}
+        height={"100%"}
+        width={"100%"}
+      >
+        <Grid item xs={12} md={7}>
+          <Box height={"100%"} width={"100%"} ref={wrapperRef}>
+            <ZoomableSVG width={size.width} height={size.height}>
+              <ChartContent
+                links={links}
+                nodes={nodes}
+                width={size.width}
+                height={size.height}
+                similarityData={similarityData}
+                setNodeId={setNodeId}
+              ></ChartContent>
+            </ZoomableSVG>
+          </Box>
+        </Grid>
+        <Grid item xs md>
+          <Box height={size.height}>
+            <RelationList nodeId={nodeId} />
+          </Box>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
