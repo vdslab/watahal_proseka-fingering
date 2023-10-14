@@ -84,7 +84,11 @@ function ZoomableSVG({ children, width, height }) {
       setY(y);
     });
     d3.select(svgRef.current).call(zoom);
-  }, [svgRef]);
+
+    () => {
+      d3.select(svgRef.current).on(".zoom", null);
+    };
+  }, [svgRef.current]);
 
   if (width === undefined || height === undefined) {
     return <p>loading data...</p>;
