@@ -10,7 +10,6 @@ export async function GET(request, { params }) {
     "detail",
     "data.json"
   );
-  console.log(musicListJsonPath);
   const musics = await readJSON(musicListJsonPath);
 
   return NextResponse.json(musics);
