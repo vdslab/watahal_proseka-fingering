@@ -72,7 +72,6 @@ function ChartContent({
 }
 
 function ZoomableSVG({ children, width, height }) {
-  const wrapperRef = useRef();
   const svgRef = useRef();
   const [k, setK] = useState(1);
   const [x, setX] = useState(0);
@@ -92,21 +91,16 @@ function ZoomableSVG({ children, width, height }) {
   }
 
   return (
-    <Box ref={wrapperRef}>
-      <svg
-        viewBox={`0 0 ${width} ${height}`}
-        style={{ backgroundColor: "lightgray" }}
-        ref={svgRef}
-        className="chart"
-      >
-        <g
-          transform={`translate(${x},${y})scale(${k})`}
-          className="chartContent"
-        >
-          {children}
-        </g>
-      </svg>
-    </Box>
+    <svg
+      viewBox={`0 0 ${width} ${height}`}
+      style={{ backgroundColor: "lightgray" }}
+      ref={svgRef}
+      className="chart"
+    >
+      <g transform={`translate(${x},${y})scale(${k})`} className="chartContent">
+        {children}
+      </g>
+    </svg>
   );
 }
 
