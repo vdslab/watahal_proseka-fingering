@@ -40,8 +40,8 @@ export default function RelationList({ nodeId }) {
     .map(({ target }) => musicListData.find((music) => music.id === target));
 
   return (
-    <Box bgcolor={"white"} height={"100%"} ref={wrapperRef}>
-      <List sx={{ maxHeight: height, overflowY: "auto" }}>
+    <Box bgcolor={"white"} height={"100%"} ref={wrapperRef} overflow={"auto"}>
+      <List sx={{ maxHeight: height }}>
         <ListSubheader>現在の曲</ListSubheader>
         <ListItem>{music?.name}</ListItem>
         <Divider />
