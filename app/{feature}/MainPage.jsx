@@ -29,15 +29,14 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
   const [currentTab, setCurrentTab] = useState(0);
   const [id, setId] = useState(null);
   const [nodeId, setNodeId] = useState(null);
+  const [clacedHeight, setCalcedHeight] = useState();
   const tabHeaderRef = useRef();
   const searchRef = useRef();
-  const [height, setHeight] = useState();
 
   useEffect(() => {
     const tabSearchHeight =
       tabHeaderRef.current?.clientHeight + searchRef.current?.clientHeight;
-    setHeight(tabSearchHeight);
-    console.log(tabSearchHeight);
+    setCalcedHeight(`calc(90vh - ${tabSearchHeight}px - 10px)`);
   }, [tabHeaderRef.current, searchRef.current]);
 
   function handleTabChange(e, tabIndex) {
@@ -76,7 +75,7 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
           </Tabs>
 
           <TabPanel value={currentTab} index={0}>
-            <Box padding={3} height={`calc(100vh - ${height}px)`}>
+            <Box padding={3} sx={{ height: clacedHeight }}>
               {/* <ClusteringVis {...{ clusteringData, id }} /> */}
               <Relationvis
                 similarityData={similarityData}
