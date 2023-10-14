@@ -97,7 +97,7 @@ export default function MusicTable({ data }) {
 
   const router = useRouter();
   return (
-    <TableContainer className="max-h-[60vh]">
+    <TableContainer className="max-h-[65vh]">
       <Table stickyHeader>
         <ThemeProvider theme={theme}>
           <TableHead color="secondary">
@@ -189,6 +189,7 @@ export default function MusicTable({ data }) {
                 key={name}
                 hover
                 onClick={() => router.push(`/music/${videoid}?id=${id}`)}
+                sx={{ cursor: "pointer" }}
               >
                 <TableCell align="center">{level}</TableCell>
                 <TableCell>{name}</TableCell>

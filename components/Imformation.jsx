@@ -36,6 +36,7 @@ export default function Imformation() {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        sx={{ zIndex: "tooltip" }}
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h5" component="h2">
