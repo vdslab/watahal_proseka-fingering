@@ -68,6 +68,7 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
               <Relationvis
                 similarityData={similarityData}
                 setNodeId={setNodeId}
+                nodeId={nodeId}
               />
               {/* <Search data={musics} setId={setId} nodeId={nodeId} /> */}
             </Box>

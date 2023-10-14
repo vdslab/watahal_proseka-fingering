@@ -2,6 +2,7 @@
 import { Box, Grid } from "@mui/material";
 import * as d3 from "d3";
 import { useRef, useEffect, useState, useLayoutEffect } from "react";
+import RelationList from "./RelationList";
 
 function ChartContent({
   links,
@@ -109,7 +110,7 @@ function ZoomableSVG({ children, width, height }) {
   );
 }
 
-export default function Relationvis({ similarityData, setNodeId }) {
+export default function Relationvis({ similarityData, setNodeId, nodeId }) {
   const wrapperRef = useRef();
   const [size, setSize] = useState({ width: undefined, height: undefined });
   useLayoutEffect(() => {
@@ -146,7 +147,7 @@ export default function Relationvis({ similarityData, setNodeId }) {
         </ZoomableSVG>
       </Grid>
       <Grid item xs={4}>
-        <Box>test</Box>
+        <RelationList nodeId={nodeId} />
       </Grid>
     </Grid>
   );
