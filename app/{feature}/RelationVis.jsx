@@ -113,10 +113,10 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
   const [size, setSize] = useState({ width: undefined, height: undefined });
   useEffect(() => {
     setSize({
+      ...size,
       width: wrapperRef.current?.clientWidth,
       height: wrapperRef.current?.clientHeight,
     });
-    console.log(size);
   }, [wrapperRef.current]);
 
   const nodes = similarityData.nodes.map((d) => ({ ...d }));
@@ -132,22 +132,34 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
   });
 
   return (
-    <Grid container spacing={3} height={"100%"} ref={wrapperRef}>
-      <Grid item xs={8}>
-        <ZoomableSVG width={size.width} height={size.height}>
-          <ChartContent
-            links={links}
-            nodes={nodes}
-            width={size.width}
-            height={size.height}
-            similarityData={similarityData}
-            setNodeId={setNodeId}
-          ></ChartContent>
-        </ZoomableSVG>
+    <Box height={"100%"} width={"100%"}>
+      <Grid
+        container
+        justifyContent={"space-between"}
+        spacing={3}
+        height={"100%"}
+        width={"100%"}
+      >
+        <Grid item xs={12} md={7}>
+          <Box height={"100%"} width={"100%"} ref={wrapperRef}>
+            <ZoomableSVG width={size.width} height={size.height}>
+              <ChartContent
+                links={links}
+                nodes={nodes}
+                width={size.width}
+                height={size.height}
+                similarityData={similarityData}
+                setNodeId={setNodeId}
+              ></ChartContent>
+            </ZoomableSVG>
+          </Box>
+        </Grid>
+        <Grid item xs md>
+          <Box height={size.height}>
+            <RelationList nodeId={nodeId} />
+          </Box>
+        </Grid>
       </Grid>
-      <Grid item xs={4}>
-        <RelationList nodeId={nodeId} />
-      </Grid>
-    </Grid>
+    </Box>
   );
 }
