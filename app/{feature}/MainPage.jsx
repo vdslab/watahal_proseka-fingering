@@ -63,7 +63,7 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
           </Tabs>
 
           <TabPanel value={currentTab} index={0}>
-            <Box padding={3}>
+            <Box padding={3} height={600}>
               {/* <ClusteringVis {...{ clusteringData, id }} /> */}
               <Relationvis
                 similarityData={similarityData}
