@@ -1,11 +1,10 @@
 "use client";
 
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+import { AppBar, Toolbar, Typography, Box } from "@mui/material";
 import Imformation from "./Imformation";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import Image from "next/image";
 
 const theme = createTheme({
   palette: {
@@ -16,8 +15,8 @@ const theme = createTheme({
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: "flex-center",
-  paddingTop: theme.spacing(1),
-  paddingBottom: theme.spacing(2),
+  paddingTop: theme.spacing(3),
+  paddingBottom: theme.spacing(3),
   // Override media queries injected by theme.mixins.toolbar
   "@media all": {
     minHeight: 60,
@@ -28,19 +27,29 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 export default function Header() {
   return (
     <ThemeProvider theme={theme}>
-      <AppBar position="static" color="primary" className="p-8 m-0">
-        <StyledToolbar>
-          <Typography
-            color="secondary"
-            variant="h3"
-            component="div"
-            sx={{ flexGrow: 1 }}
-          >
-            プロセカ運指&曲特徴可視化
-          </Typography>
-          <Imformation />
-        </StyledToolbar>
-      </AppBar>
+      <Box>
+        <AppBar position="static" color="primary" sx={{ boxShadow: 1 }}>
+          <StyledToolbar>
+            <Box position="relative" sx={{ width: "70px", height: "70px" }}>
+              <Image
+                src="/miku.png"
+                alt="mikusan"
+                fill
+                style={{ borderRadius: "50px" }}
+              />
+            </Box>
+            <Typography
+              color="secondary"
+              variant="h4"
+              component="div"
+              sx={{ flexGrow: 1 }}
+            >
+              プロセカ運指&曲特徴可視化
+            </Typography>
+            <Imformation />
+          </StyledToolbar>
+        </AppBar>
+      </Box>
     </ThemeProvider>
   );
 }

@@ -13,9 +13,9 @@ export default function Search({ data, setId, nodeId }) {
     return { key: id, label: name, ID: videoid };
   });
   names.push({
-    key: null,
+    key: undefined,
     label: "曲を選択してください",
-    ID: null,
+    ID: undefined,
   });
 
   const router = useRouter();
@@ -26,7 +26,7 @@ export default function Search({ data, setId, nodeId }) {
   }, [nodeId]);
 
   return (
-    <div className="flex">
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
       <Autocomplete
         disablePortal
         id="combo-box-demo"
@@ -43,14 +43,13 @@ export default function Search({ data, setId, nodeId }) {
         renderInput={(params) => {
           return <TextField {...params} label="曲" />;
         }}
-        isOptionEqualToValue={(option, v) => option?.key === v?.key}
+        isOptionEqualToValue={(option, v) => {
+          return option?.key === v?.key;
+        }}
         onChange={(event, value) => {
-          if (!value) {
-            setSelectID(names[names.length - 1]);
-            setId(null);
-          } else {
+          if (value) {
             setSelectID(value);
-            setId(value.key);
+            setId(value?.key);
           }
         }}
       />
@@ -68,6 +67,6 @@ export default function Search({ data, setId, nodeId }) {
       >
         曲の再生ページ
       </Button>
-    </div>
+    </Box>
   );
 }
