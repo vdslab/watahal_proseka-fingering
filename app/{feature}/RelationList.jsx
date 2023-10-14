@@ -1,6 +1,19 @@
 "use client";
+import {
+  Box,
+  Divider,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  ListSubheader,
+} from "@mui/material";
 import path from "path";
 import useSWR from "swr";
+import LaunchIcon from "@mui/icons-material/Launch";
+import { useEffect, useRef, useState } from "react";
+
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
 export default function RelationList({ nodeId }) {
@@ -9,7 +22,13 @@ export default function RelationList({ nodeId }) {
     nodeId ? `/api/music/similarity/${nodeId}` : null,
     fetcher
   );
+  const wrapperRef = useRef();
+  const [height, setHeight] = useState();
+  useEffect(() => {
+    setHeight(wrapperRef.current?.clientHeight);
+  }, [wrapperRef.current]);
 
+  if (nodeId === undefined || nodeId === null) return <div>select node</div>;
   if (error || error2) return <div>Failed to load</div>;
   if (!musicListData) return <div>Loading...</div>;
   if (!similarityData) return <div>Loading...</div>;
@@ -21,11 +40,24 @@ export default function RelationList({ nodeId }) {
     .map(({ target }) => musicListData.find((music) => music.id === target));
 
   return (
-    <div>
-      <p>{music?.name}</p>
-      {similarMusics.map(({ id, name, videoId }) => (
-        <p key={id}>{name}</p>
-      ))}
-    </div>
+    <Box bgcolor={"white"} height={"100%"} ref={wrapperRef}>
+      <List sx={{ maxHeight: height / 2, overflowY: "auto" }}>
+        <ListSubheader>現在の曲</ListSubheader>
+        <ListItem>{music?.name}</ListItem>
+        <Divider />
+        <ListSubheader>似ている曲</ListSubheader>
+        {similarMusics.map(({ id, name, videoId }) => (
+          <ListItemButton
+            key={id}
+            onClick={() => router.push(`/music/${videoId}?id=${target}`)}
+          >
+            <ListItemIcon>
+              <LaunchIcon />
+            </ListItemIcon>
+            <ListItemText>{name}</ListItemText>
+          </ListItemButton>
+        ))}
+      </List>
+    </Box>
   );
 }
