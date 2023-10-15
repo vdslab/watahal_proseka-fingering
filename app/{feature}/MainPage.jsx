@@ -46,10 +46,10 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
     <ThemeProvider theme={theme}>
       <Container maxWidth="ls">
         <Box textAlign="center" marginTop={10}>
-          <h1>運指可視化</h1>
+          <h1>運指を参考に曲を予習しよう</h1>
         </Box>
         <Box textAlign="center" marginTop={-2}>
-          <p color="secondary">最適化された運指を参考にしてしよう</p>
+          <p>似てる曲から雰囲気もつかもう</p>
         </Box>
 
         <Box

@@ -44,9 +44,9 @@ export default function Header() {
               component="div"
               sx={{ flexGrow: 1 }}
             >
-              プロセカ運指&曲特徴可視化
+              プロセカ 楽曲予習
             </Typography>
-            <Imformation />
+            {/* <Imformation /> */}
           </StyledToolbar>
         </AppBar>
       </Box>
