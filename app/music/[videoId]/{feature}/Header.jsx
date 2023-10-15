@@ -62,10 +62,10 @@ export default function Header() {
                 component="div"
                 alignSelf="center"
               >
-                プロセカ運指&曲特徴可視化
+                プロセカ 楽曲予習
               </Typography>
             </Box>
-            <Imformation />
+            {/* <Imformation /> */}
           </StyledToolbar>
         </AppBar>
       </Box>
