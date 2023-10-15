@@ -18,19 +18,15 @@ export default function ScrollableBox({
   const timeScale = d3
     .scaleLinear()
     .domain([startTime, startTime + sec])
-    .range([0, measure[1]]);
+    .range(measure);
 
   const yScale = d3
     .scaleLinear()
-    .domain([0, measure[1]])
+    .domain(measure)
     .range([svgHeight, height])
     .nice(100);
 
-  const fast = svgHeight / (YTPlayer?.getDuration() - 14); //1秒における動くピクセル数
   const FPS = 30;
-  function calcPoint(time) {
-    return fast * time;
-  }
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -74,13 +70,6 @@ export default function ScrollableBox({
       overflow={"auto"}
       ref={wrapperRef}
       height={"100%"}
-      onClick={() => {
-        wrapperRef.current?.scroll({
-          top: 1000,
-          left: 0,
-          behavior: "smooth",
-        });
-      }}
       sx={{ "::-webkit-scrollbar": { display: "none" } }}
     >
       {children}

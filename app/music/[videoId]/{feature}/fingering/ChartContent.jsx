@@ -29,7 +29,7 @@ export default function ChartContent({
   const measure = d3.extent(score, ({ y }) => y);
   const yScale = d3
     .scaleLinear()
-    .domain([0, measure[1]])
+    .domain(measure)
     .range([height, viewHeight])
     .nice(100);
   const widthScale = d3
