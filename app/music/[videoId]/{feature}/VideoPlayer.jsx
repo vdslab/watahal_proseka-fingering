@@ -55,35 +55,7 @@ export default function VideoPlayer({ videoId, YTPlayer, setYTPlayer }) {
   return (
     <Box ref={wrapperRef} width={"100%"} height={"100%"}>
       <ThemeProvider theme={theme}>
-        <div>
-          {/* <TimeSlider
-            playBtn={playBtn}
-            currentTime={currentTime}
-            setSeek={setSeek}
-            setPlayTimeState={setPlayTimeState}
-            playTimeState={playTimeState}
-            max={YTPlayer != null ? YTPlayer.getDuration() : 300}
-            YTPlayer={YTPlayer}
-          /> */}
-        </div>
-        <div>
-          {/* <VideoManagerButtons
-            {...{ YTPlayer, setPlaybackRate, playBtn, volume, setVolume }}
-          /> */}
-        </div>
-        <YouTube
-          videoId={videoId}
-          opts={opts}
-          onReady={handleReady}
-          onPlaybackRateChange={() => {
-            console.log("change rate");
-          }}
-          onStateChange={() => {
-            //   setPlayerState(YTPlayer.getPlayerState());
-            //   setPlaySeconds(YTPlayer.getCurrentTime());
-            //console.log(YTPlayer.getCurrentTime());
-          }}
-        />
+        <YouTube videoId={videoId} opts={opts} onReady={handleReady} />
       </ThemeProvider>
     </Box>
   );

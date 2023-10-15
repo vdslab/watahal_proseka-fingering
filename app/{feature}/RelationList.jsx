@@ -39,7 +39,6 @@ export default function RelationList({ nodeId }) {
   const similarMusics = similarityData
     ?.slice(0, 10)
     ?.map(({ target }) => musicListData?.find((music) => music.id === target));
-  // console.log(similarMusics);
 
   return (
     <Box bgcolor={"white"} height={"100%"} ref={wrapperRef} overflow={"auto"}>

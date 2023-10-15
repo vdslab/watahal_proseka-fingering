@@ -26,8 +26,6 @@ export default function NoteScore({ score, scales, noteheight }) {
     return acc;
   }, {});
 
-  console.log(complexHoldNotes);
-
   return (
     <g>
       {notHoldNotes.map(
