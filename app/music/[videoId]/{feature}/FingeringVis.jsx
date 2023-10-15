@@ -1,3 +1,4 @@
+import { Box, CircularProgress, Container } from "@mui/material";
 import Chart from "./fingering/Chart";
 
 export default function FingeringVis({
@@ -7,6 +8,21 @@ export default function FingeringVis({
   height,
   score,
 }) {
+  if (YTPlayer === undefined) {
+    return (
+      <Container sx={{ height: "100%" }}>
+        <Box
+          height={"100%"}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <CircularProgress />
+        </Box>
+      </Container>
+    );
+  }
+
   const left = fingering["left"]?.map(
     ({ x, y, width, type, judge_type, hold_type, hole }) => ({
       x,
