@@ -1,5 +1,6 @@
+import * as d3 from "d3";
+
 function BarLine({ y, leftX, rightX }) {
-  // console.log(y);
   return (
     <line
       x1={leftX}
@@ -14,7 +15,6 @@ function BarLine({ y, leftX, rightX }) {
 }
 
 function LaneLine({ x, bottomY, topY }) {
-  // console.log(x, bottomY, topY);
   return (
     <line
       x1={x}
@@ -28,13 +28,17 @@ function LaneLine({ x, bottomY, topY }) {
   );
 }
 
-export default function LineSkeleton({ maxY, yScale, xScale }) {
-  // console.log(y);
+export default function LineSkeleton({ maxY, xScale, height }) {
+  const yScale = d3
+    .scaleLinear()
+    .domain([0, maxY])
+    .range([height, 0])
+    .nice(100);
+
   return (
     <g>
       <g>
         {[...Array(maxY)].map((e, i) => {
-          // console.log(i);
           return (
             <BarLine
               key={i}

@@ -8,8 +8,6 @@ export default async function Home({
   searchParams: { id },
 }) {
   const video = decodeURI(videoId);
-  // console.log(typeof videoId);
-  // console.log(id);
 
   const jsonDir = path.join(process.cwd(), "public", "json");
   const musicDetailPath = path.join(jsonDir, "fingering");
@@ -46,6 +44,7 @@ export default async function Home({
         similarities={similarities}
         musicList={musicList}
         score={score}
+        id={id}
       />
     </>
   );

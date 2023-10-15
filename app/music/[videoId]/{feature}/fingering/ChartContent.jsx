@@ -8,15 +8,17 @@ export default function ChartContent({
   height,
   left,
   right,
-  maxY,
   score,
+  viewHeight,
 }) {
   const svgRef = useRef();
   const [svgWidth, setsvgWidth] = useState(10);
+
   useEffect(() => {
     svgRef.current?.scrollIntoView(false);
     setsvgWidth(width ?? 200 - 20);
   }, [height, width]);
+
   const showable = left && right;
   const noteHeight = 10;
   const xScale = d3
@@ -24,10 +26,11 @@ export default function ChartContent({
     .domain([0, 12])
     .range([0, svgWidth ?? 100])
     .nice();
+  const measure = d3.extent(score, ({ y }) => y);
   const yScale = d3
     .scaleLinear()
-    .domain(d3.extent(score, ({ y }) => y))
-    .range([height - noteHeight / 2, 0])
+    .domain(measure)
+    .range([height, viewHeight])
     .nice(100);
   const widthScale = d3
     .scaleLinear()
@@ -48,8 +51,8 @@ export default function ChartContent({
         <g>
           <LineSkeleton
             maxY={Math.ceil(yScale.domain()[1])}
-            yScale={yScale}
             xScale={xScale}
+            height={height}
           />
           <NoteScore
             score={score}
