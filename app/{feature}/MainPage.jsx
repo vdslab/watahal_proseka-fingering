@@ -27,8 +27,7 @@ function TabPanel({ value, index, children }) {
 
 export default function MainPage({ musics, clusteringData, similarityData }) {
   const [currentTab, setCurrentTab] = useState(0);
-  const [id, setId] = useState(null);
-  const [nodeId, setNodeId] = useState(null);
+  const [selectedMusicId, setSelectedMusicId] = useState(null);
   const [clacedHeight, setCalcedHeight] = useState();
   const tabHeaderRef = useRef();
   const searchRef = useRef();
@@ -60,7 +59,11 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
           sx={{ zIndex: "tooltip" }}
           ref={searchRef}
         >
-          <Search data={musics} setId={setId} />
+          <Search
+            data={musics}
+            setSelectedMusicId={setSelectedMusicId}
+            selectedMusicId={selectedMusicId}
+          />
         </Box>
 
         <Box marginTop={20} justifyContent="center">
@@ -79,8 +82,8 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
               {/* <ClusteringVis {...{ clusteringData, id }} /> */}
               <Relationvis
                 similarityData={similarityData}
-                setNodeId={setNodeId}
-                nodeId={nodeId}
+                setNodeId={setSelectedMusicId}
+                nodeId={selectedMusicId}
               />
               {/* <Search data={musics} setId={setId} nodeId={nodeId} /> */}
             </Box>
