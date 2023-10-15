@@ -28,7 +28,6 @@ export default function Note({
   height,
   direction,
 }) {
-  // console.log(res);
   switch (judge_type) {
     case "flick_up":
     case "flick_down":

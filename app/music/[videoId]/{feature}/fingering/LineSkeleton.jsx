@@ -1,5 +1,4 @@
 function BarLine({ y, leftX, rightX }) {
-  // console.log(y);
   return (
     <line
       x1={leftX}
@@ -14,7 +13,6 @@ function BarLine({ y, leftX, rightX }) {
 }
 
 function LaneLine({ x, bottomY, topY }) {
-  // console.log(x, bottomY, topY);
   return (
     <line
       x1={x}
@@ -29,12 +27,10 @@ function LaneLine({ x, bottomY, topY }) {
 }
 
 export default function LineSkeleton({ maxY, yScale, xScale }) {
-  // console.log(y);
   return (
     <g>
       <g>
         {[...Array(maxY)].map((e, i) => {
-          // console.log(i);
           return (
             <BarLine
               key={i}

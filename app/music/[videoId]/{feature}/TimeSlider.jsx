@@ -24,10 +24,6 @@ export default function TimeSlider({
 }) {
   const [value, setValue] = useState([0, max]); //指定してる区間の秒数
 
-  useEffect(() => {
-    console.log(playBtn, flowSec);
-  });
-
   //動画の長さをすぐにvalueへ
   useEffect(() => {
     setValue([0, max]);

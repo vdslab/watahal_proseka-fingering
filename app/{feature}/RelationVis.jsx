@@ -11,7 +11,76 @@ function ChartContent({
   height,
   similarityData,
   setNodeId,
+  nodeId,
 }) {
+  useEffect(() => {
+    const relationNode = new Set();
+    const link = d3.select(".link");
+    link
+      .selectChildren()
+      .transition()
+      .duration(500)
+      .ease(d3.easeLinear)
+      .attr("stroke", (d) => {
+        if (d?.source.musicId === nodeId || d?.target.musicId === nodeId) {
+          relationNode.add(d.source.musicId);
+          relationNode.add(d.target.musicId);
+          return "red";
+        } else {
+          return "#999";
+        }
+      })
+      .attr("stroke-width", (d) => {
+        if (d?.source.musicId === nodeId || d?.target.musicId === nodeId) {
+          return "3";
+        } else {
+          return "1.5";
+        }
+      })
+      .attr("stroke-opacity", (d) => {
+        if (
+          d?.source.musicId === nodeId ||
+          d?.target.musicId === nodeId ||
+          nodeId === null ||
+          nodeId === undefined
+        ) {
+          return "0.8";
+        } else {
+          return "0.4";
+        }
+      });
+    const node = d3.select(".node");
+    node
+      .selectChildren()
+      .on("click", (d) => {
+        if (d.srcElement.__data__.musicId === nodeId) {
+          setNodeId(null);
+        } else {
+          setNodeId(d.srcElement.__data__.musicId);
+        }
+      })
+      .transition()
+      .duration(500)
+      .ease(d3.easeLinear)
+      .attr("fill", (d) => {
+        if (d?.musicId === nodeId) {
+          return "#213E7C";
+        }
+        if (relationNode.has(d?.musicId)) {
+          return "#3160CF";
+        }
+        return "black";
+      })
+      .attr("opacity", (d) => {
+        if (d?.musicId === nodeId || nodeId === null || nodeId === undefined) {
+          return "1";
+        }
+        if (relationNode.has(d?.musicId)) {
+          return "0.75";
+        }
+        return "0.1";
+      });
+  }, [nodeId]);
   useEffect(() => {
     if (width === undefined || height === undefined) return;
 
@@ -20,6 +89,7 @@ function ChartContent({
 
     const link = svg
       .append("g")
+      .attr("class", "link")
       .attr("stroke", "#999")
       .attr("stroke-opacity", 0.6)
       .selectAll()
@@ -29,15 +99,15 @@ function ChartContent({
 
     const node = svg
       .append("g")
+      .attr("class", "node")
       .attr("stroke", "#fff")
       .attr("stroke-width", 1.5)
       .selectAll()
       .data(nodes)
       .join("circle")
-      .on("click", function (d) {
-        setNodeId(d.srcElement.__data__.musicId);
-      })
-      .attr("r", 5);
+      .on("click", (d) => setNodeId(d.srcElement.__data__.musicId))
+      .attr("r", 7.5)
+      .attr("class", (d) => d.musicId);
 
     const simulation = d3
       .forceSimulation(nodes)
@@ -60,9 +130,6 @@ function ChartContent({
           .attr("y1", (d) => d.source.y)
           .attr("x2", (d) => d.target.x)
           .attr("y2", (d) => d.target.y);
-        node.append("title").text(function (d) {
-          return d.id;
-        });
 
         node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
       });
@@ -71,7 +138,7 @@ function ChartContent({
   return <g></g>;
 }
 
-function ZoomableSVG({ children, width, height }) {
+function ZoomableSVG({ children, width, height, nodeId }) {
   const svgRef = useRef();
   const [k, setK] = useState(1);
   const [x, setX] = useState(0);
@@ -83,7 +150,7 @@ function ZoomableSVG({ children, width, height }) {
       setX(x);
       setY(y);
     });
-    d3.select(svgRef.current).call(zoom);
+    d3.select(svgRef.current).call(zoom).on("dblclick.zoom", null);
 
     () => {
       d3.select(svgRef.current).on(".zoom", null);
@@ -142,7 +209,11 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
       >
         <Grid item xs={12} md={7}>
           <Box height={"100%"} width={"100%"} ref={wrapperRef}>
-            <ZoomableSVG width={size.width} height={size.height}>
+            <ZoomableSVG
+              width={size.width}
+              height={size.height}
+              nodeId={nodeId}
+            >
               <ChartContent
                 links={links}
                 nodes={nodes}
@@ -150,6 +221,7 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
                 height={size.height}
                 similarityData={similarityData}
                 setNodeId={setNodeId}
+                nodeId={nodeId}
               ></ChartContent>
             </ZoomableSVG>
           </Box>

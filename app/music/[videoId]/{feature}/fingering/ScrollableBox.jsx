@@ -17,7 +17,6 @@ export default function ScrollableBox({
   }
 
   useEffect(() => {
-    console.log(YTPlayer?.getCurrentTime());
     const timer = setInterval(() => {
       if (YTPlayer?.getPlayerState() === 1) {
         wrapperRef.current?.scroll({
@@ -39,7 +38,6 @@ export default function ScrollableBox({
       overflow={"auto"}
       ref={wrapperRef}
       onClick={() => {
-        console.log("scroll test: move to top");
         wrapperRef.current?.scroll({
           top: 1000,
           left: 0,
