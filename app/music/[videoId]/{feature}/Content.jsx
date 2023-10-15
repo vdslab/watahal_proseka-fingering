@@ -14,6 +14,7 @@ export default function Content({
   similarities,
   musicList,
   score,
+  id
 }) {
   const [playTimeState, setPlayTimeState] = useState({ current: 0, max: 0 });
   const [YTPlayer, setYTPlayer] = useState();
@@ -34,6 +35,7 @@ export default function Content({
             height={mainViewRef.current?.clientHeight}
             width={mainViewRef.current?.clientWidth}
             score={score}
+            id={id}
           />
         </Box>
       </Grid>

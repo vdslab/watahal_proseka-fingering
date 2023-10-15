@@ -44,6 +44,7 @@ export default async function Home({
         similarities={similarities}
         musicList={musicList}
         score={score}
+        id={id}
       />
     </>
   );
