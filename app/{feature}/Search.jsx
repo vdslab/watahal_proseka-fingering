@@ -8,7 +8,7 @@ import MusicNoteIcon from "@mui/icons-material/MusicNote";
 
 import { useRouter } from "next/navigation";
 
-export default function Search({ data, setId, nodeId }) {
+export default function Search({ data, setSelectedMusicId, selectedMusicId }) {
   const names = data.map(({ id, name, videoid }) => {
     return { key: id, label: name, ID: videoid };
   });
@@ -22,8 +22,8 @@ export default function Search({ data, setId, nodeId }) {
   const [selectID, setSelectID] = useState(names[names.length - 1]);
 
   useEffect(() => {
-    setSelectID(names.find((d) => d.key === nodeId));
-  }, [nodeId]);
+    setSelectID(names.find((d) => d.key === selectedMusicId));
+  }, [selectedMusicId]);
 
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -49,7 +49,7 @@ export default function Search({ data, setId, nodeId }) {
         onChange={(event, value) => {
           if (value) {
             setSelectID(value);
-            setId(value?.key);
+            setSelectedMusicId(value?.key);
           }
         }}
       />
