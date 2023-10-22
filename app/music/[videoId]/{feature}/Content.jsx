@@ -1,10 +1,7 @@
 "use client";
-import React, { useState, Suspense, useRef } from "react";
+import React, { useState, useRef } from "react";
 import VideoPlayer from "./VideoPlayer";
 import FingeringVis from "./FingeringVis";
-import Stack from "@mui/material/Stack";
-import { useTheme } from "@mui/material/styles";
-import Loading from "../loading";
 import { Box, Grid } from "@mui/material";
 import SimilarityList from "./SimilarityList";
 
@@ -14,7 +11,7 @@ export default function Content({
   similarities,
   musicList,
   score,
-  id
+  id,
 }) {
   const [playTimeState, setPlayTimeState] = useState({ current: 0, max: 0 });
   const [YTPlayer, setYTPlayer] = useState();
@@ -23,11 +20,7 @@ export default function Content({
   return (
     <Grid container direction={"row"} alignItems="stretch" spacing={2}>
       <Grid item xs={8} ref={mainViewRef}>
-        <Box
-          bgcolor={"white"}
-          height={"75vh"}
-          // width={"45vw"}
-        >
+        <Box bgcolor={"white"} height={"75vh"}>
           <FingeringVis
             fingering={fingering}
             minY={0}

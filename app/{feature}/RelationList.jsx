@@ -9,7 +9,6 @@ import {
   ListItemText,
   ListSubheader,
 } from "@mui/material";
-import path from "path";
 import useSWR from "swr";
 import LaunchIcon from "@mui/icons-material/Launch";
 import { useEffect, useRef, useState } from "react";
@@ -30,9 +29,7 @@ export default function RelationList({ nodeId }) {
     setHeight(wrapperRef.current?.clientHeight);
   }, [wrapperRef.current, nodeId]);
 
-  // if (nodeId === undefined || nodeId === null) return <div>select node</div>;
   if (error || error2) return <div>Failed to load</div>;
-  // if (!musicListData) return <div>Loading...</div>;
 
   const music = musicListData?.find((music) => music.id === nodeId);
   similarityData?.sort((a, b) => b.similarity - a.similarity);

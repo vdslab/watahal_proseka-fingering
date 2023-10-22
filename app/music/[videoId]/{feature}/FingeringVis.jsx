@@ -14,7 +14,6 @@ export default function FingeringVis({
   const { data: music, error } = useSWR(`/api/music/${id}`, fetcher);
 
   if (error) return <div>Failed to load</div>;
-  console.log(music);
 
   if (YTPlayer === undefined || !music) {
     return (
@@ -42,7 +41,7 @@ export default function FingeringVis({
       hole,
     })
   );
-  // .filter(({ y }) => minY <= y && y <= minY + 4);
+
   const right = fingering["right"]?.map(
     ({ x, y, width, type, judge_type, hold_type, hole }) => ({
       x,

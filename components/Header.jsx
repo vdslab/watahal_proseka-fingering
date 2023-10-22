@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
-import Imformation from "./Imformation";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import Image from "next/image";
 
@@ -17,7 +16,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: "flex-center",
   paddingTop: theme.spacing(3),
   paddingBottom: theme.spacing(3),
-  // Override media queries injected by theme.mixins.toolbar
+
   "@media all": {
     minHeight: 60,
     maxHeight: 300,
@@ -46,7 +45,6 @@ export default function Header() {
             >
               プロセカ 楽曲予習
             </Typography>
-            {/* <Imformation /> */}
           </StyledToolbar>
         </AppBar>
       </Box>

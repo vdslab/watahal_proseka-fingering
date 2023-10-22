@@ -32,16 +32,3 @@ export default function DetailPlot({ clusteringData }) {
     </div>
   );
 }
-
-{
-  /* <g>
-          {clusteringData.map(({ x, y }, i) => (
-            <circle
-              key={i}
-              r={1}
-              transform={`translate(${xScale(x)},${yScale(y)})`}
-              opacity={0.5}
-            />
-          ))}
-        </g> */
-}

@@ -13,7 +13,6 @@ export default function Chart({
 }) {
   const svgHeight = 60000;
   const measure = d3.extent(score, ({ y }) => y);
-  console.log(measure);
 
   return (
     <ScrollableBox
