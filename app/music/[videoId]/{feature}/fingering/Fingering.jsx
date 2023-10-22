@@ -1,5 +1,3 @@
-import Note from "./Note";
-
 export default function Fingering({ hand, line, fingeringColor }) {
   return (
     <g>

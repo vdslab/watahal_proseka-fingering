@@ -4,10 +4,8 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Imformation from "./Imformation";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
-import { Box, IconButton } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Box } from "@mui/material";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 

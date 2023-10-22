@@ -43,11 +43,6 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 export default function MusicTable({ data }) {
-  const cell = "px-4 py-2";
-  const smallCell = `${cell} w-1/12`;
-  const dataCell = `border ${cell}`;
-  const smallDataCell = `border ${smallCell} text-center`;
-
   const rotateStyle = {
     transform: "rotate(180deg)",
   };

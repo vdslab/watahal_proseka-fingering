@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
-import Imformation from "./Imformation";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import Image from "next/image";
 

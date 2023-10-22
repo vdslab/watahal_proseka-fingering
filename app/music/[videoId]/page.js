@@ -1,6 +1,5 @@
 import Content from "./{feature}/Content";
 import path from "path";
-import { promises as fs } from "fs";
 import { readJSON, readSimilarity } from "@/app/readFile";
 
 export default async function Home({

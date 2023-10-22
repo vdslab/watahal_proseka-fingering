@@ -9,7 +9,6 @@ import {
   ListItemText,
   ListSubheader,
 } from "@mui/material";
-import path from "path";
 import useSWR from "swr";
 import LaunchIcon from "@mui/icons-material/Launch";
 import { useEffect, useRef, useState } from "react";

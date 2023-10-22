@@ -2,7 +2,7 @@ import "./tailwind.css";
 import Header from "@/components/Header";
 import MainPage from "./{feature}/MainPage";
 import path from "path";
-import { readCSV, readJSON, readSimilarity } from "./readFile";
+import { readCSV, readJSON } from "./readFile";
 import getSimilarityData from "./{feature}/getSimilarityData";
 
 function Sort() {

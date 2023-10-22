@@ -1,10 +1,7 @@
 "use client";
-import React, { useState, Suspense, useRef } from "react";
+import React, { useState, useRef } from "react";
 import VideoPlayer from "./VideoPlayer";
 import FingeringVis from "./FingeringVis";
-import Stack from "@mui/material/Stack";
-import { useTheme } from "@mui/material/styles";
-import Loading from "../loading";
 import { Box, Grid } from "@mui/material";
 import SimilarityList from "./SimilarityList";
 

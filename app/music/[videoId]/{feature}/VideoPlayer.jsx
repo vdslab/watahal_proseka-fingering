@@ -1,14 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import TimeSlider from "./TimeSlider";
-import VideoManagerButtons from "./VideoManagerButtons";
-import YouTube, { YouTubePlayer } from "react-youtube";
-import {
-  ConstructionOutlined,
-  LocalConvenienceStoreOutlined,
-} from "@mui/icons-material";
-
-import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import YouTube from "react-youtube";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Box } from "@mui/material";
 
 const theme = createTheme({
@@ -35,10 +28,6 @@ export default function VideoPlayer({ videoId, YTPlayer, setYTPlayer }) {
 
   function handleReady(e) {
     setYTPlayer(e.target);
-  }
-
-  function setPlaybackRate(value) {
-    YTPlayer.setPlaybackRate(value);
   }
 
   const [volume, setVolume] = useState(30);

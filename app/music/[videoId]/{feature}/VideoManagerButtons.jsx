@@ -1,6 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
-
 import { IconButton, Button } from "@mui/material";
 
 import SwapHorizRoundedIcon from "@mui/icons-material/SwapHorizRounded";
@@ -13,7 +11,7 @@ import Slider from "@mui/material/Slider";
 import VolumeDown from "@mui/icons-material/VolumeDown";
 import VolumeUp from "@mui/icons-material/VolumeUp";
 
-import YouTube, { YouTubePlayer } from "react-youtube";
+import YouTube from "react-youtube";
 
 export default function VideoManagerButtons({
   YTPlayer,
