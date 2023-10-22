@@ -59,7 +59,6 @@ export default function VideoManagerButtons({
       <IconButton onClick={videoPlayer}>
         <PlayStop playBtn={playBtn} />
       </IconButton>
-      {/*  */}
       <span>
         <Button variant="outlined" value={0.5} onClick={handlePlaybackRate}>
           0.5

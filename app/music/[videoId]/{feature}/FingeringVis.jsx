@@ -41,7 +41,7 @@ export default function FingeringVis({
       hole,
     })
   );
-  // .filter(({ y }) => minY <= y && y <= minY + 4);
+
   const right = fingering["right"]?.map(
     ({ x, y, width, type, judge_type, hold_type, hole }) => ({
       x,

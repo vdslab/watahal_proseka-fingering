@@ -29,7 +29,6 @@ export default function VideoPlayer({ videoId, YTPlayer, setYTPlayer }) {
     width: width,
     height: height,
     playerVars: {
-      //controls: 0,
       autoplay: 1,
     },
   };
@@ -41,11 +40,6 @@ export default function VideoPlayer({ videoId, YTPlayer, setYTPlayer }) {
   function setPlaybackRate(value) {
     YTPlayer.setPlaybackRate(value);
   }
-
-  // useEffect(() => {
-  //   YTPlayer?.seekTo(seek.value, true);
-  //   setPlayTimeState({ ...playTimeState, current: seek.value });
-  // }, [seek]);
 
   const [volume, setVolume] = useState(30);
   useEffect(() => {

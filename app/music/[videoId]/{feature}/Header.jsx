@@ -22,7 +22,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: "flex-center",
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(2),
-  // Override media queries injected by theme.mixins.toolbar
+
   "@media all": {
     minHeight: 60,
     maxHeight: 300,
@@ -65,7 +65,6 @@ export default function Header() {
                 プロセカ 楽曲予習
               </Typography>
             </Box>
-            {/* <Imformation /> */}
           </StyledToolbar>
         </AppBar>
       </Box>
