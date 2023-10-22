@@ -1,4 +1,4 @@
-import Content from "./{feature}/Content";
+import Content from "./_components/Content";
 import path from "path";
 import { readJSON, readSimilarity } from "@/app/readFile";
 
