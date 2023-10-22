@@ -149,12 +149,15 @@ function ZoomableSVG({ children, width, height, nodeId }) {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
   useEffect(() => {
-    const zoom = d3.zoom().on("zoom", (event) => {
-      const { x, y, k } = event.transform;
-      setK(k);
-      setX(x);
-      setY(y);
-    });
+    const zoom = d3
+      .zoom()
+      .on("zoom", (event) => {
+        const { x, y, k } = event.transform;
+        setK(k);
+        setX(x);
+        setY(y);
+      })
+      .scaleExtent([0.3, 3]);
     d3.select(svgRef.current).call(zoom).on("dblclick.zoom", null);
 
     () => {
