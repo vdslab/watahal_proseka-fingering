@@ -13,6 +13,10 @@ function ChartContent({
   setNodeId,
   nodeId,
 }) {
+  const colorScale = d3
+    .scaleSequential(d3.interpolateBuPu)
+    .domain(d3.extent(nodes, ({ level }) => level));
+
   useEffect(() => {
     const relationNode = new Set();
     const link = d3.select(".link");
@@ -69,7 +73,7 @@ function ChartContent({
         if (relationNode.has(d?.musicId)) {
           return "#3160CF";
         }
-        return "black";
+        return colorScale(d?.level);
       })
       .attr("opacity", (d) => {
         if (d?.musicId === nodeId || nodeId === null || nodeId === undefined) {
@@ -107,7 +111,8 @@ function ChartContent({
       .join("circle")
       .on("click", (d) => setNodeId(d.srcElement.__data__.musicId))
       .attr("r", 7.5)
-      .attr("class", (d) => d.musicId);
+      .attr("class", (d) => d.musicId)
+      .attr("fill", (d) => colorScale(d?.level));
 
     const simulation = d3
       .forceSimulation(nodes)
