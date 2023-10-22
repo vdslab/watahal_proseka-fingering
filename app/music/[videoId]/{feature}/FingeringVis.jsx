@@ -14,7 +14,6 @@ export default function FingeringVis({
   const { data: music, error } = useSWR(`/api/music/${id}`, fetcher);
 
   if (error) return <div>Failed to load</div>;
-  console.log(music);
 
   if (YTPlayer === undefined || !music) {
     return (
