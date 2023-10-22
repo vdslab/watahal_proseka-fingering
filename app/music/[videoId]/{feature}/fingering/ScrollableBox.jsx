@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { Box } from "@mui/material";
-import { ConstructionOutlined } from "@mui/icons-material";
 import * as d3 from "d3";
 
 export default function ScrollableBox({

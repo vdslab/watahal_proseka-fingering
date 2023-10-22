@@ -1,6 +1,5 @@
 import Content from "./{feature}/Content";
 import path from "path";
-import { promises as fs } from "fs";
 import { readJSON, readSimilarity } from "@/app/readFile";
 
 export default async function Home({
@@ -27,17 +26,9 @@ export default async function Home({
     `similarities_${id}.csv`,
     musicSimilarityPath
   );
-  // const fingering = readJSON();
+
   return (
     <>
-      {/* <div className="flex flex-row items-center">
-        <div className="w-11/12">
-          <div className="flex items-end">
-            <p>{music_name}</p>
-          </div>
-        </div>
-        <div className="w-1/12"></div>
-      </div> */}
       <Content
         videoId={video}
         fingering={fingering}

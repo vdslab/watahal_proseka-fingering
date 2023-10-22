@@ -2,10 +2,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Tabs, Tab } from "@mui/material";
 import Search from "./Search";
-//import ClusteringVis from "./ClusteringVis";
 import Relationvis from "./RelationVis";
 import MusicList from "./MusicList";
-import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Box, Container } from "@mui/material";
 
 const theme = createTheme({
@@ -25,7 +24,7 @@ function TabPanel({ value, index, children }) {
   );
 }
 
-export default function MainPage({ musics, clusteringData, similarityData }) {
+export default function MainPage({ musics, similarityData }) {
   const [currentTab, setCurrentTab] = useState(0);
   const [selectedMusicId, setSelectedMusicId] = useState(null);
   const [clacedHeight, setCalcedHeight] = useState();
@@ -79,13 +78,11 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
 
           <TabPanel value={currentTab} index={0}>
             <Box padding={3} sx={{ height: clacedHeight }}>
-              {/* <ClusteringVis {...{ clusteringData, id }} /> */}
               <Relationvis
                 similarityData={similarityData}
                 setNodeId={setSelectedMusicId}
                 nodeId={selectedMusicId}
               />
-              {/* <Search data={musics} setId={setId} nodeId={nodeId} /> */}
             </Box>
           </TabPanel>
 
