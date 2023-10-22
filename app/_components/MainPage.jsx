@@ -1,11 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Tabs, Tab } from "@mui/material";
 import Search from "./Search";
-//import ClusteringVis from "./ClusteringVis";
 import Relationvis from "./RelationVis";
 import MusicList from "./MusicList";
-import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Box, Container } from "@mui/material";
 
 const theme = createTheme({
@@ -25,10 +24,19 @@ function TabPanel({ value, index, children }) {
   );
 }
 
-export default function MainPage({ musics, clusteringData, similarityData }) {
+export default function MainPage({ musics, similarityData }) {
   const [currentTab, setCurrentTab] = useState(0);
-  const [id, setId] = useState(null);
-  const [nodeId, setNodeId] = useState(null);
+  const [selectedMusicId, setSelectedMusicId] = useState(null);
+  const [clacedHeight, setCalcedHeight] = useState();
+  const tabHeaderRef = useRef();
+  const searchRef = useRef();
+
+  useEffect(() => {
+    const tabSearchHeight =
+      tabHeaderRef.current?.clientHeight + searchRef.current?.clientHeight;
+    setCalcedHeight(`calc(90vh - ${tabSearchHeight}px - 10px)`);
+  }, [tabHeaderRef.current, searchRef.current]);
+
   function handleTabChange(e, tabIndex) {
     setCurrentTab(tabIndex);
   }
@@ -37,10 +45,10 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
     <ThemeProvider theme={theme}>
       <Container maxWidth="ls">
         <Box textAlign="center" marginTop={10}>
-          <h1>運指可視化</h1>
+          <h1>運指を参考に曲を予習しよう</h1>
         </Box>
         <Box textAlign="center" marginTop={-2}>
-          <p color="secondary">最適化された運指を参考にしてしよう</p>
+          <p>似てる曲から雰囲気もつかもう</p>
         </Box>
 
         <Box
@@ -48,8 +56,13 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
           top={20}
           marginTop={5}
           sx={{ zIndex: "tooltip" }}
+          ref={searchRef}
         >
-          <Search data={musics} setId={setId} />
+          <Search
+            data={musics}
+            setSelectedMusicId={setSelectedMusicId}
+            selectedMusicId={selectedMusicId}
+          />
         </Box>
 
         <Box marginTop={20} justifyContent="center">
@@ -57,19 +70,19 @@ export default function MainPage({ musics, clusteringData, similarityData }) {
             value={currentTab}
             onChange={handleTabChange}
             variant="fullWidth"
+            ref={tabHeaderRef}
           >
             <Tab label="似てる曲を探す" />
             <Tab label="曲一覧" />
           </Tabs>
 
           <TabPanel value={currentTab} index={0}>
-            <Box padding={3}>
-              {/* <ClusteringVis {...{ clusteringData, id }} /> */}
+            <Box padding={3} sx={{ height: clacedHeight }}>
               <Relationvis
                 similarityData={similarityData}
-                setNodeId={setNodeId}
+                setNodeId={setSelectedMusicId}
+                nodeId={selectedMusicId}
               />
-              {/* <Search data={musics} setId={setId} nodeId={nodeId} /> */}
             </Box>
           </TabPanel>
 

@@ -4,10 +4,8 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Imformation from "./Imformation";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
-import { Box, IconButton } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Box } from "@mui/material";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
@@ -22,7 +20,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: "flex-center",
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(2),
-  // Override media queries injected by theme.mixins.toolbar
+
   "@media all": {
     minHeight: 60,
     maxHeight: 300,
@@ -62,10 +60,9 @@ export default function Header() {
                 component="div"
                 alignSelf="center"
               >
-                プロセカ運指&曲特徴可視化
+                プロセカ 楽曲予習
               </Typography>
             </Box>
-            <Imformation />
           </StyledToolbar>
         </AppBar>
       </Box>

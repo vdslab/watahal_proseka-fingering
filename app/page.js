@@ -1,9 +1,9 @@
 import "./tailwind.css";
 import Header from "@/components/Header";
-import MainPage from "./{feature}/MainPage";
+import MainPage from "./_components/MainPage";
 import path from "path";
-import { readCSV, readJSON, readSimilarity } from "./readFile";
-import getSimilarityData from "./{feature}/getSimilarityData";
+import { readCSV, readJSON } from "./readFile";
+import getSimilarityData from "./_components/getSimilarityData";
 
 function Sort() {
   return (
@@ -32,7 +32,7 @@ export default async function Home({ searchParams: { id } }) {
     true
   );
 
-  const similarityData = await getSimilarityData();
+  const similarityData = await getSimilarityData(1);
 
   return (
     <>
