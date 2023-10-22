@@ -13,6 +13,10 @@ function ChartContent({
   setNodeId,
   nodeId,
 }) {
+  const colorScale = d3
+    .scaleSequential(d3.interpolateBuPu)
+    .domain(d3.extent(nodes, ({ level }) => level));
+
   useEffect(() => {
     const relationNode = new Set();
     const link = d3.select(".link");
@@ -25,9 +29,9 @@ function ChartContent({
         if (d?.source.musicId === nodeId || d?.target.musicId === nodeId) {
           relationNode.add(d.source.musicId);
           relationNode.add(d.target.musicId);
-          return "red";
+          return "rgb(255, 119, 187)";
         } else {
-          return "#999";
+          return "gray";
         }
       })
       .attr("stroke-width", (d) => {
@@ -44,9 +48,9 @@ function ChartContent({
           nodeId === null ||
           nodeId === undefined
         ) {
-          return "0.8";
+          return "0.6";
         } else {
-          return "0.4";
+          return "0.2";
         }
       });
     const node = d3.select(".node");
@@ -62,15 +66,6 @@ function ChartContent({
       .transition()
       .duration(500)
       .ease(d3.easeLinear)
-      .attr("fill", (d) => {
-        if (d?.musicId === nodeId) {
-          return "#213E7C";
-        }
-        if (relationNode.has(d?.musicId)) {
-          return "#3160CF";
-        }
-        return "black";
-      })
       .attr("opacity", (d) => {
         if (d?.musicId === nodeId || nodeId === null || nodeId === undefined) {
           return "1";
@@ -78,7 +73,16 @@ function ChartContent({
         if (relationNode.has(d?.musicId)) {
           return "0.75";
         }
-        return "0.1";
+        return "0.2";
+      })
+      .attr("stroke", (d) => {
+        if (d?.musicId === nodeId) {
+          return "black";
+        }
+        if (relationNode.has(d?.musicId)) {
+          return "black";
+        }
+        return "white";
       });
   }, [nodeId]);
   useEffect(() => {
@@ -90,7 +94,7 @@ function ChartContent({
     const link = svg
       .append("g")
       .attr("class", "link")
-      .attr("stroke", "#999")
+      .attr("stroke", "gray")
       .attr("stroke-opacity", 0.6)
       .selectAll()
       .data(links)
@@ -107,7 +111,8 @@ function ChartContent({
       .join("circle")
       .on("click", (d) => setNodeId(d.srcElement.__data__.musicId))
       .attr("r", 7.5)
-      .attr("class", (d) => d.musicId);
+      .attr("class", (d) => d.musicId)
+      .attr("fill", (d) => colorScale(d?.level));
 
     const simulation = d3
       .forceSimulation(nodes)
@@ -144,12 +149,15 @@ function ZoomableSVG({ children, width, height, nodeId }) {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
   useEffect(() => {
-    const zoom = d3.zoom().on("zoom", (event) => {
-      const { x, y, k } = event.transform;
-      setK(k);
-      setX(x);
-      setY(y);
-    });
+    const zoom = d3
+      .zoom()
+      .on("zoom", (event) => {
+        const { x, y, k } = event.transform;
+        setK(k);
+        setX(x);
+        setY(y);
+      })
+      .scaleExtent([0.3, 3]);
     d3.select(svgRef.current).call(zoom).on("dblclick.zoom", null);
 
     () => {

@@ -5,12 +5,13 @@ async function getNodesData() {
   const jsonDir = path.join(process.cwd(), "public", "json");
   const musicListPath = path.join(jsonDir, "detail");
   const musicList = await readJSON("data.json", musicListPath);
-  const nodes = musicList.map(({ id, name, videoid }) => {
+  const nodes = musicList.map(({ id, name, videoid, level }) => {
     return {
       id: name,
       musicId: id,
       musicName: name,
       videoId: videoid,
+      level,
     };
   });
 
