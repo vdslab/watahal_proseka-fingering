@@ -129,7 +129,7 @@ function ChartContent({
         "collide",
         d3.forceCollide((d) => 20)
       )
-      .on("tick", () => {
+      .on("end", () => {
         link
           .attr("x1", (d) => d.source.x)
           .attr("y1", (d) => d.source.y)
