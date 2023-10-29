@@ -3,6 +3,7 @@ import { Box, Grid } from "@mui/material";
 import * as d3 from "d3";
 import { useRef, useEffect, useState } from "react";
 import RelationList from "./RelationList";
+import RangeSlider from "./RangeSlider";
 
 function ChartContent({
   links,
@@ -12,10 +13,46 @@ function ChartContent({
   similarityData,
   setNodeId,
   nodeId,
+  selectLevelRange,
 }) {
   const colorScale = d3
     .scaleSequential(d3.interpolateBuPu)
     .domain(d3.extent(nodes, ({ level }) => level));
+
+  function attrInRangeOpacity(selectLevelRange) {
+    function isInRange(level) {
+      const haveLevel = level ?? false;
+      return (
+        haveLevel &&
+        selectLevelRange[0] <= level &&
+        level <= selectLevelRange[1]
+      );
+    }
+
+    const nodeElements = d3
+      .select(".node")
+      .selectChildren()
+      .attr("opacity", ({ level }) => {
+        return isInRange(level) ? "1" : "0.2";
+      });
+    const isInRangeNodes = nodeElements.filter(({ level }) => isInRange(level));
+
+    const inRangeNodesIdSet = new Set(
+      isInRangeNodes.data().map(({ id }) => id)
+    );
+    console.log(inRangeNodesIdSet);
+    d3.select(".link")
+      .selectChildren()
+      .attr("opacity", ({ source, target }) =>
+        inRangeNodesIdSet.has(source.id) && inRangeNodesIdSet.has(target.id)
+          ? "1"
+          : "0.2"
+      );
+  }
+
+  useEffect(() => {
+    attrInRangeOpacity(selectLevelRange);
+  }, [selectLevelRange]);
 
   useEffect(() => {
     const relationNode = new Set();
@@ -41,7 +78,7 @@ function ChartContent({
           return "1.5";
         }
       })
-      .attr("stroke-opacity", (d) => {
+      .attr("opacity", (d) => {
         if (
           d?.source.musicId === nodeId ||
           d?.target.musicId === nodeId ||
@@ -85,6 +122,7 @@ function ChartContent({
         return "white";
       });
   }, [nodeId]);
+
   useEffect(() => {
     if (width === undefined || height === undefined) return;
 
@@ -95,7 +133,7 @@ function ChartContent({
       .append("g")
       .attr("class", "link")
       .attr("stroke", "gray")
-      .attr("stroke-opacity", 0.6)
+      .attr("opacity", 0.6)
       .selectAll()
       .data(links)
       .join("line")
@@ -186,6 +224,13 @@ function ZoomableSVG({ children, width, height, nodeId }) {
 export default function Relationvis({ similarityData, setNodeId, nodeId }) {
   const wrapperRef = useRef();
   const [size, setSize] = useState({ width: undefined, height: undefined });
+
+  const levelRange = d3.extent(similarityData.nodes, ({ level }) => level);
+  const [selectLevelRange, setSelectLevelRange] = useState(levelRange);
+  function handleLevelRangeChange(newValue) {
+    setSelectLevelRange(newValue);
+  }
+
   useEffect(() => {
     setSize({
       ...size,
@@ -194,7 +239,14 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
     });
   }, [wrapperRef.current]);
 
-  const nodes = similarityData.nodes.map((d) => ({ ...d }));
+  useEffect(() => {
+    if (nodeId === null || nodeId === undefined) {
+      setSelectLevelRange([...selectLevelRange]);
+    }
+  }, [nodeId]);
+
+  const { nodes } = similarityData;
+
   const links = nodes.flatMap((node) => {
     const link = similarityData.links.filter((link) => {
       return node.id === link.source;
@@ -208,6 +260,10 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
 
   return (
     <Box height={"100%"} width={"100%"}>
+      <RangeSlider
+        range={levelRange}
+        handleLevelRangeChange={handleLevelRangeChange}
+      />
       <Grid
         container
         justifyContent={"space-between"}
@@ -230,6 +286,7 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
                 similarityData={similarityData}
                 setNodeId={setNodeId}
                 nodeId={nodeId}
+                selectLevelRange={selectLevelRange}
               ></ChartContent>
             </ZoomableSVG>
           </Box>
