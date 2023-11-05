@@ -26,15 +26,12 @@ export default function Legend({ range }) {
     const context = canvas.getContext("2d");
     const { width, height } = canvas;
     context.clearRect(0, 0, width, height);
-    // console.log(width, height);
     const color = colorScale.interpolator();
 
     for (let i = 0; i < width; i++) {
       context.fillStyle = color(i / width);
       context.fillRect(i, 0, 1, height);
     }
-    // context.fillStyle = "black";
-    // context.fillRect(0, 0, width, height);
   }
 
   return (
