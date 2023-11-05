@@ -3,6 +3,8 @@ import { Box, Grid } from "@mui/material";
 import * as d3 from "d3";
 import { useRef, useEffect, useState } from "react";
 import RelationList from "./RelationList";
+import RangeSlider from "./RangeSlider";
+import Legend from "./Legend";
 
 function ChartContent({
   links,
@@ -12,19 +14,51 @@ function ChartContent({
   similarityData,
   setNodeId,
   nodeId,
+  selectLevelRange,
 }) {
   const colorScale = d3
     .scaleSequential(d3.interpolateBuPu)
     .domain(d3.extent(nodes, ({ level }) => level));
+
+  function attrInRangeOpacity(selectLevelRange) {
+    function isInRange(level) {
+      const haveLevel = level ?? false;
+      return (
+        haveLevel &&
+        selectLevelRange[0] <= level &&
+        level <= selectLevelRange[1]
+      );
+    }
+
+    const nodeElements = d3
+      .select(".node")
+      .selectChildren()
+      .attr("opacity", ({ level }) => {
+        return isInRange(level) ? "1" : "0.2";
+      });
+    const isInRangeNodes = nodeElements.filter(({ level }) => isInRange(level));
+
+    const inRangeNodesIdSet = new Set(
+      isInRangeNodes.data().map(({ id }) => id)
+    );
+    d3.select(".link")
+      .selectChildren()
+      .attr("opacity", ({ source, target }) =>
+        inRangeNodesIdSet.has(source.id) && inRangeNodesIdSet.has(target.id)
+          ? "1"
+          : "0.2"
+      );
+  }
+
+  useEffect(() => {
+    attrInRangeOpacity(selectLevelRange);
+  }, [selectLevelRange]);
 
   useEffect(() => {
     const relationNode = new Set();
     const link = d3.select(".link");
     link
       .selectChildren()
-      .transition()
-      .duration(500)
-      .ease(d3.easeLinear)
       .attr("stroke", (d) => {
         if (d?.source.musicId === nodeId || d?.target.musicId === nodeId) {
           relationNode.add(d.source.musicId);
@@ -41,7 +75,7 @@ function ChartContent({
           return "1.5";
         }
       })
-      .attr("stroke-opacity", (d) => {
+      .attr("opacity", (d) => {
         if (
           d?.source.musicId === nodeId ||
           d?.target.musicId === nodeId ||
@@ -63,9 +97,7 @@ function ChartContent({
           setNodeId(d.srcElement.__data__.musicId);
         }
       })
-      .transition()
-      .duration(500)
-      .ease(d3.easeLinear)
+
       .attr("opacity", (d) => {
         if (d?.musicId === nodeId || nodeId === null || nodeId === undefined) {
           return "1";
@@ -84,7 +116,12 @@ function ChartContent({
         }
         return "white";
       });
+
+    if (nodeId === null || nodeId === undefined) {
+      attrInRangeOpacity(selectLevelRange);
+    }
   }, [nodeId]);
+
   useEffect(() => {
     if (width === undefined || height === undefined) return;
 
@@ -95,7 +132,7 @@ function ChartContent({
       .append("g")
       .attr("class", "link")
       .attr("stroke", "gray")
-      .attr("stroke-opacity", 0.6)
+      .attr("opacity", 0.6)
       .selectAll()
       .data(links)
       .join("line")
@@ -129,7 +166,7 @@ function ChartContent({
         "collide",
         d3.forceCollide((d) => 20)
       )
-      .on("tick", () => {
+      .on("end", () => {
         link
           .attr("x1", (d) => d.source.x)
           .attr("y1", (d) => d.source.y)
@@ -185,7 +222,18 @@ function ZoomableSVG({ children, width, height, nodeId }) {
 
 export default function Relationvis({ similarityData, setNodeId, nodeId }) {
   const wrapperRef = useRef();
-  const [size, setSize] = useState({ width: undefined, height: undefined });
+  const [size, setSize] = useState({
+    width: undefined,
+    height: undefined,
+    networkSizeRate: 0.8,
+  });
+
+  const levelRange = d3.extent(similarityData.nodes, ({ level }) => level);
+  const [selectLevelRange, setSelectLevelRange] = useState(levelRange);
+  function handleLevelRangeChange(newValue) {
+    setSelectLevelRange(newValue);
+  }
+
   useEffect(() => {
     setSize({
       ...size,
@@ -194,7 +242,14 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
     });
   }, [wrapperRef.current]);
 
-  const nodes = similarityData.nodes.map((d) => ({ ...d }));
+  useEffect(() => {
+    if (nodeId === null || nodeId === undefined) {
+      setSelectLevelRange([...selectLevelRange]);
+    }
+  }, [nodeId]);
+
+  const { nodes } = similarityData;
+
   const links = nodes.flatMap((node) => {
     const link = similarityData.links.filter((link) => {
       return node.id === link.source;
@@ -217,21 +272,34 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
       >
         <Grid item xs={12} md={7}>
           <Box height={"100%"} width={"100%"} ref={wrapperRef}>
-            <ZoomableSVG
-              width={size.width}
-              height={size.height}
-              nodeId={nodeId}
+            <Box height={`${100 * (1 - size.networkSizeRate)}%`} width={"100%"}>
+              <RangeSlider
+                range={levelRange}
+                handleLevelRangeChange={handleLevelRangeChange}
+              />
+              <Legend range={levelRange} />
+            </Box>
+            <Box
+              height={`${100 * size.networkSizeRate}%`}
+              width={"100%"} /*ref={wrapperRef}*/
             >
-              <ChartContent
-                links={links}
-                nodes={nodes}
+              <ZoomableSVG
                 width={size.width}
-                height={size.height}
-                similarityData={similarityData}
-                setNodeId={setNodeId}
+                height={size.height * size.networkSizeRate}
                 nodeId={nodeId}
-              ></ChartContent>
-            </ZoomableSVG>
+              >
+                <ChartContent
+                  links={links}
+                  nodes={nodes}
+                  width={size.width}
+                  height={size.height * size.networkSizeRate}
+                  similarityData={similarityData}
+                  setNodeId={setNodeId}
+                  nodeId={nodeId}
+                  selectLevelRange={selectLevelRange}
+                ></ChartContent>
+              </ZoomableSVG>
+            </Box>
           </Box>
         </Grid>
         <Grid item xs md>
