@@ -41,7 +41,6 @@ function ChartContent({
     const inRangeNodesIdSet = new Set(
       isInRangeNodes.data().map(({ id }) => id)
     );
-    console.log(inRangeNodesIdSet);
     d3.select(".link")
       .selectChildren()
       .attr("opacity", ({ source, target }) =>
@@ -60,9 +59,6 @@ function ChartContent({
     const link = d3.select(".link");
     link
       .selectChildren()
-      .transition()
-      .duration(500)
-      .ease(d3.easeLinear)
       .attr("stroke", (d) => {
         if (d?.source.musicId === nodeId || d?.target.musicId === nodeId) {
           relationNode.add(d.source.musicId);
@@ -101,9 +97,7 @@ function ChartContent({
           setNodeId(d.srcElement.__data__.musicId);
         }
       })
-      .transition()
-      .duration(500)
-      .ease(d3.easeLinear)
+
       .attr("opacity", (d) => {
         if (d?.musicId === nodeId || nodeId === null || nodeId === undefined) {
           return "1";
@@ -122,6 +116,10 @@ function ChartContent({
         }
         return "white";
       });
+
+    if (nodeId === null || nodeId === undefined) {
+      attrInRangeOpacity(selectLevelRange);
+    }
   }, [nodeId]);
 
   useEffect(() => {
