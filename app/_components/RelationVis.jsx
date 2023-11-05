@@ -223,7 +223,11 @@ function ZoomableSVG({ children, width, height, nodeId }) {
 
 export default function Relationvis({ similarityData, setNodeId, nodeId }) {
   const wrapperRef = useRef();
-  const [size, setSize] = useState({ width: undefined, height: undefined });
+  const [size, setSize] = useState({
+    width: undefined,
+    height: undefined,
+    networkSizeRate: 0.8,
+  });
 
   const levelRange = d3.extent(similarityData.nodes, ({ level }) => level);
   const [selectLevelRange, setSelectLevelRange] = useState(levelRange);
@@ -269,23 +273,26 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
       >
         <Grid item xs={12} md={7}>
           <Box height={"100%"} width={"100%"} ref={wrapperRef}>
-            <Box height={"20%"} width={"100%"}>
+            <Box height={`${100 * (1 - size.networkSizeRate)}%`} width={"100%"}>
               <RangeSlider
                 range={levelRange}
                 handleLevelRangeChange={handleLevelRangeChange}
               />
             </Box>
-            <Box height={"80%"} width={"100%"} /*ref={wrapperRef}*/>
+            <Box
+              height={`${100 * size.networkSizeRate}%`}
+              width={"100%"} /*ref={wrapperRef}*/
+            >
               <ZoomableSVG
                 width={size.width}
-                height={size.height * 0.8}
+                height={size.height * size.networkSizeRate}
                 nodeId={nodeId}
               >
                 <ChartContent
                   links={links}
                   nodes={nodes}
                   width={size.width}
-                  height={size.height * 0.8}
+                  height={size.height * size.networkSizeRate}
                   similarityData={similarityData}
                   setNodeId={setNodeId}
                   nodeId={nodeId}
