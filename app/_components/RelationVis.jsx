@@ -4,6 +4,7 @@ import * as d3 from "d3";
 import { useRef, useEffect, useState } from "react";
 import RelationList from "./RelationList";
 import RangeSlider from "./RangeSlider";
+import Legend from "./Legend";
 
 function ChartContent({
   links,
@@ -278,6 +279,7 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
                 range={levelRange}
                 handleLevelRangeChange={handleLevelRangeChange}
               />
+              <Legend range={levelRange} />
             </Box>
             <Box
               height={`${100 * size.networkSizeRate}%`}
