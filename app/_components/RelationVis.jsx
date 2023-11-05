@@ -260,10 +260,6 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
 
   return (
     <Box height={"100%"} width={"100%"}>
-      <RangeSlider
-        range={levelRange}
-        handleLevelRangeChange={handleLevelRangeChange}
-      />
       <Grid
         container
         justifyContent={"space-between"}
@@ -273,22 +269,30 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
       >
         <Grid item xs={12} md={7}>
           <Box height={"100%"} width={"100%"} ref={wrapperRef}>
-            <ZoomableSVG
-              width={size.width}
-              height={size.height}
-              nodeId={nodeId}
-            >
-              <ChartContent
-                links={links}
-                nodes={nodes}
+            <Box height={"20%"} width={"100%"}>
+              <RangeSlider
+                range={levelRange}
+                handleLevelRangeChange={handleLevelRangeChange}
+              />
+            </Box>
+            <Box height={"80%"} width={"100%"} /*ref={wrapperRef}*/>
+              <ZoomableSVG
                 width={size.width}
-                height={size.height}
-                similarityData={similarityData}
-                setNodeId={setNodeId}
+                height={size.height * 0.8}
                 nodeId={nodeId}
-                selectLevelRange={selectLevelRange}
-              ></ChartContent>
-            </ZoomableSVG>
+              >
+                <ChartContent
+                  links={links}
+                  nodes={nodes}
+                  width={size.width}
+                  height={size.height * 0.8}
+                  similarityData={similarityData}
+                  setNodeId={setNodeId}
+                  nodeId={nodeId}
+                  selectLevelRange={selectLevelRange}
+                ></ChartContent>
+              </ZoomableSVG>
+            </Box>
           </Box>
         </Grid>
         <Grid item xs md>
