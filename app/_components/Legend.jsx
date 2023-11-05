@@ -6,7 +6,6 @@ export default function Legend({ range }) {
   const wrapperRef = useRef();
   const canvasRef = useRef();
   const colorScale = d3.scaleSequential(d3.interpolateBuPu).domain(range);
-  console.log(colorScale.interpolator()(0.5));
   const [size, setSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
