@@ -18,7 +18,7 @@ export default function Content({
   const [YTPlayer, setYTPlayer] = useState();
   const mainViewRef = useRef();
 
-  // return <MusicScore id={id}/>;
+  return <MusicScore id={id} />;
 
   return (
     <Grid container direction={"row"} alignItems="stretch" spacing={2}>
