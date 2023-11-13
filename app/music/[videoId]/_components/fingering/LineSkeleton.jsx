@@ -36,7 +36,7 @@ export default function LineSkeleton({ maxY, xScale, height }) {
     .nice(100);
 
   return (
-    <g>
+    <g className="line skeleton">
       <g>
         {[...Array(maxY)].map((e, i) => {
           return (
