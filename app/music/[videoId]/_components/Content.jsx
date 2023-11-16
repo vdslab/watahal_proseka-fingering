@@ -4,7 +4,7 @@ import VideoPlayer from "./VideoPlayer";
 import FingeringVis from "./FingeringVis";
 import { Box, Grid } from "@mui/material";
 import SimilarityList from "./SimilarityList";
-import MusicScore from "./musicScore/MusicScore";
+import ComplexityMusicScore from "./complexityMusicScore/MusicScore";
 
 export default function Content({
   videoId,
@@ -18,7 +18,7 @@ export default function Content({
   const [YTPlayer, setYTPlayer] = useState();
   const mainViewRef = useRef();
 
-  return <MusicScore id={id} />;
+  return <ComplexityMusicScore id={id} />;
 
   return (
     <Grid container direction={"row"} alignItems="stretch" spacing={2}>
