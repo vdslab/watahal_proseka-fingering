@@ -5,6 +5,8 @@ import LineSkeleton from "../fingering/LineSkeleton";
 import * as d3 from "d3";
 import { Box, Stack } from "@mui/material";
 
+import { separateScore } from "./separeteScore";
+
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
 export default function MusicScore({ id }) {
@@ -21,14 +23,7 @@ export default function MusicScore({ id }) {
   const ys = data.map(({ y }) => y);
   // console.log(ys[ys.length - 1]);
   const separateNumber = 5;
-  const scoreLength = Math.ceil(ys[ys.length - 1] / separateNumber);
-  const separetedScore = Array(scoreLength)
-    .fill()
-    .map((_, i) =>
-      data.filter(
-        ({ y }) => i * separateNumber <= y && y < (i + 1) * separateNumber
-      )
-    );
+  const separetedScore = separateScore(data, separateNumber);
   // console.log(separetedScore);
   const xScale = d3.scaleLinear().domain([0, 12]).range([0, width]).nice(10);
   const yScales = separetedScore.map((score) =>
@@ -43,7 +38,7 @@ export default function MusicScore({ id }) {
   return (
     <Box display={"flex"}>
       {separetedScore.map((score, i) => {
-        console.log(i, score);
+        // console.log(i, score);
         return (
           <Box margin={1}>
             <svg width={width} height={height}>

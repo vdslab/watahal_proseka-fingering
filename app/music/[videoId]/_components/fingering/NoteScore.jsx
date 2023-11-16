@@ -13,18 +13,18 @@ export default function NoteScore({ score, scales, noteheight }) {
   const notHoldNotes = score.filter(({ type }) => type !== "hold");
   const holdnotes = score.filter(({ type }) => type === "hold");
 
-  // const complexHoldNotes = holdnotes.reduce((acc, cur) => {
-  //   const { hole, hold_type } = cur;
+  const complexHoldNotes = holdnotes.reduce((acc, cur) => {
+    const { hole, hold_type } = cur;
 
-  //   acc[hole] = acc[hole] ?? [];
-  //   if (hold_type === "start") {
-  //     acc[hole].push([cur]);
-  //   } else {
-  //     acc[hole][acc[hole].length - 1].push(cur);
-  //   }
+    acc[hole] = acc[hole] ?? [];
+    if (hold_type === "start") {
+      acc[hole].push([cur]);
+    } else {
+      acc[hole][acc[hole].length - 1].push(cur);
+    }
 
-  //   return acc;
-  // }, {});
+    return acc;
+  }, {});
 
   return (
     <g>
@@ -44,7 +44,7 @@ export default function NoteScore({ score, scales, noteheight }) {
         }
       )}
 
-      {/* {Object.values(complexHoldNotes).map((holdNoteGroups) => {
+      {Object.values(complexHoldNotes).map((holdNoteGroups) => {
         return holdNoteGroups.map((holdNoteGroup) => {
           return holdNoteGroup.map(
             ({ judge_type, hold_type, type, x, y, width }, i, holdNote) => {
@@ -79,7 +79,7 @@ export default function NoteScore({ score, scales, noteheight }) {
             }
           );
         });
-      })} */}
+      })}
     </g>
   );
 }
