@@ -21,28 +21,24 @@ export default function MusicScore({ id }) {
   const height = 600;
 
   const ys = data.map(({ y }) => y);
-  // console.log(ys[ys.length - 1]);
-  const separateNumber = 5;
+  const separateNumber = 4;
   const separetedScore = separateScore(data, separateNumber);
-  // console.log(separetedScore);
   const xScale = d3.scaleLinear().domain([0, 12]).range([0, width]).nice(10);
-  const yScales = separetedScore.map((score) =>
-    d3
+  const yScales = separetedScore.map((score, i) => {
+    return d3
       .scaleLinear()
-      .domain(d3.extent(score.map(({ y }) => y)))
-      .range([0, height])
-      .nice(10)
-  );
+      .domain([i * separateNumber, (i + 1) * separateNumber])
+      .range([height - 20, 20])
+      .nice(10);
+  });
   const widthScale = d3.scaleLinear().domain([0, 12]).range([0, width]).nice();
 
   return (
     <Box display={"flex"} overflow={"auto"}>
       {separetedScore.map((score, i) => {
-        // console.log(i, score);
         return (
-          <Box margin={1}>
+          <Box margin={1} key={i} bgcolor={"white"} padding={1}>
             <svg width={width} height={height}>
-              <rect x1={0} y1={0} width={width} height={height} fill="white" />
               <g>
                 <LineSkeleton
                   maxY={separateNumber}
