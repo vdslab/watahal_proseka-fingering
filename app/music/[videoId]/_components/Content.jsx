@@ -2,7 +2,7 @@
 import React, { useState, useRef } from "react";
 import VideoPlayer from "./VideoPlayer";
 import FingeringVis from "./FingeringVis";
-import { Box, Grid } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 import SimilarityList from "./SimilarityList";
 import ComplexityMusicScore from "./complexityMusicScore/MusicScore";
 
@@ -17,10 +17,9 @@ export default function Content({
   const [playTimeState, setPlayTimeState] = useState({ current: 0, max: 0 });
   const [YTPlayer, setYTPlayer] = useState();
   const mainViewRef = useRef();
+  const [showComplexity, setShowComplexity] = useState(true);
 
-  return <ComplexityMusicScore id={id} />;
-
-  return (
+  const fingeringVis = (
     <Grid container direction={"row"} alignItems="stretch" spacing={2}>
       <Grid item xs={8} ref={mainViewRef}>
         <Box bgcolor={"white"} height={"75vh"}>
@@ -51,4 +50,22 @@ export default function Content({
       </Grid>
     </Grid>
   );
+
+  return (
+    <Box padding={3}>
+      <Box marginBottom={3}>
+        <Button
+          variant="contained"
+          onClick={() => {
+            setShowComplexity(!showComplexity);
+          }}
+        >
+          {showComplexity ? "動画と一緒に運指を見る" : "譜面の複雑さを見る"}
+        </Button>
+      </Box>
+      {showComplexity ? <ComplexityMusicScore id={id} /> : fingeringVis}
+    </Box>
+  );
+
+  return;
 }

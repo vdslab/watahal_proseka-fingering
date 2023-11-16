@@ -65,7 +65,7 @@ export default function ComplexityMusicScore({ id }) {
           .fill()
           .map((_, i) => Math.floor(score[0].y / 4) * 4 + i + 1);
         return (
-          <Box margin={1} key={i} bgcolor={"white"} padding={1}>
+          <Box marginRight={1} key={i} bgcolor={"white"} padding={1}>
             <svg width={width} height={height}>
               <g>
                 <LineSkeleton
