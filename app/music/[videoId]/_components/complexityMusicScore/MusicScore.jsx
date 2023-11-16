@@ -56,7 +56,6 @@ export default function ComplexityMusicScore({ id }) {
   const complexityColorScale = d3
     .scaleSequential(d3.interpolateYlOrRd)
     .domain(d3.extent(status_by_measure, (d) => d));
-  console.log(status_by_measure);
 
   return (
     <Box display={"flex"} overflow={"auto"}>

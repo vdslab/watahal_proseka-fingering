@@ -4,11 +4,16 @@ const fetcher = (...args) => fetch(args).then((res) => res.json());
 
 export default function ComplexityHeatMap({ id, complexity, scales, ys }) {
   const { xScale, yScale, widthScale, colorScale } = scales;
+  if (complexity == null) {
+    return null;
+  }
 
   return (
     <g>
       {ys.map((y, i) => {
-        console.log(colorScale(complexity[i]));
+        if (complexity.length <= i) {
+          return null;
+        }
         return (
           <rect
             x={xScale(0)}
