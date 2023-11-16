@@ -9,7 +9,7 @@ import { separateScore } from "./separeteScore";
 
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
-export default function MusicScore({ id }) {
+export default function ComplexityMusicScore({ id }) {
   const { data, error, isLoading } = useSWR(
     `/api/music/musicScore/${id}`,
     fetcher
