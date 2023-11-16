@@ -36,7 +36,7 @@ export default function MusicScore({ id }) {
   const widthScale = d3.scaleLinear().domain([0, 12]).range([0, width]).nice();
 
   return (
-    <Box display={"flex"}>
+    <Box display={"flex"} overflow={"auto"}>
       {separetedScore.map((score, i) => {
         // console.log(i, score);
         return (
