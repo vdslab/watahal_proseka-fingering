@@ -32,7 +32,7 @@ export default async function Home({ searchParams: { id } }) {
     true
   );
 
-  const similarityData = await getSimilarityData(1);
+  const similarityData = await readJSON("similarity_graph.json", jsonDir);
 
   return (
     <>
