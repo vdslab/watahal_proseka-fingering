@@ -2,7 +2,7 @@
 import React, { useState, useRef } from "react";
 import VideoPlayer from "./VideoPlayer";
 import FingeringVis from "./FingeringVis";
-import { Box, Button, Grid } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import SimilarityList from "./SimilarityList";
 import ComplexityMusicScore from "./complexityMusicScore/MusicScore";
 
@@ -53,7 +53,7 @@ export default function Content({
 
   return (
     <Box padding={3}>
-      <Box marginBottom={3}>
+      <Box marginBottom={2}>
         <Button
           variant="contained"
           onClick={() => {
@@ -63,7 +63,19 @@ export default function Content({
           {showComplexity ? "動画と一緒に運指を見る" : "譜面の複雑さを見る"}
         </Button>
       </Box>
-      {showComplexity ? <ComplexityMusicScore id={id} /> : fingeringVis}
+      {showComplexity ? (
+        <>
+          <Typography variant="h4" gutterBottom>
+            譜面の複雑さ
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            色が濃いほど複雑であることを表しています．
+          </Typography>
+          <ComplexityMusicScore id={id} />
+        </>
+      ) : (
+        fingeringVis
+      )}
     </Box>
   );
 
