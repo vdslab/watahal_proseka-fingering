@@ -277,33 +277,41 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
                 range={levelRange}
                 handleLevelRangeChange={handleLevelRangeChange}
               />
-              <Legend range={levelRange} />
             </Box>
             <Box
               height={`${100 * size.networkSizeRate}%`}
               width={"100%"} /*ref={wrapperRef}*/
+              display={"flex"}
+              flexDirection={"column"}
+              justifyContent={"flex-end"}
+              flexWrap={"nowrap"}
             >
-              <ZoomableSVG
-                width={size.width}
-                height={size.height * size.networkSizeRate}
-                nodeId={nodeId}
-              >
-                <ChartContent
-                  links={links}
-                  nodes={nodes}
+              <Box>
+                <Legend range={levelRange} />
+              </Box>
+              <Box>
+                <ZoomableSVG
                   width={size.width}
                   height={size.height * size.networkSizeRate}
-                  similarityData={similarityData}
-                  setNodeId={setNodeId}
                   nodeId={nodeId}
-                  selectLevelRange={selectLevelRange}
-                ></ChartContent>
-              </ZoomableSVG>
+                >
+                  <ChartContent
+                    links={links}
+                    nodes={nodes}
+                    width={size.width}
+                    height={size.height * size.networkSizeRate}
+                    similarityData={similarityData}
+                    setNodeId={setNodeId}
+                    nodeId={nodeId}
+                    selectLevelRange={selectLevelRange}
+                  ></ChartContent>
+                </ZoomableSVG>
+              </Box>
             </Box>
           </Box>
         </Grid>
         <Grid item xs md>
-          <Box height={size.height}>
+          <Box height={"100%"}>
             <RelationList nodeId={nodeId} />
           </Box>
         </Grid>
