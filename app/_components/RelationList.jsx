@@ -40,8 +40,21 @@ export default function RelationList({ nodeId }) {
   return (
     <Box bgcolor={"white"} height={"100%"} ref={wrapperRef} overflow={"auto"}>
       <List sx={{ maxHeight: height }}>
-        <ListSubheader>曲名</ListSubheader>
-        <ListItem>{music?.name}</ListItem>
+        <ListSubheader>選択した曲</ListSubheader>
+        <ListItemButton
+          onClick={() => {
+            if (music?.videoId === undefined || music?.id === undefined) return;
+
+            router.push(`/music/${music?.videoId}?id=${music?.id}`);
+          }}
+          disabled={music?.videoId === undefined || music?.id === undefined}
+        >
+          <ListItemIcon>
+            <LaunchIcon />
+          </ListItemIcon>
+          <ListItemText>{music?.name}</ListItemText>
+        </ListItemButton>
+
         <Divider />
         <ListSubheader>似ている曲</ListSubheader>
         {similarMusics?.map(({ id, name, videoId }) => (
