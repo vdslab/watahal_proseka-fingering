@@ -1,0 +1,6626 @@
+{
+  "nodes": [
+    {
+      "id": "*ハロー、プラネット。",
+      "musicId": 65,
+      "musicName": "*ハロー、プラネット。",
+      "videoId": "Baj3Zz34FMI",
+      "level": 28,
+      "cx": 577.2107,
+      "cy": 500.9127,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "セカイはまだ始まってすらいない",
+      "musicId": 25,
+      "musicName": "セカイはまだ始まってすらいない",
+      "videoId": "en2xtYTlWYI",
+      "level": 29,
+      "cx": 211.9142,
+      "cy": 519.0549,
+      "fill": "#73c000"
+    },
+    {
+      "id": "夜咄ディセイブ",
+      "musicId": 37,
+      "musicName": "夜咄ディセイブ",
+      "videoId": "nGG8vKXF_9A",
+      "level": 30,
+      "cx": 778.4809,
+      "cy": 471.0435,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "1925",
+      "musicId": 273,
+      "musicName": "1925",
+      "videoId": "luTKflXq4Ww",
+      "level": 28,
+      "cx": -1151.6742,
+      "cy": -972.177,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "ヴィラン",
+      "musicId": 149,
+      "musicName": "ヴィラン",
+      "videoId": "ENvhedn7mI8",
+      "level": 29,
+      "cx": -1221.5604,
+      "cy": -966.3016,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "ももいろの鍵",
+      "musicId": 305,
+      "musicName": "ももいろの鍵",
+      "videoId": "tGz9QKPE9Pw",
+      "level": 30,
+      "cx": -1162.1085,
+      "cy": -919.08057,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "39",
+      "musicId": 284,
+      "musicName": "39",
+      "videoId": "gFjiBPE4PmM",
+      "level": 28,
+      "cx": -950.5335,
+      "cy": -1418.0508,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "六兆年と一夜物語",
+      "musicId": 107,
+      "musicName": "六兆年と一夜物語",
+      "videoId": "Wt7GA8FF2V4",
+      "level": 34,
+      "cx": -1021.6771,
+      "cy": -1372.2754,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "ミラクルペイント",
+      "musicId": 41,
+      "musicName": "ミラクルペイント",
+      "videoId": "1fsl3TtNGWE",
+      "level": 29,
+      "cx": -860.71875,
+      "cy": -1422.8734,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "39みゅーじっく!",
+      "musicId": 44,
+      "musicName": "39みゅーじっく!",
+      "videoId": "sGo8fKfjTwg",
+      "level": 28,
+      "cx": 86.72161,
+      "cy": 750.8252,
+      "fill": "#73c000"
+    },
+    {
+      "id": "Be The MUSIC!",
+      "musicId": 293,
+      "musicName": "Be The MUSIC!",
+      "videoId": "I0ADyJ2kYbc",
+      "level": 29,
+      "cx": -107.64257,
+      "cy": 880.44794,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "88☆彡",
+      "musicId": 180,
+      "musicName": "88☆彡",
+      "videoId": "kdTj_7TQp_c",
+      "level": 29,
+      "cx": 802.23566,
+      "cy": 621.7342,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "人生",
+      "musicId": 318,
+      "musicName": "人生",
+      "videoId": "yFbSia4eaRE",
+      "level": 37,
+      "cx": 755.67487,
+      "cy": 723.6761,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "Afterglow",
+      "musicId": 328,
+      "musicName": "Afterglow",
+      "videoId": "2UOwB_SVGxY",
+      "level": 27,
+      "cx": 695.1444,
+      "cy": -97.77079,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "musicId": 268,
+      "musicName": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "videoId": "fIW8UUwMivY",
+      "level": 32,
+      "cx": 364.7205,
+      "cy": -619.3686,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "Awake Now",
+      "musicId": 197,
+      "musicName": "Awake Now",
+      "videoId": "3AJ40qrhX8M",
+      "level": 30,
+      "cx": -1361.7958,
+      "cy": -326.3112,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "パラジクロロベンゼン",
+      "musicId": 243,
+      "musicName": "パラジクロロベンゼン",
+      "videoId": "xWkrdmvdrmI",
+      "level": 28,
+      "cx": -1310.6522,
+      "cy": -381.69928,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "私の恋はヘルファイア",
+      "musicId": 296,
+      "musicName": "私の恋はヘルファイア",
+      "videoId": "sxToGcJvb0I",
+      "level": 31,
+      "cx": -1448.775,
+      "cy": -378.7476,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "Bad ∞ End ∞ Night",
+      "musicId": 229,
+      "musicName": "Bad ∞ End ∞ Night",
+      "videoId": "MQw9OpS2wQ4",
+      "level": 29,
+      "cx": -593.3909,
+      "cy": -1295.5526,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "フェレス",
+      "musicId": 261,
+      "musicName": "フェレス",
+      "videoId": "ziU_FBee4sE",
+      "level": 30,
+      "cx": -628.2178,
+      "cy": -1301.1768,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "それでもいいんだよ",
+      "musicId": 215,
+      "musicName": "それでもいいんだよ",
+      "videoId": "_ZzwKUbw_yM",
+      "level": 29,
+      "cx": -658.19037,
+      "cy": -1330.1041,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "ロストエンファウンド",
+      "musicId": 213,
+      "musicName": "ロストエンファウンド",
+      "videoId": "Orjyhb8BOt4",
+      "level": 29,
+      "cx": -260.02628,
+      "cy": 1065.5713,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "Beat Eater",
+      "musicId": 106,
+      "musicName": "Beat Eater",
+      "videoId": "XlnePbSzxR0",
+      "level": 28,
+      "cx": -1199.3828,
+      "cy": -889.743,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "Blessing",
+      "musicId": 5,
+      "musicName": "Blessing",
+      "videoId": "xq099mLEawQ",
+      "level": 27,
+      "cx": 782.49207,
+      "cy": -1070.2865,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "What's up? Pop!",
+      "musicId": 252,
+      "musicName": "What's up? Pop!",
+      "videoId": "kvWPjYT-i1U",
+      "level": 37,
+      "cx": 882.0347,
+      "cy": -1023.2683,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ひつじがいっぴき",
+      "musicId": 275,
+      "musicName": "ひつじがいっぴき",
+      "videoId": "YfT3lriTcSk",
+      "level": 28,
+      "cx": 731.7904,
+      "cy": -1134.3135,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "Blue Star",
+      "musicId": 316,
+      "musicName": "Blue Star",
+      "videoId": "if90fHWDRVU",
+      "level": 29,
+      "cx": 365.28583,
+      "cy": -427.58636,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "ワールドイズマイン",
+      "musicId": 34,
+      "musicName": "ワールドイズマイン",
+      "videoId": "WaxB5pOS-5o",
+      "level": 28,
+      "cx": 247.35287,
+      "cy": -202.54764,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "Booo!",
+      "musicId": 283,
+      "musicName": "Booo!",
+      "videoId": "gcH-etXpWrc",
+      "level": 29,
+      "cx": -1772.2322,
+      "cy": 152.62479,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "アンノウン・マザーグース",
+      "musicId": 55,
+      "musicName": "アンノウン・マザーグース",
+      "videoId": "n5za6C4DKeM",
+      "level": 29,
+      "cx": -1773.3241,
+      "cy": 202.27954,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "アイロニ",
+      "musicId": 272,
+      "musicName": "アイロニ",
+      "videoId": "1DQkXSKqjlM",
+      "level": 28,
+      "cx": -1730.2372,
+      "cy": -104.9684,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "Brand New Day",
+      "musicId": 80,
+      "musicName": "Brand New Day",
+      "videoId": "uBIgxH-2cJ8",
+      "level": 32,
+      "cx": -1885.295,
+      "cy": -27.352093,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "幽霊東京",
+      "musicId": 95,
+      "musicName": "幽霊東京",
+      "videoId": "UkTzpYSb4AA",
+      "level": 27,
+      "cx": -1871.5603,
+      "cy": 12.618833,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "Calc.",
+      "musicId": 220,
+      "musicName": "Calc.",
+      "videoId": "eYYEn-U2fUY",
+      "level": 30,
+      "cx": -233.60614,
+      "cy": 991.2823,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "Change me",
+      "musicId": 239,
+      "musicName": "Change me",
+      "videoId": "25Snry2l3jg",
+      "level": 28,
+      "cx": 589.95856,
+      "cy": -706.1511,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "Color of Drops",
+      "musicId": 74,
+      "musicName": "Color of Drops",
+      "videoId": "rAypwAhg5I4",
+      "level": 27,
+      "cx": 633.2148,
+      "cy": 471.97342,
+      "fill": "#73c000"
+    },
+    {
+      "id": "Copycat",
+      "musicId": 270,
+      "musicName": "Copycat",
+      "videoId": "dRMRis7gp0I",
+      "level": 27,
+      "cx": -5.843599,
+      "cy": 760.9033,
+      "fill": "#73c000"
+    },
+    {
+      "id": "DAYBREAK FRONTLINE",
+      "musicId": 232,
+      "musicName": "DAYBREAK FRONTLINE",
+      "videoId": "Ze-n-Uilmkw",
+      "level": 29,
+      "cx": 471.03162,
+      "cy": -1436.3573,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "Don't Fight The Music",
+      "musicId": 155,
+      "musicName": "Don't Fight The Music",
+      "videoId": "7DPEvCP8I7M",
+      "level": 36,
+      "cx": 546.3793,
+      "cy": -1199.6027,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ヤミナベ!!!!",
+      "musicId": 282,
+      "musicName": "ヤミナベ!!!!",
+      "videoId": "U-jWXqn787c",
+      "level": 37,
+      "cx": 477.30603,
+      "cy": -1556.8318,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "DREAM PLACE",
+      "musicId": 234,
+      "musicName": "DREAM PLACE",
+      "videoId": "WNyvedbGvwU",
+      "level": 28,
+      "cx": -1647.527,
+      "cy": -157.53181,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "快晴",
+      "musicId": 307,
+      "musicName": "快晴",
+      "videoId": "sK_mJuTB8TE",
+      "level": 29,
+      "cx": -1707.4688,
+      "cy": -224.70074,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "腐れ外道とチョコレゐト",
+      "musicId": 253,
+      "musicName": "腐れ外道とチョコレゐト",
+      "videoId": "v0_CBn6_xCM",
+      "level": 34,
+      "cx": 114.11191,
+      "cy": -178.69484,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "ECHO",
+      "musicId": 67,
+      "musicName": "ECHO",
+      "videoId": "C3IYncPORx0",
+      "level": 26,
+      "cx": -285.61688,
+      "cy": 4.6144824,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "アンハッピーリフレイン",
+      "musicId": 224,
+      "musicName": "アンハッピーリフレイン",
+      "videoId": "cHYXZD11-lY",
+      "level": 31,
+      "cx": -189.80815,
+      "cy": -44.801006,
+      "fill": "#73c000"
+    },
+    {
+      "id": "メルト",
+      "musicId": 3,
+      "musicName": "メルト",
+      "videoId": "xT0_3Tz5iKk",
+      "level": 28,
+      "cx": -301.4667,
+      "cy": 137.96564,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "FREELY TOMORROW",
+      "musicId": 257,
+      "musicName": "FREELY TOMORROW",
+      "videoId": "2CRp4akbuRI",
+      "level": 29,
+      "cx": 1039.0889,
+      "cy": 189.03961,
+      "fill": "#73c000"
+    },
+    {
+      "id": "RAD DOGS",
+      "musicId": 75,
+      "musicName": "RAD DOGS",
+      "videoId": "bDfoNUUshV8",
+      "level": 30,
+      "cx": 342.7417,
+      "cy": 197.19087,
+      "fill": "#73c000"
+    },
+    {
+      "id": "ナンセンス文学",
+      "musicId": 166,
+      "musicName": "ナンセンス文学",
+      "videoId": "S4pUolBwQHE",
+      "level": 29,
+      "cx": 1061.3829,
+      "cy": 216.54881,
+      "fill": "#73c000"
+    },
+    {
+      "id": "Flyer!",
+      "musicId": 163,
+      "musicName": "Flyer!",
+      "videoId": "tRz4sbt0ZpM",
+      "level": 29,
+      "cx": 0.87860453,
+      "cy": 1331.7256,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "Flyway",
+      "musicId": 264,
+      "musicName": "Flyway",
+      "videoId": "uun_G-byi0o",
+      "level": 28,
+      "cx": 1299.2374,
+      "cy": -1336.8895,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ÅMARA(大未来電脳)",
+      "musicId": 233,
+      "musicName": "ÅMARA(大未来電脳)",
+      "videoId": "dCpf5x3jykA",
+      "level": 34,
+      "cx": 1230.4833,
+      "cy": -1266.2528,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "コスモスパイス",
+      "musicId": 187,
+      "musicName": "コスモスパイス",
+      "videoId": "nJYpO9zoZSc",
+      "level": 30,
+      "cx": 1346.6018,
+      "cy": -1301.3993,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "Forward",
+      "musicId": 58,
+      "musicName": "Forward",
+      "videoId": "hiF_Uh4TfTc",
+      "level": 28,
+      "cx": 375.57565,
+      "cy": -1533.8702,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "徳川カップヌードル禁止令",
+      "musicId": 188,
+      "musicName": "徳川カップヌードル禁止令",
+      "videoId": "1DH8uocRBs8",
+      "level": 31,
+      "cx": 156.5083,
+      "cy": -918.73224,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "Gimme×Gimme",
+      "musicId": 38,
+      "musicName": "Gimme×Gimme",
+      "videoId": "3sJmOHFof20",
+      "level": 29,
+      "cx": 630.50037,
+      "cy": -967.318,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "エゴイスト",
+      "musicId": 286,
+      "musicName": "エゴイスト",
+      "videoId": "mIYiUVT7d2k",
+      "level": 31,
+      "cx": 468.51587,
+      "cy": -933.8723,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "Glory Steady Go!",
+      "musicId": 113,
+      "musicName": "Glory Steady Go!",
+      "videoId": "z7PBrRwhBXU",
+      "level": 30,
+      "cx": -150.03812,
+      "cy": -17.384432,
+      "fill": "#73c000"
+    },
+    {
+      "id": "カンタレラ",
+      "musicId": 256,
+      "musicName": "カンタレラ",
+      "videoId": "3RUHS4WemSI",
+      "level": 29,
+      "cx": -128.40042,
+      "cy": 43.551678,
+      "fill": "#73c000"
+    },
+    {
+      "id": "Goodbye",
+      "musicId": 266,
+      "musicName": "Goodbye",
+      "videoId": "NJJJyicHXdE",
+      "level": 27,
+      "cx": -758.64667,
+      "cy": 794.9985,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "右肩の蝶",
+      "musicId": 130,
+      "musicName": "右肩の蝶",
+      "videoId": "CF3uvBLuEWQ",
+      "level": 31,
+      "cx": -206.81123,
+      "cy": 310.05423,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "フォニイ",
+      "musicId": 225,
+      "musicName": "フォニイ",
+      "videoId": "ijweObstbWw",
+      "level": 29,
+      "cx": -1093.7726,
+      "cy": 920.37885,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "Hand in Hand",
+      "musicId": 36,
+      "musicName": "Hand in Hand",
+      "videoId": "1_e_x9TQv_g",
+      "level": 27,
+      "cx": -156.85307,
+      "cy": 1000.98883,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "Happy Halloween",
+      "musicId": 135,
+      "musicName": "Happy Halloween",
+      "videoId": "JQZi1sVmcfc",
+      "level": 30,
+      "cx": -555.8451,
+      "cy": 605.07306,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "命ばっかり",
+      "musicId": 304,
+      "musicName": "命ばっかり",
+      "videoId": "4sA7TeK1W08",
+      "level": 28,
+      "cx": -806.03925,
+      "cy": -110.61869,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "カゲロウデイズ",
+      "musicId": 111,
+      "musicName": "カゲロウデイズ",
+      "videoId": "tg0cfT8ri4Q",
+      "level": 31,
+      "cx": -632.1215,
+      "cy": 1016.1846,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "Hello, Worker",
+      "musicId": 276,
+      "musicName": "Hello, Worker",
+      "videoId": "XDr9VJw4dxs",
+      "level": 28,
+      "cx": 512.10443,
+      "cy": 1469.4657,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "ツギハギスタッカート",
+      "musicId": 12,
+      "musicName": "ツギハギスタッカート",
+      "videoId": "7GhYwWyFqCc",
+      "level": 27,
+      "cx": 213.696,
+      "cy": 1415.333,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "Just Be Friends",
+      "musicId": 31,
+      "musicName": "Just Be Friends",
+      "videoId": "SUfXSpdX1e8",
+      "level": 27,
+      "cx": 727.90454,
+      "cy": 1455.9886,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "Hello,world!",
+      "musicId": 132,
+      "musicName": "Hello,world!",
+      "videoId": "Jflttwrq8ik",
+      "level": 29,
+      "cx": 70.40055,
+      "cy": 857.7358,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "劣等上等",
+      "musicId": 13,
+      "musicName": "劣等上等",
+      "videoId": "FqHS_ZVzZGQ",
+      "level": 30,
+      "cx": 337.48117,
+      "cy": 915.49335,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "Highlight",
+      "musicId": 288,
+      "musicName": "Highlight",
+      "videoId": "kQXeqFIXOrg",
+      "level": 27,
+      "cx": -18.47659,
+      "cy": -112.5965,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "Iなんです",
+      "musicId": 242,
+      "musicName": "Iなんです",
+      "videoId": "g9pTDEooTtQ",
+      "level": 31,
+      "cx": 309.2346,
+      "cy": 1643.8782,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "ショウタイム・ルーラー",
+      "musicId": 134,
+      "musicName": "ショウタイム・ルーラー",
+      "videoId": "s0-W6mY-_RQ",
+      "level": 31,
+      "cx": 296.92224,
+      "cy": 1680.5934,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "Sharing The World",
+      "musicId": 312,
+      "musicName": "Sharing The World",
+      "videoId": "LVl3WvZ8Ses",
+      "level": 28,
+      "cx": 389.9096,
+      "cy": 1479.5901,
+      "fill": "#73c000"
+    },
+    {
+      "id": "Journey",
+      "musicId": 222,
+      "musicName": "Journey",
+      "videoId": "e_m99YGXBFY",
+      "level": 28,
+      "cx": -1260.6719,
+      "cy": -420.56326,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "ラストスコア",
+      "musicId": 145,
+      "musicName": "ラストスコア",
+      "videoId": "Lhf4s8Zmh0k",
+      "level": 30,
+      "cx": -1344.9993,
+      "cy": -453.83615,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "裏表ラバーズ",
+      "musicId": 54,
+      "musicName": "裏表ラバーズ",
+      "videoId": "XG_vtHgZdNM",
+      "level": 30,
+      "cx": 887.9321,
+      "cy": 764.1477,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "from Y to Y",
+      "musicId": 86,
+      "musicName": "from Y to Y",
+      "videoId": "Oh4Y7RfMamc",
+      "level": 26,
+      "cx": 671.68317,
+      "cy": 1524.1226,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "KING",
+      "musicId": 97,
+      "musicName": "KING",
+      "videoId": "Rh2TMzq-e1g",
+      "level": 29,
+      "cx": -1426.3137,
+      "cy": 661.9938,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "グリーンライツ・セレナーデ",
+      "musicId": 63,
+      "musicName": "グリーンライツ・セレナーデ",
+      "videoId": "o5NAgruRHZo",
+      "level": 31,
+      "cx": -1474.2389,
+      "cy": 559.038,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "Leia - Remind",
+      "musicId": 47,
+      "musicName": "Leia - Remind",
+      "videoId": "KV97YIrCiDA",
+      "level": 28,
+      "cx": 404.51913,
+      "cy": 418.54047,
+      "fill": "#73c000"
+    },
+    {
+      "id": "METEOR",
+      "musicId": 294,
+      "musicName": "METEOR",
+      "videoId": "OlK-7S0xOc0",
+      "level": 30,
+      "cx": 32.72413,
+      "cy": -49.570454,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "少女レイ",
+      "musicId": 151,
+      "musicName": "少女レイ",
+      "videoId": "tX0DwDBc4Qw",
+      "level": 27,
+      "cx": 67.0922,
+      "cy": -41.140312,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "スイートマジック",
+      "musicId": 17,
+      "musicName": "スイートマジック",
+      "videoId": "-7MmB4lLgrU",
+      "level": 27,
+      "cx": 0.0007134716,
+      "cy": -0.0020575551,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "Miku",
+      "musicId": 169,
+      "musicName": "Miku",
+      "videoId": "5BGc8BwrLiM",
+      "level": 28,
+      "cx": -392.3394,
+      "cy": 262.39532,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "Mr. Showtime",
+      "musicId": 285,
+      "musicName": "Mr. Showtime",
+      "videoId": "N5zwT9gHiow",
+      "level": 30,
+      "cx": 801.02246,
+      "cy": -1474.6008,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "拝啓ドッペルゲンガー",
+      "musicId": 124,
+      "musicName": "拝啓ドッペルゲンガー",
+      "videoId": "Olsx3iWnjpE",
+      "level": 32,
+      "cx": 1142.263,
+      "cy": -1501.9282,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "Nostalogic",
+      "musicId": 11,
+      "musicName": "Nostalogic",
+      "videoId": "5SPCftJdsJ4",
+      "level": 28,
+      "cx": -47.32631,
+      "cy": 398.10437,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "ODDS&ENDS",
+      "musicId": 61,
+      "musicName": "ODDS&ENDS",
+      "videoId": "ch033xwff_k",
+      "level": 29,
+      "cx": 224.64397,
+      "cy": 853.0129,
+      "fill": "#73c000"
+    },
+    {
+      "id": "アイスドロップ",
+      "musicId": 112,
+      "musicName": "アイスドロップ",
+      "videoId": "Za6hsjncE1M",
+      "level": 27,
+      "cx": 208.6123,
+      "cy": 910.8876,
+      "fill": "#73c000"
+    },
+    {
+      "id": "ONESELF",
+      "musicId": 181,
+      "musicName": "ONESELF",
+      "videoId": "l2BWh8s95Q0",
+      "level": 30,
+      "cx": 1175.686,
+      "cy": -1556.3718,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ワンスアポンアドリーム",
+      "musicId": 82,
+      "musicName": "ワンスアポンアドリーム",
+      "videoId": "nLZOT9skXRQ",
+      "level": 27,
+      "cx": 1199.5131,
+      "cy": -1514.3064,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "PaIII.SENSATION",
+      "musicId": 182,
+      "musicName": "PaIII.SENSATION",
+      "videoId": "7PSoUoxuZBw",
+      "level": 29,
+      "cx": -706.28204,
+      "cy": -2714.1577,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "Peaky Peaky",
+      "musicId": 164,
+      "musicName": "Peaky Peaky",
+      "videoId": "a-n5jlYRDsE",
+      "level": 28,
+      "cx": 1129.805,
+      "cy": -949.46,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ゴーストルール",
+      "musicId": 148,
+      "musicName": "ゴーストルール",
+      "videoId": "X0uREI9SMUU",
+      "level": 32,
+      "cx": 970.95734,
+      "cy": -882.7734,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "Q",
+      "musicId": 281,
+      "musicName": "Q",
+      "videoId": "HtjBq5HFnXM",
+      "level": 28,
+      "cx": -1201.7627,
+      "cy": -116.04889,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "君色マリンスノウ",
+      "musicId": 161,
+      "musicName": "君色マリンスノウ",
+      "videoId": "8lmrerbv4sg",
+      "level": 31,
+      "cx": -1183.2054,
+      "cy": -143.6946,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "踊",
+      "musicId": 160,
+      "musicName": "踊",
+      "videoId": "9p73D0EywXA",
+      "level": 29,
+      "cx": -1234.5458,
+      "cy": -154.7974,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "ぼうけんのしょがきえました!",
+      "musicId": 18,
+      "musicName": "ぼうけんのしょがきえました!",
+      "videoId": "pMIaPWObV8I",
+      "level": 31,
+      "cx": 181.68346,
+      "cy": 259.56277,
+      "fill": "#73c000"
+    },
+    {
+      "id": "Ready Steady",
+      "musicId": 24,
+      "musicName": "Ready Steady",
+      "videoId": "CvolK1vq8Hk",
+      "level": 29,
+      "cx": -1206.2112,
+      "cy": -681.2841,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "STAGE OF SEKAI",
+      "musicId": 139,
+      "musicName": "STAGE OF SEKAI",
+      "videoId": "2O-yC2l8a3Y",
+      "level": 30,
+      "cx": -781.9441,
+      "cy": 984.233,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "未完成讃歌",
+      "musicId": 202,
+      "musicName": "未完成讃歌",
+      "videoId": "3gvxkoXtmZk",
+      "level": 31,
+      "cx": -765.6452,
+      "cy": 1047.8933,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "悪徳のジャッジメント",
+      "musicId": 311,
+      "musicName": "悪徳のジャッジメント",
+      "videoId": "rmDaAMA49Lg",
+      "level": 28,
+      "cx": -757.6183,
+      "cy": 940.1736,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "フラジール",
+      "musicId": 15,
+      "musicName": "フラジール",
+      "videoId": "Nsk4hzUb_C8",
+      "level": 27,
+      "cx": 222.89355,
+      "cy": 1588.3567,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "SnowMix♪",
+      "musicId": 267,
+      "musicName": "SnowMix♪",
+      "videoId": "4_eXCAP-Xhs",
+      "level": 30,
+      "cx": 979.812,
+      "cy": -1269.0894,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ベノム",
+      "musicId": 123,
+      "musicName": "ベノム",
+      "videoId": "zz2l-9LoxMg",
+      "level": 29,
+      "cx": 1006.38336,
+      "cy": -1314.8616,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "Tell Your World",
+      "musicId": 1,
+      "musicName": "Tell Your World",
+      "videoId": "F9XLgIO6cz0",
+      "level": 26,
+      "cx": 394.34634,
+      "cy": -756.5406,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "UNDERWATER",
+      "musicId": 326,
+      "musicName": "UNDERWATER",
+      "videoId": "_G--iBmZgqk",
+      "level": 29,
+      "cx": 189.85426,
+      "cy": -139.96895,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "Vampire's ∞ pathoS",
+      "musicId": 292,
+      "musicName": "Vampire's ∞ pathoS",
+      "videoId": "flKWhjj6SZg",
+      "level": 31,
+      "cx": 703.3379,
+      "cy": 459.51196,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "Voices",
+      "musicId": 218,
+      "musicName": "Voices",
+      "videoId": "T4_0ylUqeSo",
+      "level": 30,
+      "cx": -47.622684,
+      "cy": 146.56299,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "ダンスロボットダンス",
+      "musicId": 35,
+      "musicName": "ダンスロボットダンス",
+      "videoId": "2r9guzrNcNY",
+      "level": 29,
+      "cx": 868.9257,
+      "cy": -907.6667,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "Where shall we go?",
+      "musicId": 277,
+      "musicName": "Where shall we go?",
+      "videoId": "ZHxzenV4HXc",
+      "level": 26,
+      "cx": 36.028934,
+      "cy": -253.95134,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "サラマンダー",
+      "musicId": 189,
+      "musicName": "サラマンダー",
+      "videoId": "1yrKAYOIAxs",
+      "level": 30,
+      "cx": 109.682106,
+      "cy": -413.39758,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "Wonder Style",
+      "musicId": 319,
+      "musicName": "Wonder Style",
+      "videoId": "zJBw6nFiWqQ",
+      "level": 28,
+      "cx": -219.49345,
+      "cy": 48.725822,
+      "fill": "#73c000"
+    },
+    {
+      "id": "ポジティブ☆ダンスタイム",
+      "musicId": 79,
+      "musicName": "ポジティブ☆ダンスタイム",
+      "videoId": "ry1hfnHmeqc",
+      "level": 31,
+      "cx": -165.2236,
+      "cy": 145.40427,
+      "fill": "#73c000"
+    },
+    {
+      "id": "YY",
+      "musicId": 214,
+      "musicName": "YY",
+      "videoId": "LS6TcHEMWfw",
+      "level": 29,
+      "cx": 1283.5026,
+      "cy": -1274.877,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "alive",
+      "musicId": 6,
+      "musicName": "alive",
+      "videoId": "OCAKoxHbGyU",
+      "level": 26,
+      "cx": 276.01318,
+      "cy": 122.75799,
+      "fill": "#73c000"
+    },
+    {
+      "id": "どりーみんチュチュ",
+      "musicId": 90,
+      "musicName": "どりーみんチュチュ",
+      "videoId": "OCBFR8I3T10",
+      "level": 27,
+      "cx": 218.6791,
+      "cy": 128.9458,
+      "fill": "#73c000"
+    },
+    {
+      "id": "drop pop candy",
+      "musicId": 78,
+      "musicName": "drop pop candy",
+      "videoId": "RODLIqk46AM",
+      "level": 28,
+      "cx": -139.10329,
+      "cy": -74.86733,
+      "fill": "#73c000"
+    },
+    {
+      "id": "初音天地開闢神話",
+      "musicId": 137,
+      "musicName": "初音天地開闢神話",
+      "videoId": "R1qyKp2TJIk",
+      "level": 32,
+      "cx": -97.95221,
+      "cy": -57.23071,
+      "fill": "#73c000"
+    },
+    {
+      "id": "ハロ/ハワユ",
+      "musicId": 20,
+      "musicName": "ハロ/ハワユ",
+      "videoId": "ODIrmQwgXHs",
+      "level": 26,
+      "cx": 625.3065,
+      "cy": 1501.2241,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "glow",
+      "musicId": 324,
+      "musicName": "glow",
+      "videoId": "c5JahL2Mttk",
+      "level": 27,
+      "cx": 450.5066,
+      "cy": 514.64746,
+      "fill": "#73c000"
+    },
+    {
+      "id": "magic number",
+      "musicId": 115,
+      "musicName": "magic number",
+      "videoId": "UxJ094iJQ2s",
+      "level": 29,
+      "cx": 356.74994,
+      "cy": 284.32422,
+      "fill": "#73c000"
+    },
+    {
+      "id": "needLe",
+      "musicId": 22,
+      "musicName": "needLe",
+      "videoId": "gxJzyIXakdE",
+      "level": 29,
+      "cx": -151.31337,
+      "cy": 418.6505,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "てらてら",
+      "musicId": 209,
+      "musicName": "てらてら",
+      "videoId": "xQmDpPyvvUM",
+      "level": 30,
+      "cx": -130.03362,
+      "cy": 466.1952,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "on the rocks",
+      "musicId": 42,
+      "musicName": "on the rocks",
+      "videoId": "0z0umz84a-k",
+      "level": 27,
+      "cx": -1257.7538,
+      "cy": -1039.0632,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "お気に召すまま",
+      "musicId": 89,
+      "musicName": "お気に召すまま",
+      "videoId": "JmQQnzTw62o",
+      "level": 28,
+      "cx": -1307.8302,
+      "cy": -1047.5078,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "p.h.",
+      "musicId": 265,
+      "musicName": "p.h.",
+      "videoId": "-ltAqpZmi8Q",
+      "level": 29,
+      "cx": 1297.265,
+      "cy": -1131.0367,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "千本桜",
+      "musicId": 66,
+      "musicName": "千本桜",
+      "videoId": "okOnG56qksA",
+      "level": 32,
+      "cx": 1297.266,
+      "cy": -1052.2988,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "potatoになっていく",
+      "musicId": 51,
+      "musicName": "potatoになっていく",
+      "videoId": "foH6ExZKe4E",
+      "level": 28,
+      "cx": 1334.8885,
+      "cy": -1089.5515,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ray",
+      "musicId": 131,
+      "musicName": "ray",
+      "videoId": "d9erBYxSuZs",
+      "level": 26,
+      "cx": -199.7242,
+      "cy": -92.003075,
+      "fill": "#73c000"
+    },
+    {
+      "id": "the EmpErroR",
+      "musicId": 154,
+      "musicName": "the EmpErroR",
+      "videoId": "yH-58j5cLls",
+      "level": 36,
+      "cx": -47.32615,
+      "cy": 54.235504,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "the WALL",
+      "musicId": 241,
+      "musicName": "the WALL",
+      "videoId": "JY7sgD1E6ug",
+      "level": 30,
+      "cx": -764.9732,
+      "cy": 1159.8868,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "嗚呼、素晴らしきニャン生",
+      "musicId": 321,
+      "musicName": "嗚呼、素晴らしきニャン生",
+      "videoId": "73OW6hkKBpA",
+      "level": 29,
+      "cx": -721.61536,
+      "cy": 1137.9807,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "帝国少女",
+      "musicId": 238,
+      "musicName": "帝国少女",
+      "videoId": "ajGE63gT9yk",
+      "level": 28,
+      "cx": 869.1779,
+      "cy": -1511.4418,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "「1」",
+      "musicId": 92,
+      "musicName": "「1」",
+      "videoId": "NeJ16T0buMY",
+      "level": 26,
+      "cx": 211.1678,
+      "cy": 658.01416,
+      "fill": "#73c000"
+    },
+    {
+      "id": "ココロ",
+      "musicId": 278,
+      "musicName": "ココロ",
+      "videoId": "cTvt85Dpyyo",
+      "level": 28,
+      "cx": 152.73476,
+      "cy": 673.7164,
+      "fill": "#73c000"
+    },
+    {
+      "id": "あったかいと",
+      "musicId": 246,
+      "musicName": "あったかいと",
+      "videoId": "ro1HPla2KwQ",
+      "level": 29,
+      "cx": -927.3862,
+      "cy": 863.84595,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "エンドマークに希望と涙を添えて",
+      "musicId": 153,
+      "musicName": "エンドマークに希望と涙を添えて",
+      "videoId": "UFzO06UmMxI",
+      "level": 35,
+      "cx": -972.8795,
+      "cy": 808.8143,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "いかないで",
+      "musicId": 99,
+      "musicName": "いかないで",
+      "videoId": "n3nB7yG_Q68",
+      "level": 29,
+      "cx": 213.42137,
+      "cy": -323.34354,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "いちにのさんで",
+      "musicId": 237,
+      "musicName": "いちにのさんで",
+      "videoId": "sbAkQrjqEMA",
+      "level": 26,
+      "cx": -1697.4243,
+      "cy": -171.91655,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "いーあるふぁんくらぶ",
+      "musicId": 171,
+      "musicName": "いーあるふぁんくらぶ",
+      "videoId": "9FVMxEoh9JY",
+      "level": 28,
+      "cx": 124.72744,
+      "cy": 733.73004,
+      "fill": "#73c000"
+    },
+    {
+      "id": "うっせぇわ",
+      "musicId": 159,
+      "musicName": "うっせぇわ",
+      "videoId": "rM7_b_jKpsM",
+      "level": 28,
+      "cx": 289.51688,
+      "cy": 275.40356,
+      "fill": "#73c000"
+    },
+    {
+      "id": "おこちゃま戦争",
+      "musicId": 302,
+      "musicName": "おこちゃま戦争",
+      "videoId": "8iAHPY8Tq1U",
+      "level": 30,
+      "cx": 385.54047,
+      "cy": -982.9982,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "リモコン",
+      "musicId": 193,
+      "musicName": "リモコン",
+      "videoId": "HIsU8ywaQ6U",
+      "level": 29,
+      "cx": 284.7514,
+      "cy": -868.1377,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "からくりピエロ",
+      "musicId": 140,
+      "musicName": "からくりピエロ",
+      "videoId": "aaVp0eYv8XA",
+      "level": 27,
+      "cx": 471.96478,
+      "cy": 970.862,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "きゅうくらりん",
+      "musicId": 327,
+      "musicName": "きゅうくらりん",
+      "videoId": "ism2XdLo4T4",
+      "level": 31,
+      "cx": 661.6602,
+      "cy": 1482.6241,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "こちら、幸福安心委員会です。",
+      "musicId": 231,
+      "musicName": "こちら、幸福安心委員会です。",
+      "videoId": "zfb7Ia3JA1c",
+      "level": 28,
+      "cx": 177.06439,
+      "cy": 71.8067,
+      "fill": "#73c000"
+    },
+    {
+      "id": "しっくおぶはうす!",
+      "musicId": 133,
+      "musicName": "しっくおぶはうす!",
+      "videoId": "EKgXUdQ6hE4",
+      "level": 30,
+      "cx": 706.56195,
+      "cy": 519.9933,
+      "fill": "#73c000"
+    },
+    {
+      "id": "そうだった!!",
+      "musicId": 110,
+      "musicName": "そうだった!!",
+      "videoId": "c6iFpYaAc-s",
+      "level": 31,
+      "cx": -118.442696,
+      "cy": 741.04675,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "それがあなたの幸せとしても",
+      "musicId": 259,
+      "musicName": "それがあなたの幸せとしても",
+      "videoId": "TCY_x3bnCYY",
+      "level": 26,
+      "cx": 157.81018,
+      "cy": 8.202909,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "だれかの心臓になれたなら",
+      "musicId": 128,
+      "musicName": "だれかの心臓になれたなら",
+      "videoId": "HMjMhFK9V-E",
+      "level": 29,
+      "cx": 702.0325,
+      "cy": 668.3683,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "とても痛い痛がりたい",
+      "musicId": 70,
+      "musicName": "とても痛い痛がりたい",
+      "videoId": "HC5DbLfeFak",
+      "level": 28,
+      "cx": -1401.6892,
+      "cy": -470.5037,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "とても素敵な六月でした",
+      "musicId": 325,
+      "musicName": "とても素敵な六月でした",
+      "videoId": "kyiWWv623C4",
+      "level": 29,
+      "cx": -378.9667,
+      "cy": 965.2143,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "イフ",
+      "musicId": 190,
+      "musicName": "イフ",
+      "videoId": "ZIFns36wUF0",
+      "level": 27,
+      "cx": 570.19086,
+      "cy": 590.404,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "どんな結末がお望みだい?",
+      "musicId": 235,
+      "musicName": "どんな結末がお望みだい?",
+      "videoId": "_WRuEesFXyE",
+      "level": 28,
+      "cx": 418.43234,
+      "cy": 271.96155,
+      "fill": "#73c000"
+    },
+    {
+      "id": "にっこり^^調査隊のテーマ",
+      "musicId": 156,
+      "musicName": "にっこり^^調査隊のテーマ",
+      "videoId": "ysvVqxBvOIE",
+      "level": 31,
+      "cx": -94.638664,
+      "cy": 288.95352,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "ワールズエンド・ダンスホール",
+      "musicId": 72,
+      "musicName": "ワールズエンド・ダンスホール",
+      "videoId": "djB5eF3ux0A",
+      "level": 30,
+      "cx": -16.884012,
+      "cy": 256.64496,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "フューチャー・イヴ",
+      "musicId": 217,
+      "musicName": "フューチャー・イヴ",
+      "videoId": "C5pdyUAH514",
+      "level": 32,
+      "cx": 667.8915,
+      "cy": -1086.303,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ぼくらの16bit戦争",
+      "musicId": 205,
+      "musicName": "ぼくらの16bit戦争",
+      "videoId": "9yuswIld1Vc",
+      "level": 33,
+      "cx": 1233.5922,
+      "cy": -999.53186,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "みくみくにしてあげる♪【してやんよ】",
+      "musicId": 84,
+      "musicName": "みくみくにしてあげる♪【してやんよ】",
+      "videoId": "8M9BqF32hsw",
+      "level": 28,
+      "cx": -1107.3396,
+      "cy": -819.09406,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "アイディスマイル",
+      "musicId": 91,
+      "musicName": "アイディスマイル",
+      "videoId": "pK4Xc2vKoKw",
+      "level": 28,
+      "cx": -700.1764,
+      "cy": 509.8367,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "アイデンティティ",
+      "musicId": 185,
+      "musicName": "アイデンティティ",
+      "videoId": "Ni98XzVUmys",
+      "level": 31,
+      "cx": -956.7622,
+      "cy": -1358.5681,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "アイドル新鋭隊",
+      "musicId": 23,
+      "musicName": "アイドル新鋭隊",
+      "videoId": "V0tv7Q_x5cc",
+      "level": 28,
+      "cx": 296.98505,
+      "cy": 1570.3746,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "アイノマテリアル",
+      "musicId": 98,
+      "musicName": "アイノマテリアル",
+      "videoId": "wdMBJDFYglQ",
+      "level": 26,
+      "cx": -0.9713198,
+      "cy": 92.449844,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "アサガオの散る頃に",
+      "musicId": 195,
+      "musicName": "アサガオの散る頃に",
+      "videoId": "nmeqwZ9h2wo",
+      "level": 26,
+      "cx": 141.17271,
+      "cy": -525.6484,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "アスノヨゾラ哨戒班",
+      "musicId": 29,
+      "musicName": "アスノヨゾラ哨戒班",
+      "videoId": "4dYyLIoezyc",
+      "level": 28,
+      "cx": 271.23575,
+      "cy": -250.03914,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "リンちゃんなう!",
+      "musicId": 260,
+      "musicName": "リンちゃんなう!",
+      "videoId": "2OHjJmuzAVU",
+      "level": 29,
+      "cx": 277.7806,
+      "cy": -295.13803,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "アトラクトライト",
+      "musicId": 289,
+      "musicName": "アトラクトライト",
+      "videoId": "vhLVOEgTFnQ",
+      "level": 30,
+      "cx": -1016.0972,
+      "cy": 871.93945,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "インタビュア",
+      "musicId": 295,
+      "musicName": "インタビュア",
+      "videoId": "Nq3Gqis0y8c",
+      "level": 26,
+      "cx": -495.40033,
+      "cy": 756.63763,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "インビジブル",
+      "musicId": 227,
+      "musicName": "インビジブル",
+      "videoId": "12ZOeok0JVE",
+      "level": 32,
+      "cx": 1127.1624,
+      "cy": -1239.8582,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ウミユリ海底譚",
+      "musicId": 57,
+      "musicName": "ウミユリ海底譚",
+      "videoId": "6DAVinASmVc",
+      "level": 27,
+      "cx": -203.66447,
+      "cy": 446.64957,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "エイリアンエイリアン",
+      "musicId": 207,
+      "musicName": "エイリアンエイリアン",
+      "videoId": "HN7Gb6klvjE",
+      "level": 29,
+      "cx": 1082.9678,
+      "cy": -862.0341,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ネトゲ廃人シュプレヒコール",
+      "musicId": 255,
+      "musicName": "ネトゲ廃人シュプレヒコール",
+      "videoId": "-PWANSTWs0Q",
+      "level": 30,
+      "cx": 1072.4054,
+      "cy": -907.41016,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "エゴロック",
+      "musicId": 228,
+      "musicName": "エゴロック",
+      "videoId": "uX9H78G26Uw",
+      "level": 31,
+      "cx": 692.09045,
+      "cy": -1393.8075,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "エターナルアリア",
+      "musicId": 315,
+      "musicName": "エターナルアリア",
+      "videoId": "875thKZaigU",
+      "level": 30,
+      "cx": -439.77847,
+      "cy": 863.36,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "エピローグに君はいない",
+      "musicId": 287,
+      "musicName": "エピローグに君はいない",
+      "videoId": "y5uDYDF1OU8",
+      "level": 26,
+      "cx": -1294.7864,
+      "cy": 974.94806,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "ジェヘナ",
+      "musicId": 219,
+      "musicName": "ジェヘナ",
+      "videoId": "uL0kYgiOA3E",
+      "level": 30,
+      "cx": -1206.9569,
+      "cy": 970.9242,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "ヒビカセ",
+      "musicId": 73,
+      "musicName": "ヒビカセ",
+      "videoId": "800Wp5gvg1M",
+      "level": 28,
+      "cx": -1312.304,
+      "cy": 927.2102,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "オルターエゴ",
+      "musicId": 138,
+      "musicName": "オルターエゴ",
+      "videoId": "bHz_zNrRRo4",
+      "level": 31,
+      "cx": -1422.3998,
+      "cy": 564.6893,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "バグ",
+      "musicId": 199,
+      "musicName": "バグ",
+      "videoId": "n3DjrVzzhHU",
+      "level": 32,
+      "cx": -1056.1179,
+      "cy": 584.0363,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "オーダーメイド",
+      "musicId": 184,
+      "musicName": "オーダーメイド",
+      "videoId": "PcGmVlGhgu4",
+      "level": 26,
+      "cx": 155.64398,
+      "cy": 620.8718,
+      "fill": "#73c000"
+    },
+    {
+      "id": "カトラリー",
+      "musicId": 117,
+      "musicName": "カトラリー",
+      "videoId": "FFjYRzQFMp0",
+      "level": 28,
+      "cx": 220.86668,
+      "cy": -47.285316,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "カナデトモスソラ",
+      "musicId": 103,
+      "musicName": "カナデトモスソラ",
+      "videoId": "Wfx8CCx9ya4",
+      "level": 26,
+      "cx": 987.0448,
+      "cy": 173.30667,
+      "fill": "#73c000"
+    },
+    {
+      "id": "ガランド",
+      "musicId": 152,
+      "musicName": "ガランド",
+      "videoId": "G8ZhydnGxCI",
+      "level": 28,
+      "cx": 908.9054,
+      "cy": -888.56915,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "キティ",
+      "musicId": 306,
+      "musicName": "キティ",
+      "videoId": "oFEdUxP3X_Y",
+      "level": 31,
+      "cx": -1244.0303,
+      "cy": -256.08096,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "グッバイ宣言",
+      "musicId": 200,
+      "musicName": "グッバイ宣言",
+      "videoId": "UAfpgbwK6oU",
+      "level": 30,
+      "cx": 689.5339,
+      "cy": -688.2596,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "サンドリヨン 10th Anniversary",
+      "musicId": 150,
+      "musicName": "サンドリヨン 10th Anniversary",
+      "videoId": "UrydgOjKwtk",
+      "level": 28,
+      "cx": 1162.2538,
+      "cy": -1159.2103,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ザムザ",
+      "musicId": 290,
+      "musicName": "ザムザ",
+      "videoId": "-QrABxjIo5A",
+      "level": 30,
+      "cx": 630.9276,
+      "cy": -1151.3322,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "シネマ",
+      "musicId": 96,
+      "musicName": "シネマ",
+      "videoId": "Zpd0T0zOno4",
+      "level": 29,
+      "cx": 203.16403,
+      "cy": -911.9838,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "シャルル",
+      "musicId": 19,
+      "musicName": "シャルル",
+      "videoId": "Rc25XzI4t3k",
+      "level": 27,
+      "cx": 1100.5754,
+      "cy": 202.8737,
+      "fill": "#73c000"
+    },
+    {
+      "id": "シャンティ",
+      "musicId": 314,
+      "musicName": "シャンティ",
+      "videoId": "2qsuEHCF7xw",
+      "level": 30,
+      "cx": 645.2145,
+      "cy": 558.4347,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "ジウダス",
+      "musicId": 165,
+      "musicName": "ジウダス",
+      "videoId": "C1-Gxsp68PM",
+      "level": 28,
+      "cx": -1474.6097,
+      "cy": -239.67126,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "ジャックポットサッドガール",
+      "musicId": 48,
+      "musicName": "ジャックポットサッドガール",
+      "videoId": "U3KakOMGWlg",
+      "level": 29,
+      "cx": -1641.1464,
+      "cy": 400.32922,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "ジャンキーナイトタウンオーケストラ",
+      "musicId": 40,
+      "musicName": "ジャンキーナイトタウンオーケストラ",
+      "videoId": "u7T2H1s3xpk",
+      "level": 31,
+      "cx": -1364.5869,
+      "cy": 710.48334,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "スターダストメドレー",
+      "musicId": 322,
+      "musicName": "スターダストメドレー",
+      "videoId": "LQ1zBU_gfdU",
+      "level": 30,
+      "cx": 971.7765,
+      "cy": -1489.878,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ステラ",
+      "musicId": 46,
+      "musicName": "ステラ",
+      "videoId": "6ZLUO8X2kMk",
+      "level": 30,
+      "cx": -47.32911,
+      "cy": 1015.94086,
+      "fill": "#73c000"
+    },
+    {
+      "id": "ストロボラスト",
+      "musicId": 279,
+      "musicName": "ストロボラスト",
+      "videoId": "h4Q1_EU8xN8",
+      "level": 28,
+      "cx": -1776.9703,
+      "cy": -176.10802,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "スノーマン",
+      "musicId": 297,
+      "musicName": "スノーマン",
+      "videoId": "xPitHaFx1H8",
+      "level": 29,
+      "cx": -653.137,
+      "cy": 865.7773,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "セカイ",
+      "musicId": 27,
+      "musicName": "セカイ",
+      "videoId": "OC71BWTPOW4",
+      "level": 27,
+      "cx": -1211.9369,
+      "cy": -929.81323,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "セツナトリップ",
+      "musicId": 313,
+      "musicName": "セツナトリップ",
+      "videoId": "SXg-TbvSzSw",
+      "level": 32,
+      "cx": 274.04547,
+      "cy": -1689.7976,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "脳漿炸裂ガール",
+      "musicId": 204,
+      "musicName": "脳漿炸裂ガール",
+      "videoId": "HV-SXu-_6sI",
+      "level": 32,
+      "cx": -47.32618,
+      "cy": -869.4114,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "タイムマシン",
+      "musicId": 77,
+      "musicName": "タイムマシン",
+      "videoId": "iiv9BIt4NWM",
+      "level": 26,
+      "cx": 414.7579,
+      "cy": 338.169,
+      "fill": "#73c000"
+    },
+    {
+      "id": "ダブルラリアット",
+      "musicId": 226,
+      "musicName": "ダブルラリアット",
+      "videoId": "6F1eqvwqFTA",
+      "level": 27,
+      "cx": 890.202,
+      "cy": 706.04254,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "ダーリンダンス",
+      "musicId": 183,
+      "musicName": "ダーリンダンス",
+      "videoId": "SMdNZR8cWj0",
+      "level": 30,
+      "cx": -1060.0063,
+      "cy": 857.42114,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "チュルリラ・チュルリラ・ダッダッダ!",
+      "musicId": 68,
+      "musicName": "チュルリラ・チュルリラ・ダッダッダ!",
+      "videoId": "ueDJUMp3M94",
+      "level": 31,
+      "cx": -1085.7324,
+      "cy": -1391.5189,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "天使の翼。",
+      "musicId": 269,
+      "musicName": "天使の翼。",
+      "videoId": "BYzXgO3RX8A",
+      "level": 28,
+      "cx": -1081.1368,
+      "cy": -1335.8992,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "チルドレンレコード",
+      "musicId": 114,
+      "musicName": "チルドレンレコード",
+      "videoId": "iHozUGBWZJQ",
+      "level": 32,
+      "cx": 391.83862,
+      "cy": -129.89062,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "チームメイト",
+      "musicId": 323,
+      "musicName": "チームメイト",
+      "videoId": "-b7bkrwiYoU",
+      "level": 30,
+      "cx": 1201.178,
+      "cy": -1084.38,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "テオ",
+      "musicId": 8,
+      "musicName": "テオ",
+      "videoId": "dkWvqqlN0ug",
+      "level": 32,
+      "cx": 664.0057,
+      "cy": 132.59056,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "テレキャスタービーボーイ",
+      "musicId": 125,
+      "musicName": "テレキャスタービーボーイ",
+      "videoId": "u5-nQvRz0Ko",
+      "level": 29,
+      "cx": 623.6391,
+      "cy": 591.6907,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "トキヲ・ファンカ",
+      "musicId": 126,
+      "musicName": "トキヲ・ファンカ",
+      "videoId": "Qn3hmMRunjE",
+      "level": 28,
+      "cx": 557.0415,
+      "cy": -785.7912,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "トラッシュ・アンド・トラッシュ!",
+      "musicId": 291,
+      "musicName": "トラッシュ・アンド・トラッシュ!",
+      "videoId": "3AfTTYA6n7E",
+      "level": 31,
+      "cx": 1000.4326,
+      "cy": -917.41754,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "トラフィック・ジャム",
+      "musicId": 104,
+      "musicName": "トラフィック・ジャム",
+      "videoId": "QUQCyrVLqn0",
+      "level": 28,
+      "cx": -1193.2966,
+      "cy": -1004.3009,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "トリコロージュ",
+      "musicId": 157,
+      "musicName": "トリコロージュ",
+      "videoId": "-4HIBr90LXk",
+      "level": 28,
+      "cx": -828.82855,
+      "cy": 466.39075,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "トリノコシティ",
+      "musicId": 230,
+      "musicName": "トリノコシティ",
+      "videoId": "NJOcWefbIwU",
+      "level": 27,
+      "cx": -452.75043,
+      "cy": 1097.2441,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "トンデモワンダーズ",
+      "musicId": 102,
+      "musicName": "トンデモワンダーズ",
+      "videoId": "gD6e3HmaRk4",
+      "level": 32,
+      "cx": -1587.578,
+      "cy": 503.58875,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "ドクター=ファンクビート",
+      "musicId": 14,
+      "musicName": "ドクター=ファンクビート",
+      "videoId": "o_SN-PystHA",
+      "level": 32,
+      "cx": 398.0782,
+      "cy": -832.5983,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "ドラマツルギー",
+      "musicId": 62,
+      "musicName": "ドラマツルギー",
+      "videoId": "mjklS8FFMVY",
+      "level": 28,
+      "cx": 615.1223,
+      "cy": -1210.742,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ドーナツホール",
+      "musicId": 175,
+      "musicName": "ドーナツホール",
+      "videoId": "0mCBtiaLJJs",
+      "level": 29,
+      "cx": -151.82672,
+      "cy": -110.658516,
+      "fill": "#73c000"
+    },
+    {
+      "id": "ニア",
+      "musicId": 30,
+      "musicName": "ニア",
+      "videoId": "-zNPxktCAtQ",
+      "level": 26,
+      "cx": 153.12854,
+      "cy": -470.5511,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "ニジイロストーリーズ",
+      "musicId": 60,
+      "musicName": "ニジイロストーリーズ",
+      "videoId": "doo3dGhsr4A",
+      "level": 29,
+      "cx": 1086.7433,
+      "cy": -1190.761,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ネクストネスト",
+      "musicId": 2,
+      "musicName": "ネクストネスト",
+      "videoId": "FKG8EWgpnTA",
+      "level": 29,
+      "cx": -1104.8672,
+      "cy": -496.9461,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "ノマド",
+      "musicId": 173,
+      "musicName": "ノマド",
+      "videoId": "5jS58-Y9rUU",
+      "level": 26,
+      "cx": -1847.2692,
+      "cy": 132.59708,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "ノンブレス・オブリージュ",
+      "musicId": 248,
+      "musicName": "ノンブレス・オブリージュ",
+      "videoId": "AUYIiuV1zjo",
+      "level": 30,
+      "cx": 1019.7093,
+      "cy": -1100.6144,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "威風堂々",
+      "musicId": 85,
+      "musicName": "威風堂々",
+      "videoId": "NTq85R0J5y4",
+      "level": 28,
+      "cx": 1062.3588,
+      "cy": -1091.0331,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ハッピーシンセサイザ",
+      "musicId": 10,
+      "musicName": "ハッピーシンセサイザ",
+      "videoId": "R6SODexlpDQ",
+      "level": 28,
+      "cx": 309.94922,
+      "cy": -47.285545,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "パラソルサイダー",
+      "musicId": 212,
+      "musicName": "パラソルサイダー",
+      "videoId": "73MyLUpq3og",
+      "level": 30,
+      "cx": 209.60045,
+      "cy": -479.7357,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "パレットには君がいっぱい",
+      "musicId": 280,
+      "musicName": "パレットには君がいっぱい",
+      "videoId": "vzwxTxrFXlw",
+      "level": 28,
+      "cx": 399.73456,
+      "cy": -1574.4253,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ヒバナ -Reloaded-",
+      "musicId": 9,
+      "musicName": "ヒバナ -Reloaded-",
+      "videoId": "FhZShZ3aUPc",
+      "level": 32,
+      "cx": -183.62996,
+      "cy": 1054.8767,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "ビターチョコデコレーション",
+      "musicId": 109,
+      "musicName": "ビターチョコデコレーション",
+      "videoId": "WAUCC5iAhDk",
+      "level": 31,
+      "cx": -1694.7146,
+      "cy": 338.19373,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "ビバハピ",
+      "musicId": 39,
+      "musicName": "ビバハピ",
+      "videoId": "SkVuUk9uRxM",
+      "level": 28,
+      "cx": -13.847983,
+      "cy": -207.43939,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "ピアノ×フォルテ×スキャンダル",
+      "musicId": 178,
+      "musicName": "ピアノ×フォルテ×スキャンダル",
+      "videoId": "oktCoX8iDJA",
+      "level": 30,
+      "cx": -1613.3141,
+      "cy": -331.7504,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "フィクサー",
+      "musicId": 146,
+      "musicName": "フィクサー",
+      "videoId": "wySmTGmIx7s",
+      "level": 31,
+      "cx": 339.58914,
+      "cy": 1696.6544,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "フレー",
+      "musicId": 245,
+      "musicName": "フレー",
+      "videoId": "ui8HsivjTM8",
+      "level": 30,
+      "cx": 665.2511,
+      "cy": -819.14294,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "フロイライン=ビブリォチカ",
+      "musicId": 210,
+      "musicName": "フロイライン=ビブリォチカ",
+      "videoId": "nI8TTEauBoY",
+      "level": 31,
+      "cx": 247.46762,
+      "cy": -526.8501,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "フロムトーキョー",
+      "musicId": 105,
+      "musicName": "フロムトーキョー",
+      "videoId": "MOyEWsf2Z2I",
+      "level": 28,
+      "cx": -764.29193,
+      "cy": 865.9712,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "フロート・プランナー",
+      "musicId": 247,
+      "musicName": "フロート・プランナー",
+      "videoId": "7GUJGp62I-0",
+      "level": 27,
+      "cx": -58.404213,
+      "cy": 1304.803,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "ブラック★ロックシューター",
+      "musicId": 191,
+      "musicName": "ブラック★ロックシューター",
+      "videoId": "qTgnVH6GSRg",
+      "level": 27,
+      "cx": -517.47186,
+      "cy": 1036.6398,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "ブリキノダンス",
+      "musicId": 16,
+      "musicName": "ブリキノダンス",
+      "videoId": "LQOG4tf40bY",
+      "level": 29,
+      "cx": -1646.2474,
+      "cy": -198.17581,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "ブレス・ユア・ブレス",
+      "musicId": 69,
+      "musicName": "ブレス・ユア・ブレス",
+      "videoId": "oqS3Lm-AueU",
+      "level": 28,
+      "cx": 52.93562,
+      "cy": 96.62946,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "ボッカデラベリタ",
+      "musicId": 83,
+      "musicName": "ボッカデラベリタ",
+      "videoId": "lrKIcKvvAb4",
+      "level": 28,
+      "cx": 95.720825,
+      "cy": 70.881485,
+      "fill": "#73c000"
+    },
+    {
+      "id": "マシュマリー",
+      "musicId": 129,
+      "musicName": "マシュマリー",
+      "videoId": "49KPRyo9jCM",
+      "level": 29,
+      "cx": -302.563,
+      "cy": 653.25684,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "炉心融解",
+      "musicId": 120,
+      "musicName": "炉心融解",
+      "videoId": "gmoEHiMETbw",
+      "level": 27,
+      "cx": -275.05005,
+      "cy": 205.3603,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "マシンガンポエムドール",
+      "musicId": 122,
+      "musicName": "マシンガンポエムドール",
+      "videoId": "-4-j5-76McU",
+      "level": 34,
+      "cx": -1383.887,
+      "cy": -368.26364,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "マトリョシカ",
+      "musicId": 174,
+      "musicName": "マトリョシカ",
+      "videoId": "bVLx2PzWX8E",
+      "level": 30,
+      "cx": -591.1365,
+      "cy": 1292.4335,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "ミライ",
+      "musicId": 147,
+      "musicName": "ミライ",
+      "videoId": "tt3wjMNpYek",
+      "level": 28,
+      "cx": -1039.981,
+      "cy": 655.63477,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "星屑ユートピア",
+      "musicId": 244,
+      "musicName": "星屑ユートピア",
+      "videoId": "6WCQbWYlRQk",
+      "level": 29,
+      "cx": -877.80884,
+      "cy": -1457.1918,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "ミルククラウン・オン・ソーネチカ",
+      "musicId": 76,
+      "musicName": "ミルククラウン・オン・ソーネチカ",
+      "videoId": "A_EW_yzFKK0",
+      "level": 30,
+      "cx": 830.57983,
+      "cy": -1230.4825,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "メタモリボン",
+      "musicId": 170,
+      "musicName": "メタモリボン",
+      "videoId": "nQHerJte0H0",
+      "level": 26,
+      "cx": 378.45764,
+      "cy": 464.2838,
+      "fill": "#73c000"
+    },
+    {
+      "id": "メリュー",
+      "musicId": 206,
+      "musicName": "メリュー",
+      "videoId": "NhuReZJ4uno",
+      "level": 26,
+      "cx": 443.56006,
+      "cy": -876.033,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "メルティランドナイトメア",
+      "musicId": 49,
+      "musicName": "メルティランドナイトメア",
+      "videoId": "My2v8T-0rGw",
+      "level": 26,
+      "cx": 260.5139,
+      "cy": 353.5543,
+      "fill": "#73c000"
+    },
+    {
+      "id": "モア!ジャンプ!モア!",
+      "musicId": 53,
+      "musicName": "モア!ジャンプ!モア!",
+      "videoId": "CunrPdl7joM",
+      "level": 31,
+      "cx": -758.80286,
+      "cy": 1109.0555,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "魔法みたいなミュージック!",
+      "musicId": 299,
+      "musicName": "魔法みたいなミュージック!",
+      "videoId": "uozytECyWlc",
+      "level": 30,
+      "cx": 529.857,
+      "cy": -1537.18,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "ラブカ?",
+      "musicId": 240,
+      "musicName": "ラブカ?",
+      "videoId": "t-ZQ4q8hBKg",
+      "level": 28,
+      "cx": -643.28094,
+      "cy": 280.56363,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "ルカルカ★ナイトフィーバー",
+      "musicId": 177,
+      "musicName": "ルカルカ★ナイトフィーバー",
+      "videoId": "z0GT-TX3ri4",
+      "level": 29,
+      "cx": 945.0397,
+      "cy": 474.87946,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "ローリンガール",
+      "musicId": 52,
+      "musicName": "ローリンガール",
+      "videoId": "and-llw6P4Y",
+      "level": 31,
+      "cx": 908.1563,
+      "cy": 473.08798,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "レイニースノードロップ",
+      "musicId": 271,
+      "musicName": "レイニースノードロップ",
+      "videoId": "p4RU-2bnpTo",
+      "level": 30,
+      "cx": -448.46246,
+      "cy": 642.9687,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "ロウワー",
+      "musicId": 136,
+      "musicName": "ロウワー",
+      "videoId": "8aeSzDfjWMk",
+      "level": 31,
+      "cx": -1409.8925,
+      "cy": -420.56503,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "ロキ",
+      "musicId": 7,
+      "musicName": "ロキ",
+      "videoId": "itfv8phw6ew",
+      "level": 28,
+      "cx": 922.65125,
+      "cy": 651.27875,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "ロストワンの号哭",
+      "musicId": 121,
+      "musicName": "ロストワンの号哭",
+      "videoId": "d9ulQq6S-3g",
+      "level": 32,
+      "cx": -1288.102,
+      "cy": -470.1271,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "ロミオとシンデレラ",
+      "musicId": 100,
+      "musicName": "ロミオとシンデレラ",
+      "videoId": "L5hFUraBjbc",
+      "level": 27,
+      "cx": 841.78546,
+      "cy": 708.6077,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "ロンリーユニバース",
+      "musicId": 249,
+      "musicName": "ロンリーユニバース",
+      "videoId": "nWRhCyD-7ZU",
+      "level": 27,
+      "cx": -116.66416,
+      "cy": 1264.836,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "ワールドワイドワンダー",
+      "musicId": 141,
+      "musicName": "ワールドワイドワンダー",
+      "videoId": "2SNiM4mRYbk",
+      "level": 28,
+      "cx": 706.20013,
+      "cy": 328.663,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "ワーワーワールド",
+      "musicId": 28,
+      "musicName": "ワーワーワールド",
+      "videoId": "9ZC3ocwjGfU",
+      "level": 28,
+      "cx": 389.3606,
+      "cy": 1281.554,
+      "fill": "#73c000"
+    },
+    {
+      "id": "ヴァンパイア",
+      "musicId": 201,
+      "musicName": "ヴァンパイア",
+      "videoId": "PXPYg4dI2YY",
+      "level": 29,
+      "cx": 73.20258,
+      "cy": 236.54642,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "下剋上",
+      "musicId": 320,
+      "musicName": "下剋上",
+      "videoId": "u1s13tSxkDE",
+      "level": 30,
+      "cx": 134.40988,
+      "cy": -258.8475,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "乙女解剖",
+      "musicId": 50,
+      "musicName": "乙女解剖",
+      "videoId": "7b212IqPPGg",
+      "level": 27,
+      "cx": -509.2039,
+      "cy": -231.61559,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "仮死化",
+      "musicId": 251,
+      "musicName": "仮死化",
+      "videoId": "7T7_ZiQJXjg",
+      "level": 28,
+      "cx": -977.7115,
+      "cy": 1066.7528,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "僕らまだアンダーグラウンド",
+      "musicId": 168,
+      "musicName": "僕らまだアンダーグラウンド",
+      "videoId": "OBHhp3AYbYo",
+      "level": 28,
+      "cx": -1734.27,
+      "cy": -171.92096,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "円尾坂の仕立屋",
+      "musicId": 310,
+      "musicName": "円尾坂の仕立屋",
+      "videoId": "PHm-yNokAas",
+      "level": 28,
+      "cx": 352.56985,
+      "cy": 844.49365,
+      "fill": "#73c000"
+    },
+    {
+      "id": "再生",
+      "musicId": 118,
+      "musicName": "再生",
+      "videoId": "8LpM1PR9GRA",
+      "level": 26,
+      "cx": 588.9483,
+      "cy": 367.3291,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "初音ミクの消失",
+      "musicId": 4,
+      "musicName": "初音ミクの消失",
+      "videoId": "jVy_3H3oFZw",
+      "level": 35,
+      "cx": 444.5908,
+      "cy": -801.95435,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "初音ミクの激唱",
+      "musicId": 87,
+      "musicName": "初音ミクの激唱",
+      "videoId": "THDW-Hr2XrA",
+      "level": 33,
+      "cx": 545.54706,
+      "cy": -1032.4178,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "千年の独奏歌",
+      "musicId": 179,
+      "musicName": "千年の独奏歌",
+      "videoId": "qq0Wf9w0T9E",
+      "level": 27,
+      "cx": -478.59918,
+      "cy": -718.42236,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "去り人達のワルツ",
+      "musicId": 144,
+      "musicName": "去り人達のワルツ",
+      "videoId": "2dTTnu8T160",
+      "level": 28,
+      "cx": 745.8793,
+      "cy": -47.282505,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "名も無き革命",
+      "musicId": 301,
+      "musicName": "名も無き革命",
+      "videoId": "C_2OGvJK8dU",
+      "level": 29,
+      "cx": -135.4938,
+      "cy": 256.08136,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "君の夜をくれ",
+      "musicId": 216,
+      "musicName": "君の夜をくれ",
+      "videoId": "ttAaiZ9TVTY",
+      "level": 26,
+      "cx": 287.12686,
+      "cy": -455.83908,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "命に嫌われている。",
+      "musicId": 33,
+      "musicName": "命に嫌われている。",
+      "videoId": "py0iujOwUJA",
+      "level": 29,
+      "cx": -2.2372222,
+      "cy": -303.34387,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "地球最後の告白を",
+      "musicId": 108,
+      "musicName": "地球最後の告白を",
+      "videoId": "i2--xbmaBtM",
+      "level": 31,
+      "cx": -192.02621,
+      "cy": 970.5119,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "夜に駆ける",
+      "musicId": 94,
+      "musicName": "夜に駆ける",
+      "videoId": "KwM5YOshLX4",
+      "level": 29,
+      "cx": 861.1607,
+      "cy": -1194.6119,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "夜もすがら君想ふ",
+      "musicId": 254,
+      "musicName": "夜もすがら君想ふ",
+      "videoId": "nrf4kuazYM4",
+      "level": 28,
+      "cx": -330.98596,
+      "cy": 541.5395,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "夜明けと蛍",
+      "musicId": 262,
+      "musicName": "夜明けと蛍",
+      "videoId": "6gZOP2ZKJdw",
+      "level": 26,
+      "cx": -332.2022,
+      "cy": 1432.9253,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "天ノ弱",
+      "musicId": 223,
+      "musicName": "天ノ弱",
+      "videoId": "dxcXNzHs2iM",
+      "level": 29,
+      "cx": 848.5126,
+      "cy": 810.3984,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "天使のクローバー",
+      "musicId": 88,
+      "musicName": "天使のクローバー",
+      "videoId": "rOYVigrf_Rw",
+      "level": 31,
+      "cx": -608.8458,
+      "cy": 678.87415,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "太陽系デスコ",
+      "musicId": 329,
+      "musicName": "太陽系デスコ",
+      "videoId": "OAROeQ70FIo",
+      "level": 28,
+      "cx": 1377.7301,
+      "cy": -1341.2498,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "妄想感傷代償連盟",
+      "musicId": 192,
+      "musicName": "妄想感傷代償連盟",
+      "videoId": "HLTAvn93aPw",
+      "level": 27,
+      "cx": -1253.6482,
+      "cy": -903.9295,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "霽れを待つ",
+      "musicId": 71,
+      "musicName": "霽れを待つ",
+      "videoId": "wlY2sJNdRQQ",
+      "level": 30,
+      "cx": -1834.0734,
+      "cy": -17.501637,
+      "fill": "#ff5584"
+    },
+    {
+      "id": "心予報",
+      "musicId": 167,
+      "musicName": "心予報",
+      "videoId": "TT5aSbih-HE",
+      "level": 28,
+      "cx": -175.27264,
+      "cy": 653.1011,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "心拍ペアリング",
+      "musicId": 330,
+      "musicName": "心拍ペアリング",
+      "videoId": "OBV5Qr9G6PA",
+      "level": 28,
+      "cx": 326.5663,
+      "cy": 453.71655,
+      "fill": "#73c000"
+    },
+    {
+      "id": "心拍数♯0822",
+      "musicId": 158,
+      "musicName": "心拍数♯0822",
+      "videoId": "BUmG_WEwHG4",
+      "level": 26,
+      "cx": 290.53873,
+      "cy": 1720.4792,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "恋愛裁判",
+      "musicId": 64,
+      "musicName": "恋愛裁判",
+      "videoId": "uUcJlfbGf7w",
+      "level": 27,
+      "cx": -182.42206,
+      "cy": 391.83884,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "悔やむと書いてミライ",
+      "musicId": 26,
+      "musicName": "悔やむと書いてミライ",
+      "videoId": "tifehvLDDO8",
+      "level": 30,
+      "cx": 330.45044,
+      "cy": -926.28046,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "悪ノ召使",
+      "musicId": 143,
+      "musicName": "悪ノ召使",
+      "videoId": "U_RO5JYpCGY",
+      "level": 27,
+      "cx": 575.5955,
+      "cy": -17.036777,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "悪ノ娘",
+      "musicId": 142,
+      "musicName": "悪ノ娘",
+      "videoId": "5Jp1PPGmKDA",
+      "level": 27,
+      "cx": 153.83385,
+      "cy": 1215.7751,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "悪食娘コンチータ",
+      "musicId": 308,
+      "musicName": "悪食娘コンチータ",
+      "videoId": "r6_0zjf8xdE",
+      "level": 29,
+      "cx": 460.15106,
+      "cy": -1162.7507,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "悪魔の踊り方",
+      "musicId": 127,
+      "musicName": "悪魔の踊り方",
+      "videoId": "GuY954m4TOk",
+      "level": 30,
+      "cx": 770.4328,
+      "cy": -1214.894,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "愛されなくても君がいる",
+      "musicId": 56,
+      "musicName": "愛されなくても君がいる",
+      "videoId": "g4owq0sa-mM",
+      "level": 27,
+      "cx": -1293.2426,
+      "cy": -1001.1562,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "愛して愛して愛して",
+      "musicId": 162,
+      "musicName": "愛して愛して愛して",
+      "videoId": "ZE9AgzQjLMc",
+      "level": 28,
+      "cx": 393.9329,
+      "cy": -252.8202,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "携帯恋話",
+      "musicId": 43,
+      "musicName": "携帯恋話",
+      "videoId": "ev6YkSGBj-o",
+      "level": 29,
+      "cx": 285.88007,
+      "cy": -759.6727,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "星空のメロディー",
+      "musicId": 203,
+      "musicName": "星空のメロディー",
+      "videoId": "IAqxd8ypMf0",
+      "level": 27,
+      "cx": 662.5913,
+      "cy": 393.15088,
+      "fill": "#ff8805"
+    },
+    {
+      "id": "星空オーケストラ",
+      "musicId": 263,
+      "musicName": "星空オーケストラ",
+      "videoId": "2_ShM03H1b8",
+      "level": 28,
+      "cx": 1397.5885,
+      "cy": -1181.0134,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "月光",
+      "musicId": 194,
+      "musicName": "月光",
+      "videoId": "9Pdpu4XJ8cU",
+      "level": 29,
+      "cx": 405.79916,
+      "cy": 552.6768,
+      "fill": "#73c000"
+    },
+    {
+      "id": "気まぐれメルシィ",
+      "musicId": 258,
+      "musicName": "気まぐれメルシィ",
+      "videoId": "_SoYLR6t-KM",
+      "level": 30,
+      "cx": -845.20026,
+      "cy": 868.3759,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "泡沫未来",
+      "musicId": 101,
+      "musicName": "泡沫未来",
+      "videoId": "7wj_1r5mPE0",
+      "level": 29,
+      "cx": 804.75214,
+      "cy": -1121.049,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "泥中に咲く",
+      "musicId": 236,
+      "musicName": "泥中に咲く",
+      "videoId": "N5u2oxOmwN8",
+      "level": 26,
+      "cx": -1000.116,
+      "cy": -1465.7136,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "流星のパルス",
+      "musicId": 116,
+      "musicName": "流星のパルス",
+      "videoId": "XDgAPJ2oisM",
+      "level": 30,
+      "cx": 121.385376,
+      "cy": 177.68556,
+      "fill": "#73c000"
+    },
+    {
+      "id": "深海少女",
+      "musicId": 298,
+      "musicName": "深海少女",
+      "videoId": "etLgSutOHu8",
+      "level": 27,
+      "cx": 1045.0364,
+      "cy": -1048.3326,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "演劇",
+      "musicId": 331,
+      "musicName": "演劇",
+      "videoId": "NGJXfe_c54U",
+      "level": 28,
+      "cx": 176.55675,
+      "cy": 343.53958,
+      "fill": "#73c000"
+    },
+    {
+      "id": "独りんぼエンヴィー",
+      "musicId": 59,
+      "musicName": "独りんぼエンヴィー",
+      "videoId": "UmXQG-mJMPs",
+      "level": 26,
+      "cx": 130.48683,
+      "cy": -70.05824,
+      "fill": "#73c000"
+    },
+    {
+      "id": "相生",
+      "musicId": 300,
+      "musicName": "相生",
+      "videoId": "9n6WPEg1dqk",
+      "level": 27,
+      "cx": -977.59784,
+      "cy": 984.75946,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "眠らせ姫からの贈り物",
+      "musicId": 309,
+      "musicName": "眠らせ姫からの贈り物",
+      "videoId": "T4GKalN2IrQ",
+      "level": 27,
+      "cx": 196.55522,
+      "cy": -554.2101,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "砂の惑星",
+      "musicId": 176,
+      "musicName": "砂の惑星",
+      "videoId": "fYHaGW0eHwQ",
+      "level": 27,
+      "cx": -1192.2692,
+      "cy": 1013.82153,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "神のまにまに",
+      "musicId": 196,
+      "musicName": "神のまにまに",
+      "videoId": "gg65-Yz-2mI",
+      "level": 29,
+      "cx": -173.23056,
+      "cy": 17.024994,
+      "fill": "#73c000"
+    },
+    {
+      "id": "私は、私達は",
+      "musicId": 274,
+      "musicName": "私は、私達は",
+      "videoId": "Dy5acjUKnpc",
+      "level": 27,
+      "cx": 148.6238,
+      "cy": 1552.7395,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "箱庭のコラル",
+      "musicId": 317,
+      "musicName": "箱庭のコラル",
+      "videoId": "96lqTcMxAY0",
+      "level": 27,
+      "cx": 317.34622,
+      "cy": 338.1506,
+      "fill": "#73c000"
+    },
+    {
+      "id": "絶え間なく藍色",
+      "musicId": 303,
+      "musicName": "絶え間なく藍色",
+      "videoId": "H2Kc9-Cp2zA",
+      "level": 28,
+      "cx": -1104.5282,
+      "cy": 846.24664,
+      "fill": "#00c4ff"
+    },
+    {
+      "id": "群青讃歌",
+      "musicId": 119,
+      "musicName": "群青讃歌",
+      "videoId": "kXVIn_AzQ8M",
+      "level": 27,
+      "cx": 365.8482,
+      "cy": 518.107,
+      "fill": "#73c000"
+    },
+    {
+      "id": "脱法ロック",
+      "musicId": 32,
+      "musicName": "脱法ロック",
+      "videoId": "Z41kj0hyY2o",
+      "level": 31,
+      "cx": -2.717064,
+      "cy": 144.25151,
+      "fill": "#73c000"
+    },
+    {
+      "id": "自傷無色",
+      "musicId": 21,
+      "musicName": "自傷無色",
+      "videoId": "rzPckBCcJWA",
+      "level": 26,
+      "cx": 738.04285,
+      "cy": 1506.3108,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "花を唄う",
+      "musicId": 93,
+      "musicName": "花を唄う",
+      "videoId": "gMBRNq2k1d0",
+      "level": 30,
+      "cx": 1182.0355,
+      "cy": -1208.1335,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "虚ろを扇ぐ",
+      "musicId": 221,
+      "musicName": "虚ろを扇ぐ",
+      "videoId": "dnacoGvwo2c",
+      "level": 27,
+      "cx": 646.85986,
+      "cy": -766.23785,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "街",
+      "musicId": 208,
+      "musicName": "街",
+      "videoId": "Oes8Z0iLVnA",
+      "level": 27,
+      "cx": 939.96826,
+      "cy": 725.0022,
+      "fill": "#d3b3b0"
+    },
+    {
+      "id": "踊れオーケストラ",
+      "musicId": 211,
+      "musicName": "踊れオーケストラ",
+      "videoId": "cb2LMUPVOvU",
+      "level": 28,
+      "cx": -65.45379,
+      "cy": 85.695595,
+      "fill": "#73c000"
+    },
+    {
+      "id": "阿吽のビーツ",
+      "musicId": 198,
+      "musicName": "阿吽のビーツ",
+      "videoId": "-UtZMs1Gw9I",
+      "level": 28,
+      "cx": 1359.8999,
+      "cy": -1250.8728,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "限りなく灰色へ",
+      "musicId": 81,
+      "musicName": "限りなく灰色へ",
+      "videoId": "X7l_MX5K-b4",
+      "level": 30,
+      "cx": 1299.473,
+      "cy": -1494.0406,
+      "fill": "#df89ff"
+    },
+    {
+      "id": "陽だまりのセツナ",
+      "musicId": 250,
+      "musicName": "陽だまりのセツナ",
+      "videoId": "PhgPEzFUvUA",
+      "level": 28,
+      "cx": -989.0388,
+      "cy": -1409.0597,
+      "fill": "#c0c0c0"
+    },
+    {
+      "id": "雨とペトラ",
+      "musicId": 172,
+      "musicName": "雨とペトラ",
+      "videoId": "JOyEA4sPDQw",
+      "level": 29,
+      "cx": 160.96645,
+      "cy": -359.75803,
+      "fill": "#4c463e"
+    },
+    {
+      "id": "青く駆けろ!",
+      "musicId": 45,
+      "musicName": "青く駆けろ!",
+      "videoId": "pNIOyP89z3g",
+      "level": 27,
+      "cx": -123.141815,
+      "cy": 790.6148,
+      "fill": "#00bd94"
+    },
+    {
+      "id": "青色絵具",
+      "musicId": 186,
+      "musicName": "青色絵具",
+      "videoId": "Qq2KX1yak5I",
+      "level": 27,
+      "cx": -134.8545,
+      "cy": -331.51675,
+      "fill": "#ff8805"
+    }
+  ],
+  "links": [
+    {
+      "source": "*ハロー、プラネット。",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9932638
+    },
+    {
+      "source": "*ハロー、プラネット。",
+      "target": "夜咄ディセイブ",
+      "value": 0.9932168
+    },
+    {
+      "source": "1925",
+      "target": "ヴィラン",
+      "value": 0.99347395
+    },
+    {
+      "source": "1925",
+      "target": "ももいろの鍵",
+      "value": 0.9890206
+    },
+    {
+      "source": "39",
+      "target": "六兆年と一夜物語",
+      "value": 0.9949636
+    },
+    {
+      "source": "39",
+      "target": "ミラクルペイント",
+      "value": 0.99043417
+    },
+    {
+      "source": "39みゅーじっく!",
+      "target": "Be The MUSIC!",
+      "value": 0.9951528
+    },
+    {
+      "source": "39みゅーじっく!",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9924065
+    },
+    {
+      "source": "88☆彡",
+      "target": "人生",
+      "value": 0.9960706
+    },
+    {
+      "source": "88☆彡",
+      "target": "夜咄ディセイブ",
+      "value": 0.99561036
+    },
+    {
+      "source": "Afterglow",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.99202955
+    },
+    {
+      "source": "Afterglow",
+      "target": "夜咄ディセイブ",
+      "value": 0.990276
+    },
+    {
+      "source": "Awake Now",
+      "target": "パラジクロロベンゼン",
+      "value": 0.9948835
+    },
+    {
+      "source": "Awake Now",
+      "target": "私の恋はヘルファイア",
+      "value": 0.99427533
+    },
+    {
+      "source": "Bad ∞ End ∞ Night",
+      "target": "フェレス",
+      "value": 0.98687494
+    },
+    {
+      "source": "Bad ∞ End ∞ Night",
+      "target": "それでもいいんだよ",
+      "value": 0.9813405
+    },
+    {
+      "source": "Be The MUSIC!",
+      "target": "ロストエンファウンド",
+      "value": 0.9925115
+    },
+    {
+      "source": "Be The MUSIC!",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9920057
+    },
+    {
+      "source": "Beat Eater",
+      "target": "ヴィラン",
+      "value": 0.9947117
+    },
+    {
+      "source": "Beat Eater",
+      "target": "ももいろの鍵",
+      "value": 0.9937905
+    },
+    {
+      "source": "Blessing",
+      "target": "What's up? Pop!",
+      "value": 0.9964795
+    },
+    {
+      "source": "Blessing",
+      "target": "ひつじがいっぴき",
+      "value": 0.9923488
+    },
+    {
+      "source": "Blue Star",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.99631
+    },
+    {
+      "source": "Blue Star",
+      "target": "ワールドイズマイン",
+      "value": 0.99499685
+    },
+    {
+      "source": "Booo!",
+      "target": "アンノウン・マザーグース",
+      "value": 0.98978496
+    },
+    {
+      "source": "Booo!",
+      "target": "アイロニ",
+      "value": 0.9884185
+    },
+    {
+      "source": "Brand New Day",
+      "target": "アイロニ",
+      "value": 0.992578
+    },
+    {
+      "source": "Brand New Day",
+      "target": "幽霊東京",
+      "value": 0.9921026
+    },
+    {
+      "source": "Calc.",
+      "target": "ロストエンファウンド",
+      "value": 0.99180984
+    },
+    {
+      "source": "Calc.",
+      "target": "Be The MUSIC!",
+      "value": 0.9915
+    },
+    {
+      "source": "Change me",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9929118
+    },
+    {
+      "source": "Change me",
+      "target": "What's up? Pop!",
+      "value": 0.9914781
+    },
+    {
+      "source": "Color of Drops",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9945959
+    },
+    {
+      "source": "Color of Drops",
+      "target": "夜咄ディセイブ",
+      "value": 0.9940935
+    },
+    {
+      "source": "Copycat",
+      "target": "Be The MUSIC!",
+      "value": 0.9933707
+    },
+    {
+      "source": "Copycat",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.99317116
+    },
+    {
+      "source": "DAYBREAK FRONTLINE",
+      "target": "Don't Fight The Music",
+      "value": 0.99183106
+    },
+    {
+      "source": "DAYBREAK FRONTLINE",
+      "target": "ヤミナベ!!!!",
+      "value": 0.99176204
+    },
+    {
+      "source": "DREAM PLACE",
+      "target": "快晴",
+      "value": 0.9955387
+    },
+    {
+      "source": "DREAM PLACE",
+      "target": "アイロニ",
+      "value": 0.99226576
+    },
+    {
+      "source": "Don't Fight The Music",
+      "target": "What's up? Pop!",
+      "value": 0.9873834
+    },
+    {
+      "source": "Don't Fight The Music",
+      "target": "腐れ外道とチョコレゐト",
+      "value": 0.98664004
+    },
+    {
+      "source": "ECHO",
+      "target": "アンハッピーリフレイン",
+      "value": 0.9965881
+    },
+    {
+      "source": "ECHO",
+      "target": "メルト",
+      "value": 0.9959226
+    },
+    {
+      "source": "FREELY TOMORROW",
+      "target": "RAD DOGS",
+      "value": 0.99556464
+    },
+    {
+      "source": "FREELY TOMORROW",
+      "target": "ナンセンス文学",
+      "value": 0.99531686
+    },
+    {
+      "source": "Flyer!",
+      "target": "ロストエンファウンド",
+      "value": 0.9919163
+    },
+    {
+      "source": "Flyer!",
+      "target": "Be The MUSIC!",
+      "value": 0.9915494
+    },
+    {
+      "source": "Flyway",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.9940387
+    },
+    {
+      "source": "Flyway",
+      "target": "コスモスパイス",
+      "value": 0.99125004
+    },
+    {
+      "source": "Forward",
+      "target": "ヤミナベ!!!!",
+      "value": 0.98402375
+    },
+    {
+      "source": "Forward",
+      "target": "徳川カップヌードル禁止令",
+      "value": 0.9820445
+    },
+    {
+      "source": "Gimme×Gimme",
+      "target": "What's up? Pop!",
+      "value": 0.99190503
+    },
+    {
+      "source": "Gimme×Gimme",
+      "target": "エゴイスト",
+      "value": 0.98977226
+    },
+    {
+      "source": "Glory Steady Go!",
+      "target": "カンタレラ",
+      "value": 0.99684876
+    },
+    {
+      "source": "Glory Steady Go!",
+      "target": "アンハッピーリフレイン",
+      "value": 0.9957383
+    },
+    {
+      "source": "Goodbye",
+      "target": "右肩の蝶",
+      "value": 0.98543674
+    },
+    {
+      "source": "Goodbye",
+      "target": "フォニイ",
+      "value": 0.984918
+    },
+    {
+      "source": "Hand in Hand",
+      "target": "Be The MUSIC!",
+      "value": 0.99673545
+    },
+    {
+      "source": "Hand in Hand",
+      "target": "ロストエンファウンド",
+      "value": 0.9967284
+    },
+    {
+      "source": "Happy Halloween",
+      "target": "命ばっかり",
+      "value": 0.9808667
+    },
+    {
+      "source": "Happy Halloween",
+      "target": "カゲロウデイズ",
+      "value": 0.9792012
+    },
+    {
+      "source": "Hello, Worker",
+      "target": "ツギハギスタッカート",
+      "value": 0.9958845
+    },
+    {
+      "source": "Hello, Worker",
+      "target": "Just Be Friends",
+      "value": 0.99586284
+    },
+    {
+      "source": "Hello,world!",
+      "target": "劣等上等",
+      "value": 0.9946469
+    },
+    {
+      "source": "Hello,world!",
+      "target": "Be The MUSIC!",
+      "value": 0.9936596
+    },
+    {
+      "source": "Highlight",
+      "target": "腐れ外道とチョコレゐト",
+      "value": 0.9920887
+    },
+    {
+      "source": "Highlight",
+      "target": "カンタレラ",
+      "value": 0.9911663
+    },
+    {
+      "source": "Iなんです",
+      "target": "ショウタイム・ルーラー",
+      "value": 0.9959666
+    },
+    {
+      "source": "Iなんです",
+      "target": "Sharing The World",
+      "value": 0.99535173
+    },
+    {
+      "source": "Journey",
+      "target": "パラジクロロベンゼン",
+      "value": 0.98991066
+    },
+    {
+      "source": "Journey",
+      "target": "ラストスコア",
+      "value": 0.9880838
+    },
+    {
+      "source": "Just Be Friends",
+      "target": "裏表ラバーズ",
+      "value": 0.99237
+    },
+    {
+      "source": "Just Be Friends",
+      "target": "from Y to Y",
+      "value": 0.9922477
+    },
+    {
+      "source": "KING",
+      "target": "フォニイ",
+      "value": 0.9899672
+    },
+    {
+      "source": "KING",
+      "target": "グリーンライツ・セレナーデ",
+      "value": 0.9882663
+    },
+    {
+      "source": "Leia - Remind",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9931301
+    },
+    {
+      "source": "Leia - Remind",
+      "target": "RAD DOGS",
+      "value": 0.9922675
+    },
+    {
+      "source": "METEOR",
+      "target": "少女レイ",
+      "value": 0.99563926
+    },
+    {
+      "source": "METEOR",
+      "target": "スイートマジック",
+      "value": 0.99523914
+    },
+    {
+      "source": "Miku",
+      "target": "右肩の蝶",
+      "value": 0.9948978
+    },
+    {
+      "source": "Miku",
+      "target": "スイートマジック",
+      "value": 0.9939119
+    },
+    {
+      "source": "Mr. Showtime",
+      "target": "拝啓ドッペルゲンガー",
+      "value": 0.99305016
+    },
+    {
+      "source": "Mr. Showtime",
+      "target": "Don't Fight The Music",
+      "value": 0.99285233
+    },
+    {
+      "source": "Nostalogic",
+      "target": "右肩の蝶",
+      "value": 0.99373126
+    },
+    {
+      "source": "Nostalogic",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.99258214
+    },
+    {
+      "source": "ODDS&ENDS",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9938784
+    },
+    {
+      "source": "ODDS&ENDS",
+      "target": "アイスドロップ",
+      "value": 0.9935194
+    },
+    {
+      "source": "ONESELF",
+      "target": "拝啓ドッペルゲンガー",
+      "value": 0.9931544
+    },
+    {
+      "source": "ONESELF",
+      "target": "ワンスアポンアドリーム",
+      "value": 0.9914293
+    },
+    {
+      "source": "PaIII.SENSATION",
+      "target": "腐れ外道とチョコレゐト",
+      "value": 0.94093335
+    },
+    {
+      "source": "PaIII.SENSATION",
+      "target": "それでもいいんだよ",
+      "value": 0.93938285
+    },
+    {
+      "source": "Peaky Peaky",
+      "target": "What's up? Pop!",
+      "value": 0.9939268
+    },
+    {
+      "source": "Peaky Peaky",
+      "target": "ゴーストルール",
+      "value": 0.992427
+    },
+    {
+      "source": "Q",
+      "target": "君色マリンスノウ",
+      "value": 0.9908951
+    },
+    {
+      "source": "Q",
+      "target": "踊",
+      "value": 0.9871899
+    },
+    {
+      "source": "RAD DOGS",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.99321204
+    },
+    {
+      "source": "RAD DOGS",
+      "target": "ぼうけんのしょがきえました!",
+      "value": 0.9910241
+    },
+    {
+      "source": "Ready Steady",
+      "target": "パラジクロロベンゼン",
+      "value": 0.99559766
+    },
+    {
+      "source": "Ready Steady",
+      "target": "ももいろの鍵",
+      "value": 0.99488276
+    },
+    {
+      "source": "STAGE OF SEKAI",
+      "target": "未完成讃歌",
+      "value": 0.9937581
+    },
+    {
+      "source": "STAGE OF SEKAI",
+      "target": "悪徳のジャッジメント",
+      "value": 0.993455
+    },
+    {
+      "source": "Sharing The World",
+      "target": "フラジール",
+      "value": 0.9947345
+    },
+    {
+      "source": "Sharing The World",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9928825
+    },
+    {
+      "source": "SnowMix♪",
+      "target": "What's up? Pop!",
+      "value": 0.9946612
+    },
+    {
+      "source": "SnowMix♪",
+      "target": "ベノム",
+      "value": 0.9946016
+    },
+    {
+      "source": "Tell Your World",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9933627
+    },
+    {
+      "source": "Tell Your World",
+      "target": "エゴイスト",
+      "value": 0.9919727
+    },
+    {
+      "source": "UNDERWATER",
+      "target": "ワールドイズマイン",
+      "value": 0.9945493
+    },
+    {
+      "source": "UNDERWATER",
+      "target": "スイートマジック",
+      "value": 0.9933266
+    },
+    {
+      "source": "Vampire's ∞ pathoS",
+      "target": "夜咄ディセイブ",
+      "value": 0.99529064
+    },
+    {
+      "source": "Vampire's ∞ pathoS",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9936274
+    },
+    {
+      "source": "Voices",
+      "target": "スイートマジック",
+      "value": 0.99166566
+    },
+    {
+      "source": "Voices",
+      "target": "Be The MUSIC!",
+      "value": 0.99100834
+    },
+    {
+      "source": "What's up? Pop!",
+      "target": "ゴーストルール",
+      "value": 0.9924174
+    },
+    {
+      "source": "What's up? Pop!",
+      "target": "ダンスロボットダンス",
+      "value": 0.9907609
+    },
+    {
+      "source": "Where shall we go?",
+      "target": "スイートマジック",
+      "value": 0.9957035
+    },
+    {
+      "source": "Where shall we go?",
+      "target": "サラマンダー",
+      "value": 0.99570006
+    },
+    {
+      "source": "Wonder Style",
+      "target": "ポジティブ☆ダンスタイム",
+      "value": 0.9960796
+    },
+    {
+      "source": "Wonder Style",
+      "target": "アンハッピーリフレイン",
+      "value": 0.9958266
+    },
+    {
+      "source": "YY",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.99643165
+    },
+    {
+      "source": "YY",
+      "target": "コスモスパイス",
+      "value": 0.99337626
+    },
+    {
+      "source": "alive",
+      "target": "RAD DOGS",
+      "value": 0.9967217
+    },
+    {
+      "source": "alive",
+      "target": "どりーみんチュチュ",
+      "value": 0.99332774
+    },
+    {
+      "source": "drop pop candy",
+      "target": "アンハッピーリフレイン",
+      "value": 0.99485284
+    },
+    {
+      "source": "drop pop candy",
+      "target": "初音天地開闢神話",
+      "value": 0.9948473
+    },
+    {
+      "source": "from Y to Y",
+      "target": "ハロ/ハワユ",
+      "value": 0.99315715
+    },
+    {
+      "source": "from Y to Y",
+      "target": "Sharing The World",
+      "value": 0.9926953
+    },
+    {
+      "source": "glow",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.99460804
+    },
+    {
+      "source": "glow",
+      "target": "Leia - Remind",
+      "value": 0.9934863
+    },
+    {
+      "source": "magic number",
+      "target": "RAD DOGS",
+      "value": 0.9953544
+    },
+    {
+      "source": "magic number",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9924219
+    },
+    {
+      "source": "needLe",
+      "target": "てらてら",
+      "value": 0.99721503
+    },
+    {
+      "source": "needLe",
+      "target": "右肩の蝶",
+      "value": 0.995934
+    },
+    {
+      "source": "on the rocks",
+      "target": "ヴィラン",
+      "value": 0.9926701
+    },
+    {
+      "source": "on the rocks",
+      "target": "お気に召すまま",
+      "value": 0.9903889
+    },
+    {
+      "source": "p.h.",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.9938515
+    },
+    {
+      "source": "p.h.",
+      "target": "千本桜",
+      "value": 0.99182326
+    },
+    {
+      "source": "potatoになっていく",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.9933956
+    },
+    {
+      "source": "potatoになっていく",
+      "target": "千本桜",
+      "value": 0.9898245
+    },
+    {
+      "source": "ray",
+      "target": "初音天地開闢神話",
+      "value": 0.9967076
+    },
+    {
+      "source": "ray",
+      "target": "アンハッピーリフレイン",
+      "value": 0.9962384
+    },
+    {
+      "source": "the EmpErroR",
+      "target": "スイートマジック",
+      "value": 0.99102235
+    },
+    {
+      "source": "the EmpErroR",
+      "target": "右肩の蝶",
+      "value": 0.9910051
+    },
+    {
+      "source": "the WALL",
+      "target": "未完成讃歌",
+      "value": 0.99535793
+    },
+    {
+      "source": "the WALL",
+      "target": "嗚呼、素晴らしきニャン生",
+      "value": 0.9947062
+    },
+    {
+      "source": "ÅMARA(大未来電脳)",
+      "target": "YY",
+      "value": 0.99055505
+    },
+    {
+      "source": "ÅMARA(大未来電脳)",
+      "target": "帝国少女",
+      "value": 0.99039954
+    },
+    {
+      "source": "「1」",
+      "target": "ココロ",
+      "value": 0.99327075
+    },
+    {
+      "source": "「1」",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9930923
+    },
+    {
+      "source": "あったかいと",
+      "target": "エンドマークに希望と涙を添えて",
+      "value": 0.9889991
+    },
+    {
+      "source": "あったかいと",
+      "target": "未完成讃歌",
+      "value": 0.9859259
+    },
+    {
+      "source": "いかないで",
+      "target": "右肩の蝶",
+      "value": 0.99379724
+    },
+    {
+      "source": "いかないで",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9927155
+    },
+    {
+      "source": "いちにのさんで",
+      "target": "アイロニ",
+      "value": 0.9948029
+    },
+    {
+      "source": "いちにのさんで",
+      "target": "快晴",
+      "value": 0.992004
+    },
+    {
+      "source": "いーあるふぁんくらぶ",
+      "target": "ココロ",
+      "value": 0.9919274
+    },
+    {
+      "source": "いーあるふぁんくらぶ",
+      "target": "39みゅーじっく!",
+      "value": 0.9919153
+    },
+    {
+      "source": "うっせぇわ",
+      "target": "RAD DOGS",
+      "value": 0.99265397
+    },
+    {
+      "source": "うっせぇわ",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9915943
+    },
+    {
+      "source": "おこちゃま戦争",
+      "target": "What's up? Pop!",
+      "value": 0.99633676
+    },
+    {
+      "source": "おこちゃま戦争",
+      "target": "リモコン",
+      "value": 0.995812
+    },
+    {
+      "source": "お気に召すまま",
+      "target": "六兆年と一夜物語",
+      "value": 0.9904914
+    },
+    {
+      "source": "お気に召すまま",
+      "target": "快晴",
+      "value": 0.98936355
+    },
+    {
+      "source": "からくりピエロ",
+      "target": "人生",
+      "value": 0.9942461
+    },
+    {
+      "source": "からくりピエロ",
+      "target": "ロストエンファウンド",
+      "value": 0.9941828
+    },
+    {
+      "source": "きゅうくらりん",
+      "target": "ハロ/ハワユ",
+      "value": 0.9958268
+    },
+    {
+      "source": "きゅうくらりん",
+      "target": "from Y to Y",
+      "value": 0.9941505
+    },
+    {
+      "source": "こちら、幸福安心委員会です。",
+      "target": "RAD DOGS",
+      "value": 0.99703336
+    },
+    {
+      "source": "こちら、幸福安心委員会です。",
+      "target": "スイートマジック",
+      "value": 0.99658227
+    },
+    {
+      "source": "しっくおぶはうす!",
+      "target": "夜咄ディセイブ",
+      "value": 0.98977983
+    },
+    {
+      "source": "しっくおぶはうす!",
+      "target": "glow",
+      "value": 0.98977
+    },
+    {
+      "source": "そうだった!!",
+      "target": "Be The MUSIC!",
+      "value": 0.99642515
+    },
+    {
+      "source": "そうだった!!",
+      "target": "スイートマジック",
+      "value": 0.9943501
+    },
+    {
+      "source": "それがあなたの幸せとしても",
+      "target": "RAD DOGS",
+      "value": 0.99294585
+    },
+    {
+      "source": "それがあなたの幸せとしても",
+      "target": "少女レイ",
+      "value": 0.9923883
+    },
+    {
+      "source": "それでもいいんだよ",
+      "target": "フェレス",
+      "value": 0.9890975
+    },
+    {
+      "source": "それでもいいんだよ",
+      "target": "ミラクルペイント",
+      "value": 0.9859516
+    },
+    {
+      "source": "だれかの心臓になれたなら",
+      "target": "RAD DOGS",
+      "value": 0.99692684
+    },
+    {
+      "source": "だれかの心臓になれたなら",
+      "target": "人生",
+      "value": 0.9953994
+    },
+    {
+      "source": "てらてら",
+      "target": "Hello,world!",
+      "value": 0.9931868
+    },
+    {
+      "source": "てらてら",
+      "target": "夜咄ディセイブ",
+      "value": 0.9929109
+    },
+    {
+      "source": "とても痛い痛がりたい",
+      "target": "ラストスコア",
+      "value": 0.9896211
+    },
+    {
+      "source": "とても痛い痛がりたい",
+      "target": "私の恋はヘルファイア",
+      "value": 0.9861222
+    },
+    {
+      "source": "とても素敵な六月でした",
+      "target": "イフ",
+      "value": 0.99503815
+    },
+    {
+      "source": "とても素敵な六月でした",
+      "target": "カゲロウデイズ",
+      "value": 0.9947982
+    },
+    {
+      "source": "どりーみんチュチュ",
+      "target": "RAD DOGS",
+      "value": 0.9950037
+    },
+    {
+      "source": "どりーみんチュチュ",
+      "target": "ぼうけんのしょがきえました!",
+      "value": 0.9937907
+    },
+    {
+      "source": "どんな結末がお望みだい?",
+      "target": "Leia - Remind",
+      "value": 0.9944952
+    },
+    {
+      "source": "どんな結末がお望みだい?",
+      "target": "RAD DOGS",
+      "value": 0.9940477
+    },
+    {
+      "source": "にっこり^^調査隊のテーマ",
+      "target": "右肩の蝶",
+      "value": 0.9938774
+    },
+    {
+      "source": "にっこり^^調査隊のテーマ",
+      "target": "ワールズエンド・ダンスホール",
+      "value": 0.9911872
+    },
+    {
+      "source": "ひつじがいっぴき",
+      "target": "What's up? Pop!",
+      "value": 0.99451953
+    },
+    {
+      "source": "ひつじがいっぴき",
+      "target": "フューチャー・イヴ",
+      "value": 0.9922837
+    },
+    {
+      "source": "ぼうけんのしょがきえました!",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.994752
+    },
+    {
+      "source": "ぼうけんのしょがきえました!",
+      "target": "スイートマジック",
+      "value": 0.9908776
+    },
+    {
+      "source": "ぼくらの16bit戦争",
+      "target": "What's up? Pop!",
+      "value": 0.9938968
+    },
+    {
+      "source": "ぼくらの16bit戦争",
+      "target": "千本桜",
+      "value": 0.9938493
+    },
+    {
+      "source": "みくみくにしてあげる♪【してやんよ】",
+      "target": "ももいろの鍵",
+      "value": 0.9941168
+    },
+    {
+      "source": "みくみくにしてあげる♪【してやんよ】",
+      "target": "ヴィラン",
+      "value": 0.9937214
+    },
+    {
+      "source": "ももいろの鍵",
+      "target": "ヴィラン",
+      "value": 0.9965801
+    },
+    {
+      "source": "ももいろの鍵",
+      "target": "1925",
+      "value": 0.9938895
+    },
+    {
+      "source": "アイスドロップ",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9934585
+    },
+    {
+      "source": "アイスドロップ",
+      "target": "Flyer!",
+      "value": 0.99326336
+    },
+    {
+      "source": "アイディスマイル",
+      "target": "エンドマークに希望と涙を添えて",
+      "value": 0.9967643
+    },
+    {
+      "source": "アイディスマイル",
+      "target": "Miku",
+      "value": 0.99653786
+    },
+    {
+      "source": "アイデンティティ",
+      "target": "39",
+      "value": 0.99153775
+    },
+    {
+      "source": "アイデンティティ",
+      "target": "六兆年と一夜物語",
+      "value": 0.9913701
+    },
+    {
+      "source": "アイドル新鋭隊",
+      "target": "Iなんです",
+      "value": 0.9958869
+    },
+    {
+      "source": "アイドル新鋭隊",
+      "target": "ツギハギスタッカート",
+      "value": 0.99549687
+    },
+    {
+      "source": "アイノマテリアル",
+      "target": "スイートマジック",
+      "value": 0.9937987
+    },
+    {
+      "source": "アイノマテリアル",
+      "target": "ワールズエンド・ダンスホール",
+      "value": 0.99345964
+    },
+    {
+      "source": "アイロニ",
+      "target": "快晴",
+      "value": 0.98346275
+    },
+    {
+      "source": "アイロニ",
+      "target": "私の恋はヘルファイア",
+      "value": 0.98282677
+    },
+    {
+      "source": "アサガオの散る頃に",
+      "target": "サラマンダー",
+      "value": 0.9934734
+    },
+    {
+      "source": "アサガオの散る頃に",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9934237
+    },
+    {
+      "source": "アスノヨゾラ哨戒班",
+      "target": "ワールドイズマイン",
+      "value": 0.9948857
+    },
+    {
+      "source": "アスノヨゾラ哨戒班",
+      "target": "リンちゃんなう!",
+      "value": 0.994493
+    },
+    {
+      "source": "アトラクトライト",
+      "target": "フォニイ",
+      "value": 0.99259126
+    },
+    {
+      "source": "アトラクトライト",
+      "target": "エンドマークに希望と涙を添えて",
+      "value": 0.9895745
+    },
+    {
+      "source": "アンノウン・マザーグース",
+      "target": "Booo!",
+      "value": 0.9868831
+    },
+    {
+      "source": "アンノウン・マザーグース",
+      "target": "アイロニ",
+      "value": 0.9849878
+    },
+    {
+      "source": "アンハッピーリフレイン",
+      "target": "初音天地開闢神話",
+      "value": 0.99647367
+    },
+    {
+      "source": "アンハッピーリフレイン",
+      "target": "カンタレラ",
+      "value": 0.9956835
+    },
+    {
+      "source": "イフ",
+      "target": "Leia - Remind",
+      "value": 0.99366367
+    },
+    {
+      "source": "イフ",
+      "target": "夜咄ディセイブ",
+      "value": 0.99343246
+    },
+    {
+      "source": "インタビュア",
+      "target": "右肩の蝶",
+      "value": 0.9910355
+    },
+    {
+      "source": "インタビュア",
+      "target": "カゲロウデイズ",
+      "value": 0.9890785
+    },
+    {
+      "source": "インビジブル",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.99362683
+    },
+    {
+      "source": "インビジブル",
+      "target": "What's up? Pop!",
+      "value": 0.9925698
+    },
+    {
+      "source": "ウミユリ海底譚",
+      "target": "右肩の蝶",
+      "value": 0.99492973
+    },
+    {
+      "source": "ウミユリ海底譚",
+      "target": "てらてら",
+      "value": 0.9933965
+    },
+    {
+      "source": "エイリアンエイリアン",
+      "target": "What's up? Pop!",
+      "value": 0.98678
+    },
+    {
+      "source": "エイリアンエイリアン",
+      "target": "ネトゲ廃人シュプレヒコール",
+      "value": 0.9853656
+    },
+    {
+      "source": "エゴイスト",
+      "target": "What's up? Pop!",
+      "value": 0.99041194
+    },
+    {
+      "source": "エゴイスト",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9893454
+    },
+    {
+      "source": "エゴロック",
+      "target": "エゴイスト",
+      "value": 0.9925675
+    },
+    {
+      "source": "エゴロック",
+      "target": "Mr. Showtime",
+      "value": 0.9922746
+    },
+    {
+      "source": "エターナルアリア",
+      "target": "未完成讃歌",
+      "value": 0.9935837
+    },
+    {
+      "source": "エターナルアリア",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9934693
+    },
+    {
+      "source": "エピローグに君はいない",
+      "target": "ジェヘナ",
+      "value": 0.9861082
+    },
+    {
+      "source": "エピローグに君はいない",
+      "target": "ヒビカセ",
+      "value": 0.9858438
+    },
+    {
+      "source": "エンドマークに希望と涙を添えて",
+      "target": "未完成讃歌",
+      "value": 0.9889922
+    },
+    {
+      "source": "エンドマークに希望と涙を添えて",
+      "target": "あったかいと",
+      "value": 0.9887099
+    },
+    {
+      "source": "オルターエゴ",
+      "target": "グリーンライツ・セレナーデ",
+      "value": 0.993288
+    },
+    {
+      "source": "オルターエゴ",
+      "target": "バグ",
+      "value": 0.9861694
+    },
+    {
+      "source": "オーダーメイド",
+      "target": "ココロ",
+      "value": 0.99638927
+    },
+    {
+      "source": "オーダーメイド",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.99575925
+    },
+    {
+      "source": "カゲロウデイズ",
+      "target": "未完成讃歌",
+      "value": 0.9927574
+    },
+    {
+      "source": "カゲロウデイズ",
+      "target": "ワールズエンド・ダンスホール",
+      "value": 0.98705894
+    },
+    {
+      "source": "カトラリー",
+      "target": "腐れ外道とチョコレゐト",
+      "value": 0.9917086
+    },
+    {
+      "source": "カトラリー",
+      "target": "RAD DOGS",
+      "value": 0.9913658
+    },
+    {
+      "source": "カナデトモスソラ",
+      "target": "RAD DOGS",
+      "value": 0.99680364
+    },
+    {
+      "source": "カナデトモスソラ",
+      "target": "FREELY TOMORROW",
+      "value": 0.99633265
+    },
+    {
+      "source": "カンタレラ",
+      "target": "Be The MUSIC!",
+      "value": 0.99318165
+    },
+    {
+      "source": "カンタレラ",
+      "target": "右肩の蝶",
+      "value": 0.99261695
+    },
+    {
+      "source": "ガランド",
+      "target": "What's up? Pop!",
+      "value": 0.9958576
+    },
+    {
+      "source": "ガランド",
+      "target": "ゴーストルール",
+      "value": 0.99499464
+    },
+    {
+      "source": "キティ",
+      "target": "踊",
+      "value": 0.9846816
+    },
+    {
+      "source": "キティ",
+      "target": "パラジクロロベンゼン",
+      "value": 0.9844451
+    },
+    {
+      "source": "グッバイ宣言",
+      "target": "What's up? Pop!",
+      "value": 0.99177146
+    },
+    {
+      "source": "グッバイ宣言",
+      "target": "サラマンダー",
+      "value": 0.99154526
+    },
+    {
+      "source": "グリーンライツ・セレナーデ",
+      "target": "オルターエゴ",
+      "value": 0.98931533
+    },
+    {
+      "source": "グリーンライツ・セレナーデ",
+      "target": "フォニイ",
+      "value": 0.9864886
+    },
+    {
+      "source": "ココロ",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9948053
+    },
+    {
+      "source": "ココロ",
+      "target": "Be The MUSIC!",
+      "value": 0.9938241
+    },
+    {
+      "source": "コスモスパイス",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.99196523
+    },
+    {
+      "source": "コスモスパイス",
+      "target": "What's up? Pop!",
+      "value": 0.9897964
+    },
+    {
+      "source": "ゴーストルール",
+      "target": "What's up? Pop!",
+      "value": 0.9970844
+    },
+    {
+      "source": "ゴーストルール",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.99358076
+    },
+    {
+      "source": "サラマンダー",
+      "target": "What's up? Pop!",
+      "value": 0.99467826
+    },
+    {
+      "source": "サラマンダー",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.99313647
+    },
+    {
+      "source": "サンドリヨン 10th Anniversary",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.993816
+    },
+    {
+      "source": "サンドリヨン 10th Anniversary",
+      "target": "What's up? Pop!",
+      "value": 0.9937627
+    },
+    {
+      "source": "ザムザ",
+      "target": "What's up? Pop!",
+      "value": 0.9934565
+    },
+    {
+      "source": "ザムザ",
+      "target": "Don't Fight The Music",
+      "value": 0.990311
+    },
+    {
+      "source": "シネマ",
+      "target": "リモコン",
+      "value": 0.9930465
+    },
+    {
+      "source": "シネマ",
+      "target": "徳川カップヌードル禁止令",
+      "value": 0.9922674
+    },
+    {
+      "source": "シャルル",
+      "target": "ナンセンス文学",
+      "value": 0.99627644
+    },
+    {
+      "source": "シャルル",
+      "target": "FREELY TOMORROW",
+      "value": 0.9961741
+    },
+    {
+      "source": "シャンティ",
+      "target": "夜咄ディセイブ",
+      "value": 0.9929403
+    },
+    {
+      "source": "シャンティ",
+      "target": "ワールズエンド・ダンスホール",
+      "value": 0.9913039
+    },
+    {
+      "source": "ショウタイム・ルーラー",
+      "target": "Iなんです",
+      "value": 0.9958752
+    },
+    {
+      "source": "ショウタイム・ルーラー",
+      "target": "フラジール",
+      "value": 0.99578524
+    },
+    {
+      "source": "ジウダス",
+      "target": "アイロニ",
+      "value": 0.9886218
+    },
+    {
+      "source": "ジウダス",
+      "target": "パラジクロロベンゼン",
+      "value": 0.98805916
+    },
+    {
+      "source": "ジェヘナ",
+      "target": "フォニイ",
+      "value": 0.9864177
+    },
+    {
+      "source": "ジェヘナ",
+      "target": "エンドマークに希望と涙を添えて",
+      "value": 0.9829544
+    },
+    {
+      "source": "ジャックポットサッドガール",
+      "target": "アンノウン・マザーグース",
+      "value": 0.99287146
+    },
+    {
+      "source": "ジャックポットサッドガール",
+      "target": "グリーンライツ・セレナーデ",
+      "value": 0.99082774
+    },
+    {
+      "source": "ジャンキーナイトタウンオーケストラ",
+      "target": "フォニイ",
+      "value": 0.9868786
+    },
+    {
+      "source": "ジャンキーナイトタウンオーケストラ",
+      "target": "グリーンライツ・セレナーデ",
+      "value": 0.98685807
+    },
+    {
+      "source": "スイートマジック",
+      "target": "Be The MUSIC!",
+      "value": 0.99306965
+    },
+    {
+      "source": "スイートマジック",
+      "target": "ワールズエンド・ダンスホール",
+      "value": 0.9930191
+    },
+    {
+      "source": "スターダストメドレー",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.99610156
+    },
+    {
+      "source": "スターダストメドレー",
+      "target": "帝国少女",
+      "value": 0.9948516
+    },
+    {
+      "source": "ステラ",
+      "target": "ロストエンファウンド",
+      "value": 0.98941445
+    },
+    {
+      "source": "ステラ",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.98933464
+    },
+    {
+      "source": "ストロボラスト",
+      "target": "快晴",
+      "value": 0.99568653
+    },
+    {
+      "source": "ストロボラスト",
+      "target": "アイロニ",
+      "value": 0.99401885
+    },
+    {
+      "source": "スノーマン",
+      "target": "Be The MUSIC!",
+      "value": 0.9918906
+    },
+    {
+      "source": "スノーマン",
+      "target": "フォニイ",
+      "value": 0.9910928
+    },
+    {
+      "source": "セカイ",
+      "target": "ヴィラン",
+      "value": 0.99174225
+    },
+    {
+      "source": "セカイ",
+      "target": "ももいろの鍵",
+      "value": 0.9916702
+    },
+    {
+      "source": "セカイはまだ始まってすらいない",
+      "target": "ぼうけんのしょがきえました!",
+      "value": 0.99221116
+    },
+    {
+      "source": "セカイはまだ始まってすらいない",
+      "target": "ココロ",
+      "value": 0.990759
+    },
+    {
+      "source": "セツナトリップ",
+      "target": "ヤミナベ!!!!",
+      "value": 0.9678755
+    },
+    {
+      "source": "セツナトリップ",
+      "target": "脳漿炸裂ガール",
+      "value": 0.9473841
+    },
+    {
+      "source": "タイムマシン",
+      "target": "RAD DOGS",
+      "value": 0.9955297
+    },
+    {
+      "source": "タイムマシン",
+      "target": "Leia - Remind",
+      "value": 0.9944878
+    },
+    {
+      "source": "ダブルラリアット",
+      "target": "裏表ラバーズ",
+      "value": 0.9971047
+    },
+    {
+      "source": "ダブルラリアット",
+      "target": "夜咄ディセイブ",
+      "value": 0.9969052
+    },
+    {
+      "source": "ダンスロボットダンス",
+      "target": "What's up? Pop!",
+      "value": 0.99572015
+    },
+    {
+      "source": "ダンスロボットダンス",
+      "target": "ガランド",
+      "value": 0.9853677
+    },
+    {
+      "source": "ダーリンダンス",
+      "target": "エンドマークに希望と涙を添えて",
+      "value": 0.99219525
+    },
+    {
+      "source": "ダーリンダンス",
+      "target": "フォニイ",
+      "value": 0.9914014
+    },
+    {
+      "source": "チュルリラ・チュルリラ・ダッダッダ!",
+      "target": "天使の翼。",
+      "value": 0.9849791
+    },
+    {
+      "source": "チュルリラ・チュルリラ・ダッダッダ!",
+      "target": "39",
+      "value": 0.9844516
+    },
+    {
+      "source": "チルドレンレコード",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.99500394
+    },
+    {
+      "source": "チルドレンレコード",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.99472815
+    },
+    {
+      "source": "チームメイト",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.99172676
+    },
+    {
+      "source": "チームメイト",
+      "target": "ネトゲ廃人シュプレヒコール",
+      "value": 0.98895794
+    },
+    {
+      "source": "ツギハギスタッカート",
+      "target": "Be The MUSIC!",
+      "value": 0.99507433
+    },
+    {
+      "source": "ツギハギスタッカート",
+      "target": "Flyer!",
+      "value": 0.9945012
+    },
+    {
+      "source": "テオ",
+      "target": "ワールドイズマイン",
+      "value": 0.9974014
+    },
+    {
+      "source": "テオ",
+      "target": "夜咄ディセイブ",
+      "value": 0.9966718
+    },
+    {
+      "source": "テレキャスタービーボーイ",
+      "target": "イフ",
+      "value": 0.99715096
+    },
+    {
+      "source": "テレキャスタービーボーイ",
+      "target": "シャンティ",
+      "value": 0.9956832
+    },
+    {
+      "source": "トキヲ・ファンカ",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9956814
+    },
+    {
+      "source": "トキヲ・ファンカ",
+      "target": "What's up? Pop!",
+      "value": 0.9941993
+    },
+    {
+      "source": "トラッシュ・アンド・トラッシュ!",
+      "target": "What's up? Pop!",
+      "value": 0.9951907
+    },
+    {
+      "source": "トラッシュ・アンド・トラッシュ!",
+      "target": "ゴーストルール",
+      "value": 0.9931414
+    },
+    {
+      "source": "トラフィック・ジャム",
+      "target": "ヴィラン",
+      "value": 0.99383485
+    },
+    {
+      "source": "トラフィック・ジャム",
+      "target": "ももいろの鍵",
+      "value": 0.992862
+    },
+    {
+      "source": "トリコロージュ",
+      "target": "バグ",
+      "value": 0.9925152
+    },
+    {
+      "source": "トリコロージュ",
+      "target": "右肩の蝶",
+      "value": 0.9924573
+    },
+    {
+      "source": "トリノコシティ",
+      "target": "カゲロウデイズ",
+      "value": 0.98997426
+    },
+    {
+      "source": "トリノコシティ",
+      "target": "ロストエンファウンド",
+      "value": 0.98949873
+    },
+    {
+      "source": "トンデモワンダーズ",
+      "target": "アイロニ",
+      "value": 0.984142
+    },
+    {
+      "source": "トンデモワンダーズ",
+      "target": "ヒビカセ",
+      "value": 0.98354036
+    },
+    {
+      "source": "ドクター=ファンクビート",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.99053466
+    },
+    {
+      "source": "ドクター=ファンクビート",
+      "target": "エゴイスト",
+      "value": 0.99005306
+    },
+    {
+      "source": "ドラマツルギー",
+      "target": "Don't Fight The Music",
+      "value": 0.99171585
+    },
+    {
+      "source": "ドラマツルギー",
+      "target": "What's up? Pop!",
+      "value": 0.99120915
+    },
+    {
+      "source": "ドーナツホール",
+      "target": "初音天地開闢神話",
+      "value": 0.99660957
+    },
+    {
+      "source": "ドーナツホール",
+      "target": "アンハッピーリフレイン",
+      "value": 0.9962776
+    },
+    {
+      "source": "ナンセンス文学",
+      "target": "RAD DOGS",
+      "value": 0.99687076
+    },
+    {
+      "source": "ナンセンス文学",
+      "target": "FREELY TOMORROW",
+      "value": 0.99554497
+    },
+    {
+      "source": "ニア",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9946788
+    },
+    {
+      "source": "ニア",
+      "target": "サラマンダー",
+      "value": 0.9945154
+    },
+    {
+      "source": "ニジイロストーリーズ",
+      "target": "What's up? Pop!",
+      "value": 0.9919151
+    },
+    {
+      "source": "ニジイロストーリーズ",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.9917183
+    },
+    {
+      "source": "ネクストネスト",
+      "target": "ラストスコア",
+      "value": 0.9860085
+    },
+    {
+      "source": "ネクストネスト",
+      "target": "パラジクロロベンゼン",
+      "value": 0.98549575
+    },
+    {
+      "source": "ネトゲ廃人シュプレヒコール",
+      "target": "What's up? Pop!",
+      "value": 0.99383056
+    },
+    {
+      "source": "ネトゲ廃人シュプレヒコール",
+      "target": "ゴーストルール",
+      "value": 0.9912587
+    },
+    {
+      "source": "ノマド",
+      "target": "アンノウン・マザーグース",
+      "value": 0.99133015
+    },
+    {
+      "source": "ノマド",
+      "target": "幽霊東京",
+      "value": 0.9907332
+    },
+    {
+      "source": "ノンブレス・オブリージュ",
+      "target": "威風堂々",
+      "value": 0.99275416
+    },
+    {
+      "source": "ノンブレス・オブリージュ",
+      "target": "What's up? Pop!",
+      "value": 0.99197376
+    },
+    {
+      "source": "ハッピーシンセサイザ",
+      "target": "リンちゃんなう!",
+      "value": 0.9959086
+    },
+    {
+      "source": "ハッピーシンセサイザ",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.99568886
+    },
+    {
+      "source": "ハロ/ハワユ",
+      "target": "from Y to Y",
+      "value": 0.99419636
+    },
+    {
+      "source": "ハロ/ハワユ",
+      "target": "Be The MUSIC!",
+      "value": 0.992362
+    },
+    {
+      "source": "バグ",
+      "target": "フォニイ",
+      "value": 0.9856537
+    },
+    {
+      "source": "バグ",
+      "target": "エンドマークに希望と涙を添えて",
+      "value": 0.98460984
+    },
+    {
+      "source": "パラジクロロベンゼン",
+      "target": "私の恋はヘルファイア",
+      "value": 0.99108124
+    },
+    {
+      "source": "パラジクロロベンゼン",
+      "target": "ラストスコア",
+      "value": 0.98992693
+    },
+    {
+      "source": "パラソルサイダー",
+      "target": "サラマンダー",
+      "value": 0.99146646
+    },
+    {
+      "source": "パラソルサイダー",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.99139917
+    },
+    {
+      "source": "パレットには君がいっぱい",
+      "target": "Forward",
+      "value": 0.98629516
+    },
+    {
+      "source": "パレットには君がいっぱい",
+      "target": "ヤミナベ!!!!",
+      "value": 0.97931993
+    },
+    {
+      "source": "ヒバナ -Reloaded-",
+      "target": "Be The MUSIC!",
+      "value": 0.9960049
+    },
+    {
+      "source": "ヒバナ -Reloaded-",
+      "target": "ロストエンファウンド",
+      "value": 0.99497044
+    },
+    {
+      "source": "ヒビカセ",
+      "target": "カゲロウデイズ",
+      "value": 0.9871998
+    },
+    {
+      "source": "ヒビカセ",
+      "target": "フォニイ",
+      "value": 0.9860285
+    },
+    {
+      "source": "ビターチョコデコレーション",
+      "target": "グリーンライツ・セレナーデ",
+      "value": 0.99201226
+    },
+    {
+      "source": "ビターチョコデコレーション",
+      "target": "アンノウン・マザーグース",
+      "value": 0.9910252
+    },
+    {
+      "source": "ビバハピ",
+      "target": "スイートマジック",
+      "value": 0.9912631
+    },
+    {
+      "source": "ビバハピ",
+      "target": "サラマンダー",
+      "value": 0.99096155
+    },
+    {
+      "source": "ピアノ×フォルテ×スキャンダル",
+      "target": "快晴",
+      "value": 0.99066645
+    },
+    {
+      "source": "ピアノ×フォルテ×スキャンダル",
+      "target": "私の恋はヘルファイア",
+      "value": 0.9903107
+    },
+    {
+      "source": "フィクサー",
+      "target": "Iなんです",
+      "value": 0.9961097
+    },
+    {
+      "source": "フィクサー",
+      "target": "ショウタイム・ルーラー",
+      "value": 0.9955957
+    },
+    {
+      "source": "フェレス",
+      "target": "それでもいいんだよ",
+      "value": 0.9800709
+    },
+    {
+      "source": "フェレス",
+      "target": "Bad ∞ End ∞ Night",
+      "value": 0.97613335
+    },
+    {
+      "source": "フォニイ",
+      "target": "未完成讃歌",
+      "value": 0.9915031
+    },
+    {
+      "source": "フォニイ",
+      "target": "カゲロウデイズ",
+      "value": 0.99091536
+    },
+    {
+      "source": "フューチャー・イヴ",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9938715
+    },
+    {
+      "source": "フューチャー・イヴ",
+      "target": "ひつじがいっぴき",
+      "value": 0.99386054
+    },
+    {
+      "source": "フラジール",
+      "target": "Flyer!",
+      "value": 0.9956308
+    },
+    {
+      "source": "フラジール",
+      "target": "Iなんです",
+      "value": 0.99538547
+    },
+    {
+      "source": "フレー",
+      "target": "What's up? Pop!",
+      "value": 0.99401754
+    },
+    {
+      "source": "フレー",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9922222
+    },
+    {
+      "source": "フロイライン=ビブリォチカ",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9905396
+    },
+    {
+      "source": "フロイライン=ビブリォチカ",
+      "target": "サラマンダー",
+      "value": 0.9879251
+    },
+    {
+      "source": "フロムトーキョー",
+      "target": "Goodbye",
+      "value": 0.9927704
+    },
+    {
+      "source": "フロムトーキョー",
+      "target": "未完成讃歌",
+      "value": 0.9912872
+    },
+    {
+      "source": "フロート・プランナー",
+      "target": "Flyer!",
+      "value": 0.9970552
+    },
+    {
+      "source": "フロート・プランナー",
+      "target": "ロストエンファウンド",
+      "value": 0.9962601
+    },
+    {
+      "source": "ブラック★ロックシューター",
+      "target": "悪徳のジャッジメント",
+      "value": 0.9906957
+    },
+    {
+      "source": "ブラック★ロックシューター",
+      "target": "ロストエンファウンド",
+      "value": 0.9904482
+    },
+    {
+      "source": "ブリキノダンス",
+      "target": "快晴",
+      "value": 0.99410814
+    },
+    {
+      "source": "ブリキノダンス",
+      "target": "DREAM PLACE",
+      "value": 0.992922
+    },
+    {
+      "source": "ブレス・ユア・ブレス",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.99308574
+    },
+    {
+      "source": "ブレス・ユア・ブレス",
+      "target": "スイートマジック",
+      "value": 0.9928416
+    },
+    {
+      "source": "ベノム",
+      "target": "What's up? Pop!",
+      "value": 0.99446595
+    },
+    {
+      "source": "ベノム",
+      "target": "拝啓ドッペルゲンガー",
+      "value": 0.9930752
+    },
+    {
+      "source": "ボッカデラベリタ",
+      "target": "カンタレラ",
+      "value": 0.9966745
+    },
+    {
+      "source": "ボッカデラベリタ",
+      "target": "RAD DOGS",
+      "value": 0.9965886
+    },
+    {
+      "source": "ポジティブ☆ダンスタイム",
+      "target": "RAD DOGS",
+      "value": 0.9947701
+    },
+    {
+      "source": "ポジティブ☆ダンスタイム",
+      "target": "右肩の蝶",
+      "value": 0.9935301
+    },
+    {
+      "source": "マシュマリー",
+      "target": "炉心融解",
+      "value": 0.9953944
+    },
+    {
+      "source": "マシュマリー",
+      "target": "ロストエンファウンド",
+      "value": 0.99465454
+    },
+    {
+      "source": "マシンガンポエムドール",
+      "target": "私の恋はヘルファイア",
+      "value": 0.99181324
+    },
+    {
+      "source": "マシンガンポエムドール",
+      "target": "パラジクロロベンゼン",
+      "value": 0.9913727
+    },
+    {
+      "source": "マトリョシカ",
+      "target": "カゲロウデイズ",
+      "value": 0.9920683
+    },
+    {
+      "source": "マトリョシカ",
+      "target": "未完成讃歌",
+      "value": 0.9910016
+    },
+    {
+      "source": "ミライ",
+      "target": "バグ",
+      "value": 0.99456483
+    },
+    {
+      "source": "ミライ",
+      "target": "エンドマークに希望と涙を添えて",
+      "value": 0.99396646
+    },
+    {
+      "source": "ミラクルペイント",
+      "target": "39",
+      "value": 0.993413
+    },
+    {
+      "source": "ミラクルペイント",
+      "target": "星屑ユートピア",
+      "value": 0.992407
+    },
+    {
+      "source": "ミルククラウン・オン・ソーネチカ",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.9944289
+    },
+    {
+      "source": "ミルククラウン・オン・ソーネチカ",
+      "target": "ひつじがいっぴき",
+      "value": 0.99307394
+    },
+    {
+      "source": "メタモリボン",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9934
+    },
+    {
+      "source": "メタモリボン",
+      "target": "Leia - Remind",
+      "value": 0.992021
+    },
+    {
+      "source": "メリュー",
+      "target": "エゴイスト",
+      "value": 0.9945095
+    },
+    {
+      "source": "メリュー",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9897627
+    },
+    {
+      "source": "メルティランドナイトメア",
+      "target": "RAD DOGS",
+      "value": 0.99420935
+    },
+    {
+      "source": "メルティランドナイトメア",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9918548
+    },
+    {
+      "source": "メルト",
+      "target": "炉心融解",
+      "value": 0.99390227
+    },
+    {
+      "source": "メルト",
+      "target": "右肩の蝶",
+      "value": 0.99381906
+    },
+    {
+      "source": "モア!ジャンプ!モア!",
+      "target": "未完成讃歌",
+      "value": 0.9959009
+    },
+    {
+      "source": "モア!ジャンプ!モア!",
+      "target": "嗚呼、素晴らしきニャン生",
+      "value": 0.99511415
+    },
+    {
+      "source": "ヤミナベ!!!!",
+      "target": "What's up? Pop!",
+      "value": 0.9835166
+    },
+    {
+      "source": "ヤミナベ!!!!",
+      "target": "魔法みたいなミュージック!",
+      "value": 0.9822375
+    },
+    {
+      "source": "ラストスコア",
+      "target": "パラジクロロベンゼン",
+      "value": 0.9898469
+    },
+    {
+      "source": "ラストスコア",
+      "target": "私の恋はヘルファイア",
+      "value": 0.989401
+    },
+    {
+      "source": "ラブカ?",
+      "target": "腐れ外道とチョコレゐト",
+      "value": 0.99048567
+    },
+    {
+      "source": "ラブカ?",
+      "target": "フォニイ",
+      "value": 0.98750913
+    },
+    {
+      "source": "リモコン",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.996615
+    },
+    {
+      "source": "リモコン",
+      "target": "What's up? Pop!",
+      "value": 0.994854
+    },
+    {
+      "source": "リンちゃんなう!",
+      "target": "いかないで",
+      "value": 0.9952457
+    },
+    {
+      "source": "リンちゃんなう!",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9950973
+    },
+    {
+      "source": "ルカルカ★ナイトフィーバー",
+      "target": "夜咄ディセイブ",
+      "value": 0.99381953
+    },
+    {
+      "source": "ルカルカ★ナイトフィーバー",
+      "target": "ローリンガール",
+      "value": 0.99199075
+    },
+    {
+      "source": "レイニースノードロップ",
+      "target": "Happy Halloween",
+      "value": 0.9873651
+    },
+    {
+      "source": "レイニースノードロップ",
+      "target": "ロストエンファウンド",
+      "value": 0.9864254
+    },
+    {
+      "source": "ロウワー",
+      "target": "ラストスコア",
+      "value": 0.9935497
+    },
+    {
+      "source": "ロウワー",
+      "target": "私の恋はヘルファイア",
+      "value": 0.9916082
+    },
+    {
+      "source": "ロキ",
+      "target": "夜咄ディセイブ",
+      "value": 0.99311775
+    },
+    {
+      "source": "ロキ",
+      "target": "裏表ラバーズ",
+      "value": 0.99302864
+    },
+    {
+      "source": "ロストエンファウンド",
+      "target": "Be The MUSIC!",
+      "value": 0.99067277
+    },
+    {
+      "source": "ロストエンファウンド",
+      "target": "フォニイ",
+      "value": 0.9898176
+    },
+    {
+      "source": "ロストワンの号哭",
+      "target": "ラストスコア",
+      "value": 0.9912089
+    },
+    {
+      "source": "ロストワンの号哭",
+      "target": "パラジクロロベンゼン",
+      "value": 0.98907906
+    },
+    {
+      "source": "ロミオとシンデレラ",
+      "target": "裏表ラバーズ",
+      "value": 0.9955288
+    },
+    {
+      "source": "ロミオとシンデレラ",
+      "target": "初音天地開闢神話",
+      "value": 0.9954508
+    },
+    {
+      "source": "ロンリーユニバース",
+      "target": "Flyer!",
+      "value": 0.9960055
+    },
+    {
+      "source": "ロンリーユニバース",
+      "target": "ロストエンファウンド",
+      "value": 0.9956613
+    },
+    {
+      "source": "ローリンガール",
+      "target": "夜咄ディセイブ",
+      "value": 0.9945773
+    },
+    {
+      "source": "ローリンガール",
+      "target": "ルカルカ★ナイトフィーバー",
+      "value": 0.99435145
+    },
+    {
+      "source": "ワンスアポンアドリーム",
+      "target": "拝啓ドッペルゲンガー",
+      "value": 0.9924682
+    },
+    {
+      "source": "ワンスアポンアドリーム",
+      "target": "What's up? Pop!",
+      "value": 0.990857
+    },
+    {
+      "source": "ワールズエンド・ダンスホール",
+      "target": "右肩の蝶",
+      "value": 0.9946618
+    },
+    {
+      "source": "ワールズエンド・ダンスホール",
+      "target": "RAD DOGS",
+      "value": 0.99266356
+    },
+    {
+      "source": "ワールドイズマイン",
+      "target": "サラマンダー",
+      "value": 0.99544054
+    },
+    {
+      "source": "ワールドイズマイン",
+      "target": "スイートマジック",
+      "value": 0.99526995
+    },
+    {
+      "source": "ワールドワイドワンダー",
+      "target": "夜咄ディセイブ",
+      "value": 0.99413306
+    },
+    {
+      "source": "ワールドワイドワンダー",
+      "target": "RAD DOGS",
+      "value": 0.9933447
+    },
+    {
+      "source": "ワーワーワールド",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9934996
+    },
+    {
+      "source": "ワーワーワールド",
+      "target": "Sharing The World",
+      "value": 0.9933338
+    },
+    {
+      "source": "ヴァンパイア",
+      "target": "RAD DOGS",
+      "value": 0.98960406
+    },
+    {
+      "source": "ヴァンパイア",
+      "target": "右肩の蝶",
+      "value": 0.9890534
+    },
+    {
+      "source": "ヴィラン",
+      "target": "1925",
+      "value": 0.9942636
+    },
+    {
+      "source": "ヴィラン",
+      "target": "ももいろの鍵",
+      "value": 0.9930814
+    },
+    {
+      "source": "下剋上",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9909843
+    },
+    {
+      "source": "下剋上",
+      "target": "腐れ外道とチョコレゐト",
+      "value": 0.9892386
+    },
+    {
+      "source": "乙女解剖",
+      "target": "命ばっかり",
+      "value": 0.9971454
+    },
+    {
+      "source": "乙女解剖",
+      "target": "サラマンダー",
+      "value": 0.99608177
+    },
+    {
+      "source": "人生",
+      "target": "夜咄ディセイブ",
+      "value": 0.9964568
+    },
+    {
+      "source": "人生",
+      "target": "右肩の蝶",
+      "value": 0.9953112
+    },
+    {
+      "source": "仮死化",
+      "target": "フォニイ",
+      "value": 0.99535954
+    },
+    {
+      "source": "仮死化",
+      "target": "未完成讃歌",
+      "value": 0.9934954
+    },
+    {
+      "source": "僕らまだアンダーグラウンド",
+      "target": "快晴",
+      "value": 0.99367017
+    },
+    {
+      "source": "僕らまだアンダーグラウンド",
+      "target": "アイロニ",
+      "value": 0.9930562
+    },
+    {
+      "source": "六兆年と一夜物語",
+      "target": "39",
+      "value": 0.9937614
+    },
+    {
+      "source": "六兆年と一夜物語",
+      "target": "天使の翼。",
+      "value": 0.9908869
+    },
+    {
+      "source": "円尾坂の仕立屋",
+      "target": "ぼうけんのしょがきえました!",
+      "value": 0.99100953
+    },
+    {
+      "source": "円尾坂の仕立屋",
+      "target": "劣等上等",
+      "value": 0.9905125
+    },
+    {
+      "source": "再生",
+      "target": "夜咄ディセイブ",
+      "value": 0.9952984
+    },
+    {
+      "source": "再生",
+      "target": "ワールズエンド・ダンスホール",
+      "value": 0.9947731
+    },
+    {
+      "source": "初音ミクの消失",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9934894
+    },
+    {
+      "source": "初音ミクの消失",
+      "target": "Don't Fight The Music",
+      "value": 0.98950636
+    },
+    {
+      "source": "初音ミクの激唱",
+      "target": "エゴイスト",
+      "value": 0.99388564
+    },
+    {
+      "source": "初音ミクの激唱",
+      "target": "ひつじがいっぴき",
+      "value": 0.99288404
+    },
+    {
+      "source": "初音天地開闢神話",
+      "target": "アンハッピーリフレイン",
+      "value": 0.9953167
+    },
+    {
+      "source": "初音天地開闢神話",
+      "target": "どりーみんチュチュ",
+      "value": 0.9946739
+    },
+    {
+      "source": "劣等上等",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9901887
+    },
+    {
+      "source": "劣等上等",
+      "target": "裏表ラバーズ",
+      "value": 0.9893947
+    },
+    {
+      "source": "千年の独奏歌",
+      "target": "脳漿炸裂ガール",
+      "value": 0.98558784
+    },
+    {
+      "source": "千年の独奏歌",
+      "target": "ネクストネスト",
+      "value": 0.98445797
+    },
+    {
+      "source": "千本桜",
+      "target": "What's up? Pop!",
+      "value": 0.9943948
+    },
+    {
+      "source": "千本桜",
+      "target": "Peaky Peaky",
+      "value": 0.9908637
+    },
+    {
+      "source": "去り人達のワルツ",
+      "target": "夜咄ディセイブ",
+      "value": 0.99442333
+    },
+    {
+      "source": "去り人達のワルツ",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9939362
+    },
+    {
+      "source": "右肩の蝶",
+      "target": "ワールズエンド・ダンスホール",
+      "value": 0.99202615
+    },
+    {
+      "source": "右肩の蝶",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.990176
+    },
+    {
+      "source": "名も無き革命",
+      "target": "ワールズエンド・ダンスホール",
+      "value": 0.9929603
+    },
+    {
+      "source": "名も無き革命",
+      "target": "右肩の蝶",
+      "value": 0.9925143
+    },
+    {
+      "source": "君の夜をくれ",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9951722
+    },
+    {
+      "source": "君の夜をくれ",
+      "target": "腐れ外道とチョコレゐト",
+      "value": 0.99083364
+    },
+    {
+      "source": "君色マリンスノウ",
+      "target": "Q",
+      "value": 0.98865396
+    },
+    {
+      "source": "君色マリンスノウ",
+      "target": "踊",
+      "value": 0.9878797
+    },
+    {
+      "source": "命に嫌われている。",
+      "target": "サラマンダー",
+      "value": 0.99279857
+    },
+    {
+      "source": "命に嫌われている。",
+      "target": "スイートマジック",
+      "value": 0.9914291
+    },
+    {
+      "source": "命ばっかり",
+      "target": "バグ",
+      "value": 0.9846044
+    },
+    {
+      "source": "命ばっかり",
+      "target": "みくみくにしてあげる♪【してやんよ】",
+      "value": 0.9826725
+    },
+    {
+      "source": "嗚呼、素晴らしきニャン生",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9948721
+    },
+    {
+      "source": "嗚呼、素晴らしきニャン生",
+      "target": "未完成讃歌",
+      "value": 0.9946844
+    },
+    {
+      "source": "地球最後の告白を",
+      "target": "ロストエンファウンド",
+      "value": 0.99683595
+    },
+    {
+      "source": "地球最後の告白を",
+      "target": "Be The MUSIC!",
+      "value": 0.996807
+    },
+    {
+      "source": "夜に駆ける",
+      "target": "What's up? Pop!",
+      "value": 0.9942622
+    },
+    {
+      "source": "夜に駆ける",
+      "target": "ミルククラウン・オン・ソーネチカ",
+      "value": 0.99339306
+    },
+    {
+      "source": "夜もすがら君想ふ",
+      "target": "RAD DOGS",
+      "value": 0.9868388
+    },
+    {
+      "source": "夜もすがら君想ふ",
+      "target": "レイニースノードロップ",
+      "value": 0.98605955
+    },
+    {
+      "source": "夜咄ディセイブ",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.99125123
+    },
+    {
+      "source": "夜咄ディセイブ",
+      "target": "ローリンガール",
+      "value": 0.98853356
+    },
+    {
+      "source": "夜明けと蛍",
+      "target": "マトリョシカ",
+      "value": 0.9965918
+    },
+    {
+      "source": "夜明けと蛍",
+      "target": "Flyer!",
+      "value": 0.9959884
+    },
+    {
+      "source": "天ノ弱",
+      "target": "人生",
+      "value": 0.99535656
+    },
+    {
+      "source": "天ノ弱",
+      "target": "裏表ラバーズ",
+      "value": 0.99488586
+    },
+    {
+      "source": "天使のクローバー",
+      "target": "悪徳のジャッジメント",
+      "value": 0.99232423
+    },
+    {
+      "source": "天使のクローバー",
+      "target": "右肩の蝶",
+      "value": 0.9922605
+    },
+    {
+      "source": "天使の翼。",
+      "target": "1925",
+      "value": 0.99255013
+    },
+    {
+      "source": "天使の翼。",
+      "target": "六兆年と一夜物語",
+      "value": 0.99194187
+    },
+    {
+      "source": "太陽系デスコ",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.99262494
+    },
+    {
+      "source": "太陽系デスコ",
+      "target": "コスモスパイス",
+      "value": 0.9920609
+    },
+    {
+      "source": "妄想感傷代償連盟",
+      "target": "ヴィラン",
+      "value": 0.9924202
+    },
+    {
+      "source": "妄想感傷代償連盟",
+      "target": "ももいろの鍵",
+      "value": 0.990889
+    },
+    {
+      "source": "威風堂々",
+      "target": "What's up? Pop!",
+      "value": 0.9913749
+    },
+    {
+      "source": "威風堂々",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.9900316
+    },
+    {
+      "source": "少女レイ",
+      "target": "METEOR",
+      "value": 0.99710804
+    },
+    {
+      "source": "少女レイ",
+      "target": "スイートマジック",
+      "value": 0.99540603
+    },
+    {
+      "source": "帝国少女",
+      "target": "ヤミナベ!!!!",
+      "value": 0.99085337
+    },
+    {
+      "source": "帝国少女",
+      "target": "Mr. Showtime",
+      "value": 0.989118
+    },
+    {
+      "source": "幽霊東京",
+      "target": "霽れを待つ",
+      "value": 0.993211
+    },
+    {
+      "source": "幽霊東京",
+      "target": "Brand New Day",
+      "value": 0.9929613
+    },
+    {
+      "source": "徳川カップヌードル禁止令",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9939231
+    },
+    {
+      "source": "徳川カップヌードル禁止令",
+      "target": "リモコン",
+      "value": 0.9902759
+    },
+    {
+      "source": "心予報",
+      "target": "Be The MUSIC!",
+      "value": 0.99588567
+    },
+    {
+      "source": "心予報",
+      "target": "右肩の蝶",
+      "value": 0.9958751
+    },
+    {
+      "source": "心拍ペアリング",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9918503
+    },
+    {
+      "source": "心拍ペアリング",
+      "target": "Leia - Remind",
+      "value": 0.99067926
+    },
+    {
+      "source": "心拍数♯0822",
+      "target": "Iなんです",
+      "value": 0.99759996
+    },
+    {
+      "source": "心拍数♯0822",
+      "target": "ショウタイム・ルーラー",
+      "value": 0.9974245
+    },
+    {
+      "source": "快晴",
+      "target": "アイロニ",
+      "value": 0.9920977
+    },
+    {
+      "source": "快晴",
+      "target": "私の恋はヘルファイア",
+      "value": 0.98867553
+    },
+    {
+      "source": "恋愛裁判",
+      "target": "右肩の蝶",
+      "value": 0.9957336
+    },
+    {
+      "source": "恋愛裁判",
+      "target": "てらてら",
+      "value": 0.99463063
+    },
+    {
+      "source": "悔やむと書いてミライ",
+      "target": "リモコン",
+      "value": 0.9925268
+    },
+    {
+      "source": "悔やむと書いてミライ",
+      "target": "エゴイスト",
+      "value": 0.9914001
+    },
+    {
+      "source": "悪ノ召使",
+      "target": "夜咄ディセイブ",
+      "value": 0.991422
+    },
+    {
+      "source": "悪ノ召使",
+      "target": "サラマンダー",
+      "value": 0.9912588
+    },
+    {
+      "source": "悪ノ娘",
+      "target": "Flyer!",
+      "value": 0.99407613
+    },
+    {
+      "source": "悪ノ娘",
+      "target": "劣等上等",
+      "value": 0.9940173
+    },
+    {
+      "source": "悪徳のジャッジメント",
+      "target": "エンドマークに希望と涙を添えて",
+      "value": 0.9933626
+    },
+    {
+      "source": "悪徳のジャッジメント",
+      "target": "未完成讃歌",
+      "value": 0.9925668
+    },
+    {
+      "source": "悪食娘コンチータ",
+      "target": "Don't Fight The Music",
+      "value": 0.987033
+    },
+    {
+      "source": "悪食娘コンチータ",
+      "target": "エゴイスト",
+      "value": 0.979682
+    },
+    {
+      "source": "悪魔の踊り方",
+      "target": "ミルククラウン・オン・ソーネチカ",
+      "value": 0.99378246
+    },
+    {
+      "source": "悪魔の踊り方",
+      "target": "ひつじがいっぴき",
+      "value": 0.99330354
+    },
+    {
+      "source": "愛されなくても君がいる",
+      "target": "ヴィラン",
+      "value": 0.9933934
+    },
+    {
+      "source": "愛されなくても君がいる",
+      "target": "お気に召すまま",
+      "value": 0.9933182
+    },
+    {
+      "source": "愛して愛して愛して",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9960734
+    },
+    {
+      "source": "愛して愛して愛して",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.99268323
+    },
+    {
+      "source": "拝啓ドッペルゲンガー",
+      "target": "ワンスアポンアドリーム",
+      "value": 0.99145275
+    },
+    {
+      "source": "拝啓ドッペルゲンガー",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.9908206
+    },
+    {
+      "source": "携帯恋話",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.99708164
+    },
+    {
+      "source": "携帯恋話",
+      "target": "リモコン",
+      "value": 0.9945072
+    },
+    {
+      "source": "星屑ユートピア",
+      "target": "ミラクルペイント",
+      "value": 0.9927172
+    },
+    {
+      "source": "星屑ユートピア",
+      "target": "39",
+      "value": 0.99084944
+    },
+    {
+      "source": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "target": "リモコン",
+      "value": 0.9934774
+    },
+    {
+      "source": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "target": "What's up? Pop!",
+      "value": 0.9927498
+    },
+    {
+      "source": "星空のメロディー",
+      "target": "夜咄ディセイブ",
+      "value": 0.99512386
+    },
+    {
+      "source": "星空のメロディー",
+      "target": "ワールズエンド・ダンスホール",
+      "value": 0.99426585
+    },
+    {
+      "source": "星空オーケストラ",
+      "target": "コスモスパイス",
+      "value": 0.9905287
+    },
+    {
+      "source": "星空オーケストラ",
+      "target": "千本桜",
+      "value": 0.9898059
+    },
+    {
+      "source": "月光",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9931252
+    },
+    {
+      "source": "月光",
+      "target": "glow",
+      "value": 0.9898108
+    },
+    {
+      "source": "未完成讃歌",
+      "target": "カゲロウデイズ",
+      "value": 0.9926722
+    },
+    {
+      "source": "未完成讃歌",
+      "target": "ロストエンファウンド",
+      "value": 0.9901547
+    },
+    {
+      "source": "気まぐれメルシィ",
+      "target": "エンドマークに希望と涙を添えて",
+      "value": 0.9962234
+    },
+    {
+      "source": "気まぐれメルシィ",
+      "target": "ロストエンファウンド",
+      "value": 0.9955481
+    },
+    {
+      "source": "泡沫未来",
+      "target": "What's up? Pop!",
+      "value": 0.99456996
+    },
+    {
+      "source": "泡沫未来",
+      "target": "ひつじがいっぴき",
+      "value": 0.99428976
+    },
+    {
+      "source": "泥中に咲く",
+      "target": "六兆年と一夜物語",
+      "value": 0.97633505
+    },
+    {
+      "source": "泥中に咲く",
+      "target": "39",
+      "value": 0.9734172
+    },
+    {
+      "source": "流星のパルス",
+      "target": "RAD DOGS",
+      "value": 0.9936886
+    },
+    {
+      "source": "流星のパルス",
+      "target": "右肩の蝶",
+      "value": 0.9932645
+    },
+    {
+      "source": "深海少女",
+      "target": "What's up? Pop!",
+      "value": 0.99484843
+    },
+    {
+      "source": "深海少女",
+      "target": "威風堂々",
+      "value": 0.993169
+    },
+    {
+      "source": "演劇",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9934543
+    },
+    {
+      "source": "演劇",
+      "target": "ぼうけんのしょがきえました!",
+      "value": 0.9925189
+    },
+    {
+      "source": "炉心融解",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.99388504
+    },
+    {
+      "source": "炉心融解",
+      "target": "右肩の蝶",
+      "value": 0.9927161
+    },
+    {
+      "source": "独りんぼエンヴィー",
+      "target": "ぼうけんのしょがきえました!",
+      "value": 0.99455726
+    },
+    {
+      "source": "独りんぼエンヴィー",
+      "target": "サラマンダー",
+      "value": 0.9944354
+    },
+    {
+      "source": "相生",
+      "target": "フォニイ",
+      "value": 0.99033713
+    },
+    {
+      "source": "相生",
+      "target": "Be The MUSIC!",
+      "value": 0.9892624
+    },
+    {
+      "source": "眠らせ姫からの贈り物",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9963021
+    },
+    {
+      "source": "眠らせ姫からの贈り物",
+      "target": "サラマンダー",
+      "value": 0.99591285
+    },
+    {
+      "source": "砂の惑星",
+      "target": "ジェヘナ",
+      "value": 0.9864592
+    },
+    {
+      "source": "砂の惑星",
+      "target": "フォニイ",
+      "value": 0.9823027
+    },
+    {
+      "source": "神のまにまに",
+      "target": "カンタレラ",
+      "value": 0.9983349
+    },
+    {
+      "source": "神のまにまに",
+      "target": "アンハッピーリフレイン",
+      "value": 0.9979603
+    },
+    {
+      "source": "私の恋はヘルファイア",
+      "target": "パラジクロロベンゼン",
+      "value": 0.99222153
+    },
+    {
+      "source": "私の恋はヘルファイア",
+      "target": "ラストスコア",
+      "value": 0.9903659
+    },
+    {
+      "source": "私は、私達は",
+      "target": "Flyer!",
+      "value": 0.99505883
+    },
+    {
+      "source": "私は、私達は",
+      "target": "フラジール",
+      "value": 0.9946746
+    },
+    {
+      "source": "箱庭のコラル",
+      "target": "RAD DOGS",
+      "value": 0.99596786
+    },
+    {
+      "source": "箱庭のコラル",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9951633
+    },
+    {
+      "source": "絶え間なく藍色",
+      "target": "フォニイ",
+      "value": 0.99183655
+    },
+    {
+      "source": "絶え間なく藍色",
+      "target": "エンドマークに希望と涙を添えて",
+      "value": 0.99022704
+    },
+    {
+      "source": "群青讃歌",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.99396384
+    },
+    {
+      "source": "群青讃歌",
+      "target": "Leia - Remind",
+      "value": 0.99338454
+    },
+    {
+      "source": "脱法ロック",
+      "target": "カンタレラ",
+      "value": 0.99650127
+    },
+    {
+      "source": "脱法ロック",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9964831
+    },
+    {
+      "source": "脳漿炸裂ガール",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.9863482
+    },
+    {
+      "source": "脳漿炸裂ガール",
+      "target": "徳川カップヌードル禁止令",
+      "value": 0.98503315
+    },
+    {
+      "source": "腐れ外道とチョコレゐト",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.97911805
+    },
+    {
+      "source": "腐れ外道とチョコレゐト",
+      "target": "夜咄ディセイブ",
+      "value": 0.97742134
+    },
+    {
+      "source": "自傷無色",
+      "target": "Just Be Friends",
+      "value": 0.99460673
+    },
+    {
+      "source": "自傷無色",
+      "target": "from Y to Y",
+      "value": 0.9929076
+    },
+    {
+      "source": "花を唄う",
+      "target": "What's up? Pop!",
+      "value": 0.99167496
+    },
+    {
+      "source": "花を唄う",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.99019444
+    },
+    {
+      "source": "虚ろを扇ぐ",
+      "target": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+      "value": 0.99237
+    },
+    {
+      "source": "虚ろを扇ぐ",
+      "target": "What's up? Pop!",
+      "value": 0.9916695
+    },
+    {
+      "source": "街",
+      "target": "夜咄ディセイブ",
+      "value": 0.99572337
+    },
+    {
+      "source": "街",
+      "target": "裏表ラバーズ",
+      "value": 0.99548614
+    },
+    {
+      "source": "裏表ラバーズ",
+      "target": "夜咄ディセイブ",
+      "value": 0.99490297
+    },
+    {
+      "source": "裏表ラバーズ",
+      "target": "人生",
+      "value": 0.99306524
+    },
+    {
+      "source": "踊",
+      "target": "ラストスコア",
+      "value": 0.9878676
+    },
+    {
+      "source": "踊",
+      "target": "グリーンライツ・セレナーデ",
+      "value": 0.98698777
+    },
+    {
+      "source": "踊れオーケストラ",
+      "target": "セカイはまだ始まってすらいない",
+      "value": 0.9945497
+    },
+    {
+      "source": "踊れオーケストラ",
+      "target": "初音天地開闢神話",
+      "value": 0.99449795
+    },
+    {
+      "source": "阿吽のビーツ",
+      "target": "コスモスパイス",
+      "value": 0.99325186
+    },
+    {
+      "source": "阿吽のビーツ",
+      "target": "ÅMARA(大未来電脳)",
+      "value": 0.9927189
+    },
+    {
+      "source": "限りなく灰色へ",
+      "target": "コスモスパイス",
+      "value": 0.9905275
+    },
+    {
+      "source": "限りなく灰色へ",
+      "target": "ワンスアポンアドリーム",
+      "value": 0.9899984
+    },
+    {
+      "source": "陽だまりのセツナ",
+      "target": "六兆年と一夜物語",
+      "value": 0.9934213
+    },
+    {
+      "source": "陽だまりのセツナ",
+      "target": "39",
+      "value": 0.9916991
+    },
+    {
+      "source": "雨とペトラ",
+      "target": "サラマンダー",
+      "value": 0.9961286
+    },
+    {
+      "source": "雨とペトラ",
+      "target": "いかないで",
+      "value": 0.99590546
+    },
+    {
+      "source": "霽れを待つ",
+      "target": "幽霊東京",
+      "value": 0.99377036
+    },
+    {
+      "source": "霽れを待つ",
+      "target": "快晴",
+      "value": 0.992457
+    },
+    {
+      "source": "青く駆けろ!",
+      "target": "そうだった!!",
+      "value": 0.9953538
+    },
+    {
+      "source": "青く駆けろ!",
+      "target": "Be The MUSIC!",
+      "value": 0.995249
+    },
+    {
+      "source": "青色絵具",
+      "target": "サラマンダー",
+      "value": 0.991466
+    },
+    {
+      "source": "青色絵具",
+      "target": "炉心融解",
+      "value": 0.9911514
+    },
+    {
+      "source": "魔法みたいなミュージック!",
+      "target": "What's up? Pop!",
+      "value": 0.9893042
+    },
+    {
+      "source": "魔法みたいなミュージック!",
+      "target": "ヤミナベ!!!!",
+      "value": 0.9870856
+    }
+  ]
+}
