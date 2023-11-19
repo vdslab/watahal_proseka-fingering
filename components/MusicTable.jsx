@@ -96,6 +96,19 @@ export default function MusicTable({ data }) {
   }
 
   const router = useRouter();
+  const sortIcon = (
+    <ArrowDropDownIcon
+      color="primary"
+      fontSize="large"
+      style={
+        TableStatus[0] == "level"
+          ? TableStatus[1] == -1
+            ? rotateStyle
+            : {}
+          : {}
+      }
+    />
+  );
   return (
     <ThemeProvider theme={theme}>
       <TableContainer sx={{ maxHeight: "65vh" }}>
@@ -104,46 +117,14 @@ export default function MusicTable({ data }) {
             <TableRow>
               <StyledTableCell align="center">
                 <Box display={"flex"} alignItems={"center"}>
-                  <Button
-                    onClick={onclick}
-                    value="level"
-                    startIcon={
-                      <ArrowDropDownIcon
-                        color="primary"
-                        fontSize="large"
-                        style={
-                          TableStatus[0] == "level"
-                            ? TableStatus[1] == -1
-                              ? rotateStyle
-                              : {}
-                            : {}
-                        }
-                      />
-                    }
-                  >
+                  <Button onClick={onclick} value="level" startIcon={sortIcon}>
                     <Typography>Lv</Typography>
                   </Button>
                 </Box>
               </StyledTableCell>
               <StyledTableCell>
                 <Box className="flex items-center justify-items-center">
-                  <Button
-                    onClick={onclick}
-                    value="name"
-                    startIcon={
-                      <ArrowDropDownIcon
-                        color="primary"
-                        fontSize="large"
-                        style={
-                          TableStatus[0] == "name"
-                            ? TableStatus[1] == -1
-                              ? rotateStyle
-                              : {}
-                            : {}
-                        }
-                      />
-                    }
-                  >
+                  <Button onClick={onclick} value="name" startIcon={sortIcon}>
                     <Typography>曲名</Typography>
                   </Button>
                 </Box>
@@ -156,23 +137,7 @@ export default function MusicTable({ data }) {
                   alignItems={"center"}
                   justifyContent={"center"}
                 >
-                  <Button
-                    onClick={onclick}
-                    value="sec"
-                    startIcon={
-                      <ArrowDropDownIcon
-                        color="primary"
-                        fontSize="large"
-                        style={
-                          TableStatus[0] == "sec"
-                            ? TableStatus[1] == -1
-                              ? rotateStyle
-                              : {}
-                            : {}
-                        }
-                      />
-                    }
-                  >
+                  <Button onClick={onclick} value="sec" startIcon={sortIcon}>
                     <Typography>曲の時間</Typography>
                   </Button>
                   <IconButton onClick={onclick} value="sec"></IconButton>
@@ -184,23 +149,7 @@ export default function MusicTable({ data }) {
                   alignItems={"center"}
                   justifyContent={"center"}
                 >
-                  <Button
-                    onClick={onclick}
-                    value="bpm"
-                    startIcon={
-                      <ArrowDropDownIcon
-                        color="primary"
-                        fontSize="large"
-                        style={
-                          TableStatus[0] == "bpm"
-                            ? TableStatus[1] == -1
-                              ? rotateStyle
-                              : {}
-                            : {}
-                        }
-                      />
-                    }
-                  >
+                  <Button onClick={onclick} value="bpm" startIcon={sortIcon}>
                     <Typography>BPM</Typography>
                   </Button>
                 </Box>
