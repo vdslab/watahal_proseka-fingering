@@ -22,6 +22,8 @@ const theme = createTheme({
   palette: {
     primary: { main: "#acfef4" },
     secondary: { main: "#464366" },
+    master: { main: "#de5b7b" },
+    level: { main: "#60415f" },
   },
 });
 
@@ -95,9 +97,9 @@ export default function MusicTable({ data }) {
 
   const router = useRouter();
   return (
-    <TableContainer sx={{ maxHeight: "65vh" }}>
-      <Table stickyHeader>
-        <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <TableContainer sx={{ maxHeight: "65vh" }}>
+        <Table stickyHeader>
           <TableHead color="secondary">
             <TableRow>
               <StyledTableCell align="center">
@@ -205,46 +207,45 @@ export default function MusicTable({ data }) {
               </StyledTableCell>
             </TableRow>
           </TableHead>
-        </ThemeProvider>
-        <TableBody>
-          {showdata.map(({ id, name, level, sec, bpm, videoid }) => {
-            return (
-              <TableRow
-                key={name}
-                hover
-                onClick={() => router.push(`/music/${videoid}?id=${id}`)}
-                sx={{ cursor: "pointer" }}
-              >
-                <TableCell
-                  align="center"
-                  width={20}
-                  height={20}
-                  sx={{
-                    padding: 0,
-                  }}
+
+          <TableBody>
+            {showdata.map(({ id, name, level, sec, bpm, videoid }) => {
+              return (
+                <TableRow
+                  key={name}
+                  hover
+                  onClick={() => router.push(`/music/${videoid}?id=${id}`)}
+                  sx={{ cursor: "pointer" }}
                 >
-                  <Box
-                    width={"100%"}
-                    height={"100%"}
-                    bgcolor={"gray.300"}
-                    borderRadius={"40px"}
-                    display={"flex"}
-                    alignItems={"center"}
-                    justifyContent={"center"}
-                  >
-                    {level}
-                  </Box>
-                </TableCell>
-                <TableCell>{name}</TableCell>
-                <TableCell className="text-center">
-                  {Math.floor(sec / 60)}:{("00" + (sec % 60)).slice(-2)}
-                </TableCell>
-                <TableCell className="text-center">{bpm}</TableCell>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
-    </TableContainer>
+                  <TableCell align="center" width={20} height={20}>
+                    <Box
+                      width={"100%"}
+                      height={"100%"}
+                      bgcolor={theme.palette.master.main}
+                      borderRadius={"40px"}
+                      display={"flex"}
+                      alignItems={"center"}
+                      justifyContent={"center"}
+                    >
+                      <Typography
+                        color={theme.palette.level.main}
+                        fontWeight={"bold"}
+                      >
+                        {level}
+                      </Typography>
+                    </Box>
+                  </TableCell>
+                  <TableCell>{name}</TableCell>
+                  <TableCell className="text-center">
+                    {Math.floor(sec / 60)}:{("00" + (sec % 60)).slice(-2)}
+                  </TableCell>
+                  <TableCell className="text-center">{bpm}</TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </ThemeProvider>
   );
 }
