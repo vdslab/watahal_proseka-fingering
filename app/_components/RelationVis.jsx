@@ -76,7 +76,7 @@ function ChartContent({
               y2={idToNodeLocation[target].cy}
               stroke={isHightlighted ? "rgb(255, 119, 187)" : "black"}
               strokeWidth={isHightlighted ? value * 3 : value * 2}
-              opacity={selectedNode === null ? 0.5 : isHightlighted ? 0.5 : 0.1}
+              opacity={selectedNode === null ? 0.3 : isHightlighted ? 0.5 : 0.1}
             />
           );
         })}
