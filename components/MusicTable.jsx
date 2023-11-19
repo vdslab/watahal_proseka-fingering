@@ -7,6 +7,9 @@ import {
   TableRow,
   TableHead,
   IconButton,
+  Box,
+  Typography,
+  Button,
 } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
@@ -92,87 +95,113 @@ export default function MusicTable({ data }) {
 
   const router = useRouter();
   return (
-    <TableContainer className="max-h-[65vh]">
+    <TableContainer sx={{ maxHeight: "65vh" }}>
       <Table stickyHeader>
         <ThemeProvider theme={theme}>
           <TableHead color="secondary">
             <TableRow>
               <StyledTableCell align="center">
-                <div>
-                  難易度
-                  <IconButton onClick={onclick} value="level">
-                    <ArrowDropDownIcon
-                      color="primary"
-                      fontSize="large"
-                      style={
-                        TableStatus[0] == "level"
-                          ? TableStatus[1] == -1
-                            ? rotateStyle
+                <Box display={"flex"} alignItems={"center"}>
+                  <Button
+                    onClick={onclick}
+                    value="level"
+                    startIcon={
+                      <ArrowDropDownIcon
+                        color="primary"
+                        fontSize="large"
+                        style={
+                          TableStatus[0] == "level"
+                            ? TableStatus[1] == -1
+                              ? rotateStyle
+                              : {}
                             : {}
-                          : {}
-                      }
-                    />
-                  </IconButton>
-                </div>
+                        }
+                      />
+                    }
+                  >
+                    <Typography>Lv</Typography>
+                  </Button>
+                </Box>
               </StyledTableCell>
               <StyledTableCell>
-                <div className="flex items-center justify-items-center">
-                  <p>曲名</p>
-                  <IconButton onClick={onclick} value="name">
-                    <ArrowDropDownIcon
-                      color="primary"
-                      fontSize="large"
-                      style={
-                        TableStatus[0] == "name"
-                          ? TableStatus[1] == -1
-                            ? rotateStyle
+                <Box className="flex items-center justify-items-center">
+                  <Button
+                    onClick={onclick}
+                    value="name"
+                    startIcon={
+                      <ArrowDropDownIcon
+                        color="primary"
+                        fontSize="large"
+                        style={
+                          TableStatus[0] == "name"
+                            ? TableStatus[1] == -1
+                              ? rotateStyle
+                              : {}
                             : {}
-                          : {}
-                      }
-                    />
-                  </IconButton>
-                </div>
+                        }
+                      />
+                    }
+                  >
+                    <Typography>曲名</Typography>
+                  </Button>
+                </Box>
               </StyledTableCell>
 
               <StyledTableCell>
-                <div className="flex flex-row items-center justify-items-center">
-                  <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
-                    曲の長さ
-                  </p>
-                  <IconButton onClick={onclick} value="sec">
-                    <ArrowDropDownIcon
-                      color="primary"
-                      fontSize="large"
-                      style={
-                        TableStatus[0] == "sec"
-                          ? TableStatus[1] == -1
-                            ? rotateStyle
+                <Box
+                  width={"100%"}
+                  display={"flex"}
+                  alignItems={"center"}
+                  justifyContent={"center"}
+                >
+                  <Button
+                    onClick={onclick}
+                    value="sec"
+                    startIcon={
+                      <ArrowDropDownIcon
+                        color="primary"
+                        fontSize="large"
+                        style={
+                          TableStatus[0] == "sec"
+                            ? TableStatus[1] == -1
+                              ? rotateStyle
+                              : {}
                             : {}
-                          : {}
-                      }
-                    />
-                  </IconButton>
-                </div>
+                        }
+                      />
+                    }
+                  >
+                    <Typography>曲の時間</Typography>
+                  </Button>
+                  <IconButton onClick={onclick} value="sec"></IconButton>
+                </Box>
               </StyledTableCell>
               <StyledTableCell>
-                <div className="flex flex-row items-center justify-items-center">
-                  <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
-                    BPM
-                  </p>
-                  <IconButton onClick={onclick} value="bpm">
-                    <ArrowDropDownIcon
-                      color="primary"
-                      fontSize="large"
-                      style={
-                        TableStatus[0] == "bpm"
-                          ? TableStatus[1] == -1
-                            ? rotateStyle
+                <Box
+                  display={"flex"}
+                  alignItems={"center"}
+                  justifyContent={"center"}
+                >
+                  <Button
+                    onClick={onclick}
+                    value="bpm"
+                    startIcon={
+                      <ArrowDropDownIcon
+                        color="primary"
+                        fontSize="large"
+                        style={
+                          TableStatus[0] == "bpm"
+                            ? TableStatus[1] == -1
+                              ? rotateStyle
+                              : {}
                             : {}
-                          : {}
-                      }
-                    />
-                  </IconButton>
-                </div>
+                        }
+                      />
+                    }
+                  >
+                    <Typography>BPM</Typography>
+                  </Button>
+                </Box>
               </StyledTableCell>
             </TableRow>
           </TableHead>
@@ -186,7 +215,26 @@ export default function MusicTable({ data }) {
                 onClick={() => router.push(`/music/${videoid}?id=${id}`)}
                 sx={{ cursor: "pointer" }}
               >
-                <TableCell align="center">{level}</TableCell>
+                <TableCell
+                  align="center"
+                  width={20}
+                  height={20}
+                  sx={{
+                    padding: 0,
+                  }}
+                >
+                  <Box
+                    width={"100%"}
+                    height={"100%"}
+                    bgcolor={"gray.300"}
+                    borderRadius={"40px"}
+                    display={"flex"}
+                    alignItems={"center"}
+                    justifyContent={"center"}
+                  >
+                    {level}
+                  </Box>
+                </TableCell>
                 <TableCell>{name}</TableCell>
                 <TableCell className="text-center">
                   {Math.floor(sec / 60)}:{("00" + (sec % 60)).slice(-2)}
