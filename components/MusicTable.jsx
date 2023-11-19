@@ -7,6 +7,9 @@ import {
   TableRow,
   TableHead,
   IconButton,
+  Box,
+  Typography,
+  Button,
 } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
@@ -19,6 +22,8 @@ const theme = createTheme({
   palette: {
     primary: { main: "#acfef4" },
     secondary: { main: "#464366" },
+    master: { main: "#de5b7b" },
+    level: { main: "#60415f" },
   },
 });
 
@@ -91,112 +96,105 @@ export default function MusicTable({ data }) {
   }
 
   const router = useRouter();
+  const sortIcon = (
+    <ArrowDropDownIcon
+      color="primary"
+      fontSize="large"
+      style={
+        TableStatus[0] == "level"
+          ? TableStatus[1] == -1
+            ? rotateStyle
+            : {}
+          : {}
+      }
+    />
+  );
   return (
-    <TableContainer className="max-h-[65vh]">
-      <Table stickyHeader>
-        <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <TableContainer sx={{ maxHeight: "65vh" }}>
+        <Table stickyHeader>
           <TableHead color="secondary">
             <TableRow>
               <StyledTableCell align="center">
-                <div>
-                  難易度
-                  <IconButton onClick={onclick} value="level">
-                    <ArrowDropDownIcon
-                      color="primary"
-                      fontSize="large"
-                      style={
-                        TableStatus[0] == "level"
-                          ? TableStatus[1] == -1
-                            ? rotateStyle
-                            : {}
-                          : {}
-                      }
-                    />
-                  </IconButton>
-                </div>
+                <Box display={"flex"} alignItems={"center"}>
+                  <Button onClick={onclick} value="level" startIcon={sortIcon}>
+                    <Typography>Lv</Typography>
+                  </Button>
+                </Box>
               </StyledTableCell>
               <StyledTableCell>
-                <div className="flex items-center justify-items-center">
-                  <p>曲名</p>
-                  <IconButton onClick={onclick} value="name">
-                    <ArrowDropDownIcon
-                      color="primary"
-                      fontSize="large"
-                      style={
-                        TableStatus[0] == "name"
-                          ? TableStatus[1] == -1
-                            ? rotateStyle
-                            : {}
-                          : {}
-                      }
-                    />
-                  </IconButton>
-                </div>
+                <Box className="flex items-center justify-items-center">
+                  <Button onClick={onclick} value="name" startIcon={sortIcon}>
+                    <Typography>曲名</Typography>
+                  </Button>
+                </Box>
               </StyledTableCell>
 
               <StyledTableCell>
-                <div className="flex flex-row items-center justify-items-center">
-                  <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
-                    曲の長さ
-                  </p>
-                  <IconButton onClick={onclick} value="sec">
-                    <ArrowDropDownIcon
-                      color="primary"
-                      fontSize="large"
-                      style={
-                        TableStatus[0] == "sec"
-                          ? TableStatus[1] == -1
-                            ? rotateStyle
-                            : {}
-                          : {}
-                      }
-                    />
-                  </IconButton>
-                </div>
+                <Box
+                  width={"100%"}
+                  display={"flex"}
+                  alignItems={"center"}
+                  justifyContent={"center"}
+                >
+                  <Button onClick={onclick} value="sec" startIcon={sortIcon}>
+                    <Typography>曲の時間</Typography>
+                  </Button>
+                  <IconButton onClick={onclick} value="sec"></IconButton>
+                </Box>
               </StyledTableCell>
               <StyledTableCell>
-                <div className="flex flex-row items-center justify-items-center">
-                  <p className="hidden w-0 sm:w-auto sm:inline basis-3/4 text-center">
-                    BPM
-                  </p>
-                  <IconButton onClick={onclick} value="bpm">
-                    <ArrowDropDownIcon
-                      color="primary"
-                      fontSize="large"
-                      style={
-                        TableStatus[0] == "bpm"
-                          ? TableStatus[1] == -1
-                            ? rotateStyle
-                            : {}
-                          : {}
-                      }
-                    />
-                  </IconButton>
-                </div>
+                <Box
+                  display={"flex"}
+                  alignItems={"center"}
+                  justifyContent={"center"}
+                >
+                  <Button onClick={onclick} value="bpm" startIcon={sortIcon}>
+                    <Typography>BPM</Typography>
+                  </Button>
+                </Box>
               </StyledTableCell>
             </TableRow>
           </TableHead>
-        </ThemeProvider>
-        <TableBody>
-          {showdata.map(({ id, name, level, sec, bpm, videoid }) => {
-            return (
-              <TableRow
-                key={name}
-                hover
-                onClick={() => router.push(`/music/${videoid}?id=${id}`)}
-                sx={{ cursor: "pointer" }}
-              >
-                <TableCell align="center">{level}</TableCell>
-                <TableCell>{name}</TableCell>
-                <TableCell className="text-center">
-                  {Math.floor(sec / 60)}:{("00" + (sec % 60)).slice(-2)}
-                </TableCell>
-                <TableCell className="text-center">{bpm}</TableCell>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
-    </TableContainer>
+
+          <TableBody>
+            {showdata.map(({ id, name, level, sec, bpm, videoid }) => {
+              return (
+                <TableRow
+                  key={name}
+                  hover
+                  onClick={() => router.push(`/music/${videoid}?id=${id}`)}
+                  sx={{ cursor: "pointer" }}
+                >
+                  <TableCell align="center" width={20} height={20}>
+                    <Box
+                      width={"100%"}
+                      height={"100%"}
+                      bgcolor={theme.palette.master.main}
+                      borderRadius={"40px"}
+                      display={"flex"}
+                      alignItems={"center"}
+                      justifyContent={"center"}
+                    >
+                      <Typography
+                        color={theme.palette.level.main}
+                        fontWeight={"bold"}
+                      >
+                        {level}
+                      </Typography>
+                    </Box>
+                  </TableCell>
+                  <TableCell>{name}</TableCell>
+                  <TableCell className="text-center">
+                    {Math.floor(sec / 60)}:{("00" + (sec % 60)).slice(-2)}
+                  </TableCell>
+                  <TableCell className="text-center">{bpm}</TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </ThemeProvider>
   );
 }

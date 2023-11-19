@@ -7,8 +7,8 @@ import RangeSlider from "./RangeSlider";
 import Legend from "./Legend";
 
 function ChartContent({
-  links,
-  nodes,
+  // links,
+  // nodes,
   width,
   height,
   similarityData,
@@ -16,185 +16,123 @@ function ChartContent({
   nodeId,
   selectLevelRange,
 }) {
+  const [selectedNode, setSelectedNode] = useState(null);
+  const { nodes, links } = similarityData;
+  const viewNodes = nodes.filter(
+    ({ level }) => level >= selectLevelRange[0] && level <= selectLevelRange[1]
+  );
+  const viewNodeIds = new Set(viewNodes.map(({ id }) => id));
+  const viewLinks = links.filter(
+    ({ source, target }) => viewNodeIds.has(source) && viewNodeIds.has(target)
+  );
+
   const colorScale = d3
     .scaleSequential(d3.interpolateBuPu)
     .domain(d3.extent(nodes, ({ level }) => level));
 
-  function attrInRangeOpacity(selectLevelRange) {
-    function isInRange(level) {
-      const haveLevel = level ?? false;
-      return (
-        haveLevel &&
-        selectLevelRange[0] <= level &&
-        level <= selectLevelRange[1]
-      );
-    }
+  const xScale = d3
+    .scaleLinear()
+    .domain(d3.extent(nodes, ({ cx }) => cx * 0.5))
+    .range([0, width])
+    .nice();
+  const yScale = d3
+    .scaleLinear()
+    .domain(d3.extent(nodes, ({ cy }) => cy * 0.5))
+    .range([height, 0])
+    .nice();
 
-    const nodeElements = d3
-      .select(".node")
-      .selectChildren()
-      .attr("opacity", ({ level }) => {
-        return isInRange(level) ? "1" : "0.2";
-      });
-    const isInRangeNodes = nodeElements.filter(({ level }) => isInRange(level));
+  const idToNodeLocation = nodes.reduce((acc, node) => {
+    acc[node.id] = { cx: xScale(node.cx), cy: yScale(node.cy) };
+    return acc;
+  });
 
-    const inRangeNodesIdSet = new Set(
-      isInRangeNodes.data().map(({ id }) => id)
-    );
-    d3.select(".link")
-      .selectChildren()
-      .attr("opacity", ({ source, target }) =>
-        inRangeNodesIdSet.has(source.id) && inRangeNodesIdSet.has(target.id)
-          ? "1"
-          : "0.2"
-      );
-  }
-
-  useEffect(() => {
-    attrInRangeOpacity(selectLevelRange);
-  }, [selectLevelRange]);
-
-  useEffect(() => {
-    const relationNode = new Set();
-    const link = d3.select(".link");
-    link
-      .selectChildren()
-      .attr("stroke", (d) => {
-        if (d?.source.musicId === nodeId || d?.target.musicId === nodeId) {
-          relationNode.add(d.source.musicId);
-          relationNode.add(d.target.musicId);
-          return "rgb(255, 119, 187)";
-        } else {
-          return "gray";
-        }
-      })
-      .attr("stroke-width", (d) => {
-        if (d?.source.musicId === nodeId || d?.target.musicId === nodeId) {
-          return "3";
-        } else {
-          return "1.5";
-        }
-      })
-      .attr("opacity", (d) => {
-        if (
-          d?.source.musicId === nodeId ||
-          d?.target.musicId === nodeId ||
-          nodeId === null ||
-          nodeId === undefined
-        ) {
-          return "0.6";
-        } else {
-          return "0.2";
-        }
-      });
-    const node = d3.select(".node");
-    node
-      .selectChildren()
-      .on("click", (d) => {
-        if (d.srcElement.__data__.musicId === nodeId) {
-          setNodeId(null);
-        } else {
-          setNodeId(d.srcElement.__data__.musicId);
-        }
-      })
-
-      .attr("opacity", (d) => {
-        if (d?.musicId === nodeId || nodeId === null || nodeId === undefined) {
-          return "1";
-        }
-        if (relationNode.has(d?.musicId)) {
-          return "0.75";
-        }
-        return "0.2";
-      })
-      .attr("stroke", (d) => {
-        if (d?.musicId === nodeId) {
-          return "black";
-        }
-        if (relationNode.has(d?.musicId)) {
-          return "black";
-        }
-        return "white";
-      });
-
-    if (nodeId === null || nodeId === undefined) {
-      attrInRangeOpacity(selectLevelRange);
-    }
-  }, [nodeId]);
-
-  useEffect(() => {
-    if (width === undefined || height === undefined) return;
-
-    const svg = d3.select(".chartContent");
-    svg.selectChildren().remove();
-
-    const link = svg
-      .append("g")
-      .attr("class", "link")
-      .attr("stroke", "gray")
-      .attr("opacity", 0.6)
-      .selectAll()
-      .data(links)
-      .join("line")
-      .attr("stroke-width", 1.5);
-
-    const node = svg
-      .append("g")
-      .attr("class", "node")
-      .attr("stroke", "#fff")
-      .attr("stroke-width", 1.5)
-      .selectAll()
-      .data(nodes)
-      .join("circle")
-      .on("click", (d) => setNodeId(d.srcElement.__data__.musicId))
-      .attr("r", 7.5)
-      .attr("class", (d) => d.musicId)
-      .attr("fill", (d) => colorScale(d?.level));
-
-    const simulation = d3
-      .forceSimulation(nodes)
-      .force(
-        "link",
-        d3.forceLink(links).id((d) => d.id)
+  const highlightNodes = new Set(
+    viewLinks
+      .filter(
+        ({ source, target }) =>
+          source === selectedNode || target === selectedNode
       )
-      .force(
-        "charge",
-        d3.forceManyBody().strength((d) => d.value)
-      )
-      .force("center", d3.forceCenter(width / 2, height / 2))
-      .force(
-        "collide",
-        d3.forceCollide((d) => 20)
-      )
-      .on("end", () => {
-        link
-          .attr("x1", (d) => d.source.x)
-          .attr("y1", (d) => d.source.y)
-          .attr("x2", (d) => d.target.x)
-          .attr("y2", (d) => d.target.y);
+      .flatMap(({ source, target }) => [source, target])
+  );
 
-        node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
-      });
-  }, [similarityData, width, height]);
-
-  return <g></g>;
+  return (
+    <g className="chart_content">
+      <g className="links">
+        {viewLinks.map(({ source, target, value }) => {
+          if (
+            idToNodeLocation[source] === undefined ||
+            idToNodeLocation[target] === undefined
+          ) {
+            return null;
+          }
+          const isHightlighted =
+            source === selectedNode || target === selectedNode;
+          return (
+            <line
+              key={`${source}-${target}`}
+              x1={idToNodeLocation[source].cx}
+              y1={idToNodeLocation[source].cy}
+              x2={idToNodeLocation[target].cx}
+              y2={idToNodeLocation[target].cy}
+              stroke={isHightlighted ? "rgb(255, 119, 187)" : "black"}
+              strokeWidth={isHightlighted ? value * 3 : value * 2}
+              opacity={selectedNode === null ? 0.3 : isHightlighted ? 0.5 : 0.1}
+            />
+          );
+        })}
+      </g>
+      <g className="nodes">
+        {viewNodes.map(({ id, cx, cy, fill, musicId, level }) => {
+          const isHightlighted = selectedNode === id || highlightNodes.has(id);
+          return (
+            <circle
+              key={`${cx}-${cy}`}
+              cx={xScale(cx)}
+              cy={yScale(cy)}
+              r={5}
+              fill={colorScale(level)}
+              stroke={isHightlighted ? "black" : "white"}
+              strokeWidth={1}
+              opacity={isHightlighted || selectedNode === null ? 1 : 0.3}
+              onClick={() => {
+                if (selectedNode === id) {
+                  setSelectedNode(null);
+                  setNodeId(null);
+                  return;
+                }
+                setNodeId(musicId);
+                setSelectedNode(id);
+              }}
+            />
+          );
+        })}
+      </g>
+    </g>
+  );
 }
 
-function ZoomableSVG({ children, width, height, nodeId }) {
+function ZoomableSVG({
+  children,
+  width,
+  height,
+  nodeId,
+  similarityDataByNodeId,
+}) {
   const svgRef = useRef();
   const [k, setK] = useState(1);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
+  const zoom = d3
+    .zoom()
+    .on("zoom", (event) => {
+      const { x, y, k } = event.transform;
+      setK(k);
+      setX(x);
+      setY(y);
+    })
+    .scaleExtent([0.3, 3]);
+
   useEffect(() => {
-    const zoom = d3
-      .zoom()
-      .on("zoom", (event) => {
-        const { x, y, k } = event.transform;
-        setK(k);
-        setX(x);
-        setY(y);
-      })
-      .scaleExtent([0.3, 3]);
     d3.select(svgRef.current).call(zoom).on("dblclick.zoom", null);
 
     () => {
@@ -249,6 +187,10 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
   }, [nodeId]);
 
   const { nodes } = similarityData;
+  const similarityDataByNodeId = similarityData.nodes.reduce((acc, node) => {
+    acc[node.musicId] = node;
+    return acc;
+  }, {});
 
   const links = nodes.flatMap((node) => {
     const link = similarityData.links.filter((link) => {
@@ -277,33 +219,42 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
                 range={levelRange}
                 handleLevelRangeChange={handleLevelRangeChange}
               />
-              <Legend range={levelRange} />
             </Box>
             <Box
               height={`${100 * size.networkSizeRate}%`}
               width={"100%"} /*ref={wrapperRef}*/
+              display={"flex"}
+              flexDirection={"column"}
+              justifyContent={"flex-end"}
+              flexWrap={"nowrap"}
             >
-              <ZoomableSVG
-                width={size.width}
-                height={size.height * size.networkSizeRate}
-                nodeId={nodeId}
-              >
-                <ChartContent
-                  links={links}
-                  nodes={nodes}
+              <Box>
+                <Legend range={levelRange} />
+              </Box>
+              <Box>
+                <ZoomableSVG
                   width={size.width}
                   height={size.height * size.networkSizeRate}
-                  similarityData={similarityData}
-                  setNodeId={setNodeId}
                   nodeId={nodeId}
-                  selectLevelRange={selectLevelRange}
-                ></ChartContent>
-              </ZoomableSVG>
+                  similarityDataByNodeId={similarityDataByNodeId}
+                >
+                  <ChartContent
+                    links={links}
+                    nodes={nodes}
+                    width={size.width}
+                    height={size.height * size.networkSizeRate}
+                    similarityData={similarityData}
+                    setNodeId={setNodeId}
+                    nodeId={nodeId}
+                    selectLevelRange={selectLevelRange}
+                  ></ChartContent>
+                </ZoomableSVG>
+              </Box>
             </Box>
           </Box>
         </Grid>
         <Grid item xs md>
-          <Box height={size.height}>
+          <Box height={"100%"}>
             <RelationList nodeId={nodeId} />
           </Box>
         </Grid>
