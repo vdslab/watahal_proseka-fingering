@@ -32,7 +32,6 @@ export default function RelationList({ nodeId }) {
   if (error || error2) return <div>Failed to load</div>;
 
   const music = musicListData?.find((music) => music.id === nodeId);
-  console.log(music);
   similarityData?.sort((a, b) => b.similarity - a.similarity);
   const similarMusics = similarityData
     ?.slice(0, 10)
