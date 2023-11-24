@@ -7,6 +7,8 @@ import { Box, Stack } from "@mui/material";
 
 import { separateScore } from "./separeteScore";
 import ComplexityHeatMap from "./ComplexityHeatMap";
+import GrayScaleSlider from "./GrayScaleSlider";
+import { useState } from "react";
 
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
@@ -21,6 +23,9 @@ export default function ComplexityMusicScore({ id }) {
     error: complexityError,
     isLoading: complexityIsLoading,
   } = useSWR(`/api/music/complexity/${id}`, fetcher);
+
+  const grayScaleMax = 100;
+  const [grayScaleValue, setGrayScaleValue] = useState(grayScaleMax);
 
   if (error || complexityError) return <div>failed to load</div>;
   if (isLoading || complexityIsLoading) return <div>loading...</div>;
@@ -58,44 +63,50 @@ export default function ComplexityMusicScore({ id }) {
     .domain(d3.extent(status_by_measure, (d) => d));
 
   return (
-    <Box display={"flex"} overflow={"auto"}>
-      {separetedScore.map((score, i) => {
-        const complexity = separateComplexity[i];
-        const ys = Array(separateNumber)
-          .fill()
-          .map((_, i) => Math.floor(score[0].y / 4) * 4 + i + 1);
-        return (
-          <Box marginRight={1} key={i} bgcolor={"white"} padding={1}>
-            <svg width={width} height={height}>
-              <g>
-                <LineSkeleton
-                  maxY={separateNumber}
-                  xScale={xScale}
-                  height={height}
-                />
-                <ComplexityHeatMap
-                  id={id}
-                  complexity={complexity}
-                  scales={{
-                    xScale,
-                    yScale: yScales[i],
-                    widthScale,
-                    colorScale: complexityColorScale,
-                  }}
-                  ys={ys}
-                />
-                <NoteScore
-                  score={score}
-                  scales={{ xScale, yScale: yScales[i], widthScale }}
-                  noteheight={4}
-                  opacity={1}
-                  grayScale={1}
-                />
-              </g>
-            </svg>
-          </Box>
-        );
-      })}
+    <Box>
+      <GrayScaleSlider
+        setGrayScaleValue={setGrayScaleValue}
+        max={grayScaleMax}
+      />
+      <Box display={"flex"} overflow={"auto"}>
+        {separetedScore.map((score, i) => {
+          const complexity = separateComplexity[i];
+          const ys = Array(separateNumber)
+            .fill()
+            .map((_, i) => Math.floor(score[0].y / 4) * 4 + i + 1);
+          return (
+            <Box marginRight={1} key={i} bgcolor={"white"} padding={1}>
+              <svg width={width} height={height}>
+                <g>
+                  <LineSkeleton
+                    maxY={separateNumber}
+                    xScale={xScale}
+                    height={height}
+                  />
+                  <ComplexityHeatMap
+                    id={id}
+                    complexity={complexity}
+                    scales={{
+                      xScale,
+                      yScale: yScales[i],
+                      widthScale,
+                      colorScale: complexityColorScale,
+                    }}
+                    ys={ys}
+                  />
+                  <NoteScore
+                    score={score}
+                    scales={{ xScale, yScale: yScales[i], widthScale }}
+                    noteheight={4}
+                    opacity={1}
+                    grayScale={grayScaleValue / grayScaleMax}
+                  />
+                </g>
+              </svg>
+            </Box>
+          );
+        })}
+      </Box>
     </Box>
   );
 }
