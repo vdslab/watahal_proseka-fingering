@@ -2,10 +2,19 @@
 import React, { useState, useRef } from "react";
 import VideoPlayer from "./VideoPlayer";
 import FingeringVis from "./FingeringVis";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Chip,
+  Grid,
+  List,
+  ListItem,
+  Typography,
+} from "@mui/material";
 import SimilarityList from "./SimilarityList";
 import ComplexityMusicScore from "./complexityMusicScore/MusicScore";
 
+import DoneIcon from "@mui/icons-material/Done";
 export default function Content({
   videoId,
   fingering,
@@ -18,6 +27,10 @@ export default function Content({
   const [YTPlayer, setYTPlayer] = useState();
   const mainViewRef = useRef();
   const [showComplexity, setShowComplexity] = useState(true);
+  const [chipData, setChipData] = useState([
+    { label: "complexity", selected: true },
+    { label: "fingering", selected: false, disabled: true },
+  ]);
 
   const fingeringVis = (
     <Grid container direction={"row"} alignItems="stretch" spacing={2}>
@@ -62,6 +75,30 @@ export default function Content({
         >
           {showComplexity ? "動画と一緒に運指を見る" : "譜面の複雑さを見る"}
         </Button>
+        <Box
+          component={"ul"}
+          display={"flex"}
+          justifyContent={"start"}
+          flexWrap={"nowrap"}
+          width={"20%"}
+        >
+          {chipData.map(({ label, selected, disabled }, index) => (
+            <ListItem key={index}>
+              <Chip
+                label={label}
+                variant={selected ? "filled" : "outlined"}
+                color="primary"
+                icon={selected ? <DoneIcon /> : <span />}
+                onClick={() => {
+                  const newChipData = [...chipData];
+                  newChipData[index].selected = !newChipData[index].selected;
+                  setChipData(newChipData);
+                }}
+                disabled={disabled}
+              />
+            </ListItem>
+          ))}
+        </Box>
       </Box>
       {showComplexity ? (
         <>
@@ -71,7 +108,10 @@ export default function Content({
           <Typography variant="body1" gutterBottom>
             色が濃いほど複雑であることを表しています．
           </Typography>
-          <ComplexityMusicScore id={id} />
+          <ComplexityMusicScore
+            id={id}
+            view={chipData.find(({ label }) => label === "complexity").selected}
+          />
         </>
       ) : (
         fingeringVis
