@@ -32,15 +32,15 @@ function ChartContent({
 
   const xScale = d3
     .scaleLinear()
-    .domain(d3.extent(nodes, ({ cx }) => cx * 0.5))
+    .domain(d3.extent(nodes, ({ cx }) => cx))
     .range([0, width])
-    .nice();
+    .nice(10);
+  console.log(xScale(-960));
   const yScale = d3
     .scaleLinear()
-    .domain(d3.extent(nodes, ({ cy }) => cy * 0.5))
+    .domain(d3.extent(nodes, ({ cy }) => cy))
     .range([height, 0])
-    .nice();
-
+    .nice(10);
   const idToNodeLocation = nodes.reduce((acc, node) => {
     acc[node.id] = { cx: xScale(node.cx), cy: yScale(node.cy) };
     return acc;
@@ -89,7 +89,7 @@ function ChartContent({
               key={`${cx}-${cy}`}
               cx={xScale(cx)}
               cy={yScale(cy)}
-              r={5}
+              r={"0.5%"}
               fill={colorScale(level)}
               stroke={isHightlighted ? "black" : "white"}
               strokeWidth={1}
@@ -130,7 +130,7 @@ function ZoomableSVG({
       setX(x);
       setY(y);
     })
-    .scaleExtent([0.3, 3]);
+    .scaleExtent([0.8, 10]);
 
   useEffect(() => {
     d3.select(svgRef.current).call(zoom).on("dblclick.zoom", null);
@@ -231,18 +231,18 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
               <Box>
                 <Legend range={levelRange} />
               </Box>
-              <Box>
+              <Box width={"100%"} height={"100%"}>
                 <ZoomableSVG
-                  width={size.width}
-                  height={size.height * size.networkSizeRate}
+                  width={1000}
+                  height={1000}
                   nodeId={nodeId}
                   similarityDataByNodeId={similarityDataByNodeId}
                 >
                   <ChartContent
                     links={links}
                     nodes={nodes}
-                    width={size.width}
-                    height={size.height * size.networkSizeRate}
+                    width={1000}
+                    height={1000}
                     similarityData={similarityData}
                     setNodeId={setNodeId}
                     nodeId={nodeId}
