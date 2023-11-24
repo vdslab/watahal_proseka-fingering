@@ -16,7 +16,7 @@ export default function NoteScore({
   flickColor,
   holdColor = "lime",
   opacity = 1,
-  grayScale = 1,
+  grayScale = 0,
 }) {
   const { xScale, yScale, widthScale } = scales;
   const notHoldNotes = score.filter(({ type }) => type !== "hold");
