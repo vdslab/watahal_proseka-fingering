@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import { useState } from "react";
 
 export default function GrayScaleSlider({ setGrayScaleValue, max }) {
-  const [value, setValue] = useState(30);
+  const [value, setValue] = useState(max);
 
   const handleSliderChange = (event, newValue) => {
     setValue(newValue);
