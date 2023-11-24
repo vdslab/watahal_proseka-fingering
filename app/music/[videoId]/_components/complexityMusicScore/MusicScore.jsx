@@ -73,11 +73,6 @@ export default function ComplexityMusicScore({ id }) {
                   xScale={xScale}
                   height={height}
                 />
-                <NoteScore
-                  score={score}
-                  scales={{ xScale, yScale: yScales[i], widthScale }}
-                  noteheight={4}
-                />
                 <ComplexityHeatMap
                   id={id}
                   complexity={complexity}
@@ -88,6 +83,13 @@ export default function ComplexityMusicScore({ id }) {
                     colorScale: complexityColorScale,
                   }}
                   ys={ys}
+                />
+                <NoteScore
+                  score={score}
+                  scales={{ xScale, yScale: yScales[i], widthScale }}
+                  noteheight={4}
+                  opacity={1}
+                  grayScale={1}
                 />
               </g>
             </svg>
