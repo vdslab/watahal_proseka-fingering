@@ -8,7 +8,16 @@ function generateHoldAreaPathD(x1, y1, width1, x2, y2, width2) {
   return `M ${lowerLeftPos} ${lowerRightPos} ${upperRightPos} ${upperLeftPos}`;
 }
 
-export default function NoteScore({ score, scales, noteheight }) {
+export default function NoteScore({
+  score,
+  scales,
+  noteheight,
+  noteColor,
+  flickColor,
+  holdColor = "lime",
+  opacity = 1,
+  grayScale = 1,
+}) {
   const { xScale, yScale, widthScale } = scales;
   const notHoldNotes = score.filter(({ type }) => type !== "hold");
   const holdnotes = score.filter(({ type }) => type === "hold");
@@ -27,7 +36,7 @@ export default function NoteScore({ score, scales, noteheight }) {
   }, {});
 
   return (
-    <g>
+    <g opacity={opacity} filter={`grayscale(${grayScale})`}>
       {notHoldNotes.map(
         ({ judge_type, type, x, y, width, hold_type, hole }) => {
           return (
@@ -39,6 +48,9 @@ export default function NoteScore({ score, scales, noteheight }) {
               x={xScale(x)}
               y={yScale(y)}
               width={widthScale(width)}
+              noteColor={noteColor}
+              flickColor={flickColor}
+              holdColor={holdColor}
             />
           );
         }
@@ -54,8 +66,8 @@ export default function NoteScore({ score, scales, noteheight }) {
                     <></>
                   ) : (
                     <path
-                      fillOpacity="0.4"
-                      fill="lime"
+                      fillOpacity={0.4}
+                      fill={holdColor}
                       d={generateHoldAreaPathD(
                         xScale(x),
                         yScale(y),
@@ -73,6 +85,9 @@ export default function NoteScore({ score, scales, noteheight }) {
                     x={xScale(x)}
                     y={yScale(y)}
                     width={widthScale(width)}
+                    noteColor={noteColor}
+                    flickColor={flickColor}
+                    holdColor={holdColor}
                   />
                 </g>
               );

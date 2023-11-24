@@ -1,19 +1,16 @@
-function HoldNote({ x, y, width, height }) {
-  const color = "rgb(37 255 57)";
+function HoldNote({ x, y, width, height, color }) {
   return (
     <rect x={x} y={y - height / 2} width={width} height={height} fill={color} />
   );
 }
 
-function NormalNote({ x, y, width, height }) {
-  const color = "rgb(100 255 234)";
+function NormalNote({ x, y, width, height, color }) {
   return (
     <rect x={x} y={y - height / 2} width={width} height={height} fill={color} />
   );
 }
 
-function FlickNote({ x, y, width, height, direction }) {
-  const color = "rgb(255, 119, 187)";
+function FlickNote({ x, y, width, height, direction, color }) {
   return (
     <rect x={x} y={y - height / 2} width={width} height={height} fill={color} />
   );
@@ -27,6 +24,9 @@ export default function Note({
   width,
   height,
   direction,
+  holdColor,
+  noteColor = "rgb(100 255 234)",
+  flickColor = "rgb(255, 119, 187)",
 }) {
   switch (judge_type) {
     case "flick_up":
@@ -40,14 +40,25 @@ export default function Note({
           width={width}
           height={height}
           direction={direction}
+          color={flickColor}
         />
       );
   }
   switch (type) {
     case "hold":
-      return <HoldNote x={x} y={y} width={width} height={height} />;
+      return (
+        <HoldNote x={x} y={y} width={width} height={height} color={holdColor} />
+      );
     case "normal":
-      return <NormalNote x={x} y={y} width={width} height={height} />;
+      return (
+        <NormalNote
+          x={x}
+          y={y}
+          width={width}
+          height={height}
+          color={noteColor}
+        />
+      );
     default:
       return (
         <HoldNote
@@ -56,6 +67,7 @@ export default function Note({
           width={width}
           height={height}
           direction={direction}
+          color={holdColor}
         />
       );
   }
