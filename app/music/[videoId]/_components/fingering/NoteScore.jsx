@@ -15,6 +15,8 @@ export default function NoteScore({
   noteColor,
   flickColor,
   holdColor = "lime",
+  opacity = 1,
+  grayScale = 1,
 }) {
   const { xScale, yScale, widthScale } = scales;
   const notHoldNotes = score.filter(({ type }) => type !== "hold");
@@ -34,7 +36,7 @@ export default function NoteScore({
   }, {});
 
   return (
-    <g>
+    <g opacity={opacity} filter={`grayscale(${grayScale})`}>
       {notHoldNotes.map(
         ({ judge_type, type, x, y, width, hold_type, hole }) => {
           return (
