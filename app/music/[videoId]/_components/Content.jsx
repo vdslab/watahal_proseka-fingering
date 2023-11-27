@@ -19,13 +19,10 @@ export default function Content({
 
   return (
     <Box padding={3}>
-      <Box borderBottom={1} marginBottom={1}>
+      <Box borderBottom={1} marginBottom={3}>
         <Tabs
           value={currentTab}
-          onChange={(_, newTab) => {
-            console.log(newTab);
-            setCurrentTab(newTab);
-          }}
+          onChange={(_, newTab) => setCurrentTab(newTab)}
         >
           <Tab label="複雑さ" />
           <Tab label="運指" />
