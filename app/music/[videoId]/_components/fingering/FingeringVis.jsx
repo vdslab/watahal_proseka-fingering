@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import FingeringVisContent from "./FingeringVisContent";
 import SimilarityList from "../SimilarityList";
 import VideoPlayer from "../VideoPlayer";
@@ -15,34 +15,39 @@ export default function FingeringVis({
   const [YTPlayer, setYTPlayer] = useState();
 
   return (
-    <Grid container direction={"row"} alignItems="stretch" spacing={2}>
-      <Grid item xs={8}>
-        <Box bgcolor={"white"} height={"75vh"}>
-          <FingeringVisContent
-            fingering={fingering}
-            minY={0}
-            YTPlayer={YTPlayer}
-            height={600}
-            width={600}
-            score={score}
-            id={id}
-          />
-        </Box>
-      </Grid>
-      <Grid item xs={4} container direction={"column"}>
-        <Grid item xs height={"10vh"} overflow={"auto"}>
-          <SimilarityList similarities={similarities} musicList={musicList} />
+    <>
+      <Typography variant="h4" gutterBottom>
+        運指
+      </Typography>
+      <Grid container direction={"row"} alignItems="stretch" spacing={2}>
+        <Grid item xs={8}>
+          <Box bgcolor={"white"} height={"75vh"}>
+            <FingeringVisContent
+              fingering={fingering}
+              minY={0}
+              YTPlayer={YTPlayer}
+              height={600}
+              width={600}
+              score={score}
+              id={id}
+            />
+          </Box>
         </Grid>
-        <Grid item xs height={"10vh"}>
-          <VideoPlayer
-            {...{
-              videoId,
-              YTPlayer,
-              setYTPlayer,
-            }}
-          />
+        <Grid item xs={4} container direction={"column"}>
+          <Grid item xs height={"10vh"} overflow={"auto"}>
+            <SimilarityList similarities={similarities} musicList={musicList} />
+          </Grid>
+          <Grid item xs height={"10vh"}>
+            <VideoPlayer
+              {...{
+                videoId,
+                YTPlayer,
+                setYTPlayer,
+              }}
+            />
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 }
