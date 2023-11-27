@@ -22,7 +22,7 @@ export default function VideoPlayer({ videoId, YTPlayer, setYTPlayer }) {
     width: width,
     height: height,
     playerVars: {
-      autoplay: 1,
+      autoplay: 0,
     },
   };
 

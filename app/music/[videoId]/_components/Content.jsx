@@ -1,11 +1,12 @@
 "use client";
 import React, { useState, useRef } from "react";
 import VideoPlayer from "./VideoPlayer";
-import FingeringVis from "./FingeringVis";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import FingeringVisContent from "./fingering/FingeringVisContent";
+import { Box, Grid, Tab, Tabs } from "@mui/material";
 import SimilarityList from "./SimilarityList";
-import ComplexityMusicScore from "./complexityMusicScore/MusicScore";
 
+import ScoreOverview from "./scoreOverview/ScoreOverview";
+import FingeringVis from "./fingering/FingeringVis";
 export default function Content({
   videoId,
   fingering,
@@ -14,68 +15,33 @@ export default function Content({
   score,
   id,
 }) {
-  const [playTimeState, setPlayTimeState] = useState({ current: 0, max: 0 });
-  const [YTPlayer, setYTPlayer] = useState();
-  const mainViewRef = useRef();
-  const [showComplexity, setShowComplexity] = useState(true);
-
-  const fingeringVis = (
-    <Grid container direction={"row"} alignItems="stretch" spacing={2}>
-      <Grid item xs={8} ref={mainViewRef}>
-        <Box bgcolor={"white"} height={"75vh"}>
-          <FingeringVis
-            fingering={fingering}
-            minY={0}
-            YTPlayer={YTPlayer}
-            height={mainViewRef.current?.clientHeight}
-            width={mainViewRef.current?.clientWidth}
-            score={score}
-            id={id}
-          />
-        </Box>
-      </Grid>
-      <Grid item xs={4} container direction={"column"}>
-        <Grid item xs height={"10vh"} overflow={"auto"}>
-          <SimilarityList similarities={similarities} musicList={musicList} />
-        </Grid>
-        <Grid item xs height={"10vh"}>
-          <VideoPlayer
-            {...{
-              videoId,
-              YTPlayer,
-              setYTPlayer,
-            }}
-          />
-        </Grid>
-      </Grid>
-    </Grid>
-  );
+  const [currentTab, setCurrentTab] = useState(0);
 
   return (
     <Box padding={3}>
-      <Box marginBottom={2}>
-        <Button
-          variant="contained"
-          onClick={() => {
-            setShowComplexity(!showComplexity);
-          }}
+      <Box borderBottom={1} marginBottom={3}>
+        <Tabs
+          value={currentTab}
+          onChange={(_, newTab) => setCurrentTab(newTab)}
         >
-          {showComplexity ? "動画と一緒に運指を見る" : "譜面の複雑さを見る"}
-        </Button>
+          <Tab label="譜面の全体像" />
+          <Tab label="運指" />
+        </Tabs>
       </Box>
-      {showComplexity ? (
-        <>
-          <Typography variant="h4" gutterBottom>
-            譜面の複雑さ
-          </Typography>
-          <Typography variant="body1" gutterBottom>
-            色が濃いほど複雑であることを表しています．
-          </Typography>
-          <ComplexityMusicScore id={id} />
-        </>
-      ) : (
-        fingeringVis
-      )}
+
+      <Box hidden={currentTab !== 0}>
+        <ScoreOverview id={id} />
+      </Box>
+      <Box hidden={currentTab !== 1}>
+        <FingeringVis
+          videoId={videoId}
+          fingering={fingering}
+          similarities={similarities}
+          musicList={musicList}
+          score={score}
+          id={id}
+        />
+      </Box>
     </Box>
   );
 
