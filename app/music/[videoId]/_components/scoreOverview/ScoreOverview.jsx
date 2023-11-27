@@ -1,7 +1,7 @@
 import { Box, Chip, ListItem, Stack, Tooltip, Typography } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
 import { useState } from "react";
-import ComplexityMusicScore from "../complexityMusicScore/MusicScore";
+import ComplexityMusicScore from "./complexityMusicScore/MusicScore";
 
 export default function ScoreOverview({ id }) {
   const [chipData, setChipData] = useState([

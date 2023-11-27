@@ -1,7 +1,7 @@
 "use client";
 import useSWR from "swr";
-import NoteScore from "../fingering/NoteScore";
-import LineSkeleton from "../fingering/LineSkeleton";
+import NoteScore from "../../fingering/NoteScore";
+import LineSkeleton from "../../fingering/LineSkeleton";
 import * as d3 from "d3";
 import { Box, Stack } from "@mui/material";
 
