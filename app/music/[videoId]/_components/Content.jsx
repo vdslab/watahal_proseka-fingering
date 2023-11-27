@@ -24,7 +24,7 @@ export default function Content({
           value={currentTab}
           onChange={(_, newTab) => setCurrentTab(newTab)}
         >
-          <Tab label="複雑さ" />
+          <Tab label="譜面の全体像" />
           <Tab label="運指" />
         </Tabs>
       </Box>
