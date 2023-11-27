@@ -1,9 +1,9 @@
 import { Box, CircularProgress, Container } from "@mui/material";
-import Chart from "./fingering/Chart";
+import Chart from "./Chart";
 import useSWR from "swr";
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
-export default function FingeringVis({
+export default function FingeringVisContent({
   fingering,
   width,
   YTPlayer,
