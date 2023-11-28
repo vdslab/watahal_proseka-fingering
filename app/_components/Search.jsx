@@ -61,7 +61,7 @@ export default function Search({ data, setSelectedMusicId, selectedMusicId }) {
         onClick={() => {
           if (selectID != null) {
             const { ID: videoId, key: id } = selectID;
-            router.push(`/music/${videoId}?id=${id}`);
+            router.push(`/music/${id}`);
           }
         }}
       >

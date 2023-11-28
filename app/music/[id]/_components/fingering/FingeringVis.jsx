@@ -4,14 +4,7 @@ import SimilarityList from "../SimilarityList";
 import VideoPlayer from "../VideoPlayer";
 import { useState } from "react";
 
-export default function FingeringVis({
-  videoId,
-  fingering,
-  similarities,
-  musicList,
-  score,
-  id,
-}) {
+export default function FingeringVis({ fingering }) {
   const [YTPlayer, setYTPlayer] = useState();
 
   return (
@@ -28,23 +21,15 @@ export default function FingeringVis({
               YTPlayer={YTPlayer}
               height={600}
               width={600}
-              score={score}
-              id={id}
             />
           </Box>
         </Grid>
         <Grid item xs={4} container direction={"column"}>
           <Grid item xs height={"10vh"} overflow={"auto"}>
-            <SimilarityList similarities={similarities} musicList={musicList} />
+            <SimilarityList />
           </Grid>
           <Grid item xs height={"10vh"}>
-            <VideoPlayer
-              {...{
-                videoId,
-                YTPlayer,
-                setYTPlayer,
-              }}
-            />
+            <VideoPlayer YTPlayer={YTPlayer} setYTPlayer={setYTPlayer} />
           </Grid>
         </Grid>
       </Grid>

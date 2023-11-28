@@ -1,6 +1,7 @@
 import { Box, CircularProgress, Container } from "@mui/material";
 import Chart from "./Chart";
 import useSWR from "swr";
+import { useParams } from "next/navigation";
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
 export default function FingeringVisContent({
@@ -8,14 +9,24 @@ export default function FingeringVisContent({
   width,
   YTPlayer,
   height,
-  score,
-  id,
 }) {
+  const params = useParams();
+  const { id } = params;
+
   const { data: music, error } = useSWR(`/api/music/${id}`, fetcher);
+  const {
+    data: score,
+    isLoading: scoreLoading,
+    error: scoreError,
+  } = useSWR(`/api/music/musicScore/${id}`, (url) =>
+    fetch(url).then((res) => res.json())
+  );
 
-  if (error) return <div>Failed to load</div>;
+  if (error || scoreError) {
+    return <div>Failed to load</div>;
+  }
 
-  if (YTPlayer === undefined || !music) {
+  if (YTPlayer === undefined || !music || scoreLoading) {
     return (
       <Container sx={{ height: "100%" }}>
         <Box
