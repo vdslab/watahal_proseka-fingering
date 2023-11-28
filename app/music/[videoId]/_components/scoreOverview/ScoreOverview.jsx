@@ -3,7 +3,7 @@ import DoneIcon from "@mui/icons-material/Done";
 import { useState } from "react";
 import ComplexityMusicScore from "./complexityMusicScore/MusicScore";
 
-export default function ScoreOverview({ id }) {
+export default function ScoreOverview() {
   const [chipData, setChipData] = useState([
     {
       label: "complexity",
@@ -50,7 +50,6 @@ export default function ScoreOverview({ id }) {
       </Box>
 
       <ComplexityMusicScore
-        id={id}
         view={chipData.find(({ label }) => label === "complexity").selected}
       />
     </>

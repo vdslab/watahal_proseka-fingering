@@ -11,10 +11,36 @@ import {
   ListSubheader,
 } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import useSWR from "swr";
 
-export default function SimilarityList({ similarities, musicList }) {
+export default function SimilarityList() {
   const router = useRouter();
+  // const params = useParams();
+  // const { id } = params;
+  const searchParams = useSearchParams();
+  const id = searchParams.get("id");
+
+  const {
+    data: musicList,
+    isLoading: musicListLoading,
+    error: musicListError,
+  } = useSWR(`/api/music`, (url) => fetch(url).then((res) => res.json()));
+  const {
+    data: similarities,
+    isLoading: similaritiesLoading,
+    error: similaritiesError,
+  } = useSWR(`/api/music/similarity/${id}`, (url) =>
+    fetch(url).then((res) => res.json())
+  );
+
+  if (musicListError || similaritiesError) {
+    return <div>failed to load</div>;
+  }
+  if (musicListLoading || similaritiesLoading) {
+    return <div>loading...</div>;
+  }
+
   const header = Object.keys(similarities[0]);
   similarities.sort((a, b) => {
     return b.similarity - a.similarity;

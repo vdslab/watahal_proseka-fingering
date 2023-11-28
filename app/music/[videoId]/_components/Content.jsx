@@ -1,20 +1,11 @@
 "use client";
-import React, { useState, useRef } from "react";
-import VideoPlayer from "./VideoPlayer";
-import FingeringVisContent from "./fingering/FingeringVisContent";
-import { Box, Grid, Tab, Tabs } from "@mui/material";
-import SimilarityList from "./SimilarityList";
+import React, { useState } from "react";
+import { Box, Tab, Tabs } from "@mui/material";
 
 import ScoreOverview from "./scoreOverview/ScoreOverview";
 import FingeringVis from "./fingering/FingeringVis";
-export default function Content({
-  videoId,
-  fingering,
-  similarities,
-  musicList,
-  score,
-  id,
-}) {
+
+export default function Content({ fingering }) {
   const [currentTab, setCurrentTab] = useState(0);
 
   return (
@@ -30,17 +21,10 @@ export default function Content({
       </Box>
 
       <Box hidden={currentTab !== 0}>
-        <ScoreOverview id={id} />
+        <ScoreOverview />
       </Box>
       <Box hidden={currentTab !== 1}>
-        <FingeringVis
-          videoId={videoId}
-          fingering={fingering}
-          similarities={similarities}
-          musicList={musicList}
-          score={score}
-          id={id}
-        />
+        <FingeringVis fingering={fingering} />
       </Box>
     </Box>
   );
