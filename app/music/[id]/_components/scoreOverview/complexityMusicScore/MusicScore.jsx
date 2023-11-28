@@ -9,15 +9,13 @@ import { separateScore } from "./separeteScore";
 import ComplexityHeatMap from "./ComplexityHeatMap";
 import GrayScaleSlider from "./GrayScaleSlider";
 import { useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useParams } from "next/navigation";
 
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
 export default function ComplexityMusicScore({ view }) {
-  // const params = useParams();
-  // const { id } = params;
-  const searchParams = useSearchParams();
-  const id = searchParams.get("id");
+  const params = useParams();
+  const { id } = params;
 
   const { data, error, isLoading } = useSWR(
     `/api/music/musicScore/${id}`,

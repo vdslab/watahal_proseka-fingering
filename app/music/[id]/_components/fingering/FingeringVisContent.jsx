@@ -1,7 +1,7 @@
 import { Box, CircularProgress, Container } from "@mui/material";
 import Chart from "./Chart";
 import useSWR from "swr";
-import { useSearchParams } from "next/navigation";
+import { useParams } from "next/navigation";
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
 export default function FingeringVisContent({
@@ -10,10 +10,8 @@ export default function FingeringVisContent({
   YTPlayer,
   height,
 }) {
-  // const params = useParams();
-  // const { id } = params;
-  const searchParams = useSearchParams();
-  const id = searchParams.get("id");
+  const params = useParams();
+  const { id } = params;
 
   const { data: music, error } = useSWR(`/api/music/${id}`, fetcher);
   const {

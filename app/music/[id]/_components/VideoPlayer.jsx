@@ -4,7 +4,7 @@ import YouTube from "react-youtube";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Box } from "@mui/material";
 import useSWR from "swr";
-import { useParams, useSearchParams } from "next/navigation";
+import { useParams } from "next/navigation";
 
 const theme = createTheme({
   palette: {
@@ -18,10 +18,8 @@ const theme = createTheme({
 export default function VideoPlayer({ YTPlayer, setYTPlayer }) {
   const [volume, setVolume] = useState(30);
   const wrapperRef = useRef();
-  // const params = useParams();
-  // const { id } = params;
-  const searchParams = useSearchParams();
-  const id = searchParams.get("id");
+  const params = useParams();
+  const { id } = params;
 
   const {
     data: musicInfo,

@@ -11,15 +11,13 @@ import {
   ListSubheader,
 } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import useSWR from "swr";
 
 export default function SimilarityList() {
   const router = useRouter();
-  // const params = useParams();
-  // const { id } = params;
-  const searchParams = useSearchParams();
-  const id = searchParams.get("id");
+  const params = useParams();
+  const { id } = params;
 
   const {
     data: musicList,
@@ -37,11 +35,11 @@ export default function SimilarityList() {
   if (musicListError || similaritiesError) {
     return <div>failed to load</div>;
   }
+
   if (musicListLoading || similaritiesLoading) {
     return <div>loading...</div>;
   }
 
-  const header = Object.keys(similarities[0]);
   similarities.sort((a, b) => {
     return b.similarity - a.similarity;
   });
@@ -66,10 +64,10 @@ export default function SimilarityList() {
         <ListItem>{sourceName}</ListItem>
         <Divider />
         <ListSubheader>似ている曲</ListSubheader>
-        {similarMusic.map(({ target, name, videoId }) => (
+        {similarMusic.map(({ target, name }) => (
           <ListItemButton
             key={target}
-            onClick={() => router.push(`/music/${videoId}?id=${target}`)}
+            onClick={() => router.push(`/music/${target}`)}
           >
             <ListItemIcon>
               <LaunchIcon />
