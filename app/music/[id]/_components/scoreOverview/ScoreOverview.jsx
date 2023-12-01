@@ -13,7 +13,6 @@ export default function ScoreOverview() {
     {
       label: "fingering",
       selected: false,
-      disabled: true,
       description: "運指の表示",
     },
   ]);
@@ -30,7 +29,7 @@ export default function ScoreOverview() {
           alignItems="center"
           spacing={2}
         >
-          {chipData.map(({ label, selected, disabled, description }, index) => (
+          {chipData.map(({ label, selected, description }, index) => (
             <Box key={index}>
               <Tooltip title={description} arrow>
                 <span>
@@ -45,7 +44,6 @@ export default function ScoreOverview() {
                         !newChipData[index].selected;
                       setChipData(newChipData);
                     }}
-                    disabled={disabled}
                   />
                 </span>
               </Tooltip>
@@ -56,6 +54,9 @@ export default function ScoreOverview() {
 
       <MusicScore
         view={chipData.find(({ label }) => label === "complexity").selected}
+        showFingering={
+          chipData.find(({ label }) => label === "fingering").selected
+        }
       />
     </>
   );

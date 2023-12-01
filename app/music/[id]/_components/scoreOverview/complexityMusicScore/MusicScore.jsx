@@ -14,7 +14,7 @@ import Fingering from "../../fingering/Fingering";
 
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
-export default function MusicScore({ view }) {
+export default function MusicScore({ view, showFingering }) {
   const params = useParams();
   const { id } = params;
 
@@ -132,16 +132,6 @@ export default function MusicScore({ view }) {
                         ys={ys}
                       />
                     )}
-                    <Fingering
-                      hand={fingering.left}
-                      line={line}
-                      fingeringColor={"red"}
-                    />
-                    <Fingering
-                      hand={fingering.right}
-                      line={line}
-                      fingeringColor={"blue"}
-                    />
 
                     <NoteScore
                       score={score}
@@ -150,6 +140,21 @@ export default function MusicScore({ view }) {
                       opacity={1}
                       grayScale={grayScaleValue / grayScaleMax}
                     />
+
+                    {showFingering && (
+                      <>
+                        <Fingering
+                          hand={fingering.left}
+                          line={line}
+                          fingeringColor={"red"}
+                        />
+                        <Fingering
+                          hand={fingering.right}
+                          line={line}
+                          fingeringColor={"blue"}
+                        />
+                      </>
+                    )}
                   </g>
                 </svg>
               </Box>
