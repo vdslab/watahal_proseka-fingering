@@ -45,7 +45,7 @@ export default function RelationList({ nodeId }) {
           onClick={() => {
             if (music?.videoId === undefined || music?.id === undefined) return;
 
-            router.push(`/music/${music?.videoId}?id=${music?.id}`);
+            router.push(`/music/${music?.id}`);
           }}
           disabled={music?.videoId === undefined || music?.id === undefined}
         >
@@ -58,10 +58,7 @@ export default function RelationList({ nodeId }) {
         <Divider />
         <ListSubheader>似ている曲</ListSubheader>
         {similarMusics?.map(({ id, name, videoId }) => (
-          <ListItemButton
-            key={id}
-            onClick={() => router.push(`/music/${videoId}?id=${id}`)}
-          >
+          <ListItemButton key={id} onClick={() => router.push(`/music/${id}`)}>
             <ListItemIcon>
               <LaunchIcon />
             </ListItemIcon>

@@ -3,6 +3,8 @@ import React, { useEffect, useRef, useState } from "react";
 import YouTube from "react-youtube";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Box } from "@mui/material";
+import useSWR from "swr";
+import { useParams } from "next/navigation";
 
 const theme = createTheme({
   palette: {
@@ -13,8 +15,35 @@ const theme = createTheme({
   },
 });
 
-export default function VideoPlayer({ videoId, YTPlayer, setYTPlayer }) {
+export default function VideoPlayer({ YTPlayer, setYTPlayer }) {
+  const [volume, setVolume] = useState(30);
   const wrapperRef = useRef();
+  const params = useParams();
+  const { id } = params;
+
+  const {
+    data: musicInfo,
+    isLoading: musicInfoLoading,
+    error: musicInfoError,
+  } = useSWR(`/api/music/${id}`, (url) => fetch(url).then((res) => res.json()));
+
+  useEffect(() => {
+    YTPlayer?.setVolume(volume);
+  }, [volume]);
+
+  function handleReady(e) {
+    setYTPlayer(e.target);
+  }
+
+  if (musicInfoError || id == null) {
+    return <div>failed to load</div>;
+  }
+  if (musicInfoLoading) {
+    return <div>loading...</div>;
+  }
+
+  const { videoid: videoId } = musicInfo;
+
   const width = wrapperRef.current?.clientWidth;
   const height = wrapperRef.current?.clientHeight;
 
@@ -22,18 +51,9 @@ export default function VideoPlayer({ videoId, YTPlayer, setYTPlayer }) {
     width: width,
     height: height,
     playerVars: {
-      autoplay: 1,
+      autoplay: 0,
     },
   };
-
-  function handleReady(e) {
-    setYTPlayer(e.target);
-  }
-
-  const [volume, setVolume] = useState(30);
-  useEffect(() => {
-    YTPlayer?.setVolume(volume);
-  }, [volume]);
 
   return (
     <Box ref={wrapperRef} width={"100%"} height={"100%"}>
