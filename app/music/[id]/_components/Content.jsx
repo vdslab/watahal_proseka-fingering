@@ -5,7 +5,7 @@ import { Box, Tab, Tabs } from "@mui/material";
 import ScoreOverview from "./scoreOverview/ScoreOverview";
 import FingeringVis from "./fingering/FingeringVis";
 
-export default function Content({ fingering }) {
+export default function Content() {
   const [currentTab, setCurrentTab] = useState(0);
 
   return (
@@ -24,7 +24,7 @@ export default function Content({ fingering }) {
         <ScoreOverview />
       </Box>
       <Box hidden={currentTab !== 1}>
-        <FingeringVis fingering={fingering} />
+        <FingeringVis  />
       </Box>
     </Box>
   );
