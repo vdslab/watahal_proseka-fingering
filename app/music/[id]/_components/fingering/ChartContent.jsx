@@ -5,6 +5,7 @@ import Fingering from "./Fingering";
 import NoteScore from "./NoteScore";
 import useSWR from "swr";
 import { useParams } from "next/navigation";
+import { CircularProgress } from "@mui/material";
 export default function ChartContent({ width, height, score, viewHeight }) {
   const svgRef = useRef();
   const [svgWidth, setsvgWidth] = useState(10);
@@ -24,10 +25,14 @@ export default function ChartContent({ width, height, score, viewHeight }) {
   }, [height, width]);
 
   if (error) {
-    return <div>error</div>;
+    return (
+      <div>
+        データの読み込みに失敗しました．ブラウザをリロードするか，サイトを一度閉じて再度開いてください
+      </div>
+    );
   }
   if (isLoading) {
-    return <div>loading</div>;
+    return <CircularProgress />;
   }
 
   const left = fingering.left;

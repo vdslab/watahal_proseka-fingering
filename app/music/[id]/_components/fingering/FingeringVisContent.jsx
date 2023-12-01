@@ -18,7 +18,11 @@ export default function FingeringVisContent({ width, YTPlayer, height }) {
   );
 
   if (error || scoreError) {
-    return <div>Failed to load</div>;
+    return (
+      <div>
+        データの読み込みに失敗しました．ブラウザをリロードするか，サイトを一度閉じて再度開いてください
+      </div>
+    );
   }
 
   if (YTPlayer === undefined || !music || scoreLoading) {
