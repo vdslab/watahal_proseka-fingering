@@ -3,7 +3,7 @@ import useSWR from "swr";
 import NoteScore from "../../fingering/NoteScore";
 import LineSkeleton from "../../fingering/LineSkeleton";
 import * as d3 from "d3";
-import { Box, Stack } from "@mui/material";
+import { Box, CircularProgress, Stack } from "@mui/material";
 
 import { separateScore } from "./separeteScore";
 import ComplexityHeatMap from "./ComplexityHeatMap";
@@ -39,10 +39,14 @@ export default function MusicScore({ view, showFingering }) {
   const [grayScaleValue, setGrayScaleValue] = useState(grayScaleMax);
 
   if (error || complexityError || fingeringError) {
-    return <div>failed to load</div>;
+    return (
+      <div>
+        データの読み込みに失敗しました．ブラウザをリロードするか，サイトを一度閉じて再度開いてください
+      </div>
+    );
   }
   if (isLoading || complexityIsLoading || fingeringIsLoading) {
-    return <div>loading...</div>;
+    return <CircularProgress />;
   }
 
   const width = 100;

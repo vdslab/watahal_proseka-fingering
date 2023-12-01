@@ -2,6 +2,7 @@
 
 import {
   Box,
+  CircularProgress,
   Divider,
   List,
   ListItem,
@@ -33,11 +34,15 @@ export default function SimilarityList() {
   );
 
   if (musicListError || similaritiesError) {
-    return <div>failed to load</div>;
+    return (
+      <div>
+        データの読み込みに失敗しました．ブラウザをリロードするか，サイトを一度閉じて再度開いてください
+      </div>
+    );
   }
 
   if (musicListLoading || similaritiesLoading) {
-    return <div>loading...</div>;
+    return <CircularProgress />;
   }
 
   similarities.sort((a, b) => {
