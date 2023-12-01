@@ -10,6 +10,7 @@ import ComplexityHeatMap from "./ComplexityHeatMap";
 import GrayScaleSlider from "./GrayScaleSlider";
 import { useState } from "react";
 import { useParams } from "next/navigation";
+import Fingering from "../../fingering/Fingering";
 
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
@@ -51,7 +52,7 @@ export default function MusicScore({ view }) {
   const separetedScore = separateScore(data, separateNumber);
   const separatedFingering = {
     left: separateScore(fingering.left, separateNumber),
-    right: separateScore(fingering.left, separateNumber),
+    right: separateScore(fingering.right, separateNumber),
   };
 
   const xScale = d3.scaleLinear().domain([0, 12]).range([0, width]).nice(10);
@@ -64,8 +65,16 @@ export default function MusicScore({ view }) {
   });
   const widthScale = d3.scaleLinear().domain([0, 12]).range([0, width]).nice();
 
+  const lines = separetedScore.map((_, i) => {
+    return d3
+      .line()
+      .curve(d3.curveCatmullRom.alpha(0.5))
+      .x(({ x, width }) => xScale(x + width / 2))
+      .y(({ y }) => yScales[i](y));
+  });
+
   const { status_by_measure } = complexityInfo;
-  const length = Math.ceil(status_by_measure.length / separateNumber);
+  const length = Math.ceil(status_by_measure.length / separateNumber + 1);
   const separateComplexity = Array(length)
     .fill()
     .map((_, i) =>
@@ -77,6 +86,7 @@ export default function MusicScore({ view }) {
     .scaleSequential(d3.interpolateYlOrRd)
     .domain(d3.extent(status_by_measure, (d) => d));
 
+  console.log(separatedFingering);
   const separetedData = separetedScore.map((score, i) => ({
     score,
     fingering: {
@@ -85,6 +95,7 @@ export default function MusicScore({ view }) {
     },
     complexity: separateComplexity[i],
     yScale: yScales[i],
+    line: lines[i],
   }));
 
   return (
@@ -94,45 +105,57 @@ export default function MusicScore({ view }) {
         max={grayScaleMax}
       />
       <Box display={"flex"} overflow={"auto"}>
-        {separetedData.map(({ score, fingering, complexity, yScale }, i) => {
-          const ys = Array(separateNumber)
-            .fill()
-            .map((_, i) => Math.floor(score[0].y / 4) * 4 + i + 1);
-          return (
-            <Box marginRight={1} key={i} bgcolor={"white"} padding={1}>
-              <svg width={width} height={height}>
-                <g>
-                  <LineSkeleton
-                    maxY={separateNumber}
-                    xScale={xScale}
-                    height={height}
-                  />
-                  {view && (
-                    <ComplexityHeatMap
-                      id={id}
-                      complexity={complexity}
-                      scales={{
-                        xScale,
-                        yScale,
-                        widthScale,
-                        colorScale: complexityColorScale,
-                      }}
-                      ys={ys}
+        {separetedData.map(
+          ({ score, fingering, complexity, yScale, line }, i) => {
+            const ys = Array(separateNumber)
+              .fill()
+              .map((_, id) => i * separateNumber + id + 1);
+            return (
+              <Box marginRight={1} key={i} bgcolor={"white"} padding={1}>
+                <svg width={width} height={height}>
+                  <g>
+                    <LineSkeleton
+                      maxY={separateNumber}
+                      xScale={xScale}
+                      height={height}
                     />
-                  )}
+                    {view && (
+                      <ComplexityHeatMap
+                        id={id}
+                        complexity={complexity}
+                        scales={{
+                          xScale,
+                          yScale,
+                          widthScale,
+                          colorScale: complexityColorScale,
+                        }}
+                        ys={ys}
+                      />
+                    )}
+                    <Fingering
+                      hand={fingering.left}
+                      line={line}
+                      fingeringColor={"red"}
+                    />
+                    <Fingering
+                      hand={fingering.right}
+                      line={line}
+                      fingeringColor={"blue"}
+                    />
 
-                  <NoteScore
-                    score={score}
-                    scales={{ xScale, yScale, widthScale }}
-                    noteheight={4}
-                    opacity={1}
-                    grayScale={grayScaleValue / grayScaleMax}
-                  />
-                </g>
-              </svg>
-            </Box>
-          );
-        })}
+                    <NoteScore
+                      score={score}
+                      scales={{ xScale, yScale, widthScale }}
+                      noteheight={4}
+                      opacity={1}
+                      grayScale={grayScaleValue / grayScaleMax}
+                    />
+                  </g>
+                </svg>
+              </Box>
+            );
+          }
+        )}
       </Box>
     </Box>
   );

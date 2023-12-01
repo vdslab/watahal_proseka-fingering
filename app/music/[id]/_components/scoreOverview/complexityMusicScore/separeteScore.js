@@ -1,4 +1,5 @@
 export function separateScore(score, separateSectionNumber) {
+  score.sort((a, b) => a.y - b.y);
   const ys = score.map(({ y }) => y);
   const scoreLength = Math.ceil(ys[ys.length - 1] / separateSectionNumber);
 
@@ -22,7 +23,9 @@ export function separateScore(score, separateSectionNumber) {
 
   const scoreSeparated = notHoldNotesSeparated.map((notHoldNotes, i) => {
     const holdnotes = holdnotesSeparated[i] ?? [];
-    return [...notHoldNotes, ...holdnotes];
+    const notes = [...notHoldNotes, ...holdnotes];
+    notes.sort((a, b) => a.y - b.y);
+    return notes;
   });
   return scoreSeparated;
 }
