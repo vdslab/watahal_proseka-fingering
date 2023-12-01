@@ -6,14 +6,16 @@ import MusicScore from "./complexityMusicScore/MusicScore";
 export default function ScoreOverview() {
   const [chipData, setChipData] = useState([
     {
-      label: "complexity",
+      label: "複雑さ",
+      id: "complexity",
       selected: true,
       description: "譜面の複雑さを色の濃淡で表示",
     },
     {
-      label: "fingering",
+      label: "運指",
+      id: "fingering",
       selected: false,
-      description: "運指の表示",
+      description: "左右の指でノーツをどうとるか表示",
     },
   ]);
 
@@ -53,10 +55,8 @@ export default function ScoreOverview() {
       </Box>
 
       <MusicScore
-        view={chipData.find(({ label }) => label === "complexity").selected}
-        showFingering={
-          chipData.find(({ label }) => label === "fingering").selected
-        }
+        view={chipData.find(({ id }) => id === "complexity").selected}
+        showFingering={chipData.find(({ id }) => id === "fingering").selected}
       />
     </>
   );
