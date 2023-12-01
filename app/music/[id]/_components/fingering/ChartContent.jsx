@@ -3,21 +3,35 @@ import { useEffect, useState, useRef } from "react";
 import LineSkeleton from "./LineSkeleton";
 import Fingering from "./Fingering";
 import NoteScore from "./NoteScore";
-export default function ChartContent({
-  width,
-  height,
-  left,
-  right,
-  score,
-  viewHeight,
-}) {
+import useSWR from "swr";
+import { useParams } from "next/navigation";
+export default function ChartContent({ width, height, score, viewHeight }) {
   const svgRef = useRef();
   const [svgWidth, setsvgWidth] = useState(10);
+  const params = useParams();
+  const { id } = params;
+  const {
+    data: fingering,
+    error,
+    isLoading,
+  } = useSWR(`/api/music/fingering/${id}`, (url) =>
+    fetch(url).then((res) => res.json())
+  );
 
   useEffect(() => {
     svgRef.current?.scrollIntoView(false);
     setsvgWidth(width ?? 200 - 20);
   }, [height, width]);
+
+  if (error) {
+    return <div>error</div>;
+  }
+  if (isLoading) {
+    return <div>loading</div>;
+  }
+
+  const left = fingering.left;
+  const right = fingering.right;
 
   const showable = left && right;
   const noteHeight = 10;

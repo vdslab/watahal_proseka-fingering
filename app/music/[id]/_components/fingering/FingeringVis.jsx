@@ -4,7 +4,7 @@ import SimilarityList from "../SimilarityList";
 import VideoPlayer from "../VideoPlayer";
 import { useState } from "react";
 
-export default function FingeringVis({ fingering }) {
+export default function FingeringVis() {
   const [YTPlayer, setYTPlayer] = useState();
 
   return (
@@ -16,7 +16,6 @@ export default function FingeringVis({ fingering }) {
         <Grid item xs={8}>
           <Box bgcolor={"white"} height={"75vh"}>
             <FingeringVisContent
-              fingering={fingering}
               minY={0}
               YTPlayer={YTPlayer}
               height={600}

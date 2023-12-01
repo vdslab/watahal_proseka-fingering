@@ -10,10 +10,11 @@ import ComplexityHeatMap from "./ComplexityHeatMap";
 import GrayScaleSlider from "./GrayScaleSlider";
 import { useState } from "react";
 import { useParams } from "next/navigation";
+import Fingering from "../../fingering/Fingering";
 
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
-export default function ComplexityMusicScore({ view }) {
+export default function MusicScore({ view, showFingering }) {
   const params = useParams();
   const { id } = params;
 
@@ -28,20 +29,31 @@ export default function ComplexityMusicScore({ view }) {
     isLoading: complexityIsLoading,
   } = useSWR(`/api/music/complexity/${id}`, fetcher);
 
+  const {
+    data: fingering,
+    error: fingeringError,
+    isLoading: fingeringIsLoading,
+  } = useSWR(`/api/music/fingering/${id}`, fetcher);
+
   const grayScaleMax = 100;
   const [grayScaleValue, setGrayScaleValue] = useState(grayScaleMax);
 
-  if (error || complexityError) return <div>failed to load</div>;
-  if (isLoading || complexityIsLoading) return <div>loading...</div>;
-
-  if (error) return <div>failed to load</div>;
-  if (isLoading) return <div>loading...</div>;
+  if (error || complexityError || fingeringError) {
+    return <div>failed to load</div>;
+  }
+  if (isLoading || complexityIsLoading || fingeringIsLoading) {
+    return <div>loading...</div>;
+  }
 
   const width = 100;
   const height = 600;
 
   const separateNumber = 4;
   const separetedScore = separateScore(data, separateNumber);
+  const separatedFingering = {
+    left: separateScore(fingering.left, separateNumber),
+    right: separateScore(fingering.right, separateNumber),
+  };
 
   const xScale = d3.scaleLinear().domain([0, 12]).range([0, width]).nice(10);
   const yScales = separetedScore.map((score, i) => {
@@ -53,8 +65,16 @@ export default function ComplexityMusicScore({ view }) {
   });
   const widthScale = d3.scaleLinear().domain([0, 12]).range([0, width]).nice();
 
+  const lines = separetedScore.map((_, i) => {
+    return d3
+      .line()
+      .curve(d3.curveCatmullRom.alpha(0.5))
+      .x(({ x, width }) => xScale(x + width / 2))
+      .y(({ y }) => yScales[i](y));
+  });
+
   const { status_by_measure } = complexityInfo;
-  const length = Math.ceil(status_by_measure.length / separateNumber);
+  const length = Math.ceil(status_by_measure.length / separateNumber + 1);
   const separateComplexity = Array(length)
     .fill()
     .map((_, i) =>
@@ -66,6 +86,18 @@ export default function ComplexityMusicScore({ view }) {
     .scaleSequential(d3.interpolateYlOrRd)
     .domain(d3.extent(status_by_measure, (d) => d));
 
+  console.log(separatedFingering);
+  const separetedData = separetedScore.map((score, i) => ({
+    score,
+    fingering: {
+      left: separatedFingering.left[i],
+      right: separatedFingering.right[i],
+    },
+    complexity: separateComplexity[i],
+    yScale: yScales[i],
+    line: lines[i],
+  }));
+
   return (
     <Box>
       <GrayScaleSlider
@@ -73,46 +105,62 @@ export default function ComplexityMusicScore({ view }) {
         max={grayScaleMax}
       />
       <Box display={"flex"} overflow={"auto"}>
-        {separetedScore.map((score, i) => {
-          const complexity = separateComplexity[i];
-          const ys = Array(separateNumber)
-            .fill()
-            .map((_, i) => Math.floor(score[0].y / 4) * 4 + i + 1);
-          return (
-            <Box marginRight={1} key={i} bgcolor={"white"} padding={1}>
-              <svg width={width} height={height}>
-                <g>
-                  <LineSkeleton
-                    maxY={separateNumber}
-                    xScale={xScale}
-                    height={height}
-                  />
-                  {view && (
-                    <ComplexityHeatMap
-                      id={id}
-                      complexity={complexity}
-                      scales={{
-                        xScale,
-                        yScale: yScales[i],
-                        widthScale,
-                        colorScale: complexityColorScale,
-                      }}
-                      ys={ys}
+        {separetedData.map(
+          ({ score, fingering, complexity, yScale, line }, i) => {
+            const ys = Array(separateNumber)
+              .fill()
+              .map((_, id) => i * separateNumber + id + 1);
+            return (
+              <Box marginRight={1} key={i} bgcolor={"white"} padding={1}>
+                <svg width={width} height={height}>
+                  <g>
+                    <LineSkeleton
+                      maxY={separateNumber}
+                      xScale={xScale}
+                      height={height}
                     />
-                  )}
+                    {view && (
+                      <ComplexityHeatMap
+                        id={id}
+                        complexity={complexity}
+                        scales={{
+                          xScale,
+                          yScale,
+                          widthScale,
+                          colorScale: complexityColorScale,
+                        }}
+                        ys={ys}
+                      />
+                    )}
 
-                  <NoteScore
-                    score={score}
-                    scales={{ xScale, yScale: yScales[i], widthScale }}
-                    noteheight={4}
-                    opacity={1}
-                    grayScale={grayScaleValue / grayScaleMax}
-                  />
-                </g>
-              </svg>
-            </Box>
-          );
-        })}
+                    <NoteScore
+                      score={score}
+                      scales={{ xScale, yScale, widthScale }}
+                      noteheight={4}
+                      opacity={1}
+                      grayScale={grayScaleValue / grayScaleMax}
+                    />
+
+                    {showFingering && (
+                      <>
+                        <Fingering
+                          hand={fingering.left}
+                          line={line}
+                          fingeringColor={"red"}
+                        />
+                        <Fingering
+                          hand={fingering.right}
+                          line={line}
+                          fingeringColor={"blue"}
+                        />
+                      </>
+                    )}
+                  </g>
+                </svg>
+              </Box>
+            );
+          }
+        )}
       </Box>
     </Box>
   );
