@@ -28,20 +28,31 @@ export default function MusicScore({ view }) {
     isLoading: complexityIsLoading,
   } = useSWR(`/api/music/complexity/${id}`, fetcher);
 
+  const {
+    data: fingering,
+    error: fingeringError,
+    isLoading: fingeringIsLoading,
+  } = useSWR(`/api/music/fingering/${id}`, fetcher);
+
   const grayScaleMax = 100;
   const [grayScaleValue, setGrayScaleValue] = useState(grayScaleMax);
 
-  if (error || complexityError) return <div>failed to load</div>;
-  if (isLoading || complexityIsLoading) return <div>loading...</div>;
-
-  if (error) return <div>failed to load</div>;
-  if (isLoading) return <div>loading...</div>;
+  if (error || complexityError || fingeringError) {
+    return <div>failed to load</div>;
+  }
+  if (isLoading || complexityIsLoading || fingeringIsLoading) {
+    return <div>loading...</div>;
+  }
 
   const width = 100;
   const height = 600;
 
   const separateNumber = 4;
   const separetedScore = separateScore(data, separateNumber);
+  const separatedFingering = {
+    left: separateScore(fingering.left, separateNumber),
+    right: separateScore(fingering.left, separateNumber),
+  };
 
   const xScale = d3.scaleLinear().domain([0, 12]).range([0, width]).nice(10);
   const yScales = separetedScore.map((score, i) => {
@@ -66,6 +77,16 @@ export default function MusicScore({ view }) {
     .scaleSequential(d3.interpolateYlOrRd)
     .domain(d3.extent(status_by_measure, (d) => d));
 
+  const separetedData = separetedScore.map((score, i) => ({
+    score,
+    fingering: {
+      left: separatedFingering.left[i],
+      right: separatedFingering.right[i],
+    },
+    complexity: separateComplexity[i],
+    yScale: yScales[i],
+  }));
+
   return (
     <Box>
       <GrayScaleSlider
@@ -73,8 +94,7 @@ export default function MusicScore({ view }) {
         max={grayScaleMax}
       />
       <Box display={"flex"} overflow={"auto"}>
-        {separetedScore.map((score, i) => {
-          const complexity = separateComplexity[i];
+        {separetedData.map(({ score, fingering, complexity, yScale }, i) => {
           const ys = Array(separateNumber)
             .fill()
             .map((_, i) => Math.floor(score[0].y / 4) * 4 + i + 1);
@@ -93,7 +113,7 @@ export default function MusicScore({ view }) {
                       complexity={complexity}
                       scales={{
                         xScale,
-                        yScale: yScales[i],
+                        yScale,
                         widthScale,
                         colorScale: complexityColorScale,
                       }}
@@ -103,7 +123,7 @@ export default function MusicScore({ view }) {
 
                   <NoteScore
                     score={score}
-                    scales={{ xScale, yScale: yScales[i], widthScale }}
+                    scales={{ xScale, yScale, widthScale }}
                     noteheight={4}
                     opacity={1}
                     grayScale={grayScaleValue / grayScaleMax}
