@@ -13,7 +13,7 @@ import { useParams } from "next/navigation";
 
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
-export default function ComplexityMusicScore({ view }) {
+export default function MusicScore({ view }) {
   const params = useParams();
   const { id } = params;
 

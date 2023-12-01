@@ -1,7 +1,7 @@
 import { Box, Chip, ListItem, Stack, Tooltip, Typography } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
 import { useState } from "react";
-import ComplexityMusicScore from "./complexityMusicScore/MusicScore";
+import MusicScore from "./complexityMusicScore/MusicScore";
 
 export default function ScoreOverview() {
   const [chipData, setChipData] = useState([
@@ -24,9 +24,14 @@ export default function ScoreOverview() {
         譜面の全体像
       </Typography>
       <Box marginBottom={2}>
-        <Stack direction={"row"} width={"20%"}>
+        <Stack
+          direction="row"
+          justifyContent="flex-start"
+          alignItems="center"
+          spacing={2}
+        >
           {chipData.map(({ label, selected, disabled, description }, index) => (
-            <ListItem key={index}>
+            <Box key={index}>
               <Tooltip title={description} arrow>
                 <span>
                   <Chip
@@ -44,12 +49,12 @@ export default function ScoreOverview() {
                   />
                 </span>
               </Tooltip>
-            </ListItem>
+            </Box>
           ))}
         </Stack>
       </Box>
 
-      <ComplexityMusicScore
+      <MusicScore
         view={chipData.find(({ label }) => label === "complexity").selected}
       />
     </>
