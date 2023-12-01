@@ -1,18 +1,58 @@
 function HoldNote({ x, y, width, height, color }) {
   return (
-    <rect x={x} y={y - height / 2} width={width} height={height} fill={color} />
+    <rect
+      x={x}
+      y={y - height / 2}
+      width={width}
+      height={height}
+      fill={color}
+      stroke="gray"
+    />
   );
 }
 
 function NormalNote({ x, y, width, height, color }) {
   return (
-    <rect x={x} y={y - height / 2} width={width} height={height} fill={color} />
+    <rect
+      x={x}
+      y={y - height / 2}
+      width={width}
+      height={height}
+      fill={color}
+      stroke="gray"
+    />
   );
 }
 
-function FlickNote({ x, y, width, height, direction, color }) {
+function FlickNote({ x, y, width, height, direction, color, laneWidth }) {
+  const cx = width / 2;
+  const flickWidth = laneWidth / 2;
+  const rotate = direction
+    ? {
+        up: 0,
+        down: 180,
+        left: -30,
+        right: 30,
+      }[direction]
+    : 0;
   return (
-    <rect x={x} y={y - height / 2} width={width} height={height} fill={color} />
+    <g className={`flick`} transform={`translate(${x} ${y - height / 2})`}>
+      <rect
+        x={0}
+        y={0}
+        width={width}
+        height={height}
+        fill={color}
+        stroke="gray"
+      />
+      <polygon
+        scale={3}
+        transform={`translate(${cx} ${-height}) scale(1.5 1) rotate(${rotate})`}
+        points={`0 0, ${flickWidth} ${flickWidth}, ${flickWidth} 0, 0 ${-flickWidth}, ${-flickWidth} 0, ${-flickWidth} ${flickWidth}`}
+        fill={color}
+        stroke="gray"
+      />
+    </g>
   );
 }
 
@@ -22,6 +62,7 @@ export default function Note({
   x,
   y,
   width,
+  laneWidth,
   height,
   direction,
   holdColor,
@@ -38,6 +79,7 @@ export default function Note({
           x={x}
           y={y}
           width={width}
+          laneWidth={laneWidth}
           height={height}
           direction={direction}
           color={flickColor}

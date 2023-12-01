@@ -37,24 +37,27 @@ export default function NoteScore({
 
   return (
     <g opacity={opacity} filter={`grayscale(${grayScale})`}>
-      {notHoldNotes.map(
-        ({ judge_type, type, x, y, width, hold_type, hole }) => {
-          return (
-            <Note
-              key={`${x}-${y}`}
-              type={type}
-              judge_type={judge_type}
-              height={noteheight}
-              x={xScale(x)}
-              y={yScale(y)}
-              width={widthScale(width)}
-              noteColor={noteColor}
-              flickColor={flickColor}
-              holdColor={holdColor}
-            />
-          );
-        }
-      )}
+      {notHoldNotes.map(({ judge_type, type, x, y, width }) => {
+        const direction = judge_type.includes("flick")
+          ? judge_type.split("_")[1]
+          : null;
+        return (
+          <Note
+            key={`${x}-${y}`}
+            type={type}
+            judge_type={judge_type}
+            height={noteheight}
+            x={xScale(x)}
+            y={yScale(y)}
+            width={widthScale(width)}
+            laneWidth={widthScale(1)}
+            noteColor={noteColor}
+            flickColor={flickColor}
+            holdColor={holdColor}
+            direction={direction}
+          />
+        );
+      })}
 
       {Object.values(complexHoldNotes).map((holdNoteGroups) => {
         return holdNoteGroups.map((holdNoteGroup) => {
@@ -85,6 +88,7 @@ export default function NoteScore({
                     x={xScale(x)}
                     y={yScale(y)}
                     width={widthScale(width)}
+                    laneWidth={widthScale(1)}
                     noteColor={noteColor}
                     flickColor={flickColor}
                     holdColor={holdColor}
