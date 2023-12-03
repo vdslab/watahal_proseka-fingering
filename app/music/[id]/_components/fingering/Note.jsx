@@ -38,6 +38,10 @@ function FlickNote({ noteRect, direction, color, laneWidth }) {
         right: 30,
       }[direction]
     : 0;
+  console.log(noteRect);
+  if (x == null || y == null || height == null) {
+    return null;
+  }
   return (
     <g className={`flick`} transform={`translate(${x} ${y - height / 2})`}>
       <rect

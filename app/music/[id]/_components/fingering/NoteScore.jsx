@@ -66,6 +66,7 @@ export default function NoteScore({
     <g opacity={opacity} filter={`grayscale(${grayScale})`}>
       <NotHoldNotesView
         notHoldNotes={notHoldNotes}
+        height={noteheight}
         scales={scales}
         color={color}
       />
