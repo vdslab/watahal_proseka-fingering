@@ -3,18 +3,17 @@ import useSWR from "swr";
 import NoteScore from "../../fingering/NoteScore";
 import LineSkeleton from "../../fingering/LineSkeleton";
 import * as d3 from "d3";
-import { Box, CircularProgress, Stack } from "@mui/material";
+import { Box, CircularProgress } from "@mui/material";
 
 import { separateScore } from "./separeteScore";
 import ComplexityHeatMap from "./ComplexityHeatMap";
-import GrayScaleSlider from "./GrayScaleSlider";
 import { useState } from "react";
 import { useParams } from "next/navigation";
 import Fingering from "../../fingering/Fingering";
 
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
-export default function MusicScore({ view, showFingering }) {
+export default function MusicScore({ view, showFingering, grayScaled }) {
   const params = useParams();
   const { id } = params;
 
@@ -102,69 +101,63 @@ export default function MusicScore({ view, showFingering }) {
   }));
 
   return (
-    <Box>
-      <GrayScaleSlider
-        setGrayScaleValue={setGrayScaleValue}
-        max={grayScaleMax}
-      />
-      <Box display={"flex"} overflow={"auto"}>
-        {separetedData.map(
-          ({ score, fingering, complexity, yScale, line }, i) => {
-            const ys = Array(separateNumber)
-              .fill()
-              .map((_, id) => i * separateNumber + id + 1);
-            return (
-              <Box marginRight={1} key={i} bgcolor={"white"} padding={1}>
-                <svg width={width} height={height}>
-                  <g>
-                    <LineSkeleton
-                      maxY={separateNumber}
-                      xScale={xScale}
-                      height={height}
+    <Box display={"flex"} overflow={"auto"}>
+      {separetedData.map(
+        ({ score, fingering, complexity, yScale, line }, i) => {
+          const ys = Array(separateNumber)
+            .fill()
+            .map((_, id) => i * separateNumber + id + 1);
+          return (
+            <Box marginRight={1} key={i} bgcolor={"white"} padding={1}>
+              <svg width={width} height={height}>
+                <g>
+                  <LineSkeleton
+                    maxY={separateNumber}
+                    xScale={xScale}
+                    height={height}
+                  />
+                  {view && (
+                    <ComplexityHeatMap
+                      id={id}
+                      complexity={complexity}
+                      scales={{
+                        xScale,
+                        yScale,
+                        widthScale,
+                        colorScale: complexityColorScale,
+                      }}
+                      ys={ys}
                     />
-                    {view && (
-                      <ComplexityHeatMap
-                        id={id}
-                        complexity={complexity}
-                        scales={{
-                          xScale,
-                          yScale,
-                          widthScale,
-                          colorScale: complexityColorScale,
-                        }}
-                        ys={ys}
+                  )}
+
+                  <NoteScore
+                    score={score}
+                    scales={{ xScale, yScale, widthScale }}
+                    noteheight={4}
+                    opacity={1}
+                    grayScale={grayScaled ? 1 : 0}
+                  />
+
+                  {showFingering && (
+                    <>
+                      <Fingering
+                        hand={fingering.left}
+                        line={line}
+                        fingeringColor={"red"}
                       />
-                    )}
-
-                    <NoteScore
-                      score={score}
-                      scales={{ xScale, yScale, widthScale }}
-                      noteheight={4}
-                      opacity={1}
-                      grayScale={grayScaleValue / grayScaleMax}
-                    />
-
-                    {showFingering && (
-                      <>
-                        <Fingering
-                          hand={fingering.left}
-                          line={line}
-                          fingeringColor={"red"}
-                        />
-                        <Fingering
-                          hand={fingering.right}
-                          line={line}
-                          fingeringColor={"blue"}
-                        />
-                      </>
-                    )}
-                  </g>
-                </svg>
-              </Box>
-            );
-          }
-        )}
-      </Box>
+                      <Fingering
+                        hand={fingering.right}
+                        line={line}
+                        fingeringColor={"blue"}
+                      />
+                    </>
+                  )}
+                </g>
+              </svg>
+            </Box>
+          );
+        }
+      )}
     </Box>
   );
 }
