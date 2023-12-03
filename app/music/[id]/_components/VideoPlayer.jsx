@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import YouTube from "react-youtube";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Box } from "@mui/material";
+import { Box, CircularProgress } from "@mui/material";
 import useSWR from "swr";
 import { useParams } from "next/navigation";
 
@@ -36,10 +36,14 @@ export default function VideoPlayer({ YTPlayer, setYTPlayer }) {
   }
 
   if (musicInfoError || id == null) {
-    return <div>failed to load</div>;
+    return (
+      <div>
+        データの読み込みに失敗しました．ブラウザをリロードするか，サイトを一度閉じて再度開いてください
+      </div>
+    );
   }
   if (musicInfoLoading) {
-    return <div>loading...</div>;
+    return <CircularProgress />;
   }
 
   const { videoid: videoId } = musicInfo;
