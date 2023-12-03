@@ -6,9 +6,8 @@ import NoteScore from "./NoteScore";
 import useSWR from "swr";
 import { useParams } from "next/navigation";
 import { CircularProgress } from "@mui/material";
-export default function ChartContent({ width, height, score, viewHeight }) {
+export default function ChartContent({ height, score, viewHeight }) {
   const svgRef = useRef();
-  const [svgWidth, setsvgWidth] = useState(10);
   const params = useParams();
   const { id } = params;
   const {
@@ -18,11 +17,6 @@ export default function ChartContent({ width, height, score, viewHeight }) {
   } = useSWR(`/api/music/fingering/${id}`, (url) =>
     fetch(url).then((res) => res.json())
   );
-
-  useEffect(() => {
-    svgRef.current?.scrollIntoView(false);
-    setsvgWidth(width ?? 200 - 20);
-  }, [height, width]);
 
   if (error) {
     return (
@@ -34,6 +28,8 @@ export default function ChartContent({ width, height, score, viewHeight }) {
   if (isLoading) {
     return <CircularProgress />;
   }
+
+  const svgWidth = 600;
 
   const left = fingering.left;
   const right = fingering.right;
@@ -63,7 +59,7 @@ export default function ChartContent({ width, height, score, viewHeight }) {
     .y(({ y }) => yScale(y));
 
   return (
-    <svg width={svgWidth} height={height} ref={svgRef}>
+    <svg viewBox={`0 0 ${svgWidth} ${height}`} ref={svgRef}>
       {!showable ? (
         <></>
       ) : (
