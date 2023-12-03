@@ -9,7 +9,6 @@ function generateHoldAreaPathD(x1, y1, width1, x2, y2, width2) {
 }
 
 function NotHoldNotesView({ notHoldNotes, scales, color, height }) {
-  console.log("view");
   return (
     <g>
       {notHoldNotes.map((note) => {
