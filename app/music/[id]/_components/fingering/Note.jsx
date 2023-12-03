@@ -1,4 +1,5 @@
-function HoldNote({ x, y, width, height, color }) {
+function HoldNote({ noteRect, color }) {
+  const { x, y, width, height } = noteRect;
   return (
     <rect
       x={x}
@@ -11,7 +12,8 @@ function HoldNote({ x, y, width, height, color }) {
   );
 }
 
-function NormalNote({ x, y, width, height, color }) {
+function NormalNote({ noteRect, color }) {
+  const { x, y, width, height } = noteRect;
   return (
     <rect
       x={x}
@@ -24,7 +26,8 @@ function NormalNote({ x, y, width, height, color }) {
   );
 }
 
-function FlickNote({ x, y, width, height, direction, color, laneWidth }) {
+function FlickNote({ noteRect, direction, color, laneWidth }) {
+  const { x, y, width, height } = noteRect;
   const cx = width / 2;
   const flickWidth = laneWidth / 2;
   const rotate = direction
@@ -57,18 +60,21 @@ function FlickNote({ x, y, width, height, direction, color, laneWidth }) {
 }
 
 export default function Note({
-  judge_type,
-  type,
-  x,
-  y,
-  width,
+  note,
+  scales,
   laneWidth,
   height,
   direction,
-  holdColor,
-  noteColor = "rgb(100 255 234)",
-  flickColor = "rgb(255, 119, 187)",
+  color,
 }) {
+  const { judge_type, type, x, y, width } = note;
+  const { xScale, yScale, widthScale } = scales;
+  const noteRect = {
+    x: xScale(x),
+    y: yScale(y),
+    width: widthScale(width),
+    height,
+  };
   switch (judge_type) {
     case "flick_up":
     case "flick_down":
@@ -76,41 +82,19 @@ export default function Note({
     case "flick_right":
       return (
         <FlickNote
-          x={x}
-          y={y}
-          width={width}
+          noteRect={noteRect}
           laneWidth={laneWidth}
-          height={height}
           direction={direction}
-          color={flickColor}
+          color={color.flick}
         />
       );
   }
   switch (type) {
     case "hold":
-      return (
-        <HoldNote x={x} y={y} width={width} height={height} color={holdColor} />
-      );
+      return <HoldNote noteRect={noteRect} color={color.hold} />;
     case "normal":
-      return (
-        <NormalNote
-          x={x}
-          y={y}
-          width={width}
-          height={height}
-          color={noteColor}
-        />
-      );
+      return <NormalNote noteRect={noteRect} color={color.normal} />;
     default:
-      return (
-        <HoldNote
-          x={x}
-          y={y}
-          width={width}
-          height={height}
-          direction={direction}
-          color={holdColor}
-        />
-      );
+      return <HoldNote noteRect={noteRect} color={color.hold} />;
   }
 }
