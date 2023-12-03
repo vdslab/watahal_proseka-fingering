@@ -90,7 +90,6 @@ export default function MusicScore({ view, showFingering }) {
     .scaleSequential(d3.interpolateYlOrRd)
     .domain(d3.extent(status_by_measure, (d) => d));
 
-  console.log(separatedFingering);
   const separetedData = separetedScore.map((score, i) => ({
     score,
     fingering: {
