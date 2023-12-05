@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import FingeringVisContent from "./FingeringVisContent";
-import SimilarityList from "../SimilarityList";
-import VideoPlayer from "../VideoPlayer";
+import SimilarityList from "../../_components/SimilarityList";
+import VideoPlayer from "../../_components/VideoPlayer";
 import { useState } from "react";
 
 export default function FingeringVis() {

@@ -1,7 +1,5 @@
 "use client";
 import useSWR from "swr";
-import NoteScore from "../../fingering/NoteScore";
-import LineSkeleton from "../../fingering/LineSkeleton";
 import * as d3 from "d3";
 import { Box, CircularProgress } from "@mui/material";
 
@@ -9,7 +7,9 @@ import { separateScore } from "./separeteScore";
 import ComplexityHeatMap from "./ComplexityHeatMap";
 import { useState } from "react";
 import { useParams } from "next/navigation";
-import Fingering from "../../fingering/Fingering";
+import NoteScore from "@/app/music/[id]/fingering/_components/NoteScore";
+import LineSkeleton from "@/app/music/[id]/fingering/_components/LineSkeleton";
+import Fingering from "@/app/music/[id]/fingering/_components/Fingering";
 
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
