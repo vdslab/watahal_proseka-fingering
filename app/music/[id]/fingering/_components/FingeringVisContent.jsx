@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import { useRef } from "react";
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
-export default function FingeringVisContent({ YTPlayer, height }) {
+export default function FingeringVisContent({ YTPlayer }) {
   const params = useParams();
   const { id } = params;
   const wrapperRef = useRef();

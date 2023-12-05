@@ -2,18 +2,17 @@
 import React, { useState } from "react";
 import { Box, Tab, Tabs } from "@mui/material";
 
-import { redirect, useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import FingeringVis from "./_components/FingeringVis";
 
 export default function Overview() {
   const [currentTab, setCurrentTab] = useState(1);
   const params = useParams();
+  const searchParams = useSearchParams();
+  const measureParam = searchParams.get("measure");
+  const selectMeasure = measureParam ? parseFloat(measureParam) : 0;
   const { id } = params;
   const router = useRouter();
-  const index2url = {
-    0: "/overview",
-    1: "/fingering",
-  };
 
   return (
     <Box padding={3}>
@@ -27,7 +26,7 @@ export default function Overview() {
         </Tabs>
       </Box>
 
-      <FingeringVis />
+      <FingeringVis selectMeasure={selectMeasure} />
     </Box>
   );
 }

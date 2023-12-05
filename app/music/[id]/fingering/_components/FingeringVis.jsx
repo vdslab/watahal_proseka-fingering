@@ -4,7 +4,7 @@ import SimilarityList from "../../_components/SimilarityList";
 import VideoPlayer from "../../_components/VideoPlayer";
 import { useState } from "react";
 
-export default function FingeringVis() {
+export default function FingeringVis({ selectMeasure }) {
   const [YTPlayer, setYTPlayer] = useState();
 
   return (
@@ -23,7 +23,11 @@ export default function FingeringVis() {
             <SimilarityList />
           </Grid>
           <Grid item xs height={"10vh"}>
-            <VideoPlayer YTPlayer={YTPlayer} setYTPlayer={setYTPlayer} />
+            <VideoPlayer
+              YTPlayer={YTPlayer}
+              setYTPlayer={setYTPlayer}
+              selectMeasure={selectMeasure}
+            />
           </Grid>
         </Grid>
       </Grid>
