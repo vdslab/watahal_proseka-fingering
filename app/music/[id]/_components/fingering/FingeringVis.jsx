@@ -13,12 +13,12 @@ export default function FingeringVis() {
         運指
       </Typography>
       <Grid container direction={"row"} alignItems="stretch" spacing={2}>
-        <Grid item xs={8}>
+        <Grid item xs={7}>
           <Box bgcolor={"white"} height={"75vh"}>
             <FingeringVisContent minY={0} YTPlayer={YTPlayer} height={600} />
           </Box>
         </Grid>
-        <Grid item xs={4} container direction={"column"}>
+        <Grid item xs={5} container direction={"column"}>
           <Grid item xs height={"10vh"} overflow={"auto"}>
             <SimilarityList />
           </Grid>
