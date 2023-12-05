@@ -53,7 +53,9 @@ function GoupingHoldNotesReducer(acc, cur) {
   if (hold_type === "start") {
     acc[hole].push([cur]);
   } else {
-    acc[hole][acc[hole].length - 1].push(cur);
+    acc[hole].length === 0
+      ? acc[hole].push([cur])
+      : acc[hole][acc[hole].length - 1].push(cur);
   }
   return acc;
 }
