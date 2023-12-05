@@ -4,7 +4,7 @@ import useSWR from "swr";
 import { useParams } from "next/navigation";
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
-export default function FingeringVisContent({ width, YTPlayer, height }) {
+export default function FingeringVisContent({ YTPlayer, height }) {
   const params = useParams();
   const { id } = params;
 
@@ -42,7 +42,6 @@ export default function FingeringVisContent({ width, YTPlayer, height }) {
 
   return (
     <Chart
-      width={width}
       height={height}
       YTPlayer={YTPlayer}
       score={score}
