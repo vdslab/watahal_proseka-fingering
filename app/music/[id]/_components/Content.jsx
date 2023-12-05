@@ -29,6 +29,8 @@ export default function Content() {
           <Tab label="譜面の全体像" />
           <Tab label="運指" />
         </Tabs>
+
+        {redirect(`/music/${id}/overview`)}
       </Box>
     </Box>
   );
