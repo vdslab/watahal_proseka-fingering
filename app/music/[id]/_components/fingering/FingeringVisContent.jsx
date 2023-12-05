@@ -2,11 +2,13 @@ import { Box, CircularProgress, Container } from "@mui/material";
 import Chart from "./Chart";
 import useSWR from "swr";
 import { useParams } from "next/navigation";
+import { useRef } from "react";
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
 export default function FingeringVisContent({ YTPlayer, height }) {
   const params = useParams();
   const { id } = params;
+  const wrapperRef = useRef();
 
   const { data: music, error } = useSWR(`/api/music/${id}`, fetcher);
   const {
@@ -40,13 +42,24 @@ export default function FingeringVisContent({ YTPlayer, height }) {
     );
   }
 
+  const svgSize = {
+    width: wrapperRef.current?.clientWidth,
+    height: wrapperRef.current?.clientHeight,
+  };
+
   return (
-    <Chart
-      height={height}
-      YTPlayer={YTPlayer}
-      score={score}
-      id={id}
-      music={music}
-    />
+    <Box width={"100%"} height={"100%"} ref={wrapperRef}>
+      {!wrapperRef.current ? (
+        <CircularProgress />
+      ) : (
+        <Chart
+          svgSize={svgSize}
+          YTPlayer={YTPlayer}
+          score={score}
+          id={id}
+          music={music}
+        />
+      )}
+    </Box>
   );
 }
