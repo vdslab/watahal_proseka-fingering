@@ -15,12 +15,7 @@ export default function FingeringVis() {
       <Grid container direction={"row"} alignItems="stretch" spacing={2}>
         <Grid item xs={8}>
           <Box bgcolor={"white"} height={"75vh"}>
-            <FingeringVisContent
-              minY={0}
-              YTPlayer={YTPlayer}
-              height={600}
-              width={600}
-            />
+            <FingeringVisContent minY={0} YTPlayer={YTPlayer} height={600} />
           </Box>
         </Grid>
         <Grid item xs={4} container direction={"column"}>
