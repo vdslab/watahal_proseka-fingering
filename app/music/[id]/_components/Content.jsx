@@ -20,12 +20,8 @@ export default function Content() {
         </Tabs>
       </Box>
 
-      <Box hidden={currentTab !== 0}>
-        <ScoreOverview />
-      </Box>
-      <Box hidden={currentTab !== 1}>
-        <FingeringVis  />
-      </Box>
+      {currentTab === 0 && <ScoreOverview />}
+      {currentTab === 1 && <FingeringVis />}
     </Box>
   );
 
