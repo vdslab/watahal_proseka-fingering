@@ -62,9 +62,6 @@ export default function ScoreOverview() {
 
   return (
     <>
-      <Typography variant="h4" gutterBottom>
-        譜面の全体像
-      </Typography>
       <Stack spacing={2}>
         <StackRowChips
           chips={viewChips}
