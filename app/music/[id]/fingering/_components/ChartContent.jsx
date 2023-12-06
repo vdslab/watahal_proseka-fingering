@@ -5,8 +5,14 @@ import Fingering from "./Fingering";
 import NoteScore from "./NoteScore";
 import useSWR from "swr";
 import { useParams } from "next/navigation";
-import { CircularProgress } from "@mui/material";
-export default function ChartContent({ width, height, score, viewHeight }) {
+import { Box, CircularProgress } from "@mui/material";
+export default function ChartContent({
+  width,
+  height,
+  score,
+  viewHeight,
+  judgeLineHeight,
+}) {
   const svgRef = useRef();
   const params = useParams();
   const { id } = params;
@@ -45,7 +51,7 @@ export default function ChartContent({ width, height, score, viewHeight }) {
   const yScale = d3
     .scaleLinear()
     .domain(measure)
-    .range([height, viewHeight])
+    .range([height - judgeLineHeight, viewHeight])
     .nice(100);
   const widthScale = d3
     .scaleLinear()
