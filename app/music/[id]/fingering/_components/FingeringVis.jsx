@@ -9,9 +9,6 @@ export default function FingeringVis({ selectMeasure }) {
 
   return (
     <>
-      <Typography variant="h4" gutterBottom>
-        運指
-      </Typography>
       <Grid container direction={"row"} alignItems="stretch" spacing={2}>
         <Grid item xs={7}>
           <Box bgcolor={"white"} height={"75vh"}>

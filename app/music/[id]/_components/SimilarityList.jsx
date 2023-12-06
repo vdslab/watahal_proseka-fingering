@@ -49,9 +49,6 @@ export default function SimilarityList() {
     return b.similarity - a.similarity;
   });
   const orderedSimilarities = similarities.slice(0, 5);
-  const sourceName = musicList.find(
-    (music) => music.id === orderedSimilarities[0].source
-  ).name;
 
   const similarMusic = orderedSimilarities.map((similarity) => {
     const targetMusic = musicList.find(
@@ -65,9 +62,6 @@ export default function SimilarityList() {
   return (
     <Box bgcolor={"white"} padding={1}>
       <List>
-        <ListSubheader>現在の曲</ListSubheader>
-        <ListItem>{sourceName}</ListItem>
-        <Divider />
         <ListSubheader>似ている曲</ListSubheader>
         {similarMusic.map(({ target, name }) => (
           <ListItemButton
