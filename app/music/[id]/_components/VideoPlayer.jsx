@@ -15,7 +15,7 @@ const theme = createTheme({
   },
 });
 
-export default function VideoPlayer({ YTPlayer, setYTPlayer }) {
+export default function VideoPlayer({ YTPlayer, setYTPlayer, selectMeasure }) {
   const [volume, setVolume] = useState(30);
   const wrapperRef = useRef();
   const params = useParams();
@@ -46,7 +46,7 @@ export default function VideoPlayer({ YTPlayer, setYTPlayer }) {
     return <CircularProgress />;
   }
 
-  const { videoid: videoId } = musicInfo;
+  const { videoid: videoId, measureRange, sec } = musicInfo;
 
   const width = wrapperRef.current?.clientWidth;
   const height = wrapperRef.current?.clientHeight;
@@ -59,10 +59,20 @@ export default function VideoPlayer({ YTPlayer, setYTPlayer }) {
     },
   };
 
+  const selectTime =
+    (selectMeasure * sec) / (measureRange[1] - measureRange[0]);
+
   return (
     <Box ref={wrapperRef} width={"100%"} height={"100%"}>
       <ThemeProvider theme={theme}>
-        <YouTube videoId={videoId} opts={opts} onReady={handleReady} />
+        <YouTube
+          videoId={videoId}
+          opts={opts}
+          onReady={(e) => {
+            handleReady(e);
+            e.target?.seekTo(selectTime, true);
+          }}
+        />
       </ThemeProvider>
     </Box>
   );

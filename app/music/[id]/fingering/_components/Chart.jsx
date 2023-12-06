@@ -2,9 +2,10 @@ import ScrollableBox from "./ScrollableBox";
 import ChartContent from "./ChartContent";
 import * as d3 from "d3";
 
-export default function Chart({ YTPlayer, height, score, music }) {
+export default function Chart({ YTPlayer, score, music, svgSize }) {
   const svgHeight = 60000;
   const measure = d3.extent(score, ({ y }) => y);
+  const { width, height } = svgSize;
 
   return (
     <ScrollableBox
@@ -15,7 +16,12 @@ export default function Chart({ YTPlayer, height, score, music }) {
       sec={parseInt(music?.sec)}
       measure={measure}
     >
-      <ChartContent height={svgHeight} viewHeight={height} score={score} />
+      <ChartContent
+        width={width}
+        height={svgHeight}
+        viewHeight={height}
+        score={score}
+      />
     </ScrollableBox>
   );
 }
