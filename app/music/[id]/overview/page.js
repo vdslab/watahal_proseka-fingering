@@ -2,11 +2,10 @@
 import React, { useState } from "react";
 import { Box, Tab, Tabs } from "@mui/material";
 
-// import ScoreOverview from "../overview/scoreOverview/ScoreOverview";
-import FingeringVis from "../fingering/_components/FingeringVis";
 import { redirect, useParams, useRouter } from "next/navigation";
+import ScoreOverview from "./_components/ScoreOverview";
 
-export default function Content() {
+export default function Overview() {
   const [currentTab, setCurrentTab] = useState(0);
   const params = useParams();
   const { id } = params;
@@ -21,17 +20,14 @@ export default function Content() {
       <Box borderBottom={1} marginBottom={3}>
         <Tabs
           value={currentTab}
-          onChange={(_, newTab) => {
-            setCurrentTab(newTab);
-            router.push(`/music/${id}${index2url[newTab]}`);
-          }}
+          onChange={(_, newTab) => router.push(`/music/${id}/fingering`)}
         >
           <Tab label="譜面の全体像" />
           <Tab label="運指" />
         </Tabs>
-
-        {redirect(`/music/${id}/overview`)}
       </Box>
+
+      <ScoreOverview />
     </Box>
   );
 }

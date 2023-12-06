@@ -6,7 +6,7 @@ import NoteScore from "./NoteScore";
 import useSWR from "swr";
 import { useParams } from "next/navigation";
 import { CircularProgress } from "@mui/material";
-export default function ChartContent({ height, score, viewHeight }) {
+export default function ChartContent({ width, height, score, viewHeight }) {
   const svgRef = useRef();
   const params = useParams();
   const { id } = params;
@@ -29,7 +29,7 @@ export default function ChartContent({ height, score, viewHeight }) {
     return <CircularProgress />;
   }
 
-  const svgWidth = 600;
+  const svgWidth = width ?? 600;
 
   const left = fingering.left;
   const right = fingering.right;
