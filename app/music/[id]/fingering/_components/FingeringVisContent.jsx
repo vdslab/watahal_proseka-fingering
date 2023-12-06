@@ -27,20 +27,7 @@ export default function FingeringVisContent({ YTPlayer }) {
     );
   }
 
-  if (YTPlayer === undefined || !music || scoreLoading) {
-    return (
-      <Container sx={{ height: "100%" }}>
-        <Box
-          height={"100%"}
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
-          <CircularProgress />
-        </Box>
-      </Container>
-    );
-  }
+  const loading = YTPlayer == null || !music || scoreLoading;
 
   const svgSize = {
     width: wrapperRef.current?.clientWidth,
@@ -49,13 +36,26 @@ export default function FingeringVisContent({ YTPlayer }) {
 
   return (
     <Box width={"100%"} height={"100%"} ref={wrapperRef}>
-      <Chart
-        svgSize={svgSize}
-        YTPlayer={YTPlayer}
-        score={score}
-        id={id}
-        music={music}
-      />
+      {loading ? (
+        <Container sx={{ height: "100%" }}>
+          <Box
+            height={"100%"}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
+            <CircularProgress />
+          </Box>
+        </Container>
+      ) : (
+        <Chart
+          svgSize={svgSize}
+          YTPlayer={YTPlayer}
+          score={score}
+          id={id}
+          music={music}
+        />
+      )}
     </Box>
   );
 }
