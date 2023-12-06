@@ -14,7 +14,7 @@ function BarLine({ y, leftX, rightX }) {
   );
 }
 
-function LaneLine({ x, bottomY, topY }) {
+function LaneLine({ x, bottomY, topY, opacity = 0.35 }) {
   return (
     <line
       x1={x}
@@ -23,7 +23,7 @@ function LaneLine({ x, bottomY, topY }) {
       y2={topY}
       strokeWidth={2.5}
       stroke="gray"
-      opacity={0.35}
+      opacity={opacity}
     />
   );
 }
@@ -51,16 +51,15 @@ export default function LineSkeleton({ maxY, xScale, height }) {
       </g>
       <g>
         {[...Array(12)].map((_, i) => {
-          if (i % 2 == 0) {
-            return (
-              <LaneLine
-                key={i}
-                x={xScale(i)}
-                bottomY={yScale(0)}
-                topY={yScale(maxY)}
-              />
-            );
-          }
+          return (
+            <LaneLine
+              key={i}
+              x={xScale(i)}
+              bottomY={yScale(0)}
+              topY={yScale(maxY)}
+              opacity={i % 2 === 0 ? 0.35 : 0.35 / 2}
+            />
+          );
         })}
       </g>
     </g>
