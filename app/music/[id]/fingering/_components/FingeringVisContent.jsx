@@ -49,17 +49,13 @@ export default function FingeringVisContent({ YTPlayer }) {
 
   return (
     <Box width={"100%"} height={"100%"} ref={wrapperRef}>
-      {!wrapperRef.current ? (
-        <CircularProgress />
-      ) : (
-        <Chart
-          svgSize={svgSize}
-          YTPlayer={YTPlayer}
-          score={score}
-          id={id}
-          music={music}
-        />
-      )}
+      <Chart
+        svgSize={svgSize}
+        YTPlayer={YTPlayer}
+        score={score}
+        id={id}
+        music={music}
+      />
     </Box>
   );
 }
