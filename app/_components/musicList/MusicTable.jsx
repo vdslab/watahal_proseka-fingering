@@ -47,41 +47,45 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   },
 }));
 
+function sorttable(data, value, Status) {
+  if (!data) {
+    return data;
+  }
+
+  if (Status == 1) {
+    return [
+      ...data.sort((a, b) => {
+        if (a[`${value}`] < b[`${value}`]) {
+          return -1;
+        } else if (a[`${value}`] > b[`${value}`]) {
+          return 1;
+        } else {
+          return 0;
+        }
+      }),
+    ];
+  } else {
+    return [
+      ...data.sort((a, b) => {
+        if (a[`${value}`] > b[`${value}`]) {
+          return -1;
+        } else if (a[`${value}`] < b[`${value}`]) {
+          return 1;
+        } else {
+          return 0;
+        }
+      }),
+    ];
+  }
+}
+
 export default function MusicTable({ data }) {
   const rotateStyle = {
     transform: "rotate(180deg)",
   };
 
+  const router = useRouter();
   const [TableStatus, setTableStatus] = useState(["", 1]);
-
-  function sorttable(data, value, Status) {
-    if (Status == 1) {
-      return [
-        ...data.sort((a, b) => {
-          if (a[`${value}`] < b[`${value}`]) {
-            return -1;
-          } else if (a[`${value}`] > b[`${value}`]) {
-            return 1;
-          } else {
-            return 0;
-          }
-        }),
-      ];
-    } else {
-      return [
-        ...data.sort((a, b) => {
-          if (a[`${value}`] > b[`${value}`]) {
-            return -1;
-          } else if (a[`${value}`] < b[`${value}`]) {
-            return 1;
-          } else {
-            return 0;
-          }
-        }),
-      ];
-    }
-  }
-
   const [showdata, setShowdata] = useState(sorttable(data, "id"));
 
   useEffect(() => {
@@ -95,7 +99,6 @@ export default function MusicTable({ data }) {
     setTableStatus([value, TableStatus[1] * -1]);
   }
 
-  const router = useRouter();
   const sortIcon = (
     <ArrowDropDownIcon
       color="primary"

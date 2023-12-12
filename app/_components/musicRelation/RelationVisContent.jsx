@@ -1,8 +1,16 @@
-"use client";
-import { Box, Grid } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Popover,
+  Stack,
+  Tooltip,
+  Typography,
+} from "@mui/material";
 import * as d3 from "d3";
 import { useRef, useEffect, useState } from "react";
-import RelationList from "./RelationList";
+
 import RangeSlider from "./RangeSlider";
 import Legend from "./Legend";
 
@@ -35,7 +43,7 @@ function ChartContent({
     .domain(d3.extent(nodes, ({ cx }) => cx))
     .range([0, width])
     .nice(10);
-  console.log(xScale(-960));
+  // console.log(xScale(-960));
   const yScale = d3
     .scaleLinear()
     .domain(d3.extent(nodes, ({ cy }) => cy))
@@ -158,39 +166,20 @@ function ZoomableSVG({
   );
 }
 
-export default function Relationvis({ similarityData, setNodeId, nodeId }) {
-  const wrapperRef = useRef();
-  const [size, setSize] = useState({
-    width: undefined,
-    height: undefined,
-    networkSizeRate: 0.8,
-  });
-
+export default function RelationVisContent({
+  similarityData,
+  setNodeId,
+  nodeId,
+}) {
   const levelRange = d3.extent(similarityData.nodes, ({ level }) => level);
   const [selectLevelRange, setSelectLevelRange] = useState(levelRange);
-  function handleLevelRangeChange(newValue) {
-    setSelectLevelRange(newValue);
-  }
-
-  useEffect(() => {
-    setSize({
-      ...size,
-      width: wrapperRef.current?.clientWidth,
-      height: wrapperRef.current?.clientHeight,
-    });
-  }, [wrapperRef.current]);
-
-  useEffect(() => {
-    if (nodeId === null || nodeId === undefined) {
-      setSelectLevelRange([...selectLevelRange]);
-    }
-  }, [nodeId]);
-
   const { nodes } = similarityData;
   const similarityDataByNodeId = similarityData.nodes.reduce((acc, node) => {
     acc[node.musicId] = node;
     return acc;
   }, {});
+
+  const [popoverEl, setPopoverEl] = useState(null);
 
   const links = nodes.flatMap((node) => {
     const link = similarityData.links.filter((link) => {
@@ -203,62 +192,90 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
     return slicedLink.map((link) => ({ ...link, value: link.value * 20 }));
   });
 
+  function handleLevelRangeChange(newValue) {
+    setSelectLevelRange(newValue);
+  }
+
+  useEffect(() => {
+    if (nodeId === null || nodeId === undefined) {
+      setSelectLevelRange([...selectLevelRange]);
+    }
+  }, [nodeId]);
+
+  function handlePopoverOpen(e) {
+    setPopoverEl(e.currentTarget);
+  }
+  function handlePopoverClose() {
+    setPopoverEl(null);
+  }
+
   return (
-    <Box height={"100%"} width={"100%"}>
-      <Grid
-        container
-        justifyContent={"space-between"}
-        spacing={3}
-        height={"100%"}
-        width={"100%"}
-      >
-        <Grid item xs={12} md={7}>
-          <Box height={"100%"} width={"100%"} ref={wrapperRef}>
-            <Box height={`${100 * (1 - size.networkSizeRate)}%`} width={"100%"}>
+    <Stack justifyContent={"space-between"} spacing={1}>
+      <Card sx={{ backgroundColor: "background.light" }}>
+        <CardContent>
+          <Typography>フィルタ</Typography>
+          <Box paddingY={1}>
+            <Tooltip title={"表示する楽曲レベル"}>
+              <Button variant="outlined" onClick={handlePopoverOpen}>
+                Lv
+              </Button>
+            </Tooltip>
+          </Box>
+          <Popover
+            anchorOrigin={{
+              vertical: "top",
+              horizontal: "center",
+            }}
+            transformOrigin={{
+              vertical: "bottom",
+              horizontal: "center",
+            }}
+            open={Boolean(popoverEl)}
+            anchorEl={popoverEl}
+            onClose={handlePopoverClose}
+          >
+            <Box padding={1}>
               <RangeSlider
                 range={levelRange}
                 handleLevelRangeChange={handleLevelRangeChange}
               />
             </Box>
+          </Popover>
+        </CardContent>
+      </Card>
+      <Card sx={{ backgroundColor: "background.light" }}>
+        <Stack direction={"column"} justifyContent={"flex-end"}>
+          <Box padding={1} paddingX={3} paddingTop={2}>
+            <Legend range={levelRange} />
+          </Box>
+          <Box padding={3} paddingTop={0}>
             <Box
-              height={`${100 * size.networkSizeRate}%`}
-              width={"100%"} /*ref={wrapperRef}*/
+              width={"100%"}
+              height={"100%"}
               display={"flex"}
-              flexDirection={"column"}
-              justifyContent={"flex-end"}
-              flexWrap={"nowrap"}
+              alignItems={"flex-end"}
             >
-              <Box>
-                <Legend range={levelRange} />
-              </Box>
-              <Box width={"100%"} height={"100%"}>
-                <ZoomableSVG
+              <ZoomableSVG
+                width={1000}
+                height={1000}
+                nodeId={nodeId}
+                similarityDataByNodeId={similarityDataByNodeId}
+              >
+                <ChartContent
+                  links={links}
+                  nodes={nodes}
                   width={1000}
                   height={1000}
+                  similarityData={similarityData}
+                  setNodeId={setNodeId}
                   nodeId={nodeId}
-                  similarityDataByNodeId={similarityDataByNodeId}
-                >
-                  <ChartContent
-                    links={links}
-                    nodes={nodes}
-                    width={1000}
-                    height={1000}
-                    similarityData={similarityData}
-                    setNodeId={setNodeId}
-                    nodeId={nodeId}
-                    selectLevelRange={selectLevelRange}
-                  ></ChartContent>
-                </ZoomableSVG>
-              </Box>
+                  selectLevelRange={selectLevelRange}
+                ></ChartContent>
+              </ZoomableSVG>
             </Box>
           </Box>
-        </Grid>
-        <Grid item xs md>
-          <Box height={"100%"}>
-            <RelationList nodeId={nodeId} />
-          </Box>
-        </Grid>
-      </Grid>
-    </Box>
+        </Stack>
+      </Card>
+    </Stack>
   );
 }

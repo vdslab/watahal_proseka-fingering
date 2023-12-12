@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { Tabs, Tab } from "@mui/material";
-import Search from "./Search";
-import Relationvis from "./RelationVis";
-import MusicList from "./MusicList";
+import { Tabs, Tab, Stack } from "@mui/material";
+import Search from "./search/Search";
+import Relationvis from "./musicRelation/RelationVis";
+import MusicList from "./musicList/MusicList";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Box, Container } from "@mui/material";
 
@@ -12,19 +12,19 @@ const theme = createTheme({
     primary: { main: "#ff55aa" },
     secondary: { main: "#464366" },
     headerbg: { main: "#acfef4" },
-    background: { default: "#fff" },
+    background: { default: "#fff", light: "#EEF5FF", dark: "#9EB8D9" },
   },
 });
 
 function TabPanel({ value, index, children }) {
   return (
-    <div hidden={value !== index}>
-      {value === index && <div>{children}</div>}
-    </div>
+    <Box hidden={value !== index} padding={3}>
+      {value === index && <Box>{children}</Box>}
+    </Box>
   );
 }
 
-export default function MainPage({ musics, similarityData }) {
+export default function MainPage({ similarityData }) {
   const [currentTab, setCurrentTab] = useState(0);
   const [selectedMusicId, setSelectedMusicId] = useState(null);
   const [clacedHeight, setCalcedHeight] = useState();
@@ -51,44 +51,43 @@ export default function MainPage({ musics, similarityData }) {
           <p>似てる曲から雰囲気もつかもう</p>
         </Box>
 
-        <Box
-          position="sticky"
-          top={20}
-          marginTop={5}
-          sx={{ zIndex: "tooltip" }}
-          ref={searchRef}
+        <Tabs
+          value={currentTab}
+          onChange={handleTabChange}
+          variant="fullWidth"
+          ref={tabHeaderRef}
         >
-          <Search
-            data={musics}
-            setSelectedMusicId={setSelectedMusicId}
-            selectedMusicId={selectedMusicId}
-          />
-        </Box>
+          <Tab label="似てる曲から探す" />
+          <Tab label="曲一覧" />
+        </Tabs>
 
-        <Box marginTop={20} justifyContent="center">
-          <Tabs
-            value={currentTab}
-            onChange={handleTabChange}
-            variant="fullWidth"
-            ref={tabHeaderRef}
-          >
-            <Tab label="似てる曲を探す" />
-            <Tab label="曲一覧" />
-          </Tabs>
-
+        <Box justifyContent="center">
           <TabPanel value={currentTab} index={0}>
-            <Box padding={3} sx={{ height: clacedHeight }}>
-              <Relationvis
-                similarityData={similarityData}
-                setNodeId={setSelectedMusicId}
-                nodeId={selectedMusicId}
-              />
-            </Box>
+            <Stack
+              direction="column"
+              justifyContent="center"
+              alignItems="stretch"
+              spacing={2}
+            >
+              <Box>
+                <Search
+                  setSelectedMusicId={setSelectedMusicId}
+                  selectedMusicId={selectedMusicId}
+                />
+              </Box>
+              <Box>
+                <Relationvis
+                  similarityData={similarityData}
+                  setNodeId={setSelectedMusicId}
+                  nodeId={selectedMusicId}
+                />
+              </Box>
+            </Stack>
           </TabPanel>
 
           <TabPanel value={currentTab} index={1}>
             <Box paddingBottom={5}>
-              <MusicList musics={musics} />
+              <MusicList />
             </Box>
           </TabPanel>
         </Box>
