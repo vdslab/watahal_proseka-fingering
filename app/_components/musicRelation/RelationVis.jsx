@@ -35,7 +35,7 @@ function ChartContent({
     .domain(d3.extent(nodes, ({ cx }) => cx))
     .range([0, width])
     .nice(10);
-  console.log(xScale(-960));
+  // console.log(xScale(-960));
   const yScale = d3
     .scaleLinear()
     .domain(d3.extent(nodes, ({ cy }) => cy))
