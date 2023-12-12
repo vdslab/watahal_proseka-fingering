@@ -12,7 +12,7 @@ const theme = createTheme({
     primary: { main: "#ff55aa" },
     secondary: { main: "#464366" },
     headerbg: { main: "#acfef4" },
-    background: { default: "#fff" },
+    background: { default: "#fff", light: "#EEF5FF", dark: "#9EB8D9" },
   },
 });
 
