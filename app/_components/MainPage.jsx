@@ -18,9 +18,9 @@ const theme = createTheme({
 
 function TabPanel({ value, index, children }) {
   return (
-    <div hidden={value !== index}>
-      {value === index && <div>{children}</div>}
-    </div>
+    <Box hidden={value !== index} padding={3}>
+      {value === index && <Box>{children}</Box>}
+    </Box>
   );
 }
 
@@ -51,32 +51,33 @@ export default function MainPage({ similarityData }) {
           <p>似てる曲から雰囲気もつかもう</p>
         </Box>
 
-        <Box
-          position="sticky"
-          top={20}
-          marginTop={5}
-          sx={{ zIndex: "tooltip" }}
-          ref={searchRef}
+        <Tabs
+          value={currentTab}
+          onChange={handleTabChange}
+          variant="fullWidth"
+          ref={tabHeaderRef}
         >
-          <Search
-            setSelectedMusicId={setSelectedMusicId}
-            selectedMusicId={selectedMusicId}
-          />
-        </Box>
+          <Tab label="検索して探す" />
+          <Tab label="似てる曲を探す" />
+          <Tab label="曲一覧" />
+        </Tabs>
 
-        <Box marginTop={20} justifyContent="center">
-          <Tabs
-            value={currentTab}
-            onChange={handleTabChange}
-            variant="fullWidth"
-            ref={tabHeaderRef}
-          >
-            <Tab label="似てる曲を探す" />
-            <Tab label="曲一覧" />
-          </Tabs>
-
+        <Box justifyContent="center">
           <TabPanel value={currentTab} index={0}>
+            <Search
+              setSelectedMusicId={setSelectedMusicId}
+              selectedMusicId={selectedMusicId}
+            />
+          </TabPanel>
+
+          <TabPanel value={currentTab} index={1}>
             <Box padding={3} sx={{ height: clacedHeight }}>
+              <Box padding={3}>
+                <Search
+                  setSelectedMusicId={setSelectedMusicId}
+                  selectedMusicId={selectedMusicId}
+                />
+              </Box>
               <Relationvis
                 similarityData={similarityData}
                 setNodeId={setSelectedMusicId}
@@ -85,7 +86,7 @@ export default function MainPage({ similarityData }) {
             </Box>
           </TabPanel>
 
-          <TabPanel value={currentTab} index={1}>
+          <TabPanel value={currentTab} index={2}>
             <Box paddingBottom={5}>
               <MusicList />
             </Box>
