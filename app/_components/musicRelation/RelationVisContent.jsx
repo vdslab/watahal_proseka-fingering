@@ -3,6 +3,7 @@ import {
   Button,
   Card,
   CardContent,
+  CardHeader,
   Popover,
   Stack,
   Tooltip,
@@ -213,34 +214,14 @@ export default function RelationVisContent({
     <Stack justifyContent={"space-between"} spacing={1}>
       <Card sx={{ backgroundColor: "background.light" }}>
         <CardContent>
-          <Typography>フィルタ</Typography>
-          <Box paddingY={1}>
-            <Tooltip title={"表示する楽曲レベル"}>
-              <Button variant="outlined" onClick={handlePopoverOpen}>
-                Lv
-              </Button>
-            </Tooltip>
+          <Typography variant="h5">フィルター</Typography>
+          <Box padding={1}>
+            <Typography alignSelf={"center"}>表示する楽曲レベル</Typography>
+            <RangeSlider
+              range={levelRange}
+              handleLevelRangeChange={handleLevelRangeChange}
+            />
           </Box>
-          <Popover
-            anchorOrigin={{
-              vertical: "top",
-              horizontal: "center",
-            }}
-            transformOrigin={{
-              vertical: "bottom",
-              horizontal: "center",
-            }}
-            open={Boolean(popoverEl)}
-            anchorEl={popoverEl}
-            onClose={handlePopoverClose}
-          >
-            <Box padding={1}>
-              <RangeSlider
-                range={levelRange}
-                handleLevelRangeChange={handleLevelRangeChange}
-              />
-            </Box>
-          </Popover>
         </CardContent>
       </Card>
       <Card sx={{ backgroundColor: "background.light" }}>
