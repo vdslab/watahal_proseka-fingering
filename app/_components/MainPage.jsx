@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { Tabs, Tab } from "@mui/material";
+import { Tabs, Tab, Stack } from "@mui/material";
 import Search from "./search/Search";
 import Relationvis from "./musicRelation/RelationVis";
 import MusicList from "./musicList/MusicList";
@@ -12,7 +12,7 @@ const theme = createTheme({
     primary: { main: "#ff55aa" },
     secondary: { main: "#464366" },
     headerbg: { main: "#acfef4" },
-    background: { default: "#fff" },
+    background: { default: "#fff", light: "#EEF5FF", dark: "#9EB8D9" },
   },
 });
 
@@ -57,36 +57,35 @@ export default function MainPage({ similarityData }) {
           variant="fullWidth"
           ref={tabHeaderRef}
         >
-          <Tab label="検索して探す" />
-          <Tab label="似てる曲を探す" />
+          <Tab label="似てる曲から探す" />
           <Tab label="曲一覧" />
         </Tabs>
 
         <Box justifyContent="center">
           <TabPanel value={currentTab} index={0}>
-            <Search
-              setSelectedMusicId={setSelectedMusicId}
-              selectedMusicId={selectedMusicId}
-            />
-          </TabPanel>
-
-          <TabPanel value={currentTab} index={1}>
-            <Box padding={3} sx={{ height: clacedHeight }}>
-              <Box padding={3}>
+            <Stack
+              direction="column"
+              justifyContent="center"
+              alignItems="stretch"
+              spacing={2}
+            >
+              <Box>
                 <Search
                   setSelectedMusicId={setSelectedMusicId}
                   selectedMusicId={selectedMusicId}
                 />
               </Box>
-              <Relationvis
-                similarityData={similarityData}
-                setNodeId={setSelectedMusicId}
-                nodeId={selectedMusicId}
-              />
-            </Box>
+              <Box>
+                <Relationvis
+                  similarityData={similarityData}
+                  setNodeId={setSelectedMusicId}
+                  nodeId={selectedMusicId}
+                />
+              </Box>
+            </Stack>
           </TabPanel>
 
-          <TabPanel value={currentTab} index={2}>
+          <TabPanel value={currentTab} index={1}>
             <Box paddingBottom={5}>
               <MusicList />
             </Box>

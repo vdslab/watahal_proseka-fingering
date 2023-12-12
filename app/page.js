@@ -21,7 +21,7 @@ export default async function Home() {
   return (
     <>
       <Header />
-      <main className="p-12 bg-slate-200 max-h-screen">
+      <main className="bg-slate-200 max-h-screen">
         <MainPage {...{ clusteringData, similarityData }} />
       </main>
     </>

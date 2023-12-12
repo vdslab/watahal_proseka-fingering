@@ -9,9 +9,9 @@ export default function RangeSlider({ range, handleLevelRangeChange }) {
   };
 
   return (
-    <Stack direction="row" flexWrap={"wrap"} justifyContent={"space-between"}>
+    <Box>
       <Typography alignSelf={"center"}>表示する楽曲レベル</Typography>
-      <Box width={"60%"} paddingX={3}>
+      <Box paddingX={2}>
         <Slider
           value={value ?? [0, 100]}
           onChange={handleChange}
@@ -22,6 +22,6 @@ export default function RangeSlider({ range, handleLevelRangeChange }) {
           max={range[1]}
         />
       </Box>
-    </Stack>
+    </Box>
   );
 }
