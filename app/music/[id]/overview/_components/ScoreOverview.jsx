@@ -46,7 +46,7 @@ export default function ScoreOverview() {
     {
       label: "運指",
       id: "fingering",
-      selected: false,
+      selected: true,
       description: "左右の指でノーツをどうとるか表示",
     },
   ]);
@@ -55,7 +55,7 @@ export default function ScoreOverview() {
     {
       label: "ノーツの色を無くす",
       id: "grayScale",
-      selected: true,
+      selected: false,
       description: "ノーツの色をグレースケールする",
     },
   ]);
