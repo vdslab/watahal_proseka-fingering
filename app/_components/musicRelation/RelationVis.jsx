@@ -159,26 +159,11 @@ function ZoomableSVG({
 }
 
 export default function Relationvis({ similarityData, setNodeId, nodeId }) {
-  const wrapperRef = useRef();
-  const [size, setSize] = useState({
-    width: undefined,
-    height: undefined,
-    networkSizeRate: 0.8,
-  });
-
   const levelRange = d3.extent(similarityData.nodes, ({ level }) => level);
   const [selectLevelRange, setSelectLevelRange] = useState(levelRange);
   function handleLevelRangeChange(newValue) {
     setSelectLevelRange(newValue);
   }
-
-  useEffect(() => {
-    setSize({
-      ...size,
-      width: wrapperRef.current?.clientWidth,
-      height: wrapperRef.current?.clientHeight,
-    });
-  }, [wrapperRef.current]);
 
   useEffect(() => {
     if (nodeId === null || nodeId === undefined) {
@@ -204,64 +189,58 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
   });
 
   return (
-    <Box height={"100%"} width={"100%"}>
-      <Grid
-        container
-        justifyContent={"space-between"}
-        spacing={3}
-        height={"100%"}
-        width={"100%"}
-      >
-        <Grid item xs={12} md={7}>
-          <Box height={"100%"} width={"100%"} ref={wrapperRef}>
-            <Box height={`${100 * (1 - size.networkSizeRate)}%`} width={"100%"}>
+    <Box>
+      <Grid container justifyContent={"space-between"} spacing={3}>
+        <Grid item xs={8}>
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
               <RangeSlider
                 range={levelRange}
                 handleLevelRangeChange={handleLevelRangeChange}
               />
-            </Box>
-            <Box
-              height={`${100 * size.networkSizeRate}%`}
-              width={"100%"} /*ref={wrapperRef}*/
-              display={"flex"}
-              flexDirection={"column"}
-              justifyContent={"flex-end"}
-              flexWrap={"nowrap"}
-            >
-              <Box>
-                <Legend range={levelRange} />
-              </Box>
-              <Box>
-                <Box
-                  width={"100%"}
-                  height={"100%"}
-                  display={"flex"}
-                  alignItems={"flex-end"}
-                >
-                  <ZoomableSVG
-                    width={1000}
-                    height={1000}
-                    nodeId={nodeId}
-                    similarityDataByNodeId={similarityDataByNodeId}
+            </Grid>
+            <Grid item xs={12}>
+              <Box
+                display={"flex"}
+                flexDirection={"column"}
+                justifyContent={"flex-end"}
+                flexWrap={"nowrap"}
+              >
+                <Box>
+                  <Legend range={levelRange} />
+                </Box>
+                <Box>
+                  <Box
+                    width={"100%"}
+                    height={"100%"}
+                    display={"flex"}
+                    alignItems={"flex-end"}
                   >
-                    <ChartContent
-                      links={links}
-                      nodes={nodes}
+                    <ZoomableSVG
                       width={1000}
                       height={1000}
-                      similarityData={similarityData}
-                      setNodeId={setNodeId}
                       nodeId={nodeId}
-                      selectLevelRange={selectLevelRange}
-                    ></ChartContent>
-                  </ZoomableSVG>
+                      similarityDataByNodeId={similarityDataByNodeId}
+                    >
+                      <ChartContent
+                        links={links}
+                        nodes={nodes}
+                        width={1000}
+                        height={1000}
+                        similarityData={similarityData}
+                        setNodeId={setNodeId}
+                        nodeId={nodeId}
+                        selectLevelRange={selectLevelRange}
+                      ></ChartContent>
+                    </ZoomableSVG>
+                  </Box>
                 </Box>
               </Box>
-            </Box>
-          </Box>
+            </Grid>
+          </Grid>
         </Grid>
-        <Grid item xs md>
-          <Box height={"100%"}>
+        <Grid item xs={4}>
+          <Box height={"100%"} width={"100%"}>
             <RelationList nodeId={nodeId} />
           </Box>
         </Grid>
