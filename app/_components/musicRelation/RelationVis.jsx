@@ -231,24 +231,31 @@ export default function Relationvis({ similarityData, setNodeId, nodeId }) {
               <Box>
                 <Legend range={levelRange} />
               </Box>
-              <Box width={"100%"} height={"100%"}>
-                <ZoomableSVG
-                  width={1000}
-                  height={1000}
-                  nodeId={nodeId}
-                  similarityDataByNodeId={similarityDataByNodeId}
+              <Box>
+                <Box
+                  width={"100%"}
+                  height={"100%"}
+                  display={"flex"}
+                  alignItems={"flex-end"}
                 >
-                  <ChartContent
-                    links={links}
-                    nodes={nodes}
+                  <ZoomableSVG
                     width={1000}
                     height={1000}
-                    similarityData={similarityData}
-                    setNodeId={setNodeId}
                     nodeId={nodeId}
-                    selectLevelRange={selectLevelRange}
-                  ></ChartContent>
-                </ZoomableSVG>
+                    similarityDataByNodeId={similarityDataByNodeId}
+                  >
+                    <ChartContent
+                      links={links}
+                      nodes={nodes}
+                      width={1000}
+                      height={1000}
+                      similarityData={similarityData}
+                      setNodeId={setNodeId}
+                      nodeId={nodeId}
+                      selectLevelRange={selectLevelRange}
+                    ></ChartContent>
+                  </ZoomableSVG>
+                </Box>
               </Box>
             </Box>
           </Box>
