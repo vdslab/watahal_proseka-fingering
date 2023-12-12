@@ -1,4 +1,13 @@
-import { Box, Grid } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Popover,
+  Stack,
+  Tooltip,
+  Typography,
+} from "@mui/material";
 import * as d3 from "d3";
 import { useRef, useEffect, useState } from "react";
 
@@ -170,6 +179,8 @@ export default function RelationVisContent({
     return acc;
   }, {});
 
+  const [popoverEl, setPopoverEl] = useState(null);
+
   const links = nodes.flatMap((node) => {
     const link = similarityData.links.filter((link) => {
       return node.id === link.source;
@@ -191,25 +202,53 @@ export default function RelationVisContent({
     }
   }, [nodeId]);
 
+  function handlePopoverOpen(e) {
+    setPopoverEl(e.currentTarget);
+  }
+  function handlePopoverClose() {
+    setPopoverEl(null);
+  }
+
   return (
-    <Grid container spacing={3}>
-      <Grid item xs={12}>
-        <RangeSlider
-          range={levelRange}
-          handleLevelRangeChange={handleLevelRangeChange}
-        />
-      </Grid>
-      <Grid item xs={12}>
-        <Box
-          display={"flex"}
-          flexDirection={"column"}
-          justifyContent={"flex-end"}
-          flexWrap={"nowrap"}
-        >
-          <Box>
+    <Stack justifyContent={"space-between"} spacing={1}>
+      <Card>
+        <CardContent>
+          <Typography>フィルタ</Typography>
+          <Box paddingY={1}>
+            <Tooltip title={"表示する楽曲レベル"}>
+              <Button variant="outlined" onClick={handlePopoverOpen}>
+                Lv
+              </Button>
+            </Tooltip>
+          </Box>
+          <Popover
+            anchorOrigin={{
+              vertical: "top",
+              horizontal: "center",
+            }}
+            transformOrigin={{
+              vertical: "bottom",
+              horizontal: "center",
+            }}
+            open={Boolean(popoverEl)}
+            anchorEl={popoverEl}
+            onClose={handlePopoverClose}
+          >
+            <Box padding={1}>
+              <RangeSlider
+                range={levelRange}
+                handleLevelRangeChange={handleLevelRangeChange}
+              />
+            </Box>
+          </Popover>
+        </CardContent>
+      </Card>
+      <Card>
+        <Stack direction={"column"} justifyContent={"flex-end"}>
+          <Box padding={1} paddingX={3} paddingTop={2}>
             <Legend range={levelRange} />
           </Box>
-          <Box>
+          <Box padding={3} paddingTop={0}>
             <Box
               width={"100%"}
               height={"100%"}
@@ -235,8 +274,8 @@ export default function RelationVisContent({
               </ZoomableSVG>
             </Box>
           </Box>
-        </Box>
-      </Grid>
-    </Grid>
+        </Stack>
+      </Card>
+    </Stack>
   );
 }
