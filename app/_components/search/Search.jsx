@@ -7,30 +7,48 @@ import Box from "@mui/material/Box";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 
 import { useRouter } from "next/navigation";
+import useSWR from "swr";
+import { CircularProgress } from "@mui/material";
 
-export default function Search({ data, setSelectedMusicId, selectedMusicId }) {
-  const names = data.map(({ id, name, videoid }) => {
-    return { key: id, label: name, ID: videoid };
+export default function Search({ setSelectedMusicId, selectedMusicId }) {
+  const { data, isLoading } = useSWR("/api/music", (url) =>
+    fetch(url).then((res) => res.json())
+  );
+  const names = data?.map(({ id, name, videoId }) => {
+    return { key: id, label: name, ID: videoId };
   });
-  names.push({
-    key: undefined,
-    label: "曲を選択してください",
-    ID: undefined,
-  });
-
   const router = useRouter();
-  const [selectID, setSelectID] = useState(names[names.length - 1]);
+  const [selectID, setSelectID] = useState(0);
+  const [inputName, setInputName] = useState("");
 
   useEffect(() => {
-    setSelectID(names.find((d) => d.key === selectedMusicId));
+    setSelectID(names?.find((d) => d.key === selectedMusicId) ?? 0);
   }, [selectedMusicId]);
+
+  if (isLoading) {
+    return <CircularProgress />;
+  }
 
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }}>
       <Autocomplete
         disablePortal
-        id="combo-box-demo"
+        sx={{ width: 500 }}
+        value={selectID}
+        onChange={(event, value) => {
+          if (value) {
+            setSelectID(value);
+            setSelectedMusicId(value?.key);
+          }
+        }}
+        inputValue={inputName}
+        onInputChange={(event, newInputValue) => {
+          setInputName(newInputValue);
+        }}
         options={names}
+        renderInput={(params) => {
+          return <TextField {...params} label="曲" />;
+        }}
         renderOption={(props, option) => {
           return (
             <Box component="li" {...props} key={option.key}>
@@ -38,20 +56,10 @@ export default function Search({ data, setSelectedMusicId, selectedMusicId }) {
             </Box>
           );
         }}
-        value={selectID}
-        sx={{ width: 500 }}
-        renderInput={(params) => {
-          return <TextField {...params} label="曲" />;
-        }}
         isOptionEqualToValue={(option, v) => {
           return option?.key === v?.key;
         }}
-        onChange={(event, value) => {
-          if (value) {
-            setSelectID(value);
-            setSelectedMusicId(value?.key);
-          }
-        }}
+        getOptionLabel={(option) => option.label ?? ""}
       />
 
       <Button

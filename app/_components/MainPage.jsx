@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Tabs, Tab } from "@mui/material";
-import Search from "./Search";
-import Relationvis from "./RelationVis";
-import MusicList from "./MusicList";
+import Search from "./search/Search";
+import Relationvis from "./musicRelation/RelationVis";
+import MusicList from "./musicList/MusicList";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Box, Container } from "@mui/material";
 
@@ -24,7 +24,7 @@ function TabPanel({ value, index, children }) {
   );
 }
 
-export default function MainPage({ musics, similarityData }) {
+export default function MainPage({ similarityData }) {
   const [currentTab, setCurrentTab] = useState(0);
   const [selectedMusicId, setSelectedMusicId] = useState(null);
   const [clacedHeight, setCalcedHeight] = useState();
@@ -59,7 +59,6 @@ export default function MainPage({ musics, similarityData }) {
           ref={searchRef}
         >
           <Search
-            data={musics}
             setSelectedMusicId={setSelectedMusicId}
             selectedMusicId={selectedMusicId}
           />
@@ -88,7 +87,7 @@ export default function MainPage({ musics, similarityData }) {
 
           <TabPanel value={currentTab} index={1}>
             <Box paddingBottom={5}>
-              <MusicList musics={musics} />
+              <MusicList />
             </Box>
           </TabPanel>
         </Box>
