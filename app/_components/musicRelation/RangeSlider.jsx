@@ -10,7 +10,6 @@ export default function RangeSlider({ range, handleLevelRangeChange }) {
 
   return (
     <Box>
-      <Typography alignSelf={"center"}>表示する楽曲レベル</Typography>
       <Box paddingX={2}>
         <Slider
           value={value ?? [0, 100]}
