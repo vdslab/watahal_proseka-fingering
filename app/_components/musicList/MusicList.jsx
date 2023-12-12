@@ -1,14 +1,17 @@
 "use client";
 import React, { useState } from "react";
-import MusicTable from "@/components/MusicTable";
-import { Box } from "@mui/material";
+import MusicTable from "./MusicTable";
+import { Box, CircularProgress } from "@mui/material";
+import useSWR from "swr";
 
-export default function MusicList({ musics }) {
-  const [showedData, setShowedData] = useState(musics);
+export default function MusicList() {
+  const { data, isLoading } = useSWR("/api/music", (url) =>
+    fetch(url).then((res) => res.json())
+  );
 
   return (
     <Box marginTop={3}>
-      <MusicTable data={showedData} />
+      {isLoading ? <CircularProgress /> : <MusicTable data={data} />}
     </Box>
   );
 }

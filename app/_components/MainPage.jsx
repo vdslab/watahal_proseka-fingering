@@ -24,7 +24,7 @@ function TabPanel({ value, index, children }) {
   );
 }
 
-export default function MainPage({ musics, similarityData }) {
+export default function MainPage({ similarityData }) {
   const [currentTab, setCurrentTab] = useState(0);
   const [selectedMusicId, setSelectedMusicId] = useState(null);
   const [clacedHeight, setCalcedHeight] = useState();
@@ -87,7 +87,7 @@ export default function MainPage({ musics, similarityData }) {
 
           <TabPanel value={currentTab} index={1}>
             <Box paddingBottom={5}>
-              <MusicList musics={musics} />
+              <MusicList />
             </Box>
           </TabPanel>
         </Box>

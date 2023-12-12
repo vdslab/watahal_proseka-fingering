@@ -6,12 +6,9 @@ import { readCSV, readJSON } from "./readFile";
 
 export default async function Home() {
   const publicDir = path.join(process.cwd(), "public");
-
-  const jsonDir = path.join(publicDir, "json");
-  const musicDetailPath = path.join(jsonDir, "detail");
-  const musics = await readJSON("data.json", musicDetailPath);
-
   const csvDir = path.join(publicDir, "csv");
+  const jsonDir = path.join(publicDir, "json");
+
   const clusteringData = await readCSV(
     "clustering_data_tsne.csv",
     csvDir,
@@ -25,7 +22,7 @@ export default async function Home() {
     <>
       <Header />
       <main className="p-12 bg-slate-200 max-h-screen">
-        <MainPage {...{ musics, clusteringData, similarityData }} />
+        <MainPage {...{ clusteringData, similarityData }} />
       </main>
     </>
   );
