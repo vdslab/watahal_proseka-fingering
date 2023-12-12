@@ -57,20 +57,12 @@ export default function MainPage({ similarityData }) {
           variant="fullWidth"
           ref={tabHeaderRef}
         >
-          <Tab label="検索して探す" />
-          <Tab label="似てる曲を探す" />
+          <Tab label="似てる曲から探す" />
           <Tab label="曲一覧" />
         </Tabs>
 
         <Box justifyContent="center">
           <TabPanel value={currentTab} index={0}>
-            <Search
-              setSelectedMusicId={setSelectedMusicId}
-              selectedMusicId={selectedMusicId}
-            />
-          </TabPanel>
-
-          <TabPanel value={currentTab} index={1}>
             <Stack
               direction="column"
               justifyContent="center"
@@ -93,7 +85,7 @@ export default function MainPage({ similarityData }) {
             </Stack>
           </TabPanel>
 
-          <TabPanel value={currentTab} index={2}>
+          <TabPanel value={currentTab} index={1}>
             <Box paddingBottom={5}>
               <MusicList />
             </Box>
