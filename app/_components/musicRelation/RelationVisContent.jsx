@@ -211,7 +211,7 @@ export default function RelationVisContent({
 
   return (
     <Stack justifyContent={"space-between"} spacing={1}>
-      <Card>
+      <Card sx={{ backgroundColor: "background.light" }}>
         <CardContent>
           <Typography>フィルタ</Typography>
           <Box paddingY={1}>
@@ -243,7 +243,7 @@ export default function RelationVisContent({
           </Popover>
         </CardContent>
       </Card>
-      <Card>
+      <Card sx={{ backgroundColor: "background.light" }}>
         <Stack direction={"column"} justifyContent={"flex-end"}>
           <Box padding={1} paddingX={3} paddingTop={2}>
             <Legend range={levelRange} />
