@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Tabs, Tab } from "@mui/material";
-import Search from "./Search";
+import Search from "./search/Search";
 import Relationvis from "./RelationVis";
 import MusicList from "./MusicList";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
