@@ -12,7 +12,5 @@ export async function GET(request, { params }) {
   );
   const musics = await readJSON(musicListJsonPath);
 
-  return NextResponse.json(
-    musics.map((d) => ({ ...d, videoId: d.videoid }))
-  );
+  return NextResponse.json(musics.map((d) => ({ ...d, videoId: d.videoid })));
 }
