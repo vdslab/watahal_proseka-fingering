@@ -81,7 +81,8 @@ function ChartContent({
           const isSelect = selectNode.current === id;
           const isNearNode = highlightNodes.has(id);
           const selecting = selectNode.current != null;
-          const isHighlight = isHover || isNearNode || isSelect;
+          const hovering = hoverNode != null;
+          const isHighlight = isHover || isSelect || isNearNode;
           return (
             <circle
               className={`node-${musicId}`}
@@ -90,7 +91,7 @@ function ChartContent({
               cy={yScale(cy)}
               r={isHighlight ? "0.6%" : "0.5%"}
               fill={colorScale(level)}
-              opacity={isHighlight || !selecting ? 1 : 0.5}
+              opacity={isHighlight || (!selecting && !hovering) ? 1 : 0.3}
               stroke={isSelect ? "black" : "gray"}
               strokeWidth={1.5}
               onClick={() => {
