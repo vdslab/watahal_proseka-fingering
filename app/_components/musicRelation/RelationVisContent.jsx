@@ -61,6 +61,9 @@ function ChartContent({
             source === selectNode.current ||
             target === selectNode.current ||
             isHover;
+          const selecting = selectNode.current != null;
+          const hovering = hoverNode != null;
+          const nodeCheck = selecting || hovering;
           return (
             <line
               key={`${source}-${target}`}
@@ -70,7 +73,7 @@ function ChartContent({
               y2={yScale(targetPosition.cy)}
               stroke={isHighlight ? "rgb(255, 119, 187)" : "gray"}
               strokeWidth={isHighlight ? value * 3 : value * 2}
-              opacity={isHighlight ? 0.5 : 0.1}
+              opacity={isHighlight ? 0.5 : nodeCheck ? 0.1 : 0.2}
             />
           );
         })}
