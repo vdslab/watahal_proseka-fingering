@@ -1,14 +1,4 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  CardHeader,
-  Popover,
-  Stack,
-  Tooltip,
-  Typography,
-} from "@mui/material";
+import { Box, Card, CardContent, Stack, Typography } from "@mui/material";
 import * as d3 from "d3";
 import { useRef, useEffect, useState } from "react";
 
@@ -16,16 +6,15 @@ import RangeSlider from "./RangeSlider";
 import Legend from "./Legend";
 
 function ChartContent({
-  // links,
-  // nodes,
   width,
   height,
   similarityData,
   setNodeId,
-  nodeId,
   selectLevelRange,
 }) {
-  const [selectedNode, setSelectedNode] = useState(null);
+  const [hoverNode, setHoverNode] = useState(null);
+  const selectNode = useRef(null);
+
   const { nodes, links } = similarityData;
   const viewNodes = nodes.filter(
     ({ level }) => level >= selectLevelRange[0] && level <= selectLevelRange[1]
@@ -44,75 +33,91 @@ function ChartContent({
     .domain(d3.extent(nodes, ({ cx }) => cx))
     .range([0, width])
     .nice(10);
-  // console.log(xScale(-960));
   const yScale = d3
     .scaleLinear()
     .domain(d3.extent(nodes, ({ cy }) => cy))
     .range([height, 0])
     .nice(10);
-  const idToNodeLocation = nodes.reduce((acc, node) => {
-    acc[node.id] = { cx: xScale(node.cx), cy: yScale(node.cy) };
-    return acc;
-  });
 
   const highlightNodes = new Set(
     viewLinks
       .filter(
         ({ source, target }) =>
-          source === selectedNode || target === selectedNode
+          source === selectNode.current || target === selectNode.current
       )
       .flatMap(({ source, target }) => [source, target])
   );
+
+  const nodesById = new Map(nodes.map((node) => [node.id, node]));
 
   return (
     <g className="chart_content">
       <g className="links">
         {viewLinks.map(({ source, target, value }) => {
-          if (
-            idToNodeLocation[source] === undefined ||
-            idToNodeLocation[target] === undefined
-          ) {
+          const sourcePosition = nodesById.get(source);
+          const targetPosition = nodesById.get(target);
+          if (sourcePosition == undefined || targetPosition == undefined) {
             return null;
           }
-          const isHightlighted =
-            source === selectedNode || target === selectedNode;
+
+          const isHover = hoverNode === source || hoverNode === target;
+          const isHighlight =
+            source === selectNode.current ||
+            target === selectNode.current ||
+            isHover;
           return (
             <line
               key={`${source}-${target}`}
-              x1={idToNodeLocation[source].cx}
-              y1={idToNodeLocation[source].cy}
-              x2={idToNodeLocation[target].cx}
-              y2={idToNodeLocation[target].cy}
-              stroke={isHightlighted ? "rgb(255, 119, 187)" : "black"}
-              strokeWidth={isHightlighted ? value * 3 : value * 2}
-              opacity={selectedNode === null ? 0.3 : isHightlighted ? 0.5 : 0.1}
+              x1={xScale(sourcePosition.cx)}
+              y1={yScale(sourcePosition.cy)}
+              x2={xScale(targetPosition.cx)}
+              y2={yScale(targetPosition.cy)}
+              stroke={isHighlight ? "rgb(255, 119, 187)" : "black"}
+              strokeWidth={isHighlight ? value * 3 : value * 2}
+              opacity={isHighlight ? 0.5 : 0.1}
             />
           );
         })}
       </g>
       <g className="nodes">
         {viewNodes.map(({ id, cx, cy, fill, musicId, level }) => {
-          const isHightlighted = selectedNode === id || highlightNodes.has(id);
+          const isHover = hoverNode === id;
+          const isSelect = selectNode.current === id;
+          const isNearNode = highlightNodes.has(id);
+          const selecting = selectNode.current != null;
+          const isHighlight = isHover || isNearNode || isSelect;
           return (
             <circle
               key={`${cx}-${cy}`}
               cx={xScale(cx)}
               cy={yScale(cy)}
-              r={"0.5%"}
+              r={isHighlight ? "0.6%" : "0.5%"}
               fill={colorScale(level)}
-              stroke={isHightlighted ? "black" : "white"}
-              strokeWidth={1}
-              opacity={isHightlighted || selectedNode === null ? 1 : 0.3}
+              opacity={isHighlight || !selecting ? 1 : 0.3}
+              stroke={"black"}
+              strokeWidth={1.5}
+              strokeOpacity={0.8}
               onClick={() => {
-                if (selectedNode === id) {
-                  setSelectedNode(null);
+                if (selectNode.current === id) {
+                  selectNode.current = null;
                   setNodeId(null);
                   return;
                 }
+
+                selectNode.current = id;
                 setNodeId(musicId);
-                setSelectedNode(id);
               }}
-            />
+              onMouseOver={() => {
+                setHoverNode(id);
+              }}
+              onMouseLeave={() => {
+                setHoverNode(null);
+              }}
+            >
+              <title>
+                {id} : Lv {level}
+              </title>
+            </circle>
           );
         })}
       </g>
@@ -120,13 +125,7 @@ function ChartContent({
   );
 }
 
-function ZoomableSVG({
-  children,
-  width,
-  height,
-  nodeId,
-  similarityDataByNodeId,
-}) {
+function ZoomableSVG({ children, width, height }) {
   const svgRef = useRef();
   const [k, setK] = useState(1);
   const [x, setX] = useState(0);
@@ -172,18 +171,12 @@ export default function RelationVisContent({
   setNodeId,
   nodeId,
 }) {
-  const levelRange = d3.extent(similarityData.nodes, ({ level }) => level);
+  const { nodes: originNodes, links: originLinks } = similarityData;
+  const levelRange = d3.extent(originNodes, ({ level }) => level);
   const [selectLevelRange, setSelectLevelRange] = useState(levelRange);
-  const { nodes } = similarityData;
-  const similarityDataByNodeId = similarityData.nodes.reduce((acc, node) => {
-    acc[node.musicId] = node;
-    return acc;
-  }, {});
 
-  const [popoverEl, setPopoverEl] = useState(null);
-
-  const links = nodes.flatMap((node) => {
-    const link = similarityData.links.filter((link) => {
+  const links = originNodes.flatMap((node) => {
+    const link = originLinks.filter((link) => {
       return node.id === link.source;
     });
     link.sort(function (a, b) {
@@ -202,13 +195,6 @@ export default function RelationVisContent({
       setSelectLevelRange([...selectLevelRange]);
     }
   }, [nodeId]);
-
-  function handlePopoverOpen(e) {
-    setPopoverEl(e.currentTarget);
-  }
-  function handlePopoverClose() {
-    setPopoverEl(null);
-  }
 
   return (
     <Stack justifyContent={"space-between"} spacing={1}>
@@ -236,15 +222,10 @@ export default function RelationVisContent({
               display={"flex"}
               alignItems={"flex-end"}
             >
-              <ZoomableSVG
-                width={1000}
-                height={1000}
-                nodeId={nodeId}
-                similarityDataByNodeId={similarityDataByNodeId}
-              >
+              <ZoomableSVG width={1000} height={1000}>
                 <ChartContent
                   links={links}
-                  nodes={nodes}
+                  nodes={originNodes}
                   width={1000}
                   height={1000}
                   similarityData={similarityData}
