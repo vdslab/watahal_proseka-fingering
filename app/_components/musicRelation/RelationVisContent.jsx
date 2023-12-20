@@ -161,7 +161,7 @@ function ZoomableSVG({ children, boxSize, nodes, nodeId, scales }) {
         zoom.transform,
         d3.zoomIdentity
           .translate(width / 2, height / 2)
-          .scale(3)
+          .scale(4)
           .translate(-xScale(cx), -yScale(cy))
       );
   }, [nodeId]);
