@@ -24,7 +24,7 @@ export default function Relationvis({ setNodeId, nodeId }) {
       </Grid>
       <Grid item xs={5}>
         <Box height={"100%"} width={"100%"}>
-          <RelationList nodeId={nodeId} />
+          <RelationList nodeId={nodeId} setNodeId={setNodeId} />
         </Box>
       </Grid>
     </Grid>

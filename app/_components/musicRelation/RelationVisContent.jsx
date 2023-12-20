@@ -70,7 +70,7 @@ function ChartContent({
               y2={yScale(targetPosition.cy)}
               stroke={isHighlight ? "rgb(255, 119, 187)" : "gray"}
               strokeWidth={isHighlight ? value * 3 : value * 2}
-              opacity={isHighlight ? 0.5 : 0.2}
+              opacity={isHighlight ? 0.5 : 0.1}
             />
           );
         })}
@@ -90,10 +90,9 @@ function ChartContent({
               cy={yScale(cy)}
               r={isHighlight ? "0.6%" : "0.5%"}
               fill={colorScale(level)}
-              opacity={isHighlight || !selecting ? 1 : 0.3}
-              stroke={"black"}
+              opacity={isHighlight || !selecting ? 1 : 0.5}
+              stroke={isSelect ? "black" : "gray"}
               strokeWidth={1.5}
-              strokeOpacity={0.8}
               onClick={() => {
                 if (selectNode.current === id) {
                   selectNode.current = null;

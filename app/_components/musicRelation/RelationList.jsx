@@ -5,7 +5,7 @@ import {
   List,
   ListItem,
   ListItemButton,
-  ListItemIcon,
+  ,
   ListItemText,
   ListSubheader,
 } from "@mui/material";
@@ -17,7 +17,7 @@ import LinkWrapper from "@/components/Link";
 
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
-export default function RelationList({ nodeId }) {
+export default function RelationList({ nodeId, setNodeId }) {
   const { data: musicListData, error } = useSWR("/api/music", fetcher);
   const { data: similarityData, error2 } = useSWR(
     nodeId ? `/api/music/similarity/${nodeId}` : null,
@@ -49,15 +49,16 @@ export default function RelationList({ nodeId }) {
         <ListSubheader sx={{ backgroundColor: "background.light" }}>
           選択した曲
         </ListSubheader>
-        <ListItem>
-          <ListItemIcon>
+        <ListItem
+          secondaryAction={
             <LinkWrapper
               href={`/music/${music?.id}`}
               disabled={music?.videoId === undefined || music?.id === undefined}
             >
               <LaunchIcon />
             </LinkWrapper>
-          </ListItemIcon>
+          }
+        >
           <ListItemText>{music?.name}</ListItemText>
         </ListItem>
 
@@ -66,13 +67,26 @@ export default function RelationList({ nodeId }) {
           似ている曲
         </ListSubheader>
         {similarMusics?.map(({ id, name, videoId }) => (
-          <ListItem key={id} style={{ cursor: "auto" }}>
-            <ListItemIcon>
+          <ListItem
+            key={id}
+            style={{ cursor: "auto" }}
+            secondaryAction={
               <LinkWrapper href={`/music/${music?.id}`} disabled={id == null}>
                 <LaunchIcon />
               </LinkWrapper>
-            </ListItemIcon>
-            <ListItemText>{name}</ListItemText>
+            }
+          >
+            <ListItemButton
+              onClick={() => {
+                setNodeId(id);
+              }}
+              style={{
+                paddingLeft: 0,
+                paddingRight: 0,
+              }}
+            >
+              {name}
+            </ListItemButton>
           </ListItem>
         ))}
       </List>
