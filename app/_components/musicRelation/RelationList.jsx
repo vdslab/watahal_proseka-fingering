@@ -13,6 +13,7 @@ import useSWR from "swr";
 import LaunchIcon from "@mui/icons-material/Launch";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import LinkWrapper from "@/components/Link";
 
 const fetcher = (...args) => fetch(args).then((res) => res.json());
 
@@ -48,31 +49,31 @@ export default function RelationList({ nodeId }) {
         <ListSubheader sx={{ backgroundColor: "background.light" }}>
           選択した曲
         </ListSubheader>
-        <ListItemButton
-          onClick={() => {
-            if (music?.videoId === undefined || music?.id === undefined) return;
-
-            router.push(`/music/${music?.id}`);
-          }}
-          disabled={music?.videoId === undefined || music?.id === undefined}
-        >
+        <ListItem>
           <ListItemIcon>
-            <LaunchIcon />
+            <LinkWrapper
+              href={`/music/${music?.id}`}
+              disabled={music?.videoId === undefined || music?.id === undefined}
+            >
+              <LaunchIcon />
+            </LinkWrapper>
           </ListItemIcon>
           <ListItemText>{music?.name}</ListItemText>
-        </ListItemButton>
+        </ListItem>
 
         <Divider />
         <ListSubheader sx={{ backgroundColor: "background.light" }}>
           似ている曲
         </ListSubheader>
         {similarMusics?.map(({ id, name, videoId }) => (
-          <ListItemButton key={id} onClick={() => router.push(`/music/${id}`)}>
+          <ListItem key={id} style={{ cursor: "auto" }}>
             <ListItemIcon>
-              <LaunchIcon />
+              <LinkWrapper href={`/music/${music?.id}`} disabled={id == null}>
+                <LaunchIcon />
+              </LinkWrapper>
             </ListItemIcon>
             <ListItemText>{name}</ListItemText>
-          </ListItemButton>
+          </ListItem>
         ))}
       </List>
     </Box>
