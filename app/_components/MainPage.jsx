@@ -24,18 +24,9 @@ function TabPanel({ value, index, children }) {
   );
 }
 
-export default function MainPage({ similarityData }) {
+export default function MainPage() {
   const [currentTab, setCurrentTab] = useState(0);
   const [selectedMusicId, setSelectedMusicId] = useState(null);
-  const [clacedHeight, setCalcedHeight] = useState();
-  const tabHeaderRef = useRef();
-  const searchRef = useRef();
-
-  useEffect(() => {
-    const tabSearchHeight =
-      tabHeaderRef.current?.clientHeight + searchRef.current?.clientHeight;
-    setCalcedHeight(`calc(90vh - ${tabSearchHeight}px - 10px)`);
-  }, [tabHeaderRef.current, searchRef.current]);
 
   function handleTabChange(e, tabIndex) {
     setCurrentTab(tabIndex);
@@ -51,12 +42,7 @@ export default function MainPage({ similarityData }) {
           <p>似てる曲から雰囲気もつかもう</p>
         </Box>
 
-        <Tabs
-          value={currentTab}
-          onChange={handleTabChange}
-          variant="fullWidth"
-          ref={tabHeaderRef}
-        >
+        <Tabs value={currentTab} onChange={handleTabChange} variant="fullWidth">
           <Tab label="似てる曲から探す" />
           <Tab label="曲一覧" />
         </Tabs>
@@ -77,7 +63,6 @@ export default function MainPage({ similarityData }) {
               </Box>
               <Box>
                 <Relationvis
-                  similarityData={similarityData}
                   setNodeId={setSelectedMusicId}
                   nodeId={selectedMusicId}
                 />
