@@ -47,7 +47,14 @@ export default function Search({ setSelectedMusicId, selectedMusicId }) {
         }}
         options={names}
         renderInput={(params) => {
-          return <TextField {...params} label="曲" />;
+          return (
+            <TextField
+              {...params}
+              label="曲"
+              placeholder="Tell Your World"
+              helperText="曲を入力するか選択してください"
+            />
+          );
         }}
         renderOption={(props, option) => {
           return (
