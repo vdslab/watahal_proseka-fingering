@@ -1,43 +1,41 @@
 import { Box, Card, CardContent, Stack, Typography } from "@mui/material";
 import * as d3 from "d3";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useMemo } from "react";
 
 import RangeSlider from "./RangeSlider";
 import Legend from "./Legend";
 
 function ChartContent({
-  width,
-  height,
   similarityData,
   setNodeId,
+  nodeId,
   selectLevelRange,
+  scales,
 }) {
   const [hoverNode, setHoverNode] = useState(null);
-  const selectNode = useRef(null);
+  const selectNode = useRef();
 
   const { nodes, links } = similarityData;
-  const viewNodes = nodes.filter(
-    ({ level }) => level >= selectLevelRange[0] && level <= selectLevelRange[1]
-  );
-  const viewNodeIds = new Set(viewNodes.map(({ id }) => id));
-  const viewLinks = links.filter(
-    ({ source, target }) => viewNodeIds.has(source) && viewNodeIds.has(target)
-  );
 
-  const colorScale = d3
-    .scaleSequential(d3.interpolateBuPu)
-    .domain(d3.extent(nodes, ({ level }) => level));
+  const { nodesByNameId, nodesById, viewNodes, viewNodeIds, viewLinks } =
+    useMemo(() => {
+      const nodesByNameId = new Map(nodes.map((node) => [node.id, node]));
+      const nodesById = new Map(nodes.map((node) => [node.musicId, node]));
+      const viewNodes = nodes.filter(
+        ({ level }) =>
+          level >= selectLevelRange[0] && level <= selectLevelRange[1]
+      );
+      const viewNodeIds = new Set(viewNodes.map(({ id }) => id));
+      const viewLinks = links.filter(
+        ({ source, target }) =>
+          viewNodeIds.has(source) && viewNodeIds.has(target)
+      );
+      return { nodesByNameId, nodesById, viewNodes, viewNodeIds, viewLinks };
+    }, [nodes, links, selectLevelRange]);
 
-  const xScale = d3
-    .scaleLinear()
-    .domain(d3.extent(nodes, ({ cx }) => cx))
-    .range([0, width])
-    .nice(10);
-  const yScale = d3
-    .scaleLinear()
-    .domain(d3.extent(nodes, ({ cy }) => cy))
-    .range([height, 0])
-    .nice(10);
+  selectNode.current = nodesById.get(nodeId)?.id ?? null;
+
+  const { colorScale, xScale, yScale } = scales;
 
   const highlightNodes = new Set(
     viewLinks
@@ -48,14 +46,12 @@ function ChartContent({
       .flatMap(({ source, target }) => [source, target])
   );
 
-  const nodesById = new Map(nodes.map((node) => [node.id, node]));
-
   return (
     <g className="chart_content">
       <g className="links">
         {viewLinks.map(({ source, target, value }) => {
-          const sourcePosition = nodesById.get(source);
-          const targetPosition = nodesById.get(target);
+          const sourcePosition = nodesByNameId.get(source);
+          const targetPosition = nodesByNameId.get(target);
           if (sourcePosition == undefined || targetPosition == undefined) {
             return null;
           }
@@ -72,9 +68,9 @@ function ChartContent({
               y1={yScale(sourcePosition.cy)}
               x2={xScale(targetPosition.cx)}
               y2={yScale(targetPosition.cy)}
-              stroke={isHighlight ? "rgb(255, 119, 187)" : "black"}
+              stroke={isHighlight ? "rgb(255, 119, 187)" : "gray"}
               strokeWidth={isHighlight ? value * 3 : value * 2}
-              opacity={isHighlight ? 0.5 : 0.1}
+              opacity={isHighlight ? 0.5 : 0.2}
             />
           );
         })}
@@ -88,6 +84,7 @@ function ChartContent({
           const isHighlight = isHover || isNearNode || isSelect;
           return (
             <circle
+              className={`node-${musicId}`}
               key={`${cx}-${cy}`}
               cx={xScale(cx)}
               cy={yScale(cy)}
@@ -125,7 +122,7 @@ function ChartContent({
   );
 }
 
-function ZoomableSVG({ children, width, height }) {
+function ZoomableSVG({ children, boxSize, nodes, nodeId, scales }) {
   const svgRef = useRef();
   const [k, setK] = useState(1);
   const [x, setX] = useState(0);
@@ -140,13 +137,35 @@ function ZoomableSVG({ children, width, height }) {
     })
     .scaleExtent([0.8, 10]);
 
+  const { xScale, yScale } = scales;
+  const { width, height } = boxSize;
+
   useEffect(() => {
     d3.select(svgRef.current).call(zoom).on("dblclick.zoom", null);
 
     () => {
       d3.select(svgRef.current).on(".zoom", null);
     };
-  }, [svgRef.current]);
+  }, []);
+
+  useEffect(() => {
+    const node = nodes.find((node) => node.musicId === nodeId);
+    if (node === undefined) {
+      return;
+    }
+    const { cx, cy } = node;
+    const svg = d3.select(svgRef.current);
+    svg
+      .transition()
+      .duration(700)
+      .call(
+        zoom.transform,
+        d3.zoomIdentity
+          .translate(width / 2, height / 2)
+          .scale(3)
+          .translate(-xScale(cx), -yScale(cy))
+      );
+  }, [nodeId]);
 
   if (width === undefined || height === undefined) {
     return <p>loading data...</p>;
@@ -171,20 +190,9 @@ export default function RelationVisContent({
   setNodeId,
   nodeId,
 }) {
-  const { nodes: originNodes, links: originLinks } = similarityData;
-  const levelRange = d3.extent(originNodes, ({ level }) => level);
+  const { nodes } = similarityData;
+  const levelRange = d3.extent(nodes, ({ level }) => level);
   const [selectLevelRange, setSelectLevelRange] = useState(levelRange);
-
-  const links = originNodes.flatMap((node) => {
-    const link = originLinks.filter((link) => {
-      return node.id === link.source;
-    });
-    link.sort(function (a, b) {
-      return b.value - a.value;
-    });
-    const slicedLink = link.slice(0, 5);
-    return slicedLink.map((link) => ({ ...link, value: link.value * 20 }));
-  });
 
   function handleLevelRangeChange(newValue) {
     setSelectLevelRange(newValue);
@@ -195,6 +203,25 @@ export default function RelationVisContent({
       setSelectLevelRange([...selectLevelRange]);
     }
   }, [nodeId]);
+
+  const width = 1000;
+  const height = 1000;
+  const boxSize = { width, height };
+
+  const colorScale = d3
+    .scaleSequential(d3.interpolateBuPu)
+    .domain(d3.extent(nodes, ({ level }) => level));
+
+  const xScale = d3
+    .scaleLinear()
+    .domain(d3.extent(nodes, ({ cx }) => cx))
+    .range([0, width])
+    .nice(10);
+  const yScale = d3
+    .scaleLinear()
+    .domain(d3.extent(nodes, ({ cy }) => cy))
+    .range([height, 0])
+    .nice(10);
 
   return (
     <Stack justifyContent={"space-between"} spacing={1}>
@@ -222,16 +249,19 @@ export default function RelationVisContent({
               display={"flex"}
               alignItems={"flex-end"}
             >
-              <ZoomableSVG width={1000} height={1000}>
+              <ZoomableSVG
+                boxSize={boxSize}
+                nodes={nodes}
+                nodeId={nodeId}
+                scales={{ xScale, yScale }}
+              >
                 <ChartContent
-                  links={links}
-                  nodes={originNodes}
-                  width={1000}
-                  height={1000}
+                  key={nodeId}
                   similarityData={similarityData}
                   setNodeId={setNodeId}
                   nodeId={nodeId}
                   selectLevelRange={selectLevelRange}
+                  scales={{ xScale, yScale, colorScale }}
                 ></ChartContent>
               </ZoomableSVG>
             </Box>

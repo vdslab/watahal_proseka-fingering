@@ -8,10 +8,7 @@ export default function Relationvis({ setNodeId, nodeId }) {
   const { data, error, isLoading } = useSWR("/api/graph", (url) =>
     fetch(url)
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data.nodes[0]);
-        return data;
-      })
+      .then((data) => data)
   );
   if (error) return <p>failed to load</p>;
   if (isLoading) return <p>loading data...</p>;
