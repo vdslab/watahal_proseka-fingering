@@ -8,7 +8,8 @@ import MusicNoteIcon from "@mui/icons-material/MusicNote";
 
 import { useRouter } from "next/navigation";
 import useSWR from "swr";
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, IconButton, Stack, Tooltip } from "@mui/material";
+import LinkWrapper from "@/components/Link";
 
 export default function Search({ setSelectedMusicId, selectedMusicId }) {
   const { data, isLoading } = useSWR("/api/music", (url) =>
@@ -18,7 +19,7 @@ export default function Search({ setSelectedMusicId, selectedMusicId }) {
     return { key: id, label: name, ID: videoId };
   });
   const router = useRouter();
-  const [selectID, setSelectID] = useState(0);
+  const [selectID, setSelectID] = useState();
   const [inputName, setInputName] = useState("");
 
   useEffect(() => {
@@ -30,16 +31,15 @@ export default function Search({ setSelectedMusicId, selectedMusicId }) {
   }
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "center" }}>
+    <Box
+      sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+    >
       <Autocomplete
         disablePortal
         sx={{ width: 500 }}
-        value={selectID}
         onChange={(event, value) => {
-          if (value) {
-            setSelectID(value);
-            setSelectedMusicId(value?.key);
-          }
+          setSelectID(value);
+          setSelectedMusicId(value?.key);
         }}
         inputValue={inputName}
         onInputChange={(event, newInputValue) => {
@@ -48,12 +48,26 @@ export default function Search({ setSelectedMusicId, selectedMusicId }) {
         options={names}
         renderInput={(params) => {
           return (
-            <TextField
-              {...params}
-              label="曲"
-              placeholder="Tell Your World"
-              helperText="曲を入力するか選択してください"
-            />
+            <Stack
+              direction={"row"}
+              justifyContent={"space-between"}
+              alignItems={"center"}
+            >
+              <TextField
+                {...params}
+                label="楽曲を探す"
+                placeholder="Tell Your World"
+              />
+              <Tooltip title={"曲の再生ページに行く"}>
+                <IconButton>
+                  <LinkWrapper href="/">
+                    <Stack alignContent={"center"} justifyContent={"center"}>
+                      <MusicNoteIcon />
+                    </Stack>
+                  </LinkWrapper>
+                </IconButton>
+              </Tooltip>
+            </Stack>
           );
         }}
         renderOption={(props, option) => {
@@ -68,20 +82,6 @@ export default function Search({ setSelectedMusicId, selectedMusicId }) {
         }}
         getOptionLabel={(option) => option.label ?? ""}
       />
-
-      <Button
-        color="primary"
-        variant="contained"
-        startIcon={<MusicNoteIcon />}
-        onClick={() => {
-          if (selectID != null) {
-            const { ID: videoId, key: id } = selectID;
-            router.push(`/music/${id}`);
-          }
-        }}
-      >
-        曲の再生ページ
-      </Button>
     </Box>
   );
 }
