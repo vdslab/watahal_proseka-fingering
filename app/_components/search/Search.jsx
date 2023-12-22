@@ -18,7 +18,7 @@ export default function Search({ setSelectedMusicId, selectedMusicId }) {
     return { key: id, label: name, ID: videoId };
   });
   const router = useRouter();
-  const [selectID, setSelectID] = useState(0);
+  const [selectID, setSelectID] = useState();
   const [inputName, setInputName] = useState("");
 
   useEffect(() => {
@@ -34,12 +34,9 @@ export default function Search({ setSelectedMusicId, selectedMusicId }) {
       <Autocomplete
         disablePortal
         sx={{ width: 500 }}
-        value={selectID}
         onChange={(event, value) => {
-          if (value) {
-            setSelectID(value);
-            setSelectedMusicId(value?.key);
-          }
+          setSelectID(value);
+          setSelectedMusicId(value?.key);
         }}
         inputValue={inputName}
         onInputChange={(event, newInputValue) => {
