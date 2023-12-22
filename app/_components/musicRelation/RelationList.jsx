@@ -50,12 +50,11 @@ export default function RelationList({ nodeId, setNodeId }) {
         </ListSubheader>
         <ListItem
           secondaryAction={
-            <LinkWrapper
-              href={`/music/${music?.id}`}
-              disabled={music?.videoId === undefined || music?.id === undefined}
-            >
-              <LaunchIcon />
-            </LinkWrapper>
+            music?.id != null && (
+              <LinkWrapper href={`/music/${music?.id}`}>
+                <LaunchIcon />
+              </LinkWrapper>
+            )
           }
         >
           <ListItemText>{music?.name}</ListItemText>
@@ -65,12 +64,12 @@ export default function RelationList({ nodeId, setNodeId }) {
         <ListSubheader sx={{ backgroundColor: "background.light" }}>
           似ている曲
         </ListSubheader>
-        {similarMusics?.map(({ id, name, videoId }) => (
+        {similarMusics?.map(({ id, name }) => (
           <ListItem
             key={id}
             style={{ cursor: "auto" }}
             secondaryAction={
-              <LinkWrapper href={`/music/${music?.id}`} disabled={id == null}>
+              <LinkWrapper href={`/music/${id}`} disabled={id == null}>
                 <LaunchIcon />
               </LinkWrapper>
             }
