@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import FingeringVisContent from "./FingeringVisContent";
 import SimilarityList from "../../_components/SimilarityList";
 import VideoPlayer from "../../_components/VideoPlayer";

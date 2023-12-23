@@ -1,4 +1,4 @@
-import { Box, Chip, ListItem, Stack, Tooltip, Typography } from "@mui/material";
+import { Box, Chip, Stack, Tooltip } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
 import { useState } from "react";
 import MusicScore from "./complexityMusicScore/MusicScore";
