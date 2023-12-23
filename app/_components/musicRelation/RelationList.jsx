@@ -45,7 +45,9 @@ export default function RelationList({ nodeId, setNodeId }) {
       overflow={"auto"}
     >
       <List sx={{ maxHeight: height, backgroundColor: "background.light" }}>
-        <ListSubheader sx={{ backgroundColor: "background.light" }}>
+        <ListSubheader
+          sx={{ backgroundColor: "background.light", userSelect: "none" }}
+        >
           選択した曲
         </ListSubheader>
         <ListItem
@@ -61,7 +63,9 @@ export default function RelationList({ nodeId, setNodeId }) {
         </ListItem>
 
         <Divider />
-        <ListSubheader sx={{ backgroundColor: "background.light" }}>
+        <ListSubheader
+          sx={{ backgroundColor: "background.light", userSelect: "none" }}
+        >
           似ている曲
         </ListSubheader>
         {similarMusics?.map(({ id, name }) => (

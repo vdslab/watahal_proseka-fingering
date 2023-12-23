@@ -230,9 +230,16 @@ export default function RelationVisContent({
     <Stack justifyContent={"space-between"} spacing={1}>
       <Card sx={{ backgroundColor: "background.light" }}>
         <CardContent>
-          <Typography variant="h5">フィルター</Typography>
+          <Typography variant="h5" sx={{ caretColor: "transparent" }}>
+            フィルター
+          </Typography>
           <Box padding={1}>
-            <Typography alignSelf={"center"}>表示する楽曲レベル</Typography>
+            <Typography
+              alignSelf={"center"}
+              sx={{ caretColor: "transparent", userSelect: "none" }}
+            >
+              表示する楽曲レベル
+            </Typography>
             <RangeSlider
               range={levelRange}
               handleLevelRangeChange={handleLevelRangeChange}

@@ -39,10 +39,18 @@ export default function Imformation() {
         sx={{ zIndex: "tooltip" }}
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h5" component="h2">
+          <Typography
+            id="modal-modal-title"
+            variant="h5"
+            component="h2"
+            sx={{ caretColor: "transparent" }}
+          >
             使い方
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          <Typography
+            id="modal-modal-description"
+            sx={{ mt: 2, caretColor: "transparent" }}
+          >
             曲を選ぶドン！！
           </Typography>
         </Box>

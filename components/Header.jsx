@@ -41,7 +41,11 @@ export default function Header() {
               color="secondary"
               variant="h4"
               component="div"
-              sx={{ flexGrow: 1 }}
+              sx={{
+                flexGrow: 1,
+                caretColor: "transparent",
+                userSelect: "none",
+              }}
             >
               プロセカ 楽曲予習
             </Typography>

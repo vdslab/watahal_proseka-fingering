@@ -59,6 +59,7 @@ export default function Header() {
                 variant="h5"
                 component="div"
                 alignSelf="center"
+                sx={{ caretColor: "transparent", userSelect: "none" }}
               >
                 プロセカ 楽曲予習
               </Typography>
