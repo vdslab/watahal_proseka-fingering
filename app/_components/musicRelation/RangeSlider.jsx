@@ -1,4 +1,4 @@
-import { Box, Slider, Stack, Typography } from "@mui/material";
+import { Box, Slider } from "@mui/material";
 import { useState } from "react";
 
 export default function RangeSlider({ range, handleLevelRangeChange }) {

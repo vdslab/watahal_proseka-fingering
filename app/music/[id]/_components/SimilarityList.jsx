@@ -62,7 +62,7 @@ export default function SimilarityList() {
   return (
     <Box bgcolor={"white"} padding={1}>
       <List>
-        <ListSubheader>似ている曲</ListSubheader>
+        <ListSubheader sx={{ userSelect: "none" }}>似ている曲</ListSubheader>
         {similarMusic.map(({ target, name }) => (
           <ListItemButton
             key={target}

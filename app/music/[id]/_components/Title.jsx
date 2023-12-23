@@ -19,7 +19,11 @@ export default function Title() {
 
   return (
     <Box paddingX={3}>
-      <Typography variant="h4" component="div">
+      <Typography
+        variant="h4"
+        component="div"
+        sx={{ caretColor: "transparent" }}
+      >
         {name}
       </Typography>
     </Box>

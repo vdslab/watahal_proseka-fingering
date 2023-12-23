@@ -121,14 +121,18 @@ export default function MusicTable({ data }) {
               <StyledTableCell align="center">
                 <Box display={"flex"} alignItems={"center"}>
                   <Button onClick={onclick} value="level" startIcon={sortIcon}>
-                    <Typography>Lv</Typography>
+                    <Typography sx={{ caretColor: "transparent" }}>
+                      Lv
+                    </Typography>
                   </Button>
                 </Box>
               </StyledTableCell>
               <StyledTableCell>
                 <Box className="flex items-center justify-items-center">
                   <Button onClick={onclick} value="name" startIcon={sortIcon}>
-                    <Typography>曲名</Typography>
+                    <Typography sx={{ caretColor: "transparent" }}>
+                      曲名
+                    </Typography>
                   </Button>
                 </Box>
               </StyledTableCell>
@@ -141,7 +145,9 @@ export default function MusicTable({ data }) {
                   justifyContent={"center"}
                 >
                   <Button onClick={onclick} value="sec" startIcon={sortIcon}>
-                    <Typography>曲の時間</Typography>
+                    <Typography sx={{ caretColor: "transparent" }}>
+                      曲の時間
+                    </Typography>
                   </Button>
                   <IconButton onClick={onclick} value="sec"></IconButton>
                 </Box>
@@ -153,7 +159,9 @@ export default function MusicTable({ data }) {
                   justifyContent={"center"}
                 >
                   <Button onClick={onclick} value="bpm" startIcon={sortIcon}>
-                    <Typography>BPM</Typography>
+                    <Typography sx={{ caretColor: "transparent" }}>
+                      BPM
+                    </Typography>
                   </Button>
                 </Box>
               </StyledTableCell>
@@ -182,6 +190,7 @@ export default function MusicTable({ data }) {
                       <Typography
                         color={theme.palette.level.main}
                         fontWeight={"bold"}
+                        sx={{ caretColor: "transparent" }}
                       >
                         {level}
                       </Typography>
