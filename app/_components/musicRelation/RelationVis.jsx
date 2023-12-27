@@ -54,7 +54,7 @@ export default function Relationvis({ setNodeId, nodeId }) {
               setSelectLevelRange={setSelectLevelRange}
             />
           </Grid>
-          <Grid item xs>
+          <Grid item xs height={"100%"} boxSizing={"border-box"}>
             <Box
               width={"100%"}
               height={"100%"}
