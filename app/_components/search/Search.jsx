@@ -31,12 +31,10 @@ export default function Search({ setSelectedMusicId, selectedMusicId }) {
   }
 
   return (
-    <Box
-      sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-    >
+    <Stack justifyContent={"center"} alignItems={"center"} height={"100%"}>
       <Autocomplete
         disablePortal
-        sx={{ width: 500 }}
+        fullWidth
         onChange={(event, value) => {
           setSelectID(value);
           setSelectedMusicId(value?.key);
@@ -82,6 +80,6 @@ export default function Search({ setSelectedMusicId, selectedMusicId }) {
         }}
         getOptionLabel={(option) => option.label ?? ""}
       />
-    </Box>
+    </Stack>
   );
 }
