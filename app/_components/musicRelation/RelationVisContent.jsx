@@ -22,7 +22,7 @@ function ChartContent({
       const nodesById = new Map(nodes.map((node) => [node.musicId, node]));
       const viewNodes = nodes.filter(
         ({ level }) =>
-          level >= selectLevelRange[0] && level <= selectLevelRange[1]
+          selectLevelRange[0] <= level && level <= selectLevelRange[1]
       );
       const viewNodeIds = new Set(viewNodes.map(({ id }) => id));
       const viewLinks = links.filter(
@@ -178,7 +178,7 @@ function ZoomableSVG({ children, boxSize, nodes, nodeId, scales }) {
       width={"100%"}
       height={"100%"}
       viewBox={`0 0 ${width} ${height}`}
-      style={{ backgroundColor: "lightgray" }}
+      style={{ backgroundColor: "#E0E0E0" }}
       ref={svgRef}
       className="chart"
     >
@@ -198,7 +198,6 @@ export default function RelationVisContent({
   setSelectLevelRange,
 }) {
   const { nodes } = similarityData;
-  console.log(nodes);
 
   useEffect(() => {
     if (nodeId === null || nodeId === undefined) {
