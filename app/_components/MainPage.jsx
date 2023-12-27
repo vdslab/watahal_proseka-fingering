@@ -61,7 +61,12 @@ export default function MainPage() {
                 selectedMusicId={selectedMusicId}
               />
             </Box>
-            <Box width={"100%"} height={"100%"} boxSizing={"border-box"}>
+            <Box
+              width={"100%"}
+              height={"100%"}
+              boxSizing={"border-box"}
+              boxShadow={1}
+            >
               <Relationvis
                 setNodeId={setSelectedMusicId}
                 nodeId={selectedMusicId}
