@@ -2,7 +2,6 @@ import { Box, Card, CardContent, Stack, Typography } from "@mui/material";
 import * as d3 from "d3";
 import { useRef, useEffect, useState, useMemo } from "react";
 
-import RangeSlider from "./RangeSlider";
 import Legend from "./Legend";
 
 function ChartContent({
@@ -23,7 +22,7 @@ function ChartContent({
       const nodesById = new Map(nodes.map((node) => [node.musicId, node]));
       const viewNodes = nodes.filter(
         ({ level }) =>
-          level >= selectLevelRange[0] && level <= selectLevelRange[1]
+          selectLevelRange[0] <= level && level <= selectLevelRange[1]
       );
       const viewNodeIds = new Set(viewNodes.map(({ id }) => id));
       const viewLinks = links.filter(
@@ -176,8 +175,10 @@ function ZoomableSVG({ children, boxSize, nodes, nodeId, scales }) {
 
   return (
     <svg
+      width={"100%"}
+      height={"100%"}
       viewBox={`0 0 ${width} ${height}`}
-      style={{ backgroundColor: "lightgray" }}
+      style={{ backgroundColor: "#E0E0E0" }}
       ref={svgRef}
       className="chart"
     >
@@ -192,14 +193,11 @@ export default function RelationVisContent({
   similarityData,
   setNodeId,
   nodeId,
+  levelRange,
+  selectLevelRange,
+  setSelectLevelRange,
 }) {
   const { nodes } = similarityData;
-  const levelRange = d3.extent(nodes, ({ level }) => level);
-  const [selectLevelRange, setSelectLevelRange] = useState(levelRange);
-
-  function handleLevelRangeChange(newValue) {
-    setSelectLevelRange(newValue);
-  }
 
   useEffect(() => {
     if (nodeId === null || nodeId === undefined) {
@@ -227,57 +225,38 @@ export default function RelationVisContent({
     .nice(10);
 
   return (
-    <Stack justifyContent={"space-between"} spacing={1}>
-      <Card sx={{ backgroundColor: "background.light" }}>
-        <CardContent>
-          <Typography variant="h5" sx={{ caretColor: "transparent" }}>
-            フィルター
-          </Typography>
-          <Box padding={1}>
-            <Typography
-              alignSelf={"center"}
-              sx={{ caretColor: "transparent", userSelect: "none" }}
-            >
-              表示する楽曲レベル
-            </Typography>
-            <RangeSlider
-              range={levelRange}
-              handleLevelRangeChange={handleLevelRangeChange}
-            />
-          </Box>
-        </CardContent>
-      </Card>
-      <Card sx={{ backgroundColor: "background.light" }}>
-        <Stack direction={"column"} justifyContent={"flex-end"}>
-          <Box padding={1} paddingX={3} paddingTop={2}>
-            <Legend range={levelRange} />
-          </Box>
-          <Box padding={3} paddingTop={0}>
-            <Box
-              width={"100%"}
-              height={"100%"}
-              display={"flex"}
-              alignItems={"flex-end"}
-            >
-              <ZoomableSVG
-                boxSize={boxSize}
-                nodes={nodes}
-                nodeId={nodeId}
-                scales={{ xScale, yScale }}
-              >
-                <ChartContent
-                  key={nodeId}
-                  similarityData={similarityData}
-                  setNodeId={setNodeId}
-                  nodeId={nodeId}
-                  selectLevelRange={selectLevelRange}
-                  scales={{ xScale, yScale, colorScale }}
-                ></ChartContent>
-              </ZoomableSVG>
-            </Box>
-          </Box>
-        </Stack>
-      </Card>
+    <Stack
+      direction={"column"}
+      bgcolor={"background.light"}
+      boxShadow={1}
+      boxSizing={"border-box"}
+      height={"100%"}
+    >
+      <Box padding={1}>
+        <Legend range={levelRange} />
+      </Box>
+      <Box
+        padding={1}
+        minHeight={"50%"}
+        width={"100%"}
+        boxSizing={"border-box"}
+      >
+        <ZoomableSVG
+          boxSize={boxSize}
+          nodes={nodes}
+          nodeId={nodeId}
+          scales={{ xScale, yScale }}
+        >
+          <ChartContent
+            key={nodeId}
+            similarityData={similarityData}
+            setNodeId={setNodeId}
+            nodeId={nodeId}
+            selectLevelRange={selectLevelRange}
+            scales={{ xScale, yScale, colorScale }}
+          ></ChartContent>
+        </ZoomableSVG>
+      </Box>
     </Stack>
   );
 }

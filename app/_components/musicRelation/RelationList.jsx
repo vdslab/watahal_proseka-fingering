@@ -7,11 +7,11 @@ import {
   ListItemButton,
   ListItemText,
   ListSubheader,
+  Stack,
 } from "@mui/material";
 import useSWR from "swr";
 import LaunchIcon from "@mui/icons-material/Launch";
-import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+
 import LinkWrapper from "@/components/Link";
 
 const fetcher = (...args) => fetch(args).then((res) => res.json());
@@ -22,12 +22,6 @@ export default function RelationList({ nodeId, setNodeId }) {
     nodeId ? `/api/music/similarity/${nodeId}` : null,
     fetcher
   );
-  const wrapperRef = useRef();
-  const [height, setHeight] = useState();
-  const router = useRouter();
-  useEffect(() => {
-    setHeight(wrapperRef.current?.clientHeight);
-  }, [wrapperRef.current, nodeId]);
 
   if (error || error2) return <div>Failed to load</div>;
 
@@ -38,13 +32,13 @@ export default function RelationList({ nodeId, setNodeId }) {
     ?.map(({ target }) => musicListData?.find((music) => music.id === target));
 
   return (
-    <Box
-      bgcolor={"background.light"}
+    <Stack
       height={"100%"}
-      ref={wrapperRef}
+      spacing={1}
+      bgcolor={"background.light"}
       overflow={"auto"}
     >
-      <List sx={{ maxHeight: height, backgroundColor: "background.light" }}>
+      <List>
         <ListSubheader
           sx={{ backgroundColor: "background.light", userSelect: "none" }}
         >
@@ -61,8 +55,9 @@ export default function RelationList({ nodeId, setNodeId }) {
         >
           <ListItemText>{music?.name}</ListItemText>
         </ListItem>
-
-        <Divider />
+      </List>
+      <Divider variant="middle" />
+      <List>
         <ListSubheader
           sx={{ backgroundColor: "background.light", userSelect: "none" }}
         >
@@ -87,11 +82,11 @@ export default function RelationList({ nodeId, setNodeId }) {
                 paddingRight: 0,
               }}
             >
-              {name}
+              <ListItemText>{name}</ListItemText>
             </ListItemButton>
           </ListItem>
         ))}
       </List>
-    </Box>
+    </Stack>
   );
 }
