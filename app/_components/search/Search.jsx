@@ -2,11 +2,9 @@
 import React, { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 
-import { useRouter } from "next/navigation";
 import useSWR from "swr";
 import { CircularProgress, IconButton, Stack, Tooltip } from "@mui/material";
 import LinkWrapper from "@/components/Link";
@@ -18,12 +16,11 @@ export default function Search({ setSelectedMusicId, selectedMusicId }) {
   const names = data?.map(({ id, name, videoId }) => {
     return { key: id, label: name, ID: videoId };
   });
-  const router = useRouter();
   const [selectID, setSelectID] = useState();
   const [inputName, setInputName] = useState("");
 
   useEffect(() => {
-    setSelectID(names?.find((d) => d.key === selectedMusicId) ?? 0);
+    setSelectID(names?.find((d) => d.key === selectedMusicId));
   }, [selectedMusicId]);
 
   if (isLoading) {
@@ -35,6 +32,7 @@ export default function Search({ setSelectedMusicId, selectedMusicId }) {
       <Autocomplete
         disablePortal
         fullWidth
+        value={selectID ?? null}
         onChange={(event, value) => {
           setSelectID(value);
           setSelectedMusicId(value?.key);
