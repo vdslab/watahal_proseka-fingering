@@ -34,36 +34,35 @@ export default function Legend({ range }) {
   }
 
   return (
-    <Stack direction="row" flexWrap={"wrap"} justifyContent={"space-between"}>
+    <Stack direction="row" justifyContent={"space-between"} flexWrap={"wrap"}>
       <Typography
         alignSelf={"center"}
         sx={{ caretColor: "transparent", userSelect: "none" }}
       >
         楽曲レベル
       </Typography>
-      <Box width={"60%"} height={"100%"} paddingX={3}>
-        <Stack
-          direction="row"
-          flexWrap={"wrap"}
-          justifyContent={"space-between"}
+      <Stack
+        direction="row"
+        justifyContent={"space-between"}
+        minWidth={"50%"}
+        height={"100%"}
+      >
+        <Typography
+          alignSelf={"center"}
+          sx={{ caretColor: "transparent", userSelect: "none" }}
         >
-          <Typography
-            alignSelf={"center"}
-            sx={{ caretColor: "transparent", userSelect: "none" }}
-          >
-            低
-          </Typography>
-          <Box width={"70%"} height={"100%"} ref={wrapperRef}>
-            <canvas width={size.width} height={size.height} ref={canvasRef} />
-          </Box>
-          <Typography
-            alignSelf={"center"}
-            sx={{ caretColor: "transparent", userSelect: "none" }}
-          >
-            高
-          </Typography>
-        </Stack>
-      </Box>
+          低
+        </Typography>
+        <Box width={"70%"} height={"100%"} ref={wrapperRef}>
+          <canvas width={size.width} height={size.height} ref={canvasRef} />
+        </Box>
+        <Typography
+          alignSelf={"center"}
+          sx={{ caretColor: "transparent", userSelect: "none" }}
+        >
+          高
+        </Typography>
+      </Stack>
     </Stack>
   );
 }
