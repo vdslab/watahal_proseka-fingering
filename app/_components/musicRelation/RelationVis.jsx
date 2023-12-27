@@ -14,7 +14,10 @@ export default function Relationvis({ setNodeId, nodeId }) {
       .then((data) => data)
   );
   const nodes = data?.nodes;
-  const levelRange = d3.extent(nodes ?? [], ({ level }) => level);
+  const levelRange = d3.extent(
+    nodes ?? [{ level: 0 }, { level: 100 }],
+    ({ level }) => level
+  );
   const [selectLevelRange, setSelectLevelRange] = useState(levelRange);
 
   if (error) return <p>failed to load</p>;
@@ -23,7 +26,6 @@ export default function Relationvis({ setNodeId, nodeId }) {
   function handleLevelRangeChange(newValue) {
     setSelectLevelRange(newValue);
   }
-  console.log(data);
 
   return (
     <Stack boxSizing={"border-box"} height={"100%"} width={"100%"} spacing={1}>
