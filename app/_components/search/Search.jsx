@@ -31,7 +31,7 @@ export default function Search({ setSelectedMusicId, selectedMusicId }) {
   }
 
   return (
-    <Stack justifyContent={"center"} alignItems={"center"} height={"100%"}>
+    <Stack justifyContent={"center"} alignItems={"center"}>
       <Autocomplete
         disablePortal
         fullWidth
