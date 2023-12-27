@@ -16,10 +16,10 @@ const theme = createTheme({
   },
 });
 
-function TabPanel({ value, index, children }) {
+function TabPanel({ value, index, children, padding }) {
   return (
-    <Box hidden={value !== index} padding={3}>
-      {value === index && <Box>{children}</Box>}
+    <Box hidden={value !== index} padding={padding} boxSizing={"border-box"}>
+      {children}
     </Box>
   );
 }
@@ -47,35 +47,32 @@ export default function MainPage() {
           <Tab label="曲一覧" />
         </Tabs>
 
-        <Box justifyContent="center">
-          <TabPanel value={currentTab} index={0}>
-            <Stack
-              direction="column"
-              justifyContent="center"
-              alignItems="stretch"
-              spacing={2}
-            >
-              <Box>
-                <Search
-                  setSelectedMusicId={setSelectedMusicId}
-                  selectedMusicId={selectedMusicId}
-                />
-              </Box>
-              <Box>
-                <Relationvis
-                  setNodeId={setSelectedMusicId}
-                  nodeId={selectedMusicId}
-                />
-              </Box>
-            </Stack>
-          </TabPanel>
-
-          <TabPanel value={currentTab} index={1}>
-            <Box paddingBottom={5}>
-              <MusicList />
+        <TabPanel value={currentTab} index={0} padding={3}>
+          <Stack
+            direction="column"
+            alignItems="center"
+            spacing={2}
+            boxSizing={"border-box"}
+            height={"70vh"}
+          >
+            <Box width={"60%"}>
+              <Search
+                setSelectedMusicId={setSelectedMusicId}
+                selectedMusicId={selectedMusicId}
+              />
             </Box>
-          </TabPanel>
-        </Box>
+            <Box width={"100%"} height={"100%"} boxSizing={"border-box"}>
+              <Relationvis
+                setNodeId={setSelectedMusicId}
+                nodeId={selectedMusicId}
+              />
+            </Box>
+          </Stack>
+        </TabPanel>
+
+        <TabPanel value={currentTab} index={1} padding={3}>
+          <MusicList />
+        </TabPanel>
       </Container>
     </ThemeProvider>
   );

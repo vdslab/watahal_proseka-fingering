@@ -1,4 +1,4 @@
-import { Box, Slider } from "@mui/material";
+import { Box, Slider, Typography } from "@mui/material";
 import { useState } from "react";
 
 export default function RangeSlider({ range, handleLevelRangeChange }) {
@@ -9,8 +9,14 @@ export default function RangeSlider({ range, handleLevelRangeChange }) {
   };
 
   return (
-    <Box>
-      <Box paddingX={2}>
+    <Box width={"100%"} height={"100%"}>
+      <Typography
+        alignSelf={"center"}
+        sx={{ caretColor: "transparent", userSelect: "none" }}
+      >
+        表示する楽曲レベル
+      </Typography>
+      <Box paddingX={1}>
         <Slider
           value={value ?? [0, 100]}
           onChange={handleChange}
