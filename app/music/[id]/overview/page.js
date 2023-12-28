@@ -27,7 +27,9 @@ export default function Overview() {
         </Tabs>
       </Box>
 
-      <ScoreOverview />
+      <Box height={"90vh"}>
+        <ScoreOverview />
+      </Box>
     </Box>
   );
 }
