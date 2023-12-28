@@ -55,9 +55,13 @@ export default function Search({ setSelectedMusicId, selectedMusicId }) {
                 placeholder="Tell Your World"
               />
               <Tooltip title={"曲の再生ページに行く"}>
-                <IconButton>
-                  <LinkWrapper href="/">
-                    <Stack alignContent={"center"} justifyContent={"center"}>
+                <IconButton disabled={!Boolean(selectID)}>
+                  <LinkWrapper href={`/music/${selectID?.key}`}>
+                    <Stack
+                      alignContent={"center"}
+                      justifyContent={"center"}
+                      color={!Boolean(selectID) ? "gray" : "primary"}
+                    >
                       <MusicNoteIcon />
                     </Stack>
                   </LinkWrapper>
