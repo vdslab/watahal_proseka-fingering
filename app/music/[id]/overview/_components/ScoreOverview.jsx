@@ -1,5 +1,6 @@
 import { Box, Chip, Stack, Tooltip } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
+import AddIcon from "@mui/icons-material/Add";
 import { useState } from "react";
 import MusicScore from "./complexityMusicScore/MusicScore";
 
@@ -11,6 +12,7 @@ function StackRowChips({ chips, chipsState }) {
       justifyContent="flex-start"
       alignItems="center"
       spacing={2}
+      height={"100%"}
     >
       {chips.map(({ label, selected, description }, index) => (
         <Box key={index}>
@@ -20,7 +22,7 @@ function StackRowChips({ chips, chipsState }) {
                 label={label}
                 variant={selected ? "filled" : "outlined"}
                 color="primary"
-                icon={selected ? <DoneIcon /> : <span />}
+                icon={selected ? <DoneIcon /> : <AddIcon />}
                 onClick={() => {
                   const newChipData = [...viewChips];
                   newChipData[index].selected = !newChipData[index].selected;
@@ -61,19 +63,21 @@ export default function ScoreOverview() {
   ]);
 
   return (
-    <>
-      <Stack spacing={2}>
-        <StackRowChips
-          chips={viewChips}
-          chipsState={[viewChips, setViewChips]}
-        />
+    <Stack height={"100%"} spacing={1}>
+      <Stack spacing={1}>
+        <Box>
+          <StackRowChips
+            chips={viewChips}
+            chipsState={[viewChips, setViewChips]}
+          />
+        </Box>
         <StackRowChips
           chips={filteringChips}
           chipsState={[filteringChips, setFilteringChips]}
         />
       </Stack>
 
-      <Box paddingY={2}>
+      <Box height={"90%"}>
         <MusicScore
           view={viewChips.find(({ id }) => id === "complexity")?.selected}
           showFingering={
@@ -84,6 +88,6 @@ export default function ScoreOverview() {
           }
         />
       </Box>
-    </>
+    </Stack>
   );
 }
