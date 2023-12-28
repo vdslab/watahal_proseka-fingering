@@ -56,7 +56,9 @@ export default function Search({ setSelectedMusicId, selectedMusicId }) {
               />
               <Tooltip title={"曲の再生ページに行く"}>
                 <IconButton>
-                  <LinkWrapper href="/">
+                  <LinkWrapper
+                    href={selectID ? `/music/${selectID?.key}` : "/"}
+                  >
                     <Stack alignContent={"center"} justifyContent={"center"}>
                       <MusicNoteIcon />
                     </Stack>
