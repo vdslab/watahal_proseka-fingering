@@ -106,7 +106,6 @@ export default function MusicScore({ view, showFingering, grayScaled }) {
       spacing={1}
       overflow={"auto"}
       boxSizing={"border-box"}
-      height={"100%"}
     >
       {separetedData.map(
         ({ score, fingering, complexity, yScale, line }, i) => {
