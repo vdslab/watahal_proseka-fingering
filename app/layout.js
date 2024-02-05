@@ -24,10 +24,6 @@ export default function RootLayout({ children }) {
         <meta property="og:site_name" content={title} />
         <meta property="og:description" content={abstract} />
         <meta property="og:url" content="%PUBLIC_URL%" />
-        <meta property="og:image" content="<generated>" />
-        <meta property="og:image:type" content="<generated>" />
-        <meta property="og:image:width" content="<generated>" />
-        <meta property="og:image:height" content="<generated>" />
         <meta name="twitter:card" content="summary_large_image" />
         <title>{title}</title>
       </head>
