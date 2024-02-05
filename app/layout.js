@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="%PUBLIC_URL%/images/ogp.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <title>[タイトル]</title>
+        <title>{title}</title>
       </head>
       <body className={`${inter.className} bg-slate-200 m-0`}>{children}</body>
     </html>
